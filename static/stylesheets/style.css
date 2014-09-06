@@ -79,13 +79,18 @@ header nav a::after {
 }
 
 /* line 72, ../sass/_base.scss */
+.twitter-timeline {
+  float: right;
+}
+
+/* line 76, ../sass/_base.scss */
 section {
   border-radius: 20px;
   border: white 1px solid;
   background-color: white;
   padding: 0 10px;
 }
-/* line 77, ../sass/_base.scss */
+/* line 81, ../sass/_base.scss */
 section img {
   display: block;
   width: 300px;
@@ -93,19 +98,19 @@ section img {
   border: white 10px solid;
   float: right;
 }
-/* line 84, ../sass/_base.scss */
+/* line 88, ../sass/_base.scss */
 section aside {
   float: right;
   padding-top: 10px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 89, ../sass/_base.scss */
+  /* line 93, ../sass/_base.scss */
   section img {
     width: 100px;
   }
 }
 
-/* line 97, ../sass/_base.scss */
+/* line 101, ../sass/_base.scss */
 footer {
   padding-bottom: 20px;
   margin-bottom: 20px;
