@@ -38,10 +38,10 @@ def teardown_request(exception):
 
 #show entries in database
 @app.route('/')
-def show_entries():
+def home():
     cur = g.db.execute('select title, text from entries order by id desc')
     entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
-    return render_template('show_entries.html', entries=entries)
+    return render_template('home.html', entries=entries)
 
 #adds users entered data to database
 @app.route('/add', methods=['POST'])
@@ -52,7 +52,7 @@ def add_entry():
                  [request.form['title'], request.form['text']])
     g.db.commit()
     flash('New entry was successfully posted')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('home'))
 
 #logs in users
 @app.route('/login', methods=['GET', 'POST'])
@@ -66,7 +66,7 @@ def login():
         else:
             session['logged_in'] = True
             flash('You were logged in')
-            return redirect(url_for('show_entries'))
+            return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
 #logs out user
@@ -74,7 +74,7 @@ def login():
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('home'))
 
 
 

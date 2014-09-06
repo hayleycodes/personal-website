@@ -1,17 +1,28 @@
-<!doctype html>
-<title>Flaskr</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
-  <h1>Flaskr</h1>
-  <div class=metanav>
-  {% if not session.logged_in %}
-    <a href="{{ url_for('login') }}">log in</a>
-  {% else %}
-    <a href="{{ url_for('logout') }}">log out</a>
-  {% endif %}
-  </div>
-  {% for message in get_flashed_messages() %}
-    <div class=flash>{{ message }}</div>
-  {% endfor %}
-  {% block body %}{% endblock %}
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hayley - Beginner Computer Scientist</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Hayley van Waas, beginner, programmer, blog, ncss, eureka
+                  gather, gather workshops, web rangers, learn to code,
+                  Sir Paul Callaghan Awards for Young Science Orators, Nethui,
+                  computer science, student">
+  <meta name="description" content="Website of Hayley van Waas, a beginner programmer, read
+                    the blog and learn to code!">
+  <meta name="author" content="Hayley van Waas">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  <script type="text/javascript" src="jquery-2.1.1.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+{% block body %}{% endblock %}
+
+<footer>
+  &#169; hayleyavw.com 2014
+</footer>
+
+</div> <!-- .wrapper -->
+
+</body>
+</html>
