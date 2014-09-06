@@ -13,6 +13,5 @@ $("h1").hide();
   		var rand = Math.floor(Math.random()*colors.length);           
   		$('#controls-wrapper').css("background-color", colors[rand]);
   		$('html').css("background", colors[rand]);
-  		$('h2, h3, #middleEureka a, #topRightEureka a, #below a, #blogBoxTop a, #blogBox a').css("color", colors[rand]);
-  		$('#leftColumn p, #rightColumn p, #blogBox, #blogBoxTop, #topLeft, #topRight, #bottomLeft, #bottomRight, #below, #topRightEureka, #middleEureka').css("border", colors[rand]);
+  		$('h2, h3, .twitter-timeline').css("color", colors[rand]);
 	});
