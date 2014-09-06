@@ -3,10 +3,17 @@ import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
 
+# configuration
+DATABASE = '/tmp/flaskr.db'
+DEBUG = True
+SECRET_KEY = 'development key'
+USERNAME = 'admin'
+PASSWORD = 'default'
 
 # create our little application :)
 app = Flask(__name__)
-app.config.from_object('app.config')
+app.config.from_object(__name__)
+app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
 #connect to database
 def connect_db():
@@ -29,5 +36,9 @@ def teardown_request(exception):
     if db is not None:
         db.close()
 
-from app.core.views import mod as core
-app.register_blueprint(core)
+
+
+
+#runs server
+if __name__ == '__main__':
+    app.run()
