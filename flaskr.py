@@ -39,9 +39,11 @@ def teardown_request(exception):
 #show entries in database
 @app.route('/')
 def home():
-    cur = g.db.execute('select title, text from entries order by id desc')
-    entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
-    return render_template('home.html', entries=entries)
+    return render_template('home.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
 
 #adds users entered data to database
 @app.route('/add', methods=['POST'])

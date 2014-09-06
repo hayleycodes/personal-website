@@ -10,13 +10,23 @@
   <meta name="description" content="Website of Hayley van Waas, a beginner programmer, read
                     the blog and learn to code!">
   <meta name="author" content="Hayley van Waas">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-  <script type="text/javascript" src="jquery-2.1.1.js"></script>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
 </head>
 <body>
 <div class="wrapper">
+<header>
+  <h1>hayleyavw.com</h1>
+  <nav>
+    <a href="/">home</a>
+    <a href="blog">blog</a>
+    <a href="projects">projects</a>
+  </nav>
+  <div class="clearfix"></div>
+</header>
 
 {% block body %}{% endblock %}
+
 
 <footer>
   &#169; hayleyavw.com 2014
@@ -25,4 +35,5 @@
 </div> <!-- .wrapper -->
 
 </body>
+<script src="{{ url_for('static', filename='js/animate.js') }}"></script>
 </html>
