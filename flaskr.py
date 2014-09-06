@@ -4,7 +4,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, render_t
 from contextlib import closing
 
 # configuration
-DATABASE = '/tmp/flaskr.db'
+DATABASE = '/tmp/app.db'
 DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = 'admin'
