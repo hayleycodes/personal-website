@@ -8,28 +8,28 @@
 
         <aside>
             <img src="{{ url_for('static', filename='images/home/me6.jpg') }}" alt="Hayley van Waas">
+
+            <a href="https://twitter.com/hayleyavw" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @hayleyavw</a>
+            <script>
+                !function(d,s,id) {
+                    var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                    if(!d.getElementById(id)) {
+                        js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js,fjs); }
+                    } (document, 'script', 'twitter-wjs');
+            </script>
         </aside>
 
         <h2>
             About Me
         </h2>
         <p>
-            
+
         </p>
         <p>
             I have been programming for a few years now and have worked in Python, HTML, CSS, Javascript/jQuery, SQL, PHP and Java. My first language was Python, and is still my preferred language - although HTML/CSS is growing on me. 
         </p>
 
-        <a class="twitter-timeline" width="310" href="https://twitter.com/hayleyavw" data-widget-id="508203165036986369">       Tweets by @hayleyavw</a> 
-        <script>
-            !function(d,s,id) {
-                var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                if(!d.getElementById(id)) {
-                    js=d.createElement(s);js.id=id;
-                    js.src=p+"://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js,fjs);}
-            }(document,"script","twitter-wjs");
-        </script>
     <div class="clearfix"></div>
   </section>
 {% endblock %}

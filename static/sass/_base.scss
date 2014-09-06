@@ -70,10 +70,6 @@ header {
 }
 
 
-.twitter-timeline {
-	float: right;
-}
-
 section {
 	border-radius: 8px;
 	border: white 1px solid;
@@ -84,16 +80,35 @@ section {
 		width: 310px;
 		border-radius: 15px;
 		border: white 10px solid;
-		float: right;
+		//float: right;
 	}
 	aside {
 		float: right;
 		padding-top: 10px;
 	}
-
+	a {
+ 		display: block;
+ 		color: white;
+ 		text-decoration: none;
+ 		font-style: italic;
+	 
+		&:hover {
+		 	font-weight: bold;
+		}
+		 
+		&:visited {
+		 	color: white;
+		}
+		&::after {
+			content: "\2192";
+		}
+	}
 	@media only screen and (max-width: 480px) {
 		img {
-			width: 100px;
+			width: 150px;
+		}
+		a::after {
+			content: "";
 		}
 	}
 }

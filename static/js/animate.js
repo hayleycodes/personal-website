@@ -13,5 +13,5 @@ $("h1").hide();
   		var rand = Math.floor(Math.random()*colors.length);           
   		$('#controls-wrapper').css("background-color", colors[rand]);
   		$('html').css("background", colors[rand]);
-  		$('h2, h3, .twitter-timeline').css("color", colors[rand]);
+  		$('h2, h3, section a').css("color", colors[rand]);
 	});
