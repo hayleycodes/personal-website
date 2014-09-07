@@ -75,7 +75,7 @@ def contactform():
 @app.route('/viewpost/<postID>')
 def viewpost(postID):
     db = get_db()
-    cur = db.execute('SELECT title, text FROM entries WHERE id = ?', (postID))
+    cur = db.execute('SELECT title, text FROM entries WHERE id = ?', [postID])
     post = cur.fetchone()
     return render_template('viewpost.html', post=post)
 
