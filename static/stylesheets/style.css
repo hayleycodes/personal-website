@@ -109,59 +109,64 @@ section, .entries {
   border-radius: 8px;
   border: white 1px solid;
   background-color: white;
-  padding: 0 10px;
+  padding: 0px 0px 10px 15px;
 }
 /* line 99, ../sass/_base.scss */
 section img, .entries img {
   display: block;
   width: 310px;
+  padding-left: 8px;
+  padding-bottom: 10px;
   border-radius: 15px;
-  border: white 7px solid;
+  border: white 2px solid;
 }
-/* line 106, ../sass/_base.scss */
+/* line 109, ../sass/_base.scss */
 section p, .entries p {
   display: block;
 }
-/* line 109, ../sass/_base.scss */
+/* line 112, ../sass/_base.scss */
 section aside, .entries aside {
   float: right;
-  padding-top: 10px;
+  padding-top: 12px;
+  padding-right: 12px;
   text-align: right;
 }
-/* line 114, ../sass/_base.scss */
+/* line 118, ../sass/_base.scss */
 section a, .entries a {
   display: inline-block;
   color: white;
   text-decoration: none;
   font-style: italic;
 }
-/* line 120, ../sass/_base.scss */
+/* line 124, ../sass/_base.scss */
 section a:hover, .entries a:hover {
   font-weight: bold;
 }
 @media only screen and (max-width: 480px) {
-  /* line 125, ../sass/_base.scss */
+  /* line 129, ../sass/_base.scss */
   section img, .entries img {
     width: 170px;
   }
-  /* line 128, ../sass/_base.scss */
+  /* line 132, ../sass/_base.scss */
   section section, .entries section {
     padding: 0 5px;
   }
 }
 
-/* line 134, ../sass/_base.scss */
+/* line 138, ../sass/_base.scss */
 h2 {
   font-size: 32px;
+  margin-top: 0px;
+  padding-top: 10px;
 }
 
-/* line 138, ../sass/_base.scss */
+/* line 144, ../sass/_base.scss */
 h3 {
   line-height: 0.1;
   font-size: 18px;
 }
 
-/* line 143, ../sass/_base.scss */
+/* line 149, ../sass/_base.scss */
 h4 {
   font-size: 16px;
   font-weight: 10px;
@@ -169,12 +174,12 @@ h4 {
   padding-bottom: 0px;
 }
 
-/* line 150, ../sass/_base.scss */
+/* line 156, ../sass/_base.scss */
 li {
   list-style-type: none;
 }
 
-/* line 154, ../sass/_base.scss */
+/* line 160, ../sass/_base.scss */
 footer {
   padding-bottom: 20px;
   margin-bottom: 20px;
