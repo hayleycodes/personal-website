@@ -1,6 +1,6 @@
 
 $("body").hide();
-$("body").fadeIn(1500);
+$("body").fadeIn(1000);
 /*
 $("h1").hide();
 	$("h1").slideDown(1000);

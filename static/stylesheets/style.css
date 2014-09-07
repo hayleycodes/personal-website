@@ -29,16 +29,16 @@
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 30, ../sass/_base.scss */
+  /* line 28, ../sass/_base.scss */
   .wrapper {
     padding-top: 5px;
   }
-  /* line 32, ../sass/_base.scss */
+  /* line 30, ../sass/_base.scss */
   .wrapper section {
     padding-right: 10px;
   }
 }
-/* line 40, ../sass/_base.scss */
+/* line 38, ../sass/_base.scss */
 li {
   list-style-type: none;
   padding-right: 10px;
