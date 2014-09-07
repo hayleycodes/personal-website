@@ -6,7 +6,7 @@
 	padding: 50px 20px;
 	width: 100%;
 	min-width: 300px;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	font: normal 15px 'Century Gothic', sans-serif;
 }
@@ -79,15 +79,19 @@ section {
 		display: block;
 		width: 310px;
 		border-radius: 15px;
-		border: white 10px solid;
+		border: white 7px solid;
 		//float: right;
+	}
+	p {
+		display: block;
 	}
 	aside {
 		float: right;
 		padding-top: 10px;
+		text-align: right;
 	}
 	a {
- 		display: block;
+ 		display: inline-block;
  		color: white;
  		text-decoration: none;
  		font-style: italic;
@@ -95,20 +99,13 @@ section {
 		&:hover {
 		 	font-weight: bold;
 		}
-		 
-		&:visited {
-		 	color: white;
-		}
-		&::after {
-			content: "\2192";
-		}
 	}
 	@media only screen and (max-width: 480px) {
 		img {
-			width: 150px;
+			width: 170px;
 		}
-		a::after {
-			content: "";
+		section {
+			padding: 0 5px;
 		}
 	}
 }

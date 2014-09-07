@@ -8,7 +8,7 @@
   padding: 50px 20px;
   width: 100%;
   min-width: 300px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   font: normal 15px 'Century Gothic', sans-serif;
 }
@@ -90,55 +90,52 @@ section img {
   display: block;
   width: 310px;
   border-radius: 15px;
-  border: white 10px solid;
+  border: white 7px solid;
 }
 /* line 85, ../sass/_base.scss */
+section p {
+  display: block;
+}
+/* line 88, ../sass/_base.scss */
 section aside {
   float: right;
   padding-top: 10px;
+  text-align: right;
 }
-/* line 89, ../sass/_base.scss */
+/* line 93, ../sass/_base.scss */
 section a {
-  display: block;
+  display: inline-block;
   color: white;
   text-decoration: none;
   font-style: italic;
 }
-/* line 95, ../sass/_base.scss */
+/* line 99, ../sass/_base.scss */
 section a:hover {
   font-weight: bold;
 }
-/* line 99, ../sass/_base.scss */
-section a:visited {
-  color: white;
-}
-/* line 102, ../sass/_base.scss */
-section a::after {
-  content: "\2192";
-}
 @media only screen and (max-width: 480px) {
-  /* line 107, ../sass/_base.scss */
+  /* line 104, ../sass/_base.scss */
   section img {
-    width: 150px;
+    width: 170px;
   }
-  /* line 110, ../sass/_base.scss */
-  section a::after {
-    content: "";
+  /* line 107, ../sass/_base.scss */
+  section section {
+    padding: 0 5px;
   }
 }
 
-/* line 116, ../sass/_base.scss */
+/* line 113, ../sass/_base.scss */
 h2 {
   font-size: 32px;
 }
 
-/* line 120, ../sass/_base.scss */
+/* line 117, ../sass/_base.scss */
 h3 {
   line-height: 0.1;
   font-size: 18px;
 }
 
-/* line 126, ../sass/_base.scss */
+/* line 123, ../sass/_base.scss */
 footer {
   padding-bottom: 20px;
   margin-bottom: 20px;
