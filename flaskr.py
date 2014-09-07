@@ -41,9 +41,18 @@ def teardown_request(exception):
 def home():
     return render_template('home.html')
 
+@app.route('/')
+def blog():
+    return render_template('blog.html')
+
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+
+
+@app.route('/contactform')
+def contactform():
+    return render_template('contactform.html')
 
 #adds users entered data to database
 @app.route('/add', methods=['POST'])
