@@ -59,7 +59,7 @@ def home():
 @app.route('/blog')
 def show_entries():
     db = get_db()
-    cur = db.execute('SELECT title, text FROM entries ORDER BY id DESC')
+    cur = db.execute('SELECT * FROM entries ORDER BY id DESC')
     entries = cur.fetchall()
     return render_template('blog.html', entries=entries)
 
@@ -72,9 +72,12 @@ def projects():
 def contactform():
     return render_template('contactform.html')
 
-@app.route('/viewpost')
-def viewpost():
-    return render_template('viewpost.html')
+@app.route('/viewpost/<postID>')
+def viewpost(postID):
+    db = get_db()
+    cur = db.execute('SELECT title, text FROM entries WHERE id = ?', (postID))
+    post = cur.fetchone()
+    return render_template('viewpost.html', post=post)
 
 #adds users entered data to database
 @app.route('/add', methods=['POST'])
