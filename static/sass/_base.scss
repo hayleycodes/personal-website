@@ -49,6 +49,7 @@ header {
 	 		float: none;
 	 		text-align: center;
 	 		display: block;
+	 		font-size: 30px;
 	 	} 
 		nav {
 			float:none;
@@ -65,14 +66,14 @@ header {
 	}	
 }
 
-#entry_0, #entry_6 {
-	width: 320px;
+#entry_0, #entry_6, #entry_13 {
+	width: 100%;
 }
 
 #entry_13 {
-	width: 320px;
 	height: 100px;
 }
+
 
 .ss-form-title {
 	font-size: 32px;
@@ -107,8 +108,7 @@ section, .entries {
 		//float: right;
 	}
 	p {
-		display: block;
-	}
+		display: block;	}
 	aside {
 		float: right;
 		padding-top: 12px;
@@ -127,12 +127,22 @@ section, .entries {
 	}
 	@media only screen and (max-width: 480px) {
 		img {
-			width: 170px;
+			width: 0px;
 		}
 		section {
-			padding: 0 5px;
+			padding: 0 0px;
 		}
 	}
+}
+
+
+@media only screen and (max-width: 480px) {
+	.wrapper {
+ 		padding-top: 5px;
+ 		section {
+ 			padding-right: 10px;
+ 		}
+ 	}
 }
 
 h2 {
@@ -155,6 +165,7 @@ h4 {
 
 li {
 	list-style-type: none;
+	padding-right: 10px;
 }
 
 footer {

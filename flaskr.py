@@ -72,6 +72,10 @@ def projects():
 def contactform():
     return render_template('contactform.html')
 
+@app.route('/viewpost')
+def viewpost():
+    return render_template('viewpost.html')
+
 #adds users entered data to database
 @app.route('/add', methods=['POST'])
 def add_entry():
