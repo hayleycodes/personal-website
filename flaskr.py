@@ -1,5 +1,6 @@
 # all the imports
-import sqlite3
+#import sqlite3
+from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
 
@@ -17,7 +18,10 @@ app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
 #connect to database
 def connect_db():
-    return sqlite3.connect(app.config['DATABASE'])
+    rv = sqlite3.connect(app.config['DATABASE'])
+    rv.row_factory = sqlite3.Row
+    return rv
+    #return sqlite3.connect(app.config['DATABASE'])
 
 #initialises database
 def init_db():
@@ -25,6 +29,12 @@ def init_db():
         with app.open_resource('schema.sql', mode='r') as f:
             db.cursor().executescript(f.read())
         db.commit()
+
+def get_db():
+    if not hasattr(g, 'sqlite_db'):
+        g.sqlite_db = connect_db()
+    return g.sqlite_db
+
 
 @app.before_request
 def before_request():
@@ -36,19 +46,27 @@ def teardown_request(exception):
     if db is not None:
         db.close()
 
-#show entries in database
+
 @app.route('/')
 def home():
     return render_template('home.html')
 
-@app.route('/')
-def blog():
-    return render_template('blog.html')
+
+#@app.route('/blog')
+#def blog():
+#    return render_template('blog.html')
+
+@app.route('/blog')
+def show_entries():
+    db = get_db()
+    cur = db.execute('SELECT title, text FROM entries ORDER BY id DESC')
+    entries = cur.fetchall()
+    return render_template('blog.html', entries=entries)
+
 
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
-
 
 @app.route('/contactform')
 def contactform():
@@ -63,7 +81,8 @@ def add_entry():
                  [request.form['title'], request.form['text']])
     g.db.commit()
     flash('New entry was successfully posted')
-    return redirect(url_for('home'))
+    return redirect(url_for('show_entries'))
+
 
 #logs in users
 @app.route('/login', methods=['GET', 'POST'])
