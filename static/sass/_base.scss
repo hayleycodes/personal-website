@@ -24,13 +24,6 @@
 
 }
 
-p {
-	li {
-		list-style-type: cirlce;
-		color: pink;
-	}
-}
-
 
 .fb-like {
 
@@ -47,6 +40,12 @@ p {
 } 
 
 
+li.list {
+	list-style-type: circle;
+	margin-left: 19px;
+}
+
+
 
 @media only screen and (max-width: 480px) {
 
@@ -61,15 +60,6 @@ p {
   		}
  
  	}
-
-}
-
-
-
-li {
-
-	list-style-type: none;
-	padding-right: 10px;
 
 }
 

@@ -19,37 +19,31 @@
 }
 
 /* line 28, ../sass/_base.scss */
-p li {
-  list-style-type: cirlce;
-  color: pink;
-}
-
-/* line 35, ../sass/_base.scss */
 .fb-like {
   float: right;
 }
 
-/* line 43, ../sass/_base.scss */
+/* line 36, ../sass/_base.scss */
 .twitter-share-button {
   float: right;
 }
 
+/* line 43, ../sass/_base.scss */
+li.list {
+  list-style-type: circle;
+  margin-left: 19px;
+}
+
 @media only screen and (max-width: 480px) {
-  /* line 53, ../sass/_base.scss */
+  /* line 52, ../sass/_base.scss */
   .wrapper {
     padding-top: 5px;
   }
-  /* line 57, ../sass/_base.scss */
+  /* line 56, ../sass/_base.scss */
   .wrapper section {
     padding-right: 10px;
   }
 }
-/* line 69, ../sass/_base.scss */
-li {
-  list-style-type: none;
-  padding-right: 10px;
-}
-
 /* line 1, ../sass/_header.scss */
 header {
   color: white;
@@ -185,12 +179,17 @@ section a, .entries a {
 section a:hover, .entries a:hover {
   font-weight: bold;
 }
+/* line 49, ../sass/_sections.scss */
+section li, .entries li {
+  list-style-type: none;
+  padding-right: 10px;
+}
 @media only screen and (max-width: 480px) {
-  /* line 51, ../sass/_sections.scss */
+  /* line 59, ../sass/_sections.scss */
   section img, .entries img {
     width: 0px;
   }
-  /* line 57, ../sass/_sections.scss */
+  /* line 65, ../sass/_sections.scss */
   section section, .entries section {
     padding: 0 0px;
   }

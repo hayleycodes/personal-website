@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hayley - Computer Scientist</title>
-  <meta charset="UTF-8">
-  <meta name="keywords" content="Hayley van Waas, programmer, blog, ncss, gather workshops, computer science, student">
-  <meta name="description" content="Website of Hayley van Waas, a computer scientist.">
-  <meta name="author" content="Hayley van Waas">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
-  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
+    <title>Hayley - Computer Scientist</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Hayley van Waas, programmer, blog, gather workshops, computer science">
+    <meta name="description" content="Website of Hayley van Waas, a computer scientist.">
+    <meta name="author" content="Hayley van Waas">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
 </head>
 <body>
-<div class="wrapper">
-<header>
-  <h1>Hayley van Waas</h1>
-  <nav>
-    <a href="{{ url_for('home') }}">home</a>
-    <a href="{{ url_for('show_entries') }}">blog</a>
-    <a href="{{ url_for('projects') }}">projects</a>
-  </nav>
-  <div class="clearfix"></div>
-</header>
+    <div class="wrapper">
+        <header>
+            <h1>Hayley van Waas</h1>
+            <nav>
+                <a href="{{ url_for('home') }}">home</a>
+                <a href="{{ url_for('show_entries') }}">blog</a>
+                <a href="{{ url_for('projects') }}">projects</a>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
 
-{% block body %}{% endblock %}
+        {% block body %}{% endblock %}
 
 
-<footer>
-  &#169; Hayley van Waas 2014
-</footer>
+        <footer>
+          &#169; Hayley van Waas 2014
+        </footer>
 
-</div> <!-- .wrapper -->
+    </div> <!-- .wrapper -->
 
 </body>
+
 <script src="{{ url_for('static', filename='js/animate.js') }}"></script>
+
 </html>
