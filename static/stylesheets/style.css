@@ -146,7 +146,7 @@ section, .entries {
   border-radius: 8px;
   border: white 1px solid;
   background-color: white;
-  padding: 0px 0px 10px 15px;
+  padding: 0px 0px 20px 15px;
 }
 /* line 8, ../sass/_sections.scss */
 section img, .entries img {
@@ -165,7 +165,7 @@ section p, .entries p {
 section aside, .entries aside {
   float: right;
   padding-top: 12px;
-  padding-right: 12px;
+  padding-right: 0px;
   text-align: right;
 }
 /* line 34, ../sass/_sections.scss */
@@ -193,6 +193,13 @@ section li, .entries li {
   section section, .entries section {
     padding: 0 0px;
   }
+}
+
+/* line 75, ../sass/_sections.scss */
+section {
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /* line 1, ../sass/_headings.scss */
