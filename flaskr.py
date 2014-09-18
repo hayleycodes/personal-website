@@ -4,17 +4,10 @@ from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
 
-# configuration
-DATABASE = '/tmp/app.db'
-DEBUG = True
-SECRET_KEY = 'development key'
-USERNAME = 'admin'
-PASSWORD = 'default'
-
 # create our little application :)
 app = Flask(__name__)
 app.config.from_object(__name__)
-app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+app.config.from_envvar('FLASKR_SETTINGS')
 
 #connect to database
 def connect_db():
@@ -36,6 +29,7 @@ def get_db():
     return g.sqlite_db
 
 
+#runs before each request
 @app.before_request
 def before_request():
     g.db = connect_db()
