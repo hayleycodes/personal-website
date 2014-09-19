@@ -67,7 +67,7 @@ def contactform():
     return render_template('contactform.html')
 
 @app.route('/viewpost/<postID>')
-def viewpost(postID):
+def viewpost():
     db = get_db()
     cur = db.execute('SELECT title, text FROM entries WHERE id = ?', [postID])
     post = cur.fetchone()
@@ -84,6 +84,13 @@ def add_entry():
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
 
+@app.route('/delete', methods=['POST'])
+def delete_entry():
+    if not session.get('logged_in'):
+        abort(401)
+    g.db.execute('delete from entries WHERE id = ?', [postID])
+    flash('Entry was deleted')
+    return redirect(url_for('show_entries'))
 
 #logs in users
 @app.route('/login', methods=['GET', 'POST'])

@@ -2,3 +2,4 @@ venv
 static/.sass-cache
 compass_app_log.txt
 *.pyc
+settings.cfg
