@@ -37,7 +37,6 @@
             {% for entry in entries %}
 
                 <a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
-                {{ entry.id }}
                 <form action="/delete/{{ entry.id }}" method="post">
                     <input type="submit" value="delete" />
                 </form>
