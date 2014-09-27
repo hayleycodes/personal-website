@@ -55,6 +55,8 @@ def show_entries():
     db = get_db()
     cur = db.execute('SELECT * FROM entries ORDER BY id DESC')
     entries = cur.fetchall()
+    for e in entries:
+        print(e)
     return render_template('blog.html', entries=entries)
 
 
@@ -90,8 +92,10 @@ def delete_entry(postID):
         abort(401)
     print(postID)
     g.db.execute('DELETE FROM entries WHERE id = ?', [postID])
+    g.db.commit()
     flash('Entry was deleted')
-    return render_template('blog.html')
+    return redirect(url_for('show_entries'))
+    #return render_template('blog.html')
 
 #logs in users
 @app.route('/login', methods=['GET', 'POST'])
