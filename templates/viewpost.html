@@ -31,12 +31,28 @@
             <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
             <a href="https://twitter.com/share" class="twitter-share-button" data-via="hayleyavw" data-size="small">Tweet</a>
         </aside>
-        
-        <h2>{{ post.title }}</h2>
-        <p>
-            {{ post.text|safe }}
-        </p>
+            
+            {% if session.logged_in %}
 
+                <form action="{{ url_for('edit_entry') }}" method="post">
+                    Title
+                    <textarea name="title">{{ post.title }}</textarea>
+                    <br>
+                    <br>
+                    Text
+                    <textarea name="text" rows="10">{{ post.text|safe }}</textarea>
+                    <input type="submit" value="Edit">
+                </form>
+                    
+                    <br>
+
+            {% endif %}        
+        
+
+            <h2>{{ post.title }}</h2>
+            <p>
+                {{ post.text|safe }}
+            </p>
 
 
         <div class="clearfix"></div>

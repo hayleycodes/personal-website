@@ -55,10 +55,7 @@ def show_entries():
     db = get_db()
     cur = db.execute('SELECT * FROM entries ORDER BY id DESC')
     entries = cur.fetchall()
-    for e in entries:
-        print(e)
     return render_template('blog.html', entries=entries)
-
 
 @app.route('/projects')
 def projects():
@@ -86,11 +83,21 @@ def add_entry():
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
 
+@app.route('/edit', methods=['POST'])
+def edit_entry():
+    print('here')
+    if not session.get('logged_in'):
+        abort(401)
+    g.db.execute('INSERT INTO entries (title, text) VALUES (?, ?) ',
+                 [request.form['title'], request.form['text']])
+    g.db.commit()
+    flash('New entry was successfully posted')
+    return redirect(url_for('show_entries'))
+
 @app.route('/delete/<postID>', methods=['POST'])
 def delete_entry(postID):
     if not session.get('logged_in'):
         abort(401)
-    print(postID)
     g.db.execute('DELETE FROM entries WHERE id = ?', [postID])
     g.db.commit()
     flash('Entry was deleted')

@@ -35,17 +35,11 @@
             </form>
 
             {% for entry in entries %}
-
+                <!--change from view to edit post-->
                 <a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
                 <form action="/delete/{{ entry.id }}" method="post">
                     <input type="submit" value="delete" />
                 </form>
-                <!--
-                <form action="{{ url_for('delete_entry', postID=entry.id) }}" method="POST">
-                    <input type="hidden" name="_method" value="DELETE" />
-                    <input type="submit" value="Delete entry" />
-                </form>
-                -->
                 <br>
 
                 {% else %}
