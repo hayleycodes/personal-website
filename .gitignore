@@ -1,5 +1,5 @@
 venv
 static/.sass-cache
 compass_app_log.txt
-*.pyc
+flaskr.pyc
 settings.cfg
