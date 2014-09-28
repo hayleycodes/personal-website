@@ -35,6 +35,10 @@
             {% if session.logged_in %}
 
                 <form action="{{ url_for('edit_entry') }}" method="post">
+                    ID
+                    <textarea name="id">{{ post.id }}</textarea>
+                    <br>
+                    <br>
                     Title
                     <textarea name="title">{{ post.title }}</textarea>
                     <br>

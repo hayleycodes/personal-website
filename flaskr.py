@@ -1,4 +1,4 @@
-#  all the imports
+#all the imports
 #import sqlite3
 from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
@@ -41,6 +41,10 @@ def teardown_request(exception):
         db.close()
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -68,7 +72,7 @@ def contactform():
 @app.route('/viewpost/<postID>')
 def viewpost(postID):
     db = get_db()
-    cur = db.execute('SELECT title, text FROM entries WHERE id = ?', [postID])
+    cur = db.execute('SELECT id, title, text FROM entries WHERE id = ?', [postID])
     post = cur.fetchone()
     return render_template('viewpost.html', post=post)
 
@@ -77,7 +81,7 @@ def viewpost(postID):
 def add_entry():
     if not session.get('logged_in'):
         abort(401)
-    g.db.execute('insert into entries (title, text) values (?, ?)',
+    g.db.execute('INSERT INTO entries (title, text) VALUES (?, ?)',
                  [request.form['title'], request.form['text']])
     g.db.commit()
     flash('New entry was successfully posted')
@@ -88,8 +92,9 @@ def edit_entry():
     print('here')
     if not session.get('logged_in'):
         abort(401)
-    g.db.execute('INSERT INTO entries (title, text) VALUES (?, ?) ',
-                 [request.form['title'], request.form['text']])
+    print('here')
+    g.db.execute('UPDATE entries SET title = ?, text = ? WHERE id == ?',
+                 [request.form['title'], request.form['text'], request.form['id']])
     g.db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
