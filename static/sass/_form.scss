@@ -20,12 +20,23 @@
 
 }
 
+.ss-footer {
+	padding-top: 30px;
+}
 
 
+
+input,
 textarea {
 
 	width: 100%;
+	font: 15px "Century Gothic", sans-serif;
+	padding: 7px;
 
+}
+
+input[type=submit] {
+	width: 150px;
 }
 
 

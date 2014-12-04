@@ -10,7 +10,7 @@
   min-width: 300px;
   max-width: 1000px;
   margin: 0 auto;
-  font: normal 15px 'Century Gothic', sans-serif;
+  font: normal 15px "Century Gothic", sans-serif;
 }
 
 /* line 21, ../sass/_base.scss */
@@ -59,7 +59,7 @@ header nav {
   float: right;
   color: white;
   text-align: right;
-  font: 20px 'Century Gothic', sans-serif;
+  font: 20px "Century Gothic", sans-serif;
 }
 /* line 20, ../sass/_header.scss */
 header nav a {
@@ -120,12 +120,25 @@ header nav a::after {
   font-size: 32px;
 }
 
-/* line 25, ../sass/_form.scss */
-textarea {
-  width: 100%;
+/* line 23, ../sass/_form.scss */
+.ss-footer {
+  padding-top: 30px;
 }
 
-/* line 33, ../sass/_form.scss */
+/* line 30, ../sass/_form.scss */
+input,
+textarea {
+  width: 100%;
+  font: 15px "Century Gothic", sans-serif;
+  padding: 7px;
+}
+
+/* line 38, ../sass/_form.scss */
+input[type=submit] {
+  width: 150px;
+}
+
+/* line 44, ../sass/_form.scss */
 input {
   width: 100%;
 }
@@ -136,7 +149,7 @@ footer {
   margin-bottom: 20px;
   padding-top: 40px;
   height: 110px;
-  font: normal 15px 'Century Gothic', sans-serif;
+  font: normal 15px "Century Gothic", sans-serif;
   color: white;
   text-align: center;
 }
@@ -221,4 +234,14 @@ h4 {
   font-weight: 10px;
   padding-top: 20px;
   padding-bottom: 0px;
+}
+
+/* line 3, ../sass/_login.scss */
+.login-form input {
+  width: 50%;
+}
+/* line 7, ../sass/_login.scss */
+.login-form .submit-button {
+  display: block;
+  width: 150px;
 }
