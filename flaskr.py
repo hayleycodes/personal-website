@@ -65,6 +65,10 @@ def show_entries():
 def projects():
     return render_template('projects.html')
 
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html')
+
 @app.route('/contactform')
 def contactform():
     return render_template('contactform.html')
