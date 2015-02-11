@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<section>
+	<h5>Today</h5>
+	<div class="circle"></div>
 	<section id="cd-timeline" class="cd-container">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
@@ -16,9 +19,7 @@
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
-			</div> <!-- cd-timeline-img -->
+				<div class="circle"></div>
 
 			<div class="cd-timeline-content">
 				<h2>Title of section 2</h2>
@@ -30,7 +31,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="circle"></div>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -73,10 +74,12 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Final Section</h2>
-				<p>This is the content of the last section</p>
-				<span class="cd-date">Feb 26</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	</section> <!-- cd-timeline -->
+				<span class="cd-date">
+					Jan 2014
+				</span>
+			</div> 
+		</div>
+	</section>
+	<h5>January 2015</h5> 
+</section>
 {% endblock %}
