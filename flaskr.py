@@ -63,7 +63,7 @@ def show_entries():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('timeline.html')
 
 @app.route('/timeline')
 def timeline():
