@@ -3,43 +3,48 @@
   box-sizing: border-box;
 }
 
-/* line 8, ../sass/_base.scss */
+/* line 7, ../sass/_base.scss */
+html {
+  background-color: #0B1337;
+}
+
+/* line 12, ../sass/_base.scss */
 .wrapper {
   padding: 50px 20px;
   width: 100%;
   min-width: 300px;
   max-width: 1000px;
   margin: 0 auto;
-  font: normal 15px 'Century Gothic', sans-serif;
+  font: normal 16px 'Goudy Old Style', serif;
 }
 
-/* line 21, ../sass/_base.scss */
+/* line 24, ../sass/_base.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 28, ../sass/_base.scss */
+/* line 31, ../sass/_base.scss */
 .fb-like {
   float: right;
 }
 
-/* line 36, ../sass/_base.scss */
+/* line 39, ../sass/_base.scss */
 .twitter-share-button {
   float: right;
 }
 
-/* line 43, ../sass/_base.scss */
+/* line 46, ../sass/_base.scss */
 li.list {
   list-style-type: circle;
   margin-left: 19px;
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 52, ../sass/_base.scss */
+  /* line 55, ../sass/_base.scss */
   .wrapper {
     padding-top: 5px;
   }
-  /* line 56, ../sass/_base.scss */
+  /* line 59, ../sass/_base.scss */
   .wrapper section {
     padding-right: 10px;
   }
@@ -59,47 +64,46 @@ header nav {
   float: right;
   color: white;
   text-align: right;
-  font: 20px 'Century Gothic', sans-serif;
 }
-/* line 20, ../sass/_header.scss */
+/* line 19, ../sass/_header.scss */
 header nav a {
   display: block;
   color: white;
   text-decoration: none;
-  font-style: italic;
+  font-size: 20px;
 }
-/* line 27, ../sass/_header.scss */
+/* line 26, ../sass/_header.scss */
 header nav a:hover {
   font-weight: bold;
 }
-/* line 33, ../sass/_header.scss */
+/* line 32, ../sass/_header.scss */
 header nav a:visited {
   color: white;
 }
-/* line 39, ../sass/_header.scss */
+/* line 38, ../sass/_header.scss */
 header nav a::after {
   content: "\2192";
 }
 @media only screen and (max-width: 480px) {
-  /* line 51, ../sass/_header.scss */
+  /* line 50, ../sass/_header.scss */
   header h1 {
     float: none;
     text-align: center;
     display: block;
     font-size: 30px;
   }
-  /* line 60, ../sass/_header.scss */
+  /* line 59, ../sass/_header.scss */
   header nav {
     float: none;
     text-align: center;
   }
-  /* line 65, ../sass/_header.scss */
+  /* line 64, ../sass/_header.scss */
   header nav a {
     display: inline-block;
     padding-left: 10px;
     padding-bottom: 10px;
   }
-  /* line 71, ../sass/_header.scss */
+  /* line 70, ../sass/_header.scss */
   header nav a::after {
     content: "";
   }
@@ -157,7 +161,7 @@ footer {
 /* line 1, ../sass/_sections.scss */
 section, .entries {
   border-radius: 8px;
-  border: white 1px solid;
+  border: 0px solid;
   background-color: white;
   padding: 0px 0px 20px 15px;
 }
@@ -168,7 +172,7 @@ section img, .entries img {
   padding-left: 8px;
   padding-bottom: 10px;
   border-radius: 15px;
-  border: white 2px solid;
+  border: white 0px solid;
 }
 /* line 19, ../sass/_sections.scss */
 section p, .entries p {
@@ -186,7 +190,7 @@ section a, .entries a {
   display: inline-block;
   color: white;
   text-decoration: none;
-  font-style: italic;
+  color: #0B1337;
 }
 /* line 41, ../sass/_sections.scss */
 section a:hover, .entries a:hover {
@@ -206,9 +210,13 @@ section li, .entries li {
   section section, .entries section {
     padding: 0 0px;
   }
+  /* line 71, ../sass/_sections.scss */
+  section a, .entries a {
+    font-size: 15px;
+  }
 }
 
-/* line 75, ../sass/_sections.scss */
+/* line 79, ../sass/_sections.scss */
 section {
   padding-top: 15px;
   padding-left: 25px;
@@ -269,7 +277,7 @@ h5 {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #d7e4ed;
+  background: #0B1337;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -344,7 +352,7 @@ h5 {
 
 /* line 98, ../sass/_timeline.scss */
 .cd-timeline-img.cd-picture {
-  background: #75ce66;
+  background: #0B1337;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -448,7 +456,7 @@ h5 {
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed;
+  box-shadow: 0 3px 0 #0B1337;
 }
 
 /* line 208, ../sass/_timeline.scss */
