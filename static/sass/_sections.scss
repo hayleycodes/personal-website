@@ -36,11 +36,13 @@ section, .entries {
  		display: inline-block;
  		color: white;
  		text-decoration: none;
+ 		font-weight: bold;
  		color: #0B1337;
 	 
 		&:hover {
-	
-		 	font-weight: bold;
+			
+			font-weight: bold;
+		 	text-decoration: underline;
 	
 		}
 	

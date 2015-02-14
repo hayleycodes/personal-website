@@ -304,33 +304,35 @@ section a, .entries a {
   display: inline-block;
   color: white;
   text-decoration: none;
+  font-weight: bold;
   color: #0B1337;
 }
-/* line 41, ../sass/_sections.scss */
+/* line 42, ../sass/_sections.scss */
 section a:hover, .entries a:hover {
   font-weight: bold;
+  text-decoration: underline;
 }
-/* line 49, ../sass/_sections.scss */
+/* line 51, ../sass/_sections.scss */
 section li, .entries li {
   list-style-type: none;
   padding-right: 10px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 59, ../sass/_sections.scss */
+  /* line 61, ../sass/_sections.scss */
   section img, .entries img {
     width: 0px;
   }
-  /* line 65, ../sass/_sections.scss */
+  /* line 67, ../sass/_sections.scss */
   section section, .entries section {
     padding: 0 0px;
   }
-  /* line 71, ../sass/_sections.scss */
+  /* line 73, ../sass/_sections.scss */
   section a, .entries a {
     font-size: 15px;
   }
 }
 
-/* line 79, ../sass/_sections.scss */
+/* line 81, ../sass/_sections.scss */
 section {
   padding-top: 15px;
   padding-left: 25px;
