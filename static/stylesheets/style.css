@@ -162,7 +162,7 @@ footer {
 section, .entries {
   border-radius: 8px;
   border: 0px solid;
-  background-color: white;
+  background-color: #E6E2DB;
   padding: 0px 0px 20px 15px;
 }
 /* line 8, ../sass/_sections.scss */
@@ -468,7 +468,7 @@ h5 {
 
 /* line 215, ../sass/_timeline.scss */
 .cd-timeline-content h2 {
-  color: #303e49;
+  color: #0B1337;
 }
 
 /* line 220, ../sass/_timeline.scss */
