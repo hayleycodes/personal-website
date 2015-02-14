@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
+
+
+
 <head>
     <title>Hayley - Computer Scientist</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="Hayley van Waas, programmer, blog, gather workshops, computer science">
     <meta name="description" content="Website of Hayley van Waas, a computer scientist.">
     <meta name="author" content="Hayley van Waas">
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
     <script src="js/modernizr.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -21,18 +26,31 @@
             </nav>
             <div class="clearfix"></div>
         </header>
+        <div id="container">
+    <aside>
+    <a href="https://twitter.com/hayleyavw" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+    <br>
+    <a href="https://plus.google.com/u/0/+HayleyvanWaas/posts" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+</aside>
+</div>
 
         {% block body %}{% endblock %}
 
 
         <footer>
-          &#169; Hayley van Waas 2015
+          &#169; Hayley van Waas 2014
         </footer>
+
+
 
     </div> <!-- .wrapper -->
 
+        
 </body>
 
+
+
 <script src="{{ url_for('static', filename='js/animate.js') }}"></script>
+
 
 </html>
