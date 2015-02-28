@@ -65,11 +65,11 @@ def show_entries():
 def projects():
     return render_template('timeline.html')
 
-"""
-@app.route('/3DNZ')
-def projects():
+
+@app.route('/3dnz')
+def NZ():
     return render_template('3DNZ.html')
-"""
+
 
 @app.route('/timeline')
 def timeline():
