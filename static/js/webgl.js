@@ -25,7 +25,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 	function collectNZxyzData() {
 	    $.ajax({
 	        type: "GET",
-	        url: "final_points.csv",
+	        url: "static/js/final_points.csv",
 	        dataType: "text",
 	        success: function(data) { 
 	        	processData(data); 

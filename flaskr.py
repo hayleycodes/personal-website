@@ -71,6 +71,15 @@ def NZ():
     return render_template('3DNZ.html')
 
 
+@app.route('/presentations')
+def presentations():
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        return render_template('presentations.html')
+
+
+
 @app.route('/timeline')
 def timeline():
     return render_template('timeline.html')
@@ -131,7 +140,8 @@ def login():
         else:
             session['logged_in'] = True
             flash('You were logged in')
-            return redirect(url_for('show_entries'))
+            #return redirect(url_for('show_entries'))
+            return redirect(url_for('presentations'))
     return render_template('login.html', error=error)
 
 #logs out user
@@ -139,7 +149,8 @@ def login():
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
-    return redirect(url_for('show_entries'))
+    #return redirect(url_for('show_entries'))
+    return redirect(url_for('home'))
 
 
 
