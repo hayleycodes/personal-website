@@ -207,7 +207,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 		document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
 		//reacts to space bar and 'c' key press
-		document.addEventListener( 'keydown', function(){
+		document.addEventListener( event, function(){
         	switch (event.keyCode) {
 				case 32: //space bar
 					timeline = new TimelineMax();
