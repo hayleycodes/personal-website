@@ -123,7 +123,6 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 		colors = new Float32Array( numPoints*3 );
 
 		generateNZPositionsAndColors(positions,colors);
-		generatePoPPositionsAndColors(positions,colors);
 	
 		geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
 		geometry.addAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
