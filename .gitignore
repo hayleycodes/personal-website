@@ -5,3 +5,4 @@ compass_app_log.txt
 settings.cfg
 .sass-cacheset/
 setup.text
+static/presentations/*
