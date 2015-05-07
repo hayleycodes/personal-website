@@ -6,3 +6,4 @@ settings.cfg
 .sass-cacheset/
 setup.text
 static/presentations/*
+ENV/
