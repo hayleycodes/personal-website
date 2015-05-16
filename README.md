@@ -1,4 +1,4 @@
-#hayleyavw.com
+#[hayleyavw.com](http://www.hayleyavw.com)
 
 This is the code behind my personal website.
 Uses the Flask microframework, and Foundation for the responsive design.
@@ -14,8 +14,16 @@ To run flask:
 7. init_db #initialises the database
 8. python flasker.py #starts the server
 
+If the first steps do not work, then check out [this](http://stackoverflow.com/questions/3843981/how-come-i-can-not-
+activate-my-virtual-python-environment-with-source-env-bin-a) link.
 
-If the first steps do not work, then check out [this](http://stackoverflow.com/questions/3843981/how-come-i-can-not-activate-my-virtual-python-environment-with-source-env-bin-a) link.
+The site uses SASS for styling:
+
+1. cd into the static/ folder
+2. compass install compass --sass-dir "sass" --css-dir "stylesheets" --javascripts-dir "js" --images-dir "images" #makes sure the right files are watched, and that the output file is put in a separate folder
+3. compass watch
+
+
 
 To update the site:
 
