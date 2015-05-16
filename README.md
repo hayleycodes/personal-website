@@ -1,7 +1,7 @@
 #hayleyavw.com
 
 This is the code behind my personal website.
-Uses the Flask microframework.
+Uses the Flask microframework, and Foundation for the responsive design.
 
 To run flask:
 
