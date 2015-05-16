@@ -82,15 +82,39 @@
         </div>
     </div>
 
+{% if session.logged_in %}
 
-    
+            <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
+                Title
+                <textarea name="title"></textarea>
+                <br>
+                <br>
+                Text
+                <textarea name="text" rows="10"></textarea>
+                <input type="submit" value="Share">
+            </form>
 
-{% for entry in entries %}
+            {% for entry in entries %}
+                <!--change from view to edit post-->
+                <a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
+                <form action="/delete/{{ entry.id }}" method="post">
+                    <input type="submit" value="delete" />
+                </form>
+                <br>
+
+                {% else %}
+                    <em>Unbelievable. No entries here so far.</em>
+
+            {% endfor %}
+        
+        {% else %}
+            {% for entry in entries %}
                 <a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
                 <br>
                 {% else %}
                     <em>Unbelievable. No entries here so far.</em>
             {% endfor %}
+        {% endif %}
 
 {% endblock %}
         

@@ -11,6 +11,15 @@ To run flask:
 4. export FLASKR_SETTINGS=settings.cfg
 5. python flasker.py
 
+To include a database, after step 4:
+
+a. python
+b. from flaskr import init_db
+c. init_db
+
+
+
+
 If the first steps do not work, then check out [this](http://stackoverflow.com/questions/3843981/how-come-i-can-not-activate-my-virtual-python-environment-with-source-env-bin-a) link.
 
 To update the site:
