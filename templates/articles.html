@@ -1,153 +1,91 @@
-
-<!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
-
-    <head>
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>hayleyavw</title>
-        <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
-        <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
-        <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
-        <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
-        <link rel="stylesheet" href="../static/stylesheets/foundation.css"/>
-        <link rel="stylesheet" href="../static/stylesheets/stylesheet.css"/>
-        <script src="../static/js/modernizr.js"></script>
-
-    </head>
+{% extends "layout.html" %}
+{% block body %}
 
 
-    <body>
+        <!--ul class="button-group">
+            <li><a href="#" class="button">Nav Item 1</a></li>
+            <li><a href="#" class="button">Nav Item 2</a></li>
+            <li><a href="#" class="button">Nav Item 3</a></li>
+        </ul-->
 
         <div class="row">
 
-            <div class="large-12 columns">
+            <div class="large-6 columns">
 
-                <header>
+                <h3 class="show-for-small">Articles<hr/></h3>
 
-                <h1>Hayley van Waas</h1>
-
-                <a href="https://twitter.com/hayleyavw" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
-                    
-                
-                <a href="https://plus.google.com/u/0/+HayleyvanWaas/posts" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
-                </header>
-
-                <!--ul class="button-group">
-                    <li><a href="#" class="button">Nav Item 1</a></li>
-                    <li><a href="#" class="button">Nav Item 2</a></li>
-                    <li><a href="#" class="button">Nav Item 3</a></li>
-                </ul-->
+                <div class="panel">
+                    <h4 class="hide-for-small">Articles<hr/></h4>
+                    <h5 class="subheader">
+                        Below is an ever-growing collection of articles I've read and thought were worth sharing. Articles tend to be about tech, feminism, code, or just anything awesome. Always looking for new blogs, channels and podcasts - let me know if you find a good one!
+                    </h5>
+                </div>
 
                 <div class="row">
 
-                    <div class="large-6 columns">
-
-                        <h3 class="show-for-small">Articles<hr/></h3>
+                    <div class="large-6 small-6 columns">
 
                         <div class="panel">
-                            <h4 class="hide-for-small">Articles<hr/></h4>
-                            <h5 class="subheader">
-                                Below is an ever-growing collection of articles I've read and thought were worth sharing. Articles tend to be about tech, feminism, code, or just anything awesome. Always looking for new blogs, channels and podcasts - let me know if you find a good one!
-                            </h5>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="large-6 small-6 columns">
-
-                                <div class="panel">
-                                <h6 class="subheader">
-                                    Learn more about my technical side...
-                                </h6>
-                                <a href="#" class="small button">About Me</a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="large-6 small-6 columns">
-                            <div class="panel">
-                                <h6 class="subheader">
-                                    See what I've been up to lately...
-                                </h6>
-                                <a href="#" class="small button">Projects</a>
-                            </div>
-                        </div>
+                        <h6 class="subheader">
+                            Learn more about my technical side...
+                        </h6>
+                        <a href="#" class="small button">About Me</a>
 
                     </div>
+
                 </div>
 
-                 <div class="large-6 hide-for-small columns">
-                        <a class="twitter-timeline" href="https://twitter.com/hayleyavw" data-widget-id="599172629593923584">Tweets by @hayleyavw</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                    </div>
-            </div>
-
-
-            <div class="row">
-                <div class="large-3 small-6 columns">
-                    <img src="http://resources2.news.com.au/images/2015/05/11/1227350/906482-0430e634-f796-11e4-857f-b08ec264ced5.jpg">
+                <div class="large-6 small-6 columns">
                     <div class="panel">
-                        <p>Design and product engineers from Google Australia have helped develop a tablet device that allows Ebola medical workers in Africa to record patient information without spreading the deadly virus.</p>
+                        <h6 class="subheader">
+                            See what I've been up to lately...
+                        </h6>
+                        <a href="#" class="small button">Projects</a>
                     </div>
                 </div>
-                <div class="large-3 small-6 columns">
-                    <img src="http://tr1.cbsistatic.com/hub/i/2014/06/27/f3c56cc8-b733-4f9f-aca3-e863810ca89f/cleanslateistock13080622727x660062714.jpg">
-                    <div class="panel">
-                        <p>Tasmanian primary schools to roll out coding curriculum</p>
-                    </div>
-                </div>
-                <div class="large-3 small-6 columns">
-                    <img src="https://puppetlabs.com/sites/default/files/styles/blog_teaser/public/marni_at_velocity_conf.jpg?itok=RTh7dAGG">
-                    <div class="panel">
-                        <p>I Spoke About Feminism to a Buncha Dudes at a Tech Conf & it Was Actually Pretty Good</p>
-                    </div>
-                </div>
-                <div class="large-3 small-6 columns">
-                    <img src="http://www.codedoc.co/wordpress/wp-content/uploads/2014/08/Code_Press_Hopper_SM-539x480.jpg">
-                    <div class="panel">
-                        <p>CODE documentary | Debugging the Gender Gap</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <footer class="row">
-
-                <div class="large-12 columns"><hr/>
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <p>&copy; Copyright no one at all. Go to town.</p>
-                        </div>
-                        <div class="large-6 columns">
-                            <ul class="inline-list right">
-                                <li><a href="#">Link 1</a></li>
-                               <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                                <li><a href="#">Link 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </footer>
 
             </div>
-
         </div>
 
+         <div class="large-6 hide-for-small columns">
+                <a class="twitter-timeline" href="https://twitter.com/hayleyavw" data-widget-id="599172629593923584">Tweets by @hayleyavw</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-        <script src="../static/js/jquery.js"></script>
-        <script src="../static/js/foundation.min.js"></script>
+            </div>
+    </div>
 
-        <script>
-              $(document).foundation();
-              var doc = document.documentElement;
-              doc.setAttribute('data-useragent', navigator.userAgent);
-        </script>
-    </body>
-</html>
+
+    <div class="row">
+        <div class="large-3 small-6 columns">
+            <img src="http://resources2.news.com.au/images/2015/05/11/1227350/906482-0430e634-f796-11e4-857f-b08ec264ced5.jpg">
+            <div class="panel">
+                <p>Design and product engineers from Google Australia have helped develop a tablet device that allows Ebola medical workers in Africa to record patient information without spreading the deadly virus.</p>
+            </div>
+        </div>
+        <div class="large-3 small-6 columns">
+            <img src="http://tr1.cbsistatic.com/hub/i/2014/06/27/f3c56cc8-b733-4f9f-aca3-e863810ca89f/cleanslateistock13080622727x660062714.jpg">
+            <div class="panel">
+                <p>Tasmanian primary schools to roll out coding curriculum</p>
+            </div>
+        </div>
+        <div class="large-3 small-6 columns">
+            <img src="https://puppetlabs.com/sites/default/files/styles/blog_teaser/public/marni_at_velocity_conf.jpg?itok=RTh7dAGG">
+            <div class="panel">
+                <p>I Spoke About Feminism to a Buncha Dudes at a Tech Conf & it Was Actually Pretty Good</p>
+            </div>
+        </div>
+        <div class="large-3 small-6 columns">
+            <img src="http://www.codedoc.co/wordpress/wp-content/uploads/2014/08/Code_Press_Hopper_SM-539x480.jpg">
+            <div class="panel">
+                <p>CODE documentary | Debugging the Gender Gap</p>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    </div>
+
+{% endblock %}
+        

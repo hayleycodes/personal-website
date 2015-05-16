@@ -1,82 +1,22 @@
-*{
-
-	box-sizing: border-box;
-
+header {
+    background-color: #008cba;
+    padding: 50px;
 }
+
+
+header h1 {
+	color: #ffffff;
+}
+
 
 html {
-	background-color: #0B1337;
+	font-size: 20px;
 }
-
-.icon-button {
-		position: fixed;
-		left: 0;
-	}
-
-#container {
-	position: fixed;
-	left:0;
+body {
+	background-color: #ccc;
+	padding: 50px;
+	text-align: center;
 }
-
-
-
-.wrapper {
-
-	padding: 50px 20px;
-	width: 100%;
-	min-width: 300px;
-	max-width: 1000px;
-	margin: 0 auto;
-	font: normal 16px 'Goudy Old Style', serif;
-
-}
-
-
-.clearfix {
-
-	clear: both;
-
-}
-
-
-.fb-like {
-
-	float: right;
-
-}
-
-
-
-.twitter-share-button {
-
-	float: right;
-
-} 
-
-
-li.list {
-	list-style-type: circle;
-	margin-left: 19px;
-}
-
-
-
-@media only screen and (max-width: 480px) {
-
-	.wrapper {
-
- 		padding-top: 5px;
-
- 		section {
-
- 			padding-right: 10px;
-
-  		}
- 
- 	}
-
-}
-
 
 /* Wrapper */
 .icon-button {
@@ -158,4 +98,3 @@ li.list {
 .icon-button:hover .icon-google-plus {
 	color: white;
 }
-

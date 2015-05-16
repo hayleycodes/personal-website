@@ -51,11 +51,6 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/bj')
-def bj():
-    return render_template('victims.html')
-
-
 #@app.route('/blog')
 #def blog():
 #    return render_template('blog.html')
@@ -84,6 +79,9 @@ def presentations():
     else:
         return render_template('presentations.html')
 
+@app.route('/articles')
+def articles():
+    return render_template('articles.html')
 
 
 @app.route('/timeline')

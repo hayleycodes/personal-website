@@ -4,15 +4,22 @@
 
 
 <head>
-    <title>Hayley - Computer Scientist</title>
+    <title>hayleyavw</title>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Hayley van Waas, programmer, blog, gather workshops, computer science">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="Hayley van Waas, programmer, blog, gather workshops, computer science, feminist, tech, articles">
     <meta name="description" content="Website of Hayley van Waas, a computer scientist.">
     <meta name="author" content="Hayley van Waas">
+
     <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
+
     <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/foundation.css') }}">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+
 </head>
 
 <body>
@@ -26,42 +33,80 @@
   ga('send', 'pageview');
 
 </script>
-    <div class="wrapper">
+    <!--div class="wrapper">
         <header>
             <h1>Hayley van Waas</h1>
             <nav>
-                <a href="{{ url_for('home') }}">home </a>
-                <!--a href="{{ url_for('show_entries') }}">blog </a-->
                 <a href="{{ url_for('projects') }}">projects </a>
                 <a href="{{ url_for('contactform') }}">contact me </a>
             </nav>
             <div class="clearfix"></div>
-        </header>
-        <div id="container">
-            <aside>
-                <a href="https://twitter.com/hayleyavw" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
-                <br>
-                <a href="https://plus.google.com/u/0/+HayleyvanWaas/posts" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
-            </aside>
-        </div>
+        </header-->
+
+
+    <div class="row">
+
+            <div class="large-12 columns">
+
+                <header>
+
+                    <h1>Hayley van Waas</h1>
+
+                    <a href="https://twitter.com/hayleyavw" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+                        
+                    
+                    <a href="https://plus.google.com/u/0/+HayleyvanWaas/posts" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+                
+                </header>
+        
 
         {% block body %}{% endblock %}
 
 
-        <footer>
-          &#169; Hayley van Waas 2014
-        </footer>
+          <!--&#169; Hayley van Waas 2014-->
+        <footer class="row">
+
+                <div class="large-12 columns"><hr/>
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <p>&copy; Copyright no one at all. Go to town.</p>
+                        </div>
+                        <div class="large-6 columns">
+                            <ul class="inline-list right">
+                                <li><a href="#">Link 1</a></li>
+                               <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
 
 
 
-    </div> <!-- .wrapper -->
+            </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script>
+
+        <script>
+              $(document).foundation();
+              var doc = document.documentElement;
+              doc.setAttribute('data-useragent', navigator.userAgent);
+        </script>
+
+        <script src="{{ url_for('static', filename='js/animate.js') }}"></script>
 
         
 </body>
 
 
 
-<script src="{{ url_for('static', filename='js/animate.js') }}"></script>
+
 
 
 
