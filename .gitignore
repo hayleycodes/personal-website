@@ -7,3 +7,4 @@ settings.cfg
 setup.text
 static/presentations/*
 ENV/
+*DS_Store

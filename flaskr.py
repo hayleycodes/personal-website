@@ -1,6 +1,7 @@
 #all the imports
 #import sqlite3
-from sqlite3 import dbapi2 as sqlite3
+
+#from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from contextlib import closing
 
@@ -10,35 +11,35 @@ app.config.from_object(__name__)
 app.config.from_envvar('FLASKR_SETTINGS')
 
 #connect to database
-def connect_db():
-    rv = sqlite3.connect(app.config['DATABASE'])
-    rv.row_factory = sqlite3.Row
-    return rv
-    #return sqlite3.connect(app.config['DATABASE'])
+#def connect_db():
+#    rv = sqlite3.connect(app.config['DATABASE'])
+#    rv.row_factory = sqlite3.Row
+#    return rv
+#    #return sqlite3.connect(app.config['DATABASE'])
 
 #initialises database
-def init_db():
-    with closing(connect_db()) as db:
-        with app.open_resource('schema.sql', mode='r') as f:
-            db.cursor().executescript(f.read())
-        db.commit()
-
-def get_db():
-    if not hasattr(g, 'sqlite_db'):
-        g.sqlite_db = connect_db()
-    return g.sqlite_db
+#def init_db():
+#    with closing(connect_db()) as db:
+#        with app.open_resource('schema.sql', mode='r') as f:
+#            db.cursor().executescript(f.read())
+#        db.commit()
+#
+#def get_db():
+#    if not hasattr(g, 'sqlite_db'):
+#        g.sqlite_db = connect_db()
+#    return g.sqlite_db
 
 
 #runs before each request
-@app.before_request
-def before_request():
-    g.db = connect_db()
-
-@app.teardown_request
-def teardown_request(exception):
-    db = getattr(g, 'db', None)
-    if db is not None:
-        db.close()
+#@app.before_request
+#def before_request():
+#    g.db = connect_db()
+#
+#@app.teardown_request
+#def teardown_request(exception):
+#    db = getattr(g, 'db', None)
+#    if db is not None:
+#        db.close()
 
 
 @app.errorhandler(404)
@@ -48,6 +49,11 @@ def page_not_found(e):
 @app.route('/')
 def home():
     return render_template('home.html')
+
+
+@app.route('/bj')
+def bj():
+    return render_template('victims.html')
 
 
 #@app.route('/blog')
