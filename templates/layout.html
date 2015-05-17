@@ -33,21 +33,11 @@
   ga('send', 'pageview');
 
 </script>
-    <!--div class="wrapper">
-        <header>
-            <h1>Hayley van Waas</h1>
-            <nav>
-                <a href="{{ url_for('projects') }}">projects </a>
-                <a href="{{ url_for('contactform') }}">contact me </a>
-            </nav>
-            <div class="clearfix"></div>
-        </header-->
-
 
     <div class="row">
 
             <div class="large-12 columns">
-
+                <a href="{{ url_for('articles') }}">
                 <header>
 
                     <h1>Hayley van Waas</h1>
@@ -55,6 +45,7 @@
                     <a href="https://twitter.com/hayleyavw" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
                     <a href="https://plus.google.com/u/0/+HayleyvanWaas/posts" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
                 </header>
+                </a>
 
         {% block body %}{% endblock %}
 
@@ -65,14 +56,13 @@
                 <div class="large-12 columns"><hr/>
                     <div class="row">
                         <div class="large-6 columns">
-                            <p>&copy; Copyright no one at all. Go to town.</p>
+                            <p>&copy; Copyright Hayley van Waas</p>
                         </div>
                         <div class="large-6 columns">
                             <ul class="inline-list right">
-                                <li><a href="#">Link 1</a></li>
-                               <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                                <li><a href="#">Link 4</a></li>
+                                <li><a href="{{ url_for('about') }}">About Me</a></li>
+                                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                                <li><a href="{{ url_for('contactform') }}">Contact Me</a></li>
                             </ul>
                         </div>
                     </div>
@@ -97,13 +87,7 @@
 
         <script src="{{ url_for('static', filename='js/animate.js') }}"></script>
 
-        
 </body>
-
-
-
-
-
 
 
 </html>

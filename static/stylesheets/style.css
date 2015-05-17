@@ -15,7 +15,12 @@ header h1 {
   font-size: 20px;
 }
 
-/* line 18, ../sass/_base.scss */
+/* line 17, ../sass/_base.scss */
+h3, h4 {
+  font-weight: bold;
+}
+
+/* line 22, ../sass/_base.scss */
 body {
   background-color: #ccc;
   padding: 50px;
@@ -23,7 +28,7 @@ body {
 }
 
 /* Wrapper */
-/* line 25, ../sass/_base.scss */
+/* line 29, ../sass/_base.scss */
 .icon-button {
   background-color: white;
   border-radius: 3.6rem;
@@ -43,7 +48,7 @@ body {
 }
 
 /* Circle */
-/* line 44, ../sass/_base.scss */
+/* line 48, ../sass/_base.scss */
 .icon-button span {
   border-radius: 0;
   display: block;
@@ -59,7 +64,7 @@ body {
   width: 0;
 }
 
-/* line 58, ../sass/_base.scss */
+/* line 62, ../sass/_base.scss */
 .icon-button:hover span {
   width: 3.6rem;
   height: 3.6rem;
@@ -67,18 +72,18 @@ body {
   margin: -1.8rem;
 }
 
-/* line 64, ../sass/_base.scss */
+/* line 68, ../sass/_base.scss */
 .twitter span {
   background-color: #4099ff;
 }
 
-/* line 67, ../sass/_base.scss */
+/* line 71, ../sass/_base.scss */
 .google-plus span {
   background-color: #db5a3c;
 }
 
 /* Icons */
-/* line 72, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 .icon-button i {
   background: none;
   color: white;
@@ -95,22 +100,22 @@ body {
   z-index: 10;
 }
 
-/* line 87, ../sass/_base.scss */
+/* line 91, ../sass/_base.scss */
 .icon-button .icon-twitter {
   color: #4099ff;
 }
 
-/* line 90, ../sass/_base.scss */
+/* line 94, ../sass/_base.scss */
 .icon-button .icon-facebook {
   color: #3B5998;
 }
 
-/* line 93, ../sass/_base.scss */
+/* line 97, ../sass/_base.scss */
 .icon-button .icon-google-plus {
   color: #db5a3c;
 }
 
-/* line 96, ../sass/_base.scss */
+/* line 100, ../sass/_base.scss */
 .icon-button:hover .icon-twitter,
 .icon-button:hover .icon-facebook,
 .icon-button:hover .icon-google-plus {

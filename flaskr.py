@@ -51,9 +51,9 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-@app.route('/')
-def home():
-    return render_template('home.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 # @app.route('/blog')
@@ -78,9 +78,9 @@ def NZ():
     return render_template('3DNZ.html')
 
 
-@app.route('/articles')
+@app.route('/')
 def articles():
-    return render_template('articles.html')
+    return redirect(url_for('show_entries'))
 
 
 @app.route('/timeline')
@@ -157,7 +157,7 @@ def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     # return redirect(url_for('show_entries'))
-    return redirect(url_for('home'))
+    return redirect(url_for('about'))
 
 
 # runs server
