@@ -49,59 +49,35 @@
 
          <div class="large-6 hide-for-small columns">
                 <a class="twitter-timeline" href="https://twitter.com/hayleyavw" data-widget-id="599172629593923584">Tweets by @hayleyavw</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
             </div>
     </div>
 
-
-    <div class="row">
-        <div class="large-3 small-6 columns">
-            <img src="http://resources2.news.com.au/images/2015/05/11/1227350/906482-0430e634-f796-11e4-857f-b08ec264ced5.jpg">
-            <div class="panel">
-                <p>Design and product engineers from Google Australia have helped develop a tablet device that allows Ebola medical workers in Africa to record patient information without spreading the deadly virus.</p>
-            </div>
-        </div>
-        <div class="large-3 small-6 columns">
-            <img src="http://tr1.cbsistatic.com/hub/i/2014/06/27/f3c56cc8-b733-4f9f-aca3-e863810ca89f/cleanslateistock13080622727x660062714.jpg">
-            <div class="panel">
-                <p>Tasmanian primary schools to roll out coding curriculum</p>
-            </div>
-        </div>
-        <div class="large-3 small-6 columns">
-            <img src="https://puppetlabs.com/sites/default/files/styles/blog_teaser/public/marni_at_velocity_conf.jpg?itok=RTh7dAGG">
-            <div class="panel">
-                <p>I Spoke About Feminism to a Buncha Dudes at a Tech Conf & it Was Actually Pretty Good</p>
-            </div>
-        </div>
-        <div class="large-3 small-6 columns">
-            <img src="http://www.codedoc.co/wordpress/wp-content/uploads/2014/08/Code_Press_Hopper_SM-539x480.jpg">
-            <div class="panel">
-                <p>CODE documentary | Debugging the Gender Gap</p>
-            </div>
-        </div>
-    </div>
-
-{% if session.logged_in %}
-
+    {% if session.logged_in %}
+            <div class="large-6 small-6 columns">
             <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
-                Title
-                <textarea name="title"></textarea>
-                <br>
-                <br>
-                Text
-                <textarea name="image" rows="2"></textarea>
-                <textarea name="link" rows="2"></textarea>
+                Title: <textarea name="title"></textarea>
+                Image url: <textarea name="image" rows="2"></textarea>
+                Link: <textarea name="link" rows="2"></textarea>
                 <input type="submit" value="Share">
             </form>
+            </div>
 
             {% for entry in entries %}
                 <!--change from view to edit post-->
-                <a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
-                <form action="/delete/{{ entry.id }}" method="post">
-                    <input type="submit" value="delete" />
-                </form>
-                <br>
+                <div class="large-3 small-6 columns">
+                    <a href="/viewpost/{{ entry.id}}">
+                        <img src="{{ entry.image }}">
+                        <div class="panel">
+                            <p>{{ entry.title }}</p>
+                        </div>
+                    </a>
+                    <form action="/delete/{{ entry.id }}" method="post">
+                        <input type="submit" value="delete" />
+                    </form>
+                </div>
+                <!--a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a-->
 
                 {% else %}
                     <em>Unbelievable. No entries here so far.</em>
@@ -109,14 +85,14 @@
             {% endfor %}
 
 
-
         {% else %}
+
         <div class="row">
             {% for entry in entries %}
                 <div class="large-3 small-6 columns">
                     <img src="{{ entry.image }}">
                     <div class="panel">
-                        <a href="{{ entry.link }}"><p>{{ entry.title }}</p></a>
+                        <a target="_blank" href="{{ entry.link }}"><p>{{ entry.title }}</p></a>
                     </div>
                 </div>
             {% endfor %}

@@ -1,5 +1,3 @@
-<!--drop table entries;-->
-
 create table if not exists entries (
     id integer primary key autoincrement,
     title text not null,

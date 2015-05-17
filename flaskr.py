@@ -115,12 +115,10 @@ def add_entry():
 
 @app.route('/edit', methods=['POST'])
 def edit_entry():
-    print('here')
     if not session.get('logged_in'):
         abort(401)
-    print('here')
-    g.db.execute('UPDATE entries SET title = ?, image = ?, link = ? WHERE id == ?',
-                 [request.form['title'], request.form['image'], request.form['link'], request.form['id']])
+    print(request.form['id'])
+    g.db.execute('UPDATE entries SET title = ?, image = ?, link = ? WHERE id == 1', [request.form['title'], request.form['image'], request.form['link']])
     g.db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))

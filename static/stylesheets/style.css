@@ -2,19 +2,20 @@
 header {
   background-color: #008cba;
   padding: 50px;
+  margin-bottom: 40px;
 }
 
-/* line 7, ../sass/_base.scss */
+/* line 8, ../sass/_base.scss */
 header h1 {
   color: #ffffff;
 }
 
-/* line 12, ../sass/_base.scss */
-html {
+/* line 13, ../sass/_base.scss */
+.subheader {
   font-size: 20px;
 }
 
-/* line 15, ../sass/_base.scss */
+/* line 18, ../sass/_base.scss */
 body {
   background-color: #ccc;
   padding: 50px;
@@ -22,7 +23,7 @@ body {
 }
 
 /* Wrapper */
-/* line 22, ../sass/_base.scss */
+/* line 25, ../sass/_base.scss */
 .icon-button {
   background-color: white;
   border-radius: 3.6rem;
@@ -42,7 +43,7 @@ body {
 }
 
 /* Circle */
-/* line 41, ../sass/_base.scss */
+/* line 44, ../sass/_base.scss */
 .icon-button span {
   border-radius: 0;
   display: block;
@@ -58,7 +59,7 @@ body {
   width: 0;
 }
 
-/* line 55, ../sass/_base.scss */
+/* line 58, ../sass/_base.scss */
 .icon-button:hover span {
   width: 3.6rem;
   height: 3.6rem;
@@ -66,14 +67,9 @@ body {
   margin: -1.8rem;
 }
 
-/* line 61, ../sass/_base.scss */
+/* line 64, ../sass/_base.scss */
 .twitter span {
   background-color: #4099ff;
-}
-
-/* line 64, ../sass/_base.scss */
-.facebook span {
-  background-color: #3B5998;
 }
 
 /* line 67, ../sass/_base.scss */
@@ -127,57 +123,56 @@ header {
 }
 /* line 5, ../sass/_header.scss */
 header h1 {
-  float: left;
   display: inline-block;
   font-size: 40px;
   margin-top: 20px;
 }
-/* line 14, ../sass/_header.scss */
+/* line 13, ../sass/_header.scss */
 header nav {
   float: right;
   color: white;
   text-align: right;
   margin-top: 20px;
 }
-/* line 21, ../sass/_header.scss */
+/* line 20, ../sass/_header.scss */
 header nav a {
   display: block;
   color: white;
   text-decoration: none;
   font-size: 20px;
 }
-/* line 28, ../sass/_header.scss */
+/* line 27, ../sass/_header.scss */
 header nav a:hover {
   font-weight: bold;
 }
-/* line 34, ../sass/_header.scss */
+/* line 33, ../sass/_header.scss */
 header nav a:visited {
   color: white;
 }
-/* line 40, ../sass/_header.scss */
+/* line 39, ../sass/_header.scss */
 header nav a::after {
   content: "\2192";
 }
 @media only screen and (max-width: 480px) {
-  /* line 52, ../sass/_header.scss */
+  /* line 51, ../sass/_header.scss */
   header h1 {
     float: none;
     text-align: center;
     display: block;
     font-size: 30px;
   }
-  /* line 61, ../sass/_header.scss */
+  /* line 60, ../sass/_header.scss */
   header nav {
     float: none;
     text-align: center;
   }
-  /* line 66, ../sass/_header.scss */
+  /* line 65, ../sass/_header.scss */
   header nav a {
     display: inline-block;
     padding-left: 10px;
     padding-bottom: 10px;
   }
-  /* line 72, ../sass/_header.scss */
+  /* line 71, ../sass/_header.scss */
   header nav a::after {
     content: "";
   }
