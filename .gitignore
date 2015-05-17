@@ -8,3 +8,4 @@ setup.text
 static/presentations/*
 ENV/
 *DS_Store
+*.swp

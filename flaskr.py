@@ -1,4 +1,4 @@
-#all the imports
+# all the imports
 import sqlite3
 from sqlite3 import dbapi2 as sqlite3
 
@@ -10,29 +10,34 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 app.config.from_envvar('FLASKR_SETTINGS')
 
-#connect to database
+
+# connect to database
 def connect_db():
     rv = sqlite3.connect(app.config['DATABASE'])
     rv.row_factory = sqlite3.Row
     return rv
-    #return sqlite3.connect(app.config['DATABASE'])
+    # return sqlite3.connect(app.config['DATABASE'])
 
-#initialises database
+
+# initialises database
 def init_db():
     with closing(connect_db()) as db:
         with app.open_resource('schema.sql', mode='r') as f:
             db.cursor().executescript(f.read())
         db.commit()
 
+
 def get_db():
     if not hasattr(g, 'sqlite_db'):
         g.sqlite_db = connect_db()
     return g.sqlite_db
 
-#runs before each request
+
+# runs before each request
 @app.before_request
 def before_request():
     g.db = connect_db()
+
 
 @app.teardown_request
 def teardown_request(exception):
@@ -45,14 +50,15 @@ def teardown_request(exception):
 def page_not_found(e):
     return render_template('404.html'), 404
 
+
 @app.route('/')
 def home():
     return render_template('home.html')
 
 
-#@app.route('/blog')
-#def blog():
-#    return render_template('blog.html')
+# @app.route('/blog')
+# def blog():
+#     return render_template('blog.html')
 
 @app.route('/articles')
 def show_entries():
@@ -60,6 +66,7 @@ def show_entries():
     cur = db.execute('SELECT * FROM entries ORDER BY id DESC')
     entries = cur.fetchall()
     return render_template('articles.html', entries=entries)
+
 
 @app.route('/projects')
 def projects():
@@ -89,18 +96,18 @@ def contactform():
 @app.route('/viewpost/<postID>')
 def viewpost(postID):
     db = get_db()
-    cur = db.execute('SELECT id, title, text FROM entries WHERE id = ?', [postID])
+    cur = db.execute('SELECT id, title, image, link FROM entries WHERE id = ?', [postID])
     post = cur.fetchone()
     return render_template('viewpost.html', post=post)
 
 
-#adds users entered data to database
+# adds users entered data to database
 @app.route('/add', methods=['POST'])
 def add_entry():
     if not session.get('logged_in'):
         abort(401)
-    g.db.execute('INSERT INTO entries (title, text) VALUES (?, ?)',
-                 [request.form['title'], request.form['text']])
+    g.db.execute('INSERT INTO entries (title, image, link) VALUES (?, ?, ?)',
+                 [request.form['title'], request.form['image'], request.form['link']])
     g.db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
@@ -112,8 +119,8 @@ def edit_entry():
     if not session.get('logged_in'):
         abort(401)
     print('here')
-    g.db.execute('UPDATE entries SET title = ?, text = ? WHERE id == ?',
-                 [request.form['title'], request.form['text'], request.form['id']])
+    g.db.execute('UPDATE entries SET title = ?, image = ?, link = ? WHERE id == ?',
+                 [request.form['title'], request.form['image'], request.form['link'], request.form['id']])
     g.db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
@@ -127,10 +134,10 @@ def delete_entry(postID):
     g.db.commit()
     flash('Entry was deleted')
     return redirect(url_for('show_entries'))
-    #return render_template('blog.html')
+    # return render_template('blog.html')
 
 
-#logs in users
+# logs in users
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
@@ -146,16 +153,15 @@ def login():
     return render_template('login.html', error=error)
 
 
-#logs out user
+# logs out user
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
-    #return redirect(url_for('show_entries'))
+    # return redirect(url_for('show_entries'))
     return redirect(url_for('home'))
 
 
-
-#runs server
+# runs server
 if __name__ == '__main__':
     app.run()

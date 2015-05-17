@@ -1,5 +1,8 @@
+<!--drop table entries;-->
+
 create table if not exists entries (
-	id integer primary key autoincrement,
-	title text not null,
-	text text not null
+    id integer primary key autoincrement,
+    title text not null,
+    image text not null,
+    link text not null
 );

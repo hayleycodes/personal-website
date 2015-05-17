@@ -90,7 +90,8 @@
                 <br>
                 <br>
                 Text
-                <textarea name="text" rows="10"></textarea>
+                <textarea name="image" rows="2"></textarea>
+                <textarea name="link" rows="2"></textarea>
                 <input type="submit" value="Share">
             </form>
 
@@ -106,15 +107,21 @@
                     <em>Unbelievable. No entries here so far.</em>
 
             {% endfor %}
-        
+
+
+
         {% else %}
+        <div class="row">
             {% for entry in entries %}
-                <a href="/viewpost/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
-                <br>
-                {% else %}
-                    <em>Unbelievable. No entries here so far.</em>
+                <div class="large-3 small-6 columns">
+                    <img src="{{ entry.image }}">
+                    <div class="panel">
+                        <a href="{{ entry.link }}"><p>{{ entry.title }}</p></a>
+                    </div>
+                </div>
             {% endfor %}
+        </div>
         {% endif %}
 
 {% endblock %}
-        
+
