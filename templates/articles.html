@@ -87,7 +87,8 @@
 
         {% else %}
 
-        <div class="row">
+
+        <div class="row">        
             {% for entry in entries %}
                 <div class="large-3 small-6 columns">
                     <img src="{{ entry.image }}">
@@ -97,6 +98,7 @@
                 </div>
             {% endfor %}
         </div>
+
         {% endif %}
 
 {% endblock %}
