@@ -1,22 +1,54 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<section>
 
-    <h2>
-        Projects and Events
-    </h2>
+    <div class="row">
 
-    <p>
-        The timeline below shows a few of the projects I have been involved with and the events I have been to over the last couple of years.
-        <br>
-            If you would like to know more about a particular project, feel free to <a href="contactform">contact me</a> ☺
-    </p>
+        <div class="large-6 small-6 columns">
+
+            <div class="panel">
+                <h6 class="subheader">
+                    Learn more about my technical side...
+                </h6>
+                <a href="{{ url_for('about') }}" class="small button">About Me</a>
+            </div>
+
+        </div>
+
+        <div class="large-6 small-6 columns">
+
+            <div class="panel">
+                <h6 class="subheader">
+                    A diverse collection of tech articles...
+                </h6>
+                <a href="{{ url_for('articles') }}" class="small button">Articles</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="radius panel">
+                <h2>
+                    Projects and Events
+                </h2>
+
+                <p>
+                    The timeline below shows a few of the projects I have been involved with and the events I have been to over the last couple of years.
+                    <br>
+                        If you would like to know more about a particular project, feel free to <a href="contactform">contact me</a> ☺
+                </p>
+            </div>
+        </div>
+    </div>
+
 
     <h5>Today</h5>
 
     <section id="cd-timeline" class="cd-container">
-
         <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-picture">
             </div>
@@ -239,5 +271,4 @@
 
     </section>
     <h5>January 2014</h5> 
-</section>
 {% endblock %}

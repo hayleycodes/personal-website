@@ -236,10 +236,9 @@ footer {
 section, .entries {
   border-radius: 8px;
   border: 0px solid;
-  background-color: #E6E2DB;
   padding: 0px 0px 20px 15px;
 }
-/* line 8, ../sass/_sections.scss */
+/* line 7, ../sass/_sections.scss */
 section img, .entries img {
   display: block;
   width: 310px;
@@ -248,18 +247,18 @@ section img, .entries img {
   border-radius: 15px;
   border: white 0px solid;
 }
-/* line 19, ../sass/_sections.scss */
+/* line 18, ../sass/_sections.scss */
 section p, .entries p {
   display: block;
 }
-/* line 25, ../sass/_sections.scss */
+/* line 24, ../sass/_sections.scss */
 section aside, .entries aside {
   float: right;
   padding-top: 12px;
   padding-right: 0px;
   text-align: right;
 }
-/* line 34, ../sass/_sections.scss */
+/* line 33, ../sass/_sections.scss */
 section a, .entries a {
   display: inline-block;
   color: white;
@@ -267,32 +266,32 @@ section a, .entries a {
   font-weight: bold;
   color: #0B1337;
 }
-/* line 42, ../sass/_sections.scss */
+/* line 41, ../sass/_sections.scss */
 section a:hover, .entries a:hover {
   font-weight: bold;
   text-decoration: underline;
 }
-/* line 51, ../sass/_sections.scss */
+/* line 50, ../sass/_sections.scss */
 section li, .entries li {
   list-style-type: none;
   padding-right: 10px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 61, ../sass/_sections.scss */
+  /* line 60, ../sass/_sections.scss */
   section img, .entries img {
     width: 0px;
   }
-  /* line 67, ../sass/_sections.scss */
+  /* line 66, ../sass/_sections.scss */
   section section, .entries section {
     padding: 0 0px;
   }
-  /* line 73, ../sass/_sections.scss */
+  /* line 72, ../sass/_sections.scss */
   section a, .entries a {
     font-size: 15px;
   }
 }
 
-/* line 81, ../sass/_sections.scss */
+/* line 80, ../sass/_sections.scss */
 section {
   padding-top: 15px;
   padding-left: 25px;
@@ -353,7 +352,7 @@ h5 {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #0B1337;
+  background: #0B8CBA;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -428,7 +427,7 @@ h5 {
 
 /* line 98, ../sass/_timeline.scss */
 .cd-timeline-img.cd-picture {
-  background: #0B1337;
+  background: #0B8CBA;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -514,7 +513,7 @@ h5 {
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #0B1337;
+  box-shadow: 0 3px 0 #0B8CBA;
 }
 
 /* line 208, ../sass/_timeline.scss */
@@ -526,7 +525,7 @@ h5 {
 
 /* line 215, ../sass/_timeline.scss */
 .cd-timeline-content h2 {
-  color: #0B1337;
+  color: #0B8CBA;
 }
 
 /* line 220, ../sass/_timeline.scss */
@@ -627,14 +626,15 @@ h5 {
     top: 6px;
     font-size: 16px;
     font-size: 1rem;
+    text-align: left;
   }
 
-  /* line 316, ../sass/_timeline.scss */
+  /* line 317, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
   }
 
-  /* line 320, ../sass/_timeline.scss */
+  /* line 321, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
     top: 24px;
     left: auto;
@@ -643,24 +643,24 @@ h5 {
     border-right-color: white;
   }
 
-  /* line 328, ../sass/_timeline.scss */
+  /* line 329, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
   }
 
-  /* line 332, ../sass/_timeline.scss */
+  /* line 333, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
     right: 122%;
     text-align: right;
   }
 
-  /* line 338, ../sass/_timeline.scss */
+  /* line 339, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-content.is-hidden {
     visibility: hidden;
   }
 
-  /* line 342, ../sass/_timeline.scss */
+  /* line 343, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-content.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-2 0.6s;
@@ -670,7 +670,7 @@ h5 {
 }
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  /* line 355, ../sass/_timeline.scss */
+  /* line 356, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
