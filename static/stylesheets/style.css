@@ -229,7 +229,6 @@ footer {
   height: 110px;
   font: normal 15px 'Century Gothic', sans-serif;
   color: white;
-  text-align: center;
 }
 
 /* line 1, ../sass/_sections.scss */
@@ -414,24 +413,23 @@ h5 {
   left: 0;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   margin-left: 5px;
   margin-top: 20px;
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
-/* line 93, ../sass/_timeline.scss */
+/* line 92, ../sass/_timeline.scss */
 .cd-date {
   margin-top: 10px;
 }
 
-/* line 98, ../sass/_timeline.scss */
+/* line 97, ../sass/_timeline.scss */
 .cd-timeline-img.cd-picture {
   background: #0B8CBA;
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 105, ../sass/_timeline.scss */
+  /* line 104, ../sass/_timeline.scss */
   .cd-timeline-img {
     width: 40px;
     height: 40px;
@@ -442,12 +440,12 @@ h5 {
     -webkit-backface-visibility: hidden;
   }
 
-  /* line 115, ../sass/_timeline.scss */
+  /* line 114, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-img.is-hidden {
     visibility: hidden;
   }
 
-  /* line 119, ../sass/_timeline.scss */
+  /* line 118, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-img.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-1 0.6s;
@@ -506,67 +504,65 @@ h5 {
     transform: scale(1);
   }
 }
-/* line 198, ../sass/_timeline.scss */
+/* line 197, ../sass/_timeline.scss */
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
   background: white;
-  border-radius: 0.25em;
   padding: 1em;
   box-shadow: 0 3px 0 #0B8CBA;
 }
 
-/* line 208, ../sass/_timeline.scss */
+/* line 206, ../sass/_timeline.scss */
 .cd-timeline-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 215, ../sass/_timeline.scss */
+/* line 213, ../sass/_timeline.scss */
 .cd-timeline-content h2 {
   color: #0B8CBA;
 }
 
-/* line 220, ../sass/_timeline.scss */
+/* line 218, ../sass/_timeline.scss */
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
   font-size: 0.8125rem;
 }
 
-/* line 226, ../sass/_timeline.scss */
+/* line 224, ../sass/_timeline.scss */
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
 
-/* line 231, ../sass/_timeline.scss */
+/* line 229, ../sass/_timeline.scss */
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.6;
 }
 
-/* line 237, ../sass/_timeline.scss */
+/* line 235, ../sass/_timeline.scss */
 .cd-timeline-content .cd-read-more {
   float: right;
   padding: .8em 1em;
   background: #acb7c0;
   color: white;
-  border-radius: 0.25em;
 }
 
-/* line 246, ../sass/_timeline.scss */
+/* line 243, ../sass/_timeline.scss */
 .no-touch .cd-timeline-content .cd-read-more:hover {
   background-color: #bac4cb;
 }
 
-/* line 251, ../sass/_timeline.scss */
+/* line 248, ../sass/_timeline.scss */
 .cd-timeline-content .cd-date {
   float: left;
   padding: .8em 0;
   opacity: .7;
 }
 
-/* line 258, ../sass/_timeline.scss */
+/* line 255, ../sass/_timeline.scss */
 .cd-timeline-content::before {
   content: '';
   position: absolute;
@@ -579,33 +575,33 @@ h5 {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 272, ../sass/_timeline.scss */
+  /* line 269, ../sass/_timeline.scss */
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 276, ../sass/_timeline.scss */
+  /* line 273, ../sass/_timeline.scss */
   .cd-timeline-content p {
     font-size: 16px;
     font-size: 1rem;
   }
 
-  /* line 280, ../sass/_timeline.scss */
+  /* line 277, ../sass/_timeline.scss */
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 14px;
     font-size: 0.875rem;
   }
 }
 @media only screen and (min-width: 1170px) {
-  /* line 290, ../sass/_timeline.scss */
+  /* line 287, ../sass/_timeline.scss */
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
     width: 45%;
   }
 
-  /* line 296, ../sass/_timeline.scss */
+  /* line 293, ../sass/_timeline.scss */
   .cd-timeline-content::before {
     top: 24px;
     left: 100%;
@@ -613,12 +609,12 @@ h5 {
     border-left-color: white;
   }
 
-  /* line 303, ../sass/_timeline.scss */
+  /* line 300, ../sass/_timeline.scss */
   .cd-timeline-content .cd-read-more {
     float: left;
   }
 
-  /* line 307, ../sass/_timeline.scss */
+  /* line 304, ../sass/_timeline.scss */
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
@@ -629,12 +625,12 @@ h5 {
     text-align: left;
   }
 
-  /* line 317, ../sass/_timeline.scss */
+  /* line 314, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
   }
 
-  /* line 321, ../sass/_timeline.scss */
+  /* line 318, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
     top: 24px;
     left: auto;
@@ -643,24 +639,24 @@ h5 {
     border-right-color: white;
   }
 
-  /* line 329, ../sass/_timeline.scss */
+  /* line 326, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
   }
 
-  /* line 333, ../sass/_timeline.scss */
+  /* line 330, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
     right: 122%;
     text-align: right;
   }
 
-  /* line 339, ../sass/_timeline.scss */
+  /* line 336, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-content.is-hidden {
     visibility: hidden;
   }
 
-  /* line 343, ../sass/_timeline.scss */
+  /* line 340, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-content.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-2 0.6s;
@@ -670,7 +666,7 @@ h5 {
 }
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  /* line 356, ../sass/_timeline.scss */
+  /* line 353, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;

@@ -3,67 +3,69 @@
 {% block body %}
 
 
-<div class="row">
+    <div class="row">
 
-    <div class="large-8 columns">
+        <div class="large-8 columns">
 
-        <h3 class="show-for-small">About Me<hr/></h3>
+            <h3 class="show-for-small">About Me<hr/></h3>
 
-        <div class="panel">
-            <h4 class="hide-for-small">About Me<hr/></h4>
-            <h5 class="subheader">
-                Hi :) My name is Hayley and I am a programmer, nerd, tweeter, feminist and tech shirt enthusiast.
-            </h5>
-        </div>
+            <div class="panel">
+                <h4 class="hide-for-small">About Me<hr/></h4>
+                <h5 class="subheader">
+                    Hi :) My name is Hayley and I am a programmer, nerd, tweeter, feminist and tech shirt enthusiast.
+                </h5>
+            </div>
 
-        <div class="row">
+            <div class="row">
 
-            <div class="large-6 small-6 columns">
+                <div class="large-6 small-6 columns">
 
-                <div class="panel">
+                    <div class="panel">
 
-                    <h6 class="subheader">
-                        A diverse collection of tech articles...
-                    </h6>
-                    <a href="{{ url_for('articles') }}" class="small button">Articles</a>
+                        <h6 class="subheader">
+                            A diverse collection of tech articles...
+                        </h6>
+                        <a href="{{ url_for('articles') }}" class="small button">Articles</a>
+
+                    </div>
 
                 </div>
 
-            </div>
-
-            <div class="large-6 small-6 columns">
-                <div class="panel">
-                    <h6 class="subheader">
-                        See what I've been up to lately...
-                    </h6>
-                    <a href="{{ url_for('projects') }}" class="small button">Projects</a>
+                <div class="large-6 small-6 columns">
+                    <div class="panel">
+                        <h6 class="subheader">
+                            See what I've been up to lately...
+                        </h6>
+                        <a href="{{ url_for('projects') }}" class="small button">Projects</a>
+                    </div>
                 </div>
+
+            </div>
+        </div>
+
+        <div class="large-4 hide-for-small columns">
+            <img class="large-image" src="{{ url_for('static', filename='images/home/me2.jpg') }}" alt="Hayley van Waas">
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="large-12 columns">
+
+            <div class="radius panel">
+
+                <p>
+                    I have been programming for a few years now and have experience in Python, HTML, CSS, JavaScript, MySQL, PHP, Java... My first language was Python and it is still my preferred language, although I also enjoy working with JavaScript.
+                </p>
+                <p>
+                    Below is a brief description of my work, if you would like to view my official R&eacutesum&eacute, please <a href="contactform">contact me.</a>
+                </p>
             </div>
 
-        </div>
-    </div>
-
-    <div class="large-4 hide-for-small columns">
-        <img class="large-image" src="{{ url_for('static', filename='images/home/me2.jpg') }}" alt="Hayley van Waas">
-    </div>
-
-</div>
-
-
-
-<div class="row">
-    <div class="large-12 columns">
-        <div class="radius panel">
-
-        <p>
-            I have been programming for a few years now and have experience in Python, HTML, CSS, JavaScript, MySQL, PHP, Java... My first language was Python and it is still my preferred language, although I also enjoy working with JavaScript.
-        </p>
-        <p>
-            Below is a brief description of my work, if you would like to view my official R&eacutesum&eacute, please <a href="contactform">contact me.</a>
-        </p>
-    </div>
-    <div class="radius panel">
-        <h3>My skills...<hr/></h3>
+            <div class="radius panel">
+                <h3>My skills...<hr/></h3>
                 <h4>Version Control</h4>
                 <p>
                     Never will I work without a version control system again. These days I work with Git for all my projects, and will never go back.
@@ -80,10 +82,11 @@
                 <p>
                     I am very familiar with both MySQL and SQLite. I've mostly worked with SQLite because I love the simplicity, it is so easy to get up and and running quickly.
                 </p>
-        <br>
-    </div>
-    <div class="radius panel">
-        <h3>What I want to learn...<hr/></h3>
+                <br>
+            </div>
+
+            <div class="radius panel">
+                <h3>What I want to learn...<hr/></h3>
                 <h4>Data Visualisation</h4>
                 <p>
                     This is an area I have recently started exploring, having only recently completed a project using WebGL through the Three.js library for JavaScript. I hope to gain more experience in projects of this kind over the next few months.
@@ -96,23 +99,23 @@
                 <p>
                     After using Flask for this website I have discovered the potential of a framework to make development so much easier. There are plenty of these out there, and since Django seems to be one of the most popular python frameworks, I'm keen to try it out.
                 </p>
-        <br>
+                <br>
+            </div>
 
-    </div>
-    <div class="radius panel">
-        <h3>I've also had experience with...<hr/></h3>
+            <div class="radius panel">
+                <h3>I've also had experience with...<hr/></h3>
                 <h4>Teaching and Public Speaking</h4>
                 <p>
                     Teaching programming is something I absolutely love doing! I have taught plenty of different topics to a variety of age groups, primarily as a presenter for Gather Workhops.
-
                 </p>
-    </div>
+            </div>
 
-    <div class="radius panel">
-        <h3>When I'm not doing computer stuff...<hr/></h3>
-        <p>
-           Occassionally I decide it's time to find another hobby; the current phase includes skateboarding and nail art.
+            <div class="radius panel">
+                <h3>When I'm not doing computer stuff...<hr/></h3>
+                <p>
+                   Occassionally I decide it's time to find another hobby; the current phase includes skateboarding and nail art.
+            </div>
+        </div>
     </div>
-</div>
 
 {% endblock %}
