@@ -51,22 +51,17 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-@app.route('/about')
+@app.route('/')
 def about():
     return render_template('about.html')
 
 
-# @app.route('/blog')
-# def blog():
-#     return render_template('blog.html')
-
 @app.route('/articles')
-def show_entries():
+def articles():
     db = get_db()
     cur = db.execute('SELECT * FROM entries ORDER BY id DESC')
     entries = cur.fetchall()
     return render_template('articles.html', entries=entries)
-
 
 @app.route('/projects')
 def projects():
@@ -76,11 +71,6 @@ def projects():
 @app.route('/3dnz')
 def NZ():
     return render_template('3DNZ.html')
-
-
-@app.route('/')
-def articles():
-    return redirect(url_for('show_entries'))
 
 
 @app.route('/timeline')
@@ -110,7 +100,7 @@ def add_entry():
                  [request.form['title'], request.form['image'], request.form['link']])
     g.db.commit()
     flash('New entry was successfully posted')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('articles'))
 
 
 @app.route('/edit', methods=['POST'])
@@ -121,7 +111,7 @@ def edit_entry():
     g.db.execute('UPDATE entries SET title = ?, image = ?, link = ? WHERE id == 1', [request.form['title'], request.form['image'], request.form['link']])
     g.db.commit()
     flash('New entry was successfully posted')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('articles'))
 
 
 @app.route('/delete/<postID>', methods=['POST'])
@@ -131,7 +121,7 @@ def delete_entry(postID):
     g.db.execute('DELETE FROM entries WHERE id = ?', [postID])
     g.db.commit()
     flash('Entry was deleted')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('articles'))
     # return render_template('blog.html')
 
 
@@ -147,7 +137,7 @@ def login():
         else:
             session['logged_in'] = True
             flash('You were logged in')
-            return redirect(url_for('show_entries'))
+            return redirect(url_for('articles'))
     return render_template('login.html', error=error)
 
 
@@ -156,7 +146,7 @@ def login():
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
-    # return redirect(url_for('show_entries'))
+    # return redirect(url_for('articles'))
     return redirect(url_for('about'))
 
 
