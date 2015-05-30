@@ -5,22 +5,29 @@ header {
   margin-bottom: 30px;
 }
 
-/* line 8, ../sass/_base.scss */
+/*hides image for smaller display*/
+@media (max-width: 1025px) {
+  /* line 9, ../sass/_base.scss */
+  .large-image {
+    display: none;
+  }
+}
+/* line 14, ../sass/_base.scss */
 header h1 {
   color: #ffffff;
 }
 
-/* line 13, ../sass/_base.scss */
+/* line 19, ../sass/_base.scss */
 .subheader {
   font-size: 20px;
 }
 
-/* line 17, ../sass/_base.scss */
+/* line 23, ../sass/_base.scss */
 h3, h4 {
   font-weight: bold;
 }
 
-/* line 22, ../sass/_base.scss */
+/* line 28, ../sass/_base.scss */
 body {
   background-color: #ccc;
   /*padding: 50px;*/
@@ -28,7 +35,7 @@ body {
 }
 
 /* Wrapper */
-/* line 29, ../sass/_base.scss */
+/* line 35, ../sass/_base.scss */
 .icon-button {
   background-color: white;
   border-radius: 3.6rem;
@@ -48,7 +55,7 @@ body {
 }
 
 /* Circle */
-/* line 48, ../sass/_base.scss */
+/* line 54, ../sass/_base.scss */
 .icon-button span {
   border-radius: 0;
   display: block;
@@ -64,7 +71,7 @@ body {
   width: 0;
 }
 
-/* line 62, ../sass/_base.scss */
+/* line 68, ../sass/_base.scss */
 .icon-button:hover span {
   width: 3.6rem;
   height: 3.6rem;
@@ -72,18 +79,18 @@ body {
   margin: -1.8rem;
 }
 
-/* line 68, ../sass/_base.scss */
+/* line 74, ../sass/_base.scss */
 .twitter span {
   background-color: #4099ff;
 }
 
-/* line 71, ../sass/_base.scss */
+/* line 77, ../sass/_base.scss */
 .google-plus span {
   background-color: #db5a3c;
 }
 
 /* Icons */
-/* line 76, ../sass/_base.scss */
+/* line 82, ../sass/_base.scss */
 .icon-button i {
   background: none;
   color: white;
@@ -100,22 +107,22 @@ body {
   z-index: 10;
 }
 
-/* line 91, ../sass/_base.scss */
+/* line 97, ../sass/_base.scss */
 .icon-button .icon-twitter {
   color: #4099ff;
 }
 
-/* line 94, ../sass/_base.scss */
+/* line 100, ../sass/_base.scss */
 .icon-button .icon-facebook {
   color: #3B5998;
 }
 
-/* line 97, ../sass/_base.scss */
+/* line 103, ../sass/_base.scss */
 .icon-button .icon-google-plus {
   color: #db5a3c;
 }
 
-/* line 100, ../sass/_base.scss */
+/* line 106, ../sass/_base.scss */
 .icon-button:hover .icon-twitter,
 .icon-button:hover .icon-facebook,
 .icon-button:hover .icon-google-plus {

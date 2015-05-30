@@ -4,6 +4,12 @@ header {
     margin-bottom: 30px;
 }
 
+/*hides image for smaller display*/
+@media (max-width: 1025px) {
+    .large-image {
+        display: none;
+    }
+}
 
 header h1 {
     color: #ffffff;
