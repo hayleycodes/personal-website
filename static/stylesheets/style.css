@@ -23,7 +23,7 @@ h3, h4 {
 /* line 22, ../sass/_base.scss */
 body {
   background-color: #ccc;
-  padding: 50px;
+  /*padding: 50px;*/
   text-align: center;
 }
 
