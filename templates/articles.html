@@ -63,10 +63,9 @@
                 <input type="submit" value="Share">
             </form>
             </div>
-            <div data-equalizer>
             {% for entry in entries %}
                 <!--change from view to edit post-->
-                <div class="large-3 small-6 columns" data-equalizer-watch>
+                <div class="large-3 small-6 columns">
                     <a href="/viewpost/{{ entry.id}}">
                         <img src="{{ entry.image }}">
                         <div class="panel">
@@ -82,15 +81,14 @@
                 {% else %}
                     <em>Unbelievable. No entries here so far.</em>
 
-            {% endfor %}
-            </div>  
+            {% endfor %} 
 
         {% else %}
 
 
-        <div class="row">
+        <div class="row" data-equalizer>
             {% for entry in entries %}
-                <div class="large-3 small-6 columns">
+                <div class="large-3 small-6 columns" data-equalizer-watch>
                     <img src="{{ entry.image }}">
                     <div class="panel">
                         <a target="_blank" href="{{ entry.link }}"><p>{{ entry.title }}</p></a>
