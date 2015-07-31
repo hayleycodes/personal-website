@@ -6,13 +6,14 @@ Uses the Flask microframework, and Foundation for the responsive design.
 To run flask:
 
 1. sudo pip install virtualenv
-2. . venv/bin/activate #start the virtual environment #NOTE: if this does not work, try: . ENV/bin/activate
-3. pip install Flask
-4. export FLASKR_SETTINGS=settings.cfg #tells the application where to find the settings (username, password etc)
-5. python
-6. from flaskr import init_db  
-7. init_db #initialises the database
-8. python flasker.py #starts the server
+2. virtualenv venv
+3. . venv/bin/activate #start the virtual environment #NOTE: if this does not work, try: . ENV/bin/activate
+4. pip install Flask
+5. export FLASKR_SETTINGS=settings.cfg #tells the application where to find the settings (username, password etc)
+6. python
+7. from flaskr import init_db  
+8. init_db #initialises the database
+9. python flasker.py #starts the server
 
 If the first steps do not work, then check out [this](http://stackoverflow.com/questions/3843981/how-come-i-can-not-
 activate-my-virtual-python-environment-with-source-env-bin-a) link.
