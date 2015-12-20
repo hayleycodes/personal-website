@@ -53,101 +53,12 @@ def page_not_found(e):
 
 @app.route('/')
 def about():
-    return render_template('about.html')
+    return render_template('index.html')
 
 
-@app.route('/articles')
-def articles():
-    db = get_db()
-    cur = db.execute('SELECT * FROM entries ORDER BY id DESC')
-    entries = cur.fetchall()
-    return render_template('articles.html', entries=entries)
-
-@app.route('/projects')
-def projects():
-    return render_template('timeline.html')
-
-
-@app.route('/3dnz')
-def NZ():
-    return render_template('3DNZ.html')
-
-
-@app.route('/timeline')
-def timeline():
-    return render_template('timeline.html')
-
-
-@app.route('/contactform')
-def contactform():
-    return render_template('contactform.html')
-
-
-@app.route('/viewpost/<postID>')
-def viewpost(postID):
-    db = get_db()
-    cur = db.execute('SELECT id, title, image, link FROM entries WHERE id = ?', [postID])
-    post = cur.fetchone()
-    return render_template('viewpost.html', post=post)
-
-
-# adds users entered data to database
-@app.route('/add', methods=['POST'])
-def add_entry():
-    if not session.get('logged_in'):
-        abort(401)
-    g.db.execute('INSERT INTO entries (title, image, link) VALUES (?, ?, ?)',
-                 [request.form['title'], request.form['image'], request.form['link']])
-    g.db.commit()
-    flash('New entry was successfully posted')
-    return redirect(url_for('articles'))
-
-
-@app.route('/edit', methods=['POST'])
-def edit_entry():
-    if not session.get('logged_in'):
-        abort(401)
-    print(request.form['id'])
-    g.db.execute('UPDATE entries SET title = ?, image = ?, link = ? WHERE id == 1', [request.form['title'], request.form['image'], request.form['link']])
-    g.db.commit()
-    flash('New entry was successfully posted')
-    return redirect(url_for('articles'))
-
-
-@app.route('/delete/<postID>', methods=['POST'])
-def delete_entry(postID):
-    if not session.get('logged_in'):
-        abort(401)
-    g.db.execute('DELETE FROM entries WHERE id = ?', [postID])
-    g.db.commit()
-    flash('Entry was deleted')
-    return redirect(url_for('articles'))
-    # return render_template('blog.html')
-
-
-# logs in users
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != app.config['USERNAME']:
-            error = 'Invalid username'
-        elif request.form['password'] != app.config['PASSWORD']:
-            error = 'Invalid password'
-        else:
-            session['logged_in'] = True
-            flash('You were logged in')
-            return redirect(url_for('articles'))
-    return render_template('login.html', error=error)
-
-
-# logs out user
-@app.route('/logout')
-def logout():
-    session.pop('logged_in', None)
-    flash('You were logged out')
-    # return redirect(url_for('articles'))
-    return redirect(url_for('about'))
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 
 # runs server
