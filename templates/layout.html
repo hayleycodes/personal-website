@@ -11,12 +11,15 @@
 
         <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
 
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/foundation.css') }}">
+        <!--<link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/foundation.css') }}">-->
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/style.css') }}">
 
         <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
     </head>
 
     <body>
@@ -34,5 +37,8 @@
         {% block body %} {% endblock %}
 
     </body>
+    <footer>
+    <div>Icons made by <a href="http://www.flaticon.com/authors/elegant-themes" title="Elegant Themes">Elegant Themes</a>, <a href="http://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a>, <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
+    </footer>
 </html>

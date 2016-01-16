@@ -52,14 +52,26 @@ def page_not_found(e):
 
 
 @app.route('/')
-def about():
-    return render_template('index.html')
-
-
 @app.route('/index')
 def index():
     return render_template('index.html')
 
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 # runs server
 if __name__ == '__main__':

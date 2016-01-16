@@ -1,3 +1,11 @@
+.timeline-background {
+    background-color:white;
+    background-image: radial-gradient(closest-side, transparent 98%, #89ecda 99%),
+    radial-gradient(closest-side, transparent 98%, #89ecda 99%);
+    background-size:80px 80px;
+    background-position:0 0, 40px 40px;
+}
+
 h5 {
     font-size: 22px;
     text-align: center;

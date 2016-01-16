@@ -2,35 +2,42 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<div class="row">
-    <div class="large-12 columns">
-    <section id="panels">
-        <div id="panel-1" class="panel large-4 columns">
+<section id="home">
+
+    <section class="panels">
+        <div id="about-div" class="icon">
+            <a href="{{ url_for('about') }}"><img src="{{ url_for('static', filename='images/about_icon.png') }}" alt="about">
+            About</a>
         </div>
-        <div id="panel-2" class="panel large-4 columns">
+        <div id="projects-div" class="icon">
+            <a href="{{ url_for('projects') }}"><img src="{{ url_for('static', filename='images/projects_icon.png') }}" alt="projects">
+            Projects</a>
         </div>
-        <div id="panel-3" class="panel large-4 columns">
-        </div>
-        <div id="panel-4" class="panel large-4 columns">
-        </div>
-        <div id="panel-5" class="panel large-4 columns">
-        </div>
-        <div id="panel-6" class="panel large-4 columns">
-        </div>
-        <div id="panel-7" class="panel large-4 columns">
-        </div>
-        <div id="panel-8" class="panel large-4 columns">
-        </div>
-        <div id="panel-9" class="panel large-4 columns">
-        </div>
-        <div id="panel-10" class="panel large-4 columns">
-        </div>
-        <div id="panel-11" class="panel large-4 columns">
-        </div>
-        <div id="panel-12" class="panel large-4 columns">
+        <div id="timeline-div" class="icon">
+            <a href="{{ url_for('timeline') }}"><img src="{{ url_for('static', filename='images/timeline_icon.png') }}" alt="timeline">
+            Timeline</a>
         </div>
     </section>
-</div>
-</div>
+    <section id="heading">
+        <h1>HAYLEY VAN WAAS</h1>
+    </section>
+
+    <section class="panels">
+        <div id="twitter-div" class="icon">
+            <a href="https://www.twitter.com/hayleyavw"><img src="{{ url_for('static', filename='images/twitter_icon.png') }}" alt="twitter">
+            Twitter</a>
+        </div>
+        <div id="plus-div" class="icon">
+            <a href="https://plus.google.com/u/0/+HayleyvanWaas"><img src="{{ url_for('static', filename='images/g_plus_icon.png') }}" alt="G+">
+            Google Plus</a>
+
+        </div>
+        <div id="contact-div" class="icon">
+            <a href="{{ url_for('contact') }}"><img src="{{ url_for('static', filename='images/contact_icon.png') }}" alt="contact">
+            Contact</a>
+        </div>
+    </section>
+
+</section>
 
 {% endblock %}

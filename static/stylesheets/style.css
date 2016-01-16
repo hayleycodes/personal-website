@@ -1,74 +1,88 @@
-/* line 1, ../sass/_base.scss */
-#panels {
-  margin: 100px auto;
-  width: 90%;
+/* line 2, ../sass/_base.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 70px auto;
 }
 
-/* line 6, ../sass/_base.scss */
-.panel {
-  display: inline-block;
+/* line 2, ../sass/_home.scss */
+.home-background {
+  background-color: #89ECDA;
+}
+
+/* line 6, ../sass/_home.scss */
+.panels, h1 {
   width: 100%;
-  height: 300px;
-  background-color: grey;
+  text-align: center;
 }
 
-/* line 13, ../sass/_base.scss */
-#panel-1 {
-  background-color: blue;
+/* line 11, ../sass/_home.scss */
+.icon {
+  width: 30%;
+  height: 100px;
+  display: inline-block;
+  text-align: center;
 }
 
-/* line 17, ../sass/_base.scss */
-#panel-2 {
-  background-color: green;
+/* line 18, ../sass/_home.scss */
+.icon img {
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 21, ../sass/_base.scss */
-#panel-3 {
-  background-color: red;
+/* line 23, ../sass/_home.scss */
+.icon a {
+  margin-top: 10px;
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-/* line 25, ../sass/_base.scss */
-#panel-4 {
-  background-color: pink;
-}
-
-/* line 29, ../sass/_base.scss */
-#panel-5 {
-  background-color: orange;
-}
-
-/* line 33, ../sass/_base.scss */
-#panel-6 {
-  background-color: yellow;
-}
-
-/* line 37, ../sass/_base.scss */
-#panel-7 {
-  background-color: purple;
-}
-
-/* line 41, ../sass/_base.scss */
-#panel-8 {
-  background-color: light-blue;
+/* line 31, ../sass/_home.scss */
+#heading {
+  margin: 70px auto;
+  font-size: 50px;
+  color: #ff8e34;
+  width: 67.75%;
+  line-height: 0px;
+  padding: 0px;
+  border-top: 5px solid #1f375b;
+  border-bottom: 5px solid #1f375b;
 }
 
 /* line 1, ../sass/_footer.scss */
 footer {
+  text-align: center;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  padding-top: 40px;
+  padding-top: 100px;
   height: 110px;
-  font: normal 15px 'Century Gothic', sans-serif;
+  font-size: 10px;
   color: white;
 }
 
+/* line 1, ../sass/_about.scss */
+.about-background {
+  background: linear-gradient(135deg, #89ecda 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px), linear-gradient(225deg, #89ecda 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px) 0 64px;
+  background-color: #89ecda;
+  background-size: 64px 128px;
+}
+
 /* line 1, ../sass/_timeline.scss */
+.timeline-background {
+  background-color: white;
+  background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0) 98%, #89ecda 99%), radial-gradient(closest-side, rgba(0, 0, 0, 0) 98%, #89ecda 99%);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
+}
+
+/* line 9, ../sass/_timeline.scss */
 h5 {
   font-size: 22px;
   text-align: center;
 }
 
-/* line 7, ../sass/_timeline.scss */
+/* line 15, ../sass/_timeline.scss */
 #cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -76,7 +90,7 @@ h5 {
   margin-bottom: 2em;
 }
 
-/* line 14, ../sass/_timeline.scss */
+/* line 22, ../sass/_timeline.scss */
 #cd-timeline::before {
   /* this is the vertical line */
   content: '';
@@ -89,58 +103,58 @@ h5 {
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 28, ../sass/_timeline.scss */
+  /* line 36, ../sass/_timeline.scss */
   #cd-timeline {
     margin-top: 3em;
     margin-bottom: 3em;
   }
 
-  /* line 33, ../sass/_timeline.scss */
+  /* line 41, ../sass/_timeline.scss */
   #cd-timeline::before {
     left: 50%;
     margin-left: -2px;
   }
 }
-/* line 41, ../sass/_timeline.scss */
+/* line 49, ../sass/_timeline.scss */
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
 }
 
-/* line 47, ../sass/_timeline.scss */
+/* line 55, ../sass/_timeline.scss */
 .cd-timeline-block:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 54, ../sass/_timeline.scss */
+/* line 62, ../sass/_timeline.scss */
 .cd-timeline-block:first-child {
   margin-top: 0;
 }
 
-/* line 59, ../sass/_timeline.scss */
+/* line 67, ../sass/_timeline.scss */
 .cd-timeline-block:last-child {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 66, ../sass/_timeline.scss */
+  /* line 74, ../sass/_timeline.scss */
   .cd-timeline-block {
     margin: 4em 0;
   }
 
-  /* line 70, ../sass/_timeline.scss */
+  /* line 78, ../sass/_timeline.scss */
   .cd-timeline-block:first-child {
     margin-top: 0;
   }
 
-  /* line 74, ../sass/_timeline.scss */
+  /* line 82, ../sass/_timeline.scss */
   .cd-timeline-block:last-child {
     margin-bottom: 0;
   }
 }
-/* line 81, ../sass/_timeline.scss */
+/* line 89, ../sass/_timeline.scss */
 .cd-timeline-img {
   position: absolute;
   top: 0;
@@ -152,18 +166,18 @@ h5 {
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
-/* line 92, ../sass/_timeline.scss */
+/* line 100, ../sass/_timeline.scss */
 .cd-date {
   margin-top: 10px;
 }
 
-/* line 97, ../sass/_timeline.scss */
+/* line 105, ../sass/_timeline.scss */
 .cd-timeline-img.cd-picture {
   background: #0B8CBA;
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 104, ../sass/_timeline.scss */
+  /* line 112, ../sass/_timeline.scss */
   .cd-timeline-img {
     width: 40px;
     height: 40px;
@@ -174,12 +188,12 @@ h5 {
     -webkit-backface-visibility: hidden;
   }
 
-  /* line 114, ../sass/_timeline.scss */
+  /* line 122, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-img.is-hidden {
     visibility: hidden;
   }
 
-  /* line 118, ../sass/_timeline.scss */
+  /* line 126, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-img.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-1 0.6s;
@@ -238,7 +252,7 @@ h5 {
     transform: scale(1);
   }
 }
-/* line 197, ../sass/_timeline.scss */
+/* line 205, ../sass/_timeline.scss */
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
@@ -247,36 +261,36 @@ h5 {
   box-shadow: 0 3px 0 #0B8CBA;
 }
 
-/* line 206, ../sass/_timeline.scss */
+/* line 214, ../sass/_timeline.scss */
 .cd-timeline-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 213, ../sass/_timeline.scss */
+/* line 221, ../sass/_timeline.scss */
 .cd-timeline-content h2 {
   color: #0B8CBA;
 }
 
-/* line 218, ../sass/_timeline.scss */
+/* line 226, ../sass/_timeline.scss */
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
   font-size: 0.8125rem;
 }
 
-/* line 224, ../sass/_timeline.scss */
+/* line 232, ../sass/_timeline.scss */
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
 
-/* line 229, ../sass/_timeline.scss */
+/* line 237, ../sass/_timeline.scss */
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.6;
 }
 
-/* line 235, ../sass/_timeline.scss */
+/* line 243, ../sass/_timeline.scss */
 .cd-timeline-content .cd-read-more {
   float: right;
   padding: .8em 1em;
@@ -284,19 +298,19 @@ h5 {
   color: white;
 }
 
-/* line 243, ../sass/_timeline.scss */
+/* line 251, ../sass/_timeline.scss */
 .no-touch .cd-timeline-content .cd-read-more:hover {
   background-color: #bac4cb;
 }
 
-/* line 248, ../sass/_timeline.scss */
+/* line 256, ../sass/_timeline.scss */
 .cd-timeline-content .cd-date {
   float: left;
   padding: .8em 0;
   opacity: .7;
 }
 
-/* line 255, ../sass/_timeline.scss */
+/* line 263, ../sass/_timeline.scss */
 .cd-timeline-content::before {
   content: '';
   position: absolute;
@@ -309,33 +323,33 @@ h5 {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 269, ../sass/_timeline.scss */
+  /* line 277, ../sass/_timeline.scss */
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 273, ../sass/_timeline.scss */
+  /* line 281, ../sass/_timeline.scss */
   .cd-timeline-content p {
     font-size: 16px;
     font-size: 1rem;
   }
 
-  /* line 277, ../sass/_timeline.scss */
+  /* line 285, ../sass/_timeline.scss */
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 14px;
     font-size: 0.875rem;
   }
 }
 @media only screen and (min-width: 1170px) {
-  /* line 287, ../sass/_timeline.scss */
+  /* line 295, ../sass/_timeline.scss */
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
     width: 45%;
   }
 
-  /* line 293, ../sass/_timeline.scss */
+  /* line 301, ../sass/_timeline.scss */
   .cd-timeline-content::before {
     top: 24px;
     left: 100%;
@@ -343,12 +357,12 @@ h5 {
     border-left-color: white;
   }
 
-  /* line 300, ../sass/_timeline.scss */
+  /* line 308, ../sass/_timeline.scss */
   .cd-timeline-content .cd-read-more {
     float: left;
   }
 
-  /* line 304, ../sass/_timeline.scss */
+  /* line 312, ../sass/_timeline.scss */
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
@@ -359,12 +373,12 @@ h5 {
     text-align: left;
   }
 
-  /* line 314, ../sass/_timeline.scss */
+  /* line 322, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
   }
 
-  /* line 318, ../sass/_timeline.scss */
+  /* line 326, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
     top: 24px;
     left: auto;
@@ -373,24 +387,24 @@ h5 {
     border-right-color: white;
   }
 
-  /* line 326, ../sass/_timeline.scss */
+  /* line 334, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
   }
 
-  /* line 330, ../sass/_timeline.scss */
+  /* line 338, ../sass/_timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
     right: 122%;
     text-align: right;
   }
 
-  /* line 336, ../sass/_timeline.scss */
+  /* line 344, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-content.is-hidden {
     visibility: hidden;
   }
 
-  /* line 340, ../sass/_timeline.scss */
+  /* line 348, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-content.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-2 0.6s;
@@ -400,7 +414,7 @@ h5 {
 }
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  /* line 353, ../sass/_timeline.scss */
+  /* line 361, ../sass/_timeline.scss */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
@@ -508,4 +522,18 @@ h5 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+/* line 1, ../sass/_contact.scss */
+.contact-background {
+  background: linear-gradient(135deg, #FFFFFF 25%, transparent 25%) -50px 0, linear-gradient(225deg, #FFFFFF 25%, transparent 25%) -50px 0, linear-gradient(315deg, #FFFFFF 25%, transparent 25%), linear-gradient(45deg, #FFFFFF 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #89ecda;
+}
+
+/* line 1, ../sass/_projects.scss */
+.projects-background {
+  background-color: white;
+  background-image: radial-gradient(#89ecda 9px, rgba(0, 0, 0, 0) 10px), repeating-radial-gradient(#89ecda 0, #89ecda 4px, transparent 5px, transparent 20px, #89ecda 21px, #89ecda 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
 }
