@@ -1,8 +1,7 @@
 .projects-background {
     background-color:white;
-    background-image:
-        radial-gradient(#89ecda 9px, transparent 10px),
-        repeating-radial-gradient(#89ecda 0, #89ecda 4px, transparent 5px, transparent 20px, #89ecda 21px, #89ecda 25px, transparent 26px, transparent 50px);
-    background-size: 30px 30px, 90px 90px; 
-    background-position: 0 0;
+    background-image: radial-gradient(closest-side, transparent 98%, #89ecda 99%),
+    radial-gradient(closest-side, transparent 98%, #89ecda 99%);
+    background-size:80px 80px;
+    background-position:0 0, 40px 40px;
 }

@@ -1,7 +1,22 @@
+html {
+    background-color: #89ECDA;
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 70px auto;
 }
 
+.content {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFF;
+    opacity: 0.9;
+    width: 70%;
+    padding: 10px;
+    box-shadow: 0 0 20px 20px #FFF;
+}
 
+h2 {
+    color: #1f375b;
+}

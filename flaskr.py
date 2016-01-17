@@ -65,10 +65,6 @@ def about():
 def projects():
     return render_template('projects.html')
 
-@app.route('/timeline')
-def timeline():
-    return render_template('timeline.html')
-
 @app.route('/contact')
 def contact():
     return render_template('contact.html')

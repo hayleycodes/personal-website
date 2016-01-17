@@ -1,3 +1,6 @@
+
+$(document).ready(function () { $('html').hide().fadeIn(2000)});
+
 window.onload = function() {
     console.log("hi");
     var html_tag = document.getElementsByTagName("html")[0];
@@ -6,8 +9,6 @@ window.onload = function() {
         html_tag.className = "about-background";
     } else if (page_url.indexOf("projects") != -1) {
         html_tag.className = "projects-background";
-    } else if (page_url.indexOf("timeline") != -1) {
-        html_tag.className = "timeline-background";
     } else if (page_url.indexOf("contact") != -1) {
         html_tag.className = "contact-background";
     } else {
