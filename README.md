@@ -32,3 +32,6 @@ To update the site:
 2. cd into hayleyavw.com
 3. git pull origin
 4. touch tmp/restart.txt
+
+
+http://lea.verou.me/css3patterns/

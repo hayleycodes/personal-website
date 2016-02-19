@@ -2,6 +2,11 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<script>
+    var html_tag = document.getElementsByTagName("html")[0];
+    html_tag.className = "home-background";
+</script>
+
 <section id="home">
 
     <section class="panels">
@@ -24,11 +29,11 @@
 
     <section class="panels">
         <div id="twitter-div" class="icon">
-            <a href="https://www.twitter.com/hayleyavw"><img src="{{ url_for('static', filename='images/twitter_icon.png') }}" alt="twitter">
+            <a href="https://www.twitter.com/hayleyavw" target="_blank"><img src="{{ url_for('static', filename='images/twitter_icon.png') }}" alt="twitter">
             Twitter</a>
         </div>
         <div id="plus-div" class="icon">
-            <a href="https://plus.google.com/u/0/+HayleyvanWaas"><img src="{{ url_for('static', filename='images/g_plus_icon.png') }}" alt="G+">
+            <a href="https://plus.google.com/u/0/+HayleyvanWaas" target="_blank"><img src="{{ url_for('static', filename='images/g_plus_icon.png') }}" alt="G+">
             Google Plus</a>
 
         </div>

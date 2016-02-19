@@ -1,22 +1,4 @@
 
-$(document).ready(function () { $('html').hide().fadeIn(2000)});
-
-window.onload = function() {
-    console.log("hi");
-    var html_tag = document.getElementsByTagName("html")[0];
-    var page_url = window.location.href;
-    if (page_url.indexOf("about") != -1) {
-        html_tag.className = "about-background";
-    } else if (page_url.indexOf("projects") != -1) {
-        html_tag.className = "projects-background";
-    } else if (page_url.indexOf("contact") != -1) {
-        html_tag.className = "contact-background";
-    } else {
-        html_tag.className = "home-background";
-    }
-};
-
-
 jQuery(document).ready(function($){
     var $timeline_block = $(".cd-timeline-block");
 

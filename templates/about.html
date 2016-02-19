@@ -2,11 +2,18 @@
 {% extends "layout.html" %}
 {% block body %}
 
+{% include "header.html" %}
+
+<script>
+    var html_tag = document.getElementsByTagName("html")[0];
+    html_tag.className = "about-background";
+</script>
+
 <section id="about" class="content">
 
-    <h2>
+    <h3>
         About
-    </h2>
+    </h3>
 
     Place holder text! So much placeholder text!
     Place holder text! So much placeholder text!
@@ -24,6 +31,7 @@
     Place holder text! So much placeholder text!
     Place holder text! So much placeholder text!
     Place holder text! So much placeholder text!
+
 </section>
 
 {% endblock %}

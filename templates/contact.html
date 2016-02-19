@@ -2,10 +2,17 @@
 {% extends "layout.html" %}
 {% block body %}
 
+{% include "header.html" %}
+
+<script>
+    var html_tag = document.getElementsByTagName("html")[0];
+    html_tag.className = "contact-background";
+</script>
+
 <section class="content ss-base-body" dir="ltr" itemscope="" itemtype="http://schema.org/CreativeWork/FormObject">
-    <h2>
+    <h3>
         Contact
-    </h2>
+    </h3>
 
             <meta itemprop="name" content="Contact Me">
             <meta itemprop="embedUrl" content="https://docs.google.com/spreadsheet/embeddedform?formkey=dG9ZSlJRMFptMEQ3b0R0UkFIX01Mb2c6MA">
