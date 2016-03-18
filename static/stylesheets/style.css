@@ -42,7 +42,23 @@ h4 {
   font-size: 20px;
 }
 
-/* line 2, ../sass/_timeline.scss */
+/* line 1, ../sass/_timeline.scss */
+.description {
+  display: none;
+}
+
+/* line 5, ../sass/_timeline.scss */
+h4 {
+  margin-bottom: 5px;
+}
+
+/* line 9, ../sass/_timeline.scss */
+h6.header {
+  margin-top: 0px;
+  color: #376078;
+}
+
+/* line 14, ../sass/_timeline.scss */
 #cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -50,7 +66,7 @@ h4 {
   margin-bottom: 2em;
 }
 
-/* line 9, ../sass/_timeline.scss */
+/* line 21, ../sass/_timeline.scss */
 #cd-timeline::before {
   /* this is the vertical line */
   content: '';
@@ -62,30 +78,30 @@ h4 {
   background: #89ECDA;
 }
 
-/* line 21, ../sass/_timeline.scss */
+/* line 33, ../sass/_timeline.scss */
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
 }
 
-/* line 27, ../sass/_timeline.scss */
+/* line 39, ../sass/_timeline.scss */
 .cd-timeline-block:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 34, ../sass/_timeline.scss */
+/* line 46, ../sass/_timeline.scss */
 .cd-timeline-block:first-child {
   margin-top: 0;
 }
 
-/* line 39, ../sass/_timeline.scss */
+/* line 51, ../sass/_timeline.scss */
 .cd-timeline-block:last-child {
   margin-bottom: 0;
 }
 
-/* line 44, ../sass/_timeline.scss */
+/* line 56, ../sass/_timeline.scss */
 .cd-timeline-img {
   position: absolute;
   top: 0;
@@ -98,12 +114,12 @@ h4 {
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
-/* line 56, ../sass/_timeline.scss */
+/* line 68, ../sass/_timeline.scss */
 .cd-date {
   margin-top: 10px;
 }
 
-/* line 61, ../sass/_timeline.scss */
+/* line 73, ../sass/_timeline.scss */
 .cd-timeline-img.cd-picture {
   background: #89ECDA;
 }
@@ -159,7 +175,7 @@ h4 {
     transform: scale(1);
   }
 }
-/* line 135, ../sass/_timeline.scss */
+/* line 147, ../sass/_timeline.scss */
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
@@ -169,36 +185,36 @@ h4 {
   box-shadow: 0 3px 0 #89ECDA;
 }
 
-/* line 145, ../sass/_timeline.scss */
+/* line 157, ../sass/_timeline.scss */
 .cd-timeline-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 152, ../sass/_timeline.scss */
+/* line 164, ../sass/_timeline.scss */
 .cd-timeline-content h2 {
   color: #89ECDA;
 }
 
-/* line 157, ../sass/_timeline.scss */
+/* line 169, ../sass/_timeline.scss */
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
   font-size: 0.8125rem;
 }
 
-/* line 163, ../sass/_timeline.scss */
+/* line 175, ../sass/_timeline.scss */
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
 
-/* line 168, ../sass/_timeline.scss */
+/* line 180, ../sass/_timeline.scss */
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.6;
 }
 
-/* line 174, ../sass/_timeline.scss */
+/* line 186, ../sass/_timeline.scss */
 .cd-timeline-content .cd-read-more {
   float: right;
   padding: .8em 1em;
@@ -207,19 +223,19 @@ h4 {
   border-radius: 0.25em;
 }
 
-/* line 183, ../sass/_timeline.scss */
+/* line 195, ../sass/_timeline.scss */
 .no-touch .cd-timeline-content .cd-read-more:hover {
   background-color: #bac4cb;
 }
 
-/* line 188, ../sass/_timeline.scss */
+/* line 200, ../sass/_timeline.scss */
 .cd-timeline-content .cd-date {
   float: left;
   padding: .8em 0;
   opacity: .7;
 }
 
-/* line 195, ../sass/_timeline.scss */
+/* line 207, ../sass/_timeline.scss */
 .cd-timeline-content::before {
   content: '';
   position: absolute;
@@ -232,19 +248,19 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 209, ../sass/_timeline.scss */
+  /* line 221, ../sass/_timeline.scss */
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 213, ../sass/_timeline.scss */
+  /* line 225, ../sass/_timeline.scss */
   .cd-timeline-content p {
     font-size: 16px;
     font-size: 1rem;
   }
 
-  /* line 217, ../sass/_timeline.scss */
+  /* line 229, ../sass/_timeline.scss */
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 14px;
     font-size: 0.875rem;
@@ -407,7 +423,7 @@ h4 {
 
   /* line 48, ../sass/_home.scss */
   h1 {
-    margin-top: 25px;
+    margin-top: 23px;
   }
 }
 @media only screen and (max-width: 680px) {
