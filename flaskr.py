@@ -11,6 +11,10 @@ app.config.from_object(__name__)
 app.config.from_envvar('FLASKR_SETTINGS')
 
 
+# app.add_url_rule('/favicon.ico',
+#                  redirect_to=url_for('static', filename='favicon.ico'))
+
+
 # connect to database
 def connect_db():
     rv = sqlite3.connect(app.config['DATABASE'])
