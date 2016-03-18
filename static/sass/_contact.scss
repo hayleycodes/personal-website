@@ -6,6 +6,7 @@
         linear-gradient(45deg, #FFFFFF 25%, transparent 25%);
     background-size: 100px 100px;
     background-color: #89ecda;
+    background-attachment: fixed;
 }
 
 #entry_0, #entry_6, #entry_13 {
@@ -23,6 +24,9 @@
 .ss-footer {
     padding-top: 30px;
     font-size: 10px;
+    a {
+        font-size: 10px;
+    }
 }
 
 input,
