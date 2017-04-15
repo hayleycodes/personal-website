@@ -1,31 +1,25 @@
+img {
+	height: 200px;
+	float: left;
+	margin-left: 20px;
+}
+
+#heading {
+	display: inline-block;
+	float: left;
+}
+
+h1 {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 96px;
+}
 
 h2 {
-    color: #1f375b;
-    float: left;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    font-family: 'Londrina Outline', cursive;
+    font-size: 60px;
 }
 
-.nav-bar img {
-    height: 40px;
-    display: inline-block;
-    text-align: center;
-}
-
-.nav-bar {
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-    padding-bottom: 80px;
-}
-
-#title {
-    float: left;
-    position: relative;
-}
-
-#links {
-    float: right;
+h1, h2 {
+	margin: 0px;
+	color: #FFF;
 }

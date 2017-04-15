@@ -1,44 +1,53 @@
 
-{% extends "layout.html" %}
+{% extends "header.html" %}
 {% block body %}
 
-<script>
-    var html_tag = document.getElementsByTagName("html")[0];
-    html_tag.className = "home-background";
-</script>
+<div id="right-panel">
 
-<section id="home">
+	<h3>Projects</h3>
 
-    <section class="panels">
-        <div id="about-div" class="icon">
-            <a href="{{ url_for('about') }}"><img src="{{ url_for('static', filename='images/about_icon.png') }}" alt="about">
-            About</a>
-        </div>
-        <div id="projects-div" class="icon">
-            <a href="{{ url_for('projects') }}"><img src="{{ url_for('static', filename='images/projects_icon.png') }}" alt="projects">
-            Projects</a>
-        </div>
-        <div id="contact-div" class="icon">
-            <a href="{{ url_for('contact') }}"><img src="{{ url_for('static', filename='images/contact_icon.png') }}" alt="contact">
-            Contact</a>
-        </div>
-    </section>
-    <section id="heading">
-        <h1>HAYLEY VAN WAAS</h1>
-    </section>
+	<p>
+		<h4>Computer Science Unplugged</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ante in ipsum volutpat ornare a et justo. Mauris in mauris at nisl euismod suscipit id at dui. Nulla convallis tincidunt sagittis. Aliquam ut justo tincidunt, viverra sem nec, sodales metus.
+		</p>
 
-    <section class="panels">
-        <div id="twitter-div" class="icon">
-            <a href="https://www.twitter.com/hayleyavw" target="_blank"><img src="{{ url_for('static', filename='images/twitter_icon.png') }}" alt="twitter">
-            Twitter</a>
-        </div>
-        <div id="plus-div" class="icon">
-            <a href="https://plus.google.com/u/0/+HayleyvanWaas" target="_blank"><img src="{{ url_for('static', filename='images/g_plus_icon.png') }}" alt="G+">
-            Google Plus</a>
+		<h4>Verto</h4>
+		<p>
+			Cras molestie, augue quis porttitor varius, nunc tortor luctus nisi, in lobortis mauris ex eget lacus. Sed volutpat sagittis mauris, sed congue ligula feugiat at. Pellentesque efficitur fringilla quam. Sed finibus laoreet arcu, non consequat metus fringilla ut. Phasellus sit amet porttitor tortor.
+		</p>
 
-        </div>
-    </section>
+		<h4>Computer Science Field Guide</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ante in ipsum volutpat ornare a et justo. Mauris in mauris at nisl euismod suscipit id at dui. Nulla convallis tincidunt sagittis. Aliquam ut justo tincidunt, viverra sem nec, sodales metus.
+		</p>
 
-</section>
+		<h4>Google Internship</h4>
+		<p>
+			Cras molestie, augue quis porttitor varius, nunc tortor luctus nisi, in lobortis mauris ex eget lacus. Sed volutpat sagittis mauris, sed congue ligula feugiat at. Pellentesque efficitur fringilla quam. 
+		</p>
+
+		<h4>REANNZ</h4>
+		<p>
+		Sed finibus laoreet arcu, non consequat metus fringilla ut. Phasellus sit amet porttitor tortor. Phasellus sit amet porttitor tortor.
+		</p>
+	</p>
+
+</div>
+
+
+<div id="left-panel">
+
+	<h3>About Me</h3>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ante in ipsum volutpat ornare a et justo. Mauris in mauris at nisl euismod suscipit id at dui. Nulla convallis tincidunt sagittis. Aliquam ut justo tincidunt, viverra sem nec, sodales metus.
+	</p>
+
+	<p>
+		Cras molestie, augue quis porttitor varius, nunc tortor luctus nisi, in lobortis mauris ex eget lacus. Sed volutpat sagittis mauris, sed congue ligula feugiat at. Pellentesque efficitur fringilla quam. Sed finibus laoreet arcu, non consequat metus fringilla ut.
+	</p>
+
+</div>
 
 {% endblock %}
