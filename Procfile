@@ -1,1 +1,1 @@
-web: python flasker.py
+web: python /app/flasker.py
