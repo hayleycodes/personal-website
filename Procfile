@@ -1,1 +1,1 @@
-flasker.py
+web: python flasker.py
