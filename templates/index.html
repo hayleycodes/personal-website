@@ -2,22 +2,18 @@
 {% extends "header.html" %}
 {% block body %}
 
-<div id="right-panel">
+	<div id="panels">
 
-	<h3>Projects</h3>
+		<div id="right-panel">
+			<h3>Projects</h3>
+			{{ projects }}	
+		</div>
 
-	{{ projects }}	
+		<div id="left-panel">
+			<h3>About Me</h3>
+			{{ about }}
+		</div>
 
-</div>
-
-
-<div id="left-panel">
-
-	<h3>About Me</h3>
-
-	{{ about }}
-
-	
-</div>
+	</div>
 
 {% endblock %}

@@ -3,8 +3,15 @@ header {
 		height: 200px;
 		float: left;
 		margin-left: 20px;
+		@media (max-width: 700px) {
+			margin-left: 0px;
+		}
+		@media (max-width: 475px) {
+			margin-top: 30px;
+		}
 	}
 }
+
 
 nav {
 	position: relative;
@@ -35,6 +42,20 @@ h2 {
 h1, h2 {
 	margin: 0px;
 	color: #FFF;
+}
+
+@media (max-width: 365px) {
+	header {
+		img {
+			height: 150px;
+		}
+	}
+	h1 {
+	    font-size: 70px;
+	}
+	h2 {
+		font-size: 43px;
+	}
 }
 
 footer {
