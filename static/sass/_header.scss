@@ -13,6 +13,7 @@ nav {
 	margin-right: 40px; 
 	img {
 		width: 30px;
+		margin-left: 5px;
 	}
 }
 
@@ -34,4 +35,13 @@ h2 {
 h1, h2 {
 	margin: 0px;
 	color: #FFF;
+}
+
+footer {
+	clear: both;
+	margin: 50px;
+	text-align: center;
+	img {
+		width: 30px;
+	}
 }

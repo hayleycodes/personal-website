@@ -58,98 +58,40 @@ nav {
 /* line 14, ../sass/_header.scss */
 nav img {
   width: 30px;
+  margin-left: 5px;
 }
 
-/* line 19, ../sass/_header.scss */
+/* line 20, ../sass/_header.scss */
 #heading {
   display: inline-block;
   float: left;
 }
 
-/* line 24, ../sass/_header.scss */
+/* line 25, ../sass/_header.scss */
 h1 {
   font-family: 'Londrina Solid', cursive;
   font-size: 96px;
 }
 
-/* line 29, ../sass/_header.scss */
+/* line 30, ../sass/_header.scss */
 h2 {
   font-family: 'Londrina Outline', cursive;
   font-size: 60px;
 }
 
-/* line 34, ../sass/_header.scss */
+/* line 35, ../sass/_header.scss */
 h1, h2 {
   margin: 0px;
   color: #FFF;
 }
 
-/* line 1, ../sass/_contact.scss */
-#contact-form {
+/* line 40, ../sass/_header.scss */
+footer {
   clear: both;
-  padding-top: 20px;
+  margin: 50px;
+  text-align: center;
 }
-
-/* line 6, ../sass/_contact.scss */
-#input-boxes {
-  float: left;
-  width: 100%;
-}
-
-/* line 11, ../sass/_contact.scss */
-#contact-info {
-  float: left;
-  width: 30%;
-}
-
-/* line 16, ../sass/_contact.scss */
-#contact-message {
-  float: right;
-  width: 65%;
-}
-
-/* line 21, ../sass/_contact.scss */
-.ss-form-title {
-  font-size: 32px;
-}
-
-/* line 25, ../sass/_contact.scss */
-.ss-footer {
-  padding-top: 30px;
-  font-size: 10px;
-}
-/* line 28, ../sass/_contact.scss */
-.ss-footer a {
-  font-size: 10px;
-}
-
-/* line 33, ../sass/_contact.scss */
-#entry_0, #entry_6 {
-  height: 20px;
-}
-
-/* line 37, ../sass/_contact.scss */
-textarea#entry_13 {
-  height: 100px;
-}
-
-/* line 41, ../sass/_contact.scss */
-.errorbox-good {
-  padding-bottom: 20px;
-}
-
-/* line 45, ../sass/_contact.scss */
-input,
-textarea {
-  width: 100%;
-  font: 15px "Century Gothic", sans-serif;
-  padding: 5px;
-  border: 1px solid #89ecda;
-}
-
-/* line 53, ../sass/_contact.scss */
-input[type=submit] {
-  width: 150px;
-  background-color: #89ecda;
-  color: #1f375b;
+/* line 44, ../sass/_header.scss */
+footer img {
+  width: 30px;
 }
