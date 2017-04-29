@@ -28,12 +28,19 @@
 
         </script>
 
-            <img src="{{ url_for('static', filename='images/Slack_Hayley.png') }}" alt="cartoon hayley"/>
+            <nav>
+                <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/home_icon.png') }}" alt="home"/></a>
+                <a href="{{ url_for('contact') }}"><img src="{{ url_for('static', filename='images/paper_plane_icon.png') }}" alt="contact"/></a>
+                <a href="https://twitter.com/hayleyavw" target="_blank"><img src="{{ url_for('static', filename='images/twitter_icon.png') }}" alt="twitter"/></a>
+            </nav>
 
-            <section id="heading">
-                <h1>Hayley</h1>
-                <h2>Junior Dev</h2>
-            </section>
+            <header>
+                <img src="{{ url_for('static', filename='images/Slack_Hayley.png') }}" alt="cartoon hayley"/>
+                <section id="heading">
+                    <h1>Hayley</h1>
+                    <h2>Junior Dev</h2>
+                </section>
+            </header>
 
         {% block body %}
 

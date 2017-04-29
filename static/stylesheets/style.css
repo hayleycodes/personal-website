@@ -6,16 +6,17 @@ html {
 /* line 5, ../sass/_base.scss */
 body {
   font-family: 'Calibri', sans-serif;
+  margin: 30px;
 }
 
-/* line 9, ../sass/_base.scss */
+/* line 10, ../sass/_base.scss */
 h3 {
   font-family: 'Londrina Solid', cursive;
   font-size: 30px;
   color: #FFF;
 }
 
-/* line 15, ../sass/_base.scss */
+/* line 16, ../sass/_base.scss */
 h4 {
   font-family: 'Calibri', sans-serif;
   font-weight: bold;
@@ -28,88 +29,127 @@ h4 {
   width: 30%;
   margin-left: 25px;
   clear: left;
+  padding-top: 20px;
 }
 
-/* line 7, ../sass/_home.scss */
+/* line 8, ../sass/_home.scss */
 #right-panel {
   width: 65%;
+  margin-top: -30px;
   display: inline-block;
   float: right;
+  padding-left: 50px;
 }
 
-/* line 1, ../sass/_header.scss */
-img {
+/* line 2, ../sass/_header.scss */
+header img {
   height: 200px;
   float: left;
   margin-left: 20px;
 }
 
-/* line 7, ../sass/_header.scss */
+/* line 9, ../sass/_header.scss */
+nav {
+  position: relative;
+  z-index: 1;
+  float: right;
+  margin-right: 40px;
+}
+/* line 14, ../sass/_header.scss */
+nav img {
+  width: 30px;
+}
+
+/* line 19, ../sass/_header.scss */
 #heading {
   display: inline-block;
   float: left;
 }
 
-/* line 12, ../sass/_header.scss */
+/* line 24, ../sass/_header.scss */
 h1 {
   font-family: 'Londrina Solid', cursive;
   font-size: 96px;
 }
 
-/* line 17, ../sass/_header.scss */
+/* line 29, ../sass/_header.scss */
 h2 {
   font-family: 'Londrina Outline', cursive;
   font-size: 60px;
 }
 
-/* line 22, ../sass/_header.scss */
+/* line 34, ../sass/_header.scss */
 h1, h2 {
   margin: 0px;
   color: #FFF;
 }
 
 /* line 1, ../sass/_contact.scss */
-#entry_0, #entry_6, #entry_13 {
+#contact-form {
+  clear: both;
+  padding-top: 20px;
+}
+
+/* line 6, ../sass/_contact.scss */
+#input-boxes {
+  float: left;
   width: 100%;
 }
 
-/* line 5, ../sass/_contact.scss */
-#entry_13 {
-  height: 100px;
+/* line 11, ../sass/_contact.scss */
+#contact-info {
+  float: left;
+  width: 30%;
 }
 
-/* line 9, ../sass/_contact.scss */
+/* line 16, ../sass/_contact.scss */
+#contact-message {
+  float: right;
+  width: 65%;
+}
+
+/* line 21, ../sass/_contact.scss */
 .ss-form-title {
   font-size: 32px;
 }
 
-/* line 13, ../sass/_contact.scss */
+/* line 25, ../sass/_contact.scss */
 .ss-footer {
   padding-top: 30px;
   font-size: 10px;
 }
-/* line 16, ../sass/_contact.scss */
+/* line 28, ../sass/_contact.scss */
 .ss-footer a {
   font-size: 10px;
 }
 
-/* line 21, ../sass/_contact.scss */
+/* line 33, ../sass/_contact.scss */
+#entry_0, #entry_6 {
+  height: 20px;
+}
+
+/* line 37, ../sass/_contact.scss */
+textarea#entry_13 {
+  height: 100px;
+}
+
+/* line 41, ../sass/_contact.scss */
+.errorbox-good {
+  padding-bottom: 20px;
+}
+
+/* line 45, ../sass/_contact.scss */
 input,
 textarea {
   width: 100%;
   font: 15px "Century Gothic", sans-serif;
-  padding: 7px;
+  padding: 5px;
   border: 1px solid #89ecda;
 }
 
-/* line 29, ../sass/_contact.scss */
+/* line 53, ../sass/_contact.scss */
 input[type=submit] {
   width: 150px;
   background-color: #89ecda;
   color: #1f375b;
-}
-
-/* line 35, ../sass/_contact.scss */
-input {
-  width: 100%;
 }

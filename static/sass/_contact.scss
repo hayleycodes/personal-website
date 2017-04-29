@@ -1,9 +1,21 @@
-#entry_0, #entry_6, #entry_13 {
+#contact-form {
+    clear: both;
+    padding-top: 20px;
+}
+
+#input-boxes {
+    float: left;
     width: 100%;
 }
 
-#entry_13 {
-    height: 100px;
+#contact-info {
+    float: left;
+    width: 30%;
+}
+
+#contact-message {
+    float: right;
+    width: 65%;
 }
 
 .ss-form-title {
@@ -18,11 +30,23 @@
     }
 }
 
+#entry_0, #entry_6 {
+    height: 20px;    
+}
+
+textarea#entry_13 {
+    height: 100px;
+}
+
+.errorbox-good {
+    padding-bottom: 20px;
+}
+
 input,
 textarea {
     width: 100%;
     font: 15px "Century Gothic", sans-serif;
-    padding: 7px;
+    padding: 5px;
     border: 1px solid #89ecda;
 }
 
@@ -30,8 +54,4 @@ input[type=submit] {
     width: 150px;
     background-color: #89ecda;
     color: #1f375b;
-}
-
-input {
-    width: 100%;
 }

@@ -1,7 +1,19 @@
-img {
-	height: 200px;
-	float: left;
-	margin-left: 20px;
+header {
+	img {
+		height: 200px;
+		float: left;
+		margin-left: 20px;
+	}
+}
+
+nav {
+	position: relative;
+	z-index: 1;
+	float: right;
+	margin-right: 40px; 
+	img {
+		width: 30px;
+	}
 }
 
 #heading {
