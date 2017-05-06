@@ -14,8 +14,10 @@ class Converter:
         self.converter = self.setup_converter()
 
     def setup_converter(self):
-        processors = {'heading'}
-        custom_templates = {'heading': open('custom_html_templates/heading.html').read()}
+        processors = {'heading', 'image'}
+        custom_templates = {
+            'heading': open('custom_html_templates/heading.html').read()
+        }
         return Verto(processors=processors, html_templates=custom_templates)
 
     def convert_md_file(self, md_file):

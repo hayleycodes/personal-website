@@ -1,3 +1,5 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ante in ipsum volutpat ornare a et justo. Mauris in mauris at nisl euismod suscipit id at dui. Nulla convallis tincidunt sagittis. Aliquam ut justo tincidunt, viverra sem nec, sodales metus.
+I am a junior developer, and am always in search of the next project.
 
-Cras molestie, augue quis porttitor varius, nunc tortor luctus nisi, in lobortis mauris ex eget lacus. Sed volutpat sagittis mauris, sed congue ligula feugiat at. Pellentesque efficitur fringilla quam. Sed finibus laoreet arcu, non consequat metus fringilla ut.
+The projects I enjoy the most are those it the field of  Computer Science education in schools as I think this is really important. I also like to be challenged. I like to take on projects that are well over my head and be surrounded in engineers more experienced than myself because that is where I learn the most. I am not afraid to speak up and have my say when it comes to making design decisions and ask a lot of questions if I don't understand something.
+
+When I am not working, I love public speaking and teaching programming and therefore dedicate a lot of time to volunteering for organisations and/or at events. Outside of academia and tech, I like to keep fit by running 2-4 times a week and attending pilates classes at the gym. When I really need to relax I can often be found watching comedies on Netflix or painting my nails.
