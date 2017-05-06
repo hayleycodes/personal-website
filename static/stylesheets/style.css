@@ -5,23 +5,43 @@ html {
 
 /* line 5, ../sass/_base.scss */
 body {
-  font-family: 'Calibri', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 30px;
 }
 
 /* line 10, ../sass/_base.scss */
-h3 {
+a {
+  text-decoration: none;
   font-family: 'Londrina Solid', cursive;
+  color: #2d2929;
+}
+
+/* line 16, ../sass/_base.scss */
+p {
+  font-size: 14px;
+}
+
+/* line 20, ../sass/_base.scss */
+h3, h4, h5 {
+  font-family: 'Londrina Solid', cursive;
+}
+
+/* line 24, ../sass/_base.scss */
+h3 {
   font-size: 30px;
   color: #FFF;
 }
 
-/* line 16, ../sass/_base.scss */
+/* line 29, ../sass/_base.scss */
 h4 {
-  font-family: 'Calibri', sans-serif;
-  font-weight: bold;
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 0px;
+}
+
+/* line 37, ../sass/_base.scss */
+h5 {
+  font-size: 16px;
 }
 
 /* line 1, ../sass/_home.scss */

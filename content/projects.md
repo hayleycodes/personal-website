@@ -8,7 +8,7 @@ The work we do is only made possible thanks to so many generous sponsors and the
 
 CS Unplugged is a collection of free learning activities that teach Computer Science fough engaging games and puzzles that use cards, string, crayons and lots of running around.
 
-I am part of the team who is working on the technical side of creating a new website for [CS Unplugged](http://csunplugged.org/)
+I am part of the team who is working on the technical side of creating a new website for [CS Unplugged](http://csunplugged.org/).
 
 To learn more about CS Unplugged and how you can contribute check out the [repo](https://github.com/uccser/cs-unplugged) and the [docs](http://cs-unplugged.readthedocs.io/en/develop/).
 

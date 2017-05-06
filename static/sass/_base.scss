@@ -3,19 +3,37 @@ html {
 }
 
 body {
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 30px;
 }
 
-h3 {
+a {
+    text-decoration: none;
     font-family: 'Londrina Solid', cursive;
+    color: #2d2929;
+}
+
+p {
+    font-size: 14px;
+}
+
+h3, h4, h5 {
+    font-family: 'Londrina Solid', cursive;
+}
+
+h3 {
     font-size: 30px;
     color: #FFF;
 }
 
 h4 {
-    font-family: 'Calibri', sans-serif;
-    font-weight: bold;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+
+
+h5 {
+    font-size: 16px;
 }
