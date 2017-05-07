@@ -1,0 +1,172 @@
+/* line 1, ../sass/_base.scss */
+html {
+  background-color: #6287C6;
+}
+
+/* line 5, ../sass/_base.scss */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 30px;
+}
+
+/* line 10, ../sass/_base.scss */
+a {
+  text-decoration: none;
+  font-family: 'Londrina Solid', cursive;
+  color: #2d2929;
+}
+
+/* line 16, ../sass/_base.scss */
+p {
+  font-size: 14px;
+}
+
+/* line 20, ../sass/_base.scss */
+h3, h4, h5 {
+  font-family: 'Londrina Solid', cursive;
+}
+
+/* line 24, ../sass/_base.scss */
+h3 {
+  font-size: 30px;
+  color: #FFF;
+}
+
+/* line 29, ../sass/_base.scss */
+h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 37, ../sass/_base.scss */
+h5 {
+  font-size: 16px;
+}
+
+/* line 1, ../sass/_home.scss */
+#left-panel {
+  width: 30%;
+  margin-left: 25px;
+  clear: left;
+  padding-top: 20px;
+}
+
+/* line 8, ../sass/_home.scss */
+#right-panel {
+  width: 65%;
+  margin-top: -30px;
+  display: inline-block;
+  float: right;
+  padding-left: 50px;
+}
+@media (max-width: 1130px) {
+  /* line 8, ../sass/_home.scss */
+  #right-panel {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* line 20, ../sass/_home.scss */
+  #panels {
+    display: table;
+    clear: both;
+  }
+
+  /* line 24, ../sass/_home.scss */
+  #left-panel {
+    width: 100%;
+    margin-left: 0px;
+    display: table-header-group;
+  }
+
+  /* line 29, ../sass/_home.scss */
+  #right-panel {
+    width: 100%;
+    display: table-footer-group;
+    margin-top: 0px;
+  }
+}
+/* line 2, ../sass/_header.scss */
+header img {
+  height: 200px;
+  float: left;
+  margin-left: 20px;
+}
+@media (max-width: 700px) {
+  /* line 2, ../sass/_header.scss */
+  header img {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 475px) {
+  /* line 2, ../sass/_header.scss */
+  header img {
+    margin-top: 30px;
+  }
+}
+
+/* line 16, ../sass/_header.scss */
+nav {
+  position: relative;
+  z-index: 1;
+  float: right;
+  margin-right: 40px;
+}
+/* line 21, ../sass/_header.scss */
+nav img {
+  width: 30px;
+  margin-left: 5px;
+}
+
+/* line 27, ../sass/_header.scss */
+#heading {
+  display: inline-block;
+  float: left;
+}
+
+/* line 32, ../sass/_header.scss */
+h1 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 96px;
+}
+
+/* line 37, ../sass/_header.scss */
+h2 {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 60px;
+}
+
+/* line 42, ../sass/_header.scss */
+h1, h2 {
+  margin: 0px;
+  color: #FFF;
+}
+
+@media (max-width: 365px) {
+  /* line 49, ../sass/_header.scss */
+  header img {
+    height: 150px;
+  }
+
+  /* line 53, ../sass/_header.scss */
+  h1 {
+    font-size: 70px;
+  }
+
+  /* line 56, ../sass/_header.scss */
+  h2 {
+    font-size: 43px;
+  }
+}
+/* line 61, ../sass/_header.scss */
+footer {
+  clear: both;
+  margin: 50px;
+  text-align: center;
+}
+/* line 65, ../sass/_header.scss */
+footer img {
+  width: 30px;
+}
