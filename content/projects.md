@@ -1,12 +1,12 @@
 #### Computer Science and Education Research Group (CSERG)
 
-We are a small team (often known as "The Department of Fun Stuff") at the University of Canterbury who create resources for teachers (or anyone) from all around to use to help learn and teach Computer Science. I work on the technical side of this project, which means I am involved in designing and creating open source software that allows contributors from all over the world to help us grow our projects.
+We are a small team (often known as "The Department of Fun Stuff") at the University of Canterbury who create resources for teachers (or anyone) from all around the world to use to help learn and teach Computer Science. I work on the technical side of this project, which means I am involved in designing and creating open source software that allows contributors from all over the world to help us grow our projects.
 
 The work we do is only made possible thanks to so many generous sponsors and there is always an ever growing list of things we want to work on in future. If you are interested in helping us out, please [contact me](https://docs.google.com/forms/d/e/1FAIpQLSdqyT5Rppz3E7ZLvRfS6sQlborxzm9b7UsZ7Vt_GYroDX0ebw/viewform?usp=sf_link)!
 
 ##### Computer Science Unplugged
 
-CS Unplugged is a collection of free learning activities that teach Computer Science fough engaging games and puzzles that use cards, string, crayons and lots of running around.
+CS Unplugged is a collection of free learning activities that teach Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around.
 
 I am part of the team who is working on the technical side of creating a new website for [CS Unplugged](http://csunplugged.org/).
 
@@ -16,7 +16,7 @@ To learn more about CS Unplugged and how you can contribute check out the [repo]
 
 I worked part time on the [CS Field Guide](http://www.csfieldguide.org.nz/) project for two years, which I spent developing what we call "interactives". These are little JavaScript applets that aim to teach computer science concepts and back up the content in their particular chapter.
 
-The most recent interactives I worked on were the most challenging were for the [Computer Graphics chapter](http://www.csfieldguide.org.nz/en/chapters/computer-graphics.html). The Box Translation and Rotation interactives demonstrate the basic principles of moving objects in 3D space. They are written using Three.js, a JavaScript framework for WebGL.
+The most recent interactives I worked on were for the [Computer Graphics chapter](http://www.csfieldguide.org.nz/en/chapters/computer-graphics.html). The Box Translation and Rotation interactives demonstrate the basic principles of moving objects in 3D space. They are written using Three.js, a JavaScript framework for WebGL.
 
 The Arrow Manipulation interactives demonstrate how matrices can be used to manipulate shapes in 2D space. Each of these interactives have a config file which is used to determine the interface components to load, as well as the start and target position of the arrow. The code for these interactives is written in pure Javascript with SVGs for the arrows.
 
@@ -30,13 +30,13 @@ To learn more about Verto and how you can contribute, check out the [repo](https
 
 ##### CS4HS - Computer Science for High Schools
 
-This is a conference sponsored by Google that takes all around the world. Our department has run this conference every December for the last few years. I attended in 2015 as the "Student Story" speaker, a workshop presenter, and a general conference volunteer. In 2016 I was back again as an organiser, and spent the week helping to make sure the conference ran smoothy. In both of these years we had over 100 attendees, all staying onsite for at least 3 days, and some even for a week to attend the first two days of extra workshops.
+This is a conference sponsored by Google that takes all around the world. Our department has run this conference every December for the last few years. I attended in 2015 as the "Student Story" speaker, a workshop presenter, and a general conference volunteer. In 2016 I was back again as an organiser, and spent the week helping to make sure the conference ran smoothly.
 
 To learn more about CS4HS Christchurch, take a look at our [conference website](http://cosc.canterbury.ac.nz/cs4hs/).
 
 #### Google Internship
 
-In summer 2015/16 I was an intern at Google. I was with one other intern on the Bandwidth Site Reliability Engineering team. We created an internal tool to be used by other SREs to check the status of the amount of bandwith their service is using. The tool was already being used before we even finished the internship, and proved to be extremely useful.
+In summer 2015/16 I was an intern at Google. I was with one other intern on the Bandwidth Site Reliability Engineering team. We created an internal tool to be used by other SREs to check the status of the amount of bandwith their service is using. The tool proved to be extremely useful and was already being used before we even finished the internship.
 
 #### Interactive Course Planners for Engineering at UC
 
