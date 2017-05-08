@@ -34,14 +34,14 @@ h3 {
 
 /* line 29, ../sass/_base.scss */
 h4 {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
 /* line 37, ../sass/_base.scss */
 h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* line 1, ../sass/_home.scss */
@@ -129,13 +129,13 @@ nav img {
 /* line 32, ../sass/_header.scss */
 h1 {
   font-family: 'Londrina Solid', cursive;
-  font-size: 96px;
+  font-size: 105px;
 }
 
 /* line 37, ../sass/_header.scss */
 h2 {
   font-family: 'Londrina Outline', cursive;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 /* line 42, ../sass/_header.scss */
@@ -152,12 +152,12 @@ h1, h2 {
 
   /* line 53, ../sass/_header.scss */
   h1 {
-    font-size: 70px;
+    font-size: 75px;
   }
 
   /* line 56, ../sass/_header.scss */
   h2 {
-    font-size: 43px;
+    font-size: 35px;
   }
 }
 /* line 61, ../sass/_header.scss */

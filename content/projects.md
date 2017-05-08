@@ -30,7 +30,7 @@ To learn more about Verto and how you can contribute, check out the [repo](https
 
 ##### CS4HS - Computer Science for High Schools
 
-This is a conference sponsored by Google that takes all around the world. Our department has run this conference every December for the last few years. I attended in 2015 as the "Student Story" speaker, a workshop presenter, and a general conference volunteer. In 2016 I was back again as an organiser, and spent the week helping to make sure the conference ran smoothly.
+This is a conference sponsored by Google that takes place all around the world. Our department has run this conference every December for the last few years. I attended in 2015 as the "Student Story" speaker, a workshop presenter, and a general conference volunteer. In 2016 I was back again as an organiser, and spent the week helping to make sure the conference ran smoothly.
 
 To learn more about CS4HS Christchurch, take a look at our [conference website](http://cosc.canterbury.ac.nz/cs4hs/).
 
