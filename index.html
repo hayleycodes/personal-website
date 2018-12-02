@@ -24,8 +24,10 @@
 
 		<div class="content">
 			<section id="intro">
-				<h3>Intro</h3>
 				<div class="cards">
+					<h3>Intro</h3>
+					<div class="hidden">
+					</div>
 					<div class="card">
 						<h4>Key Facts</h4>
 						<p>
@@ -84,11 +86,13 @@
 				</div>
 			</section>
 
-			<section id="intro">
-				<h3>Projects</h3>
+			<section id="projects">
 				<div class="cards">
+					<h3>Projects</h3>
+					<div class="hidden">
+					</div>
 					<div class="card">
-						<h4><a target="_blank" href="www.hayleyshealthfoods.com">Hayley's Health Foods</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
+						<h4><a target="_blank" href="www.hayleyshealthfoods.com"><img class="project-image" src="static/images/hayleys-health-foods-heading.png"></a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
 						<p>
 							This is a little passion project of mine. I’m very interested in health and nutrition, as well as cooking. Have you noticed how recipe websites always seem to have someone’s life story before the recipe? I was pretty over these less than optimal designs so I decided to make my own instead!
 						</p>
@@ -99,7 +103,7 @@
 					<div id="image-hayleys-health-foods-banner" class="card image-card">
 					</div>
 					<div class="card">
-						<h4><a target="_blank" href="https://pypi.org/project/verto/">Verto</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
+						<h4><a target="_blank" href="https://pypi.org/project/verto/"><img class="project-image" src="static/images/verto-logo.png"></a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
 						<p>
 							Verto is an extension of the Python Markdown package, which allows authors to include complex HTML elements with simple text tags in their Markdown files. I was one of the main developers and maintainers of this package for several months.
 						</p>
@@ -108,9 +112,9 @@
 						</p>
 					</div>
 					<div class="card">
-						<h4><a target="_blank" href="www.csunplugged.org">Computer Science Unplugged</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
+						<h4><a target="_blank" href="www.csunplugged.org"><img class="project-image" src="static/images/csunplugged-logo.png"></a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
 						<p>
-							CS Unplugged is a collection of free learning activities that teach Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. I was part of the team who recently recreated the website. The backend is written in Python using the Django framework. The front end is written in HTML, JavaScript and SCSS. The whole system runs on Docker containers.
+							Computer Science Unplugged is a collection of free learning activities that teach Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. I was part of the team who recently recreated the website. The backend is written in Python using the Django framework. The front end is written in HTML, JavaScript and SCSS. The whole system runs on Docker containers.
 						</p>
 						<p>
 							CS Unplugged is an open source project so you can take a look at my contributions (and even contribute yourself!) <a target="_blank" href="https://github.com/uccser/cs-unplugged">here<img class="external-link-icon" src="static/images/external-link-icon.png"></a>.
@@ -129,7 +133,7 @@
 						</p>
 					</div>
 					<div class="card">
-						<h4>Google Internship</h4>
+						<h4><img class="project-image" src="static/images/google-logo.png"></h4>
 						<p>
 							In summer 2015/16 I was a Site Reliability Engineer (SRE) Intern at Google. I was with one other intern on the Bandwidth SRE team. To best describe what an SRE does, think about the last time Google went down, can you even think of a time Google was down? Probably not too many memories spring to mind, and that is because SREs are working around the clock to keep everything up and running, and to fix things when something does go wrong.
 						</p>
@@ -138,7 +142,7 @@
 						</p>
 					</div>
 					<div class="card">
-						<h4><a target="_blank" href="https://www.canterbury.ac.nz/engineering/qualifications-and-courses/engineering/engineering-course-planner/">Interactive Course Planners for Engineering at UC</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
+						<h4><a target="_blank" href="https://www.canterbury.ac.nz/engineering/qualifications-and-courses/engineering/engineering-course-planner/">Interactive Course Planners for Engineering at the University of Canterbury</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
 						<p>
 							If you have ever enrolled at University then you will know that it is not an easy task, and in fact once you’ve navigated your way through it you feel like you’ve already some kind of qualification. The University of Canterbury receives thousands of calls every year from prospective engineering students asking for help with their enrolment as it is a surprisingly complicated task given the number of requirements for each course (which is also affected by the type of High School Qualification earned), and the number of specialisations on offer.
 						</p>
@@ -150,7 +154,7 @@
 						</p>
 					</div>
 					<div class="card">
-						<h4>REANNZ Internship</h4>
+						<h4><img class="project-image" src="static/images/reannz-logo.png"></h4>
 						<p>
 							This was my first internship. I started at REANNZ only a week and a half after my last exam at high school, and it was a great way to spend the summer before starting my first year at University!
 						</p>
@@ -161,13 +165,13 @@
 						</p>
 					</div>
 					<div class="card">
-						<h4><a target="_blank" href="http://www.ncss.edu.au/summer-school">NCSS</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
+						<h4><a target="_blank" href="http://www.ncss.edu.au/summer-school"><img class="project-image" src="static/images/ncss-logo.png"></a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
 						<p>
 							The National Computer Science School runs a summer camp program, which I attended as a student in 2014 and 2015, an industry mentor in 2016, and a tutor in 2017 and 2018. NCSS is what made me realise that I wanted a career in Software! It is a 10 day event where students from all over Australia and New Zealand, and tutors from all over the world, come together to learn and experience Computer Science. It's just as nerdy as it sounds and is always an incredible experience!
 						</p>
 					</div>
 					<div class="card">
-						<h4><a target="_blank" href="http://gathergather.co.nz/workshops/">Gather Workshops</a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
+						<h4><a target="_blank" href="http://gathergather.co.nz/workshops/"><img class="project-image" src="static/images/gather-workshops-logo.png"></a></h4><img class="external-link-icon" src="static/images/external-link-icon.png">
 						<p>
 							From during my last year of High School to my second year of University I presented and mentored many Gather Workshops. Although I’m quite biased towards Python, I have been found presenting/mentoring Robotics and JavaScript workshops on several occasions.
 						</p>
