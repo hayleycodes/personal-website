@@ -27,6 +27,16 @@ h1, h2 {
 	color: #FFF;
 }
 
+h4 a {
+	color: #000;
+	text-decoration: none;
+}
+
+a {
+	color: #6287c6;
+	text-decoration: none;
+}
+
 body {
 	margin: 0;
 	height: 100%;
@@ -70,11 +80,23 @@ header {
 			padding: 10px;
 			margin: 10px 0;
 			box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+			h4, .external-link-icon {
+				display: inline-block;
+			}
+			.external-link-icon {
+				height: 18px;
+				margin-left: 4px;
+			}
 		}
 		#image-card {
 			background-image: url('../images/me-at-laptop.jpg');
+		}
+		#image-hayleys-health-foods-banner {
+			background-image: url('../images/hayleys-health-foods-banner.png');
+		}
+		.image-card {
 			background-size: cover;
-			background-position: bottom;
+			background-position: center;
 		}
 	}
 }
