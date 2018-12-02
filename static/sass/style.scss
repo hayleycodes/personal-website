@@ -79,6 +79,22 @@ header {
 		}
 		.card {
 			width: 45%;
+			ul {
+				padding-left: 20px;
+				list-style: none;
+				li::before {
+					content: "•";
+					color: #6287c6;
+					display: inline-block;
+					width: 1em;
+  					margin-left: -1em;
+				}
+			}
+		}
+		.contact-card {
+			width: 95%;
+		}
+		.card, .contact-card {
 			background-color: #FFF;
 			padding: 10px;
 			margin: 10px 0;
@@ -99,7 +115,7 @@ header {
 			width: 45%;
 		}
 		#image-card {
-			background-image: url('../images/me-at-laptop.jpg');
+			background-image: url('../images/me-speaking.jpg');
 		}
 		#image-hayleys-health-foods-banner {
 			background-image: url('../images/hayleys-health-foods-banner.png');
@@ -107,6 +123,13 @@ header {
 		.image-card {
 			background-size: cover;
 			background-position: center;
+		}
+	}
+	#contact {
+		.contact-card #contact-form {
+			.form-element {
+				display: flex;
+			}
 		}
 	}
 }
