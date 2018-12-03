@@ -1,72 +1,72 @@
 @charset "UTF-8";
-/* line 1, ../sass/style.scss */
+/* line 3, ../sass/style.scss */
 html {
   background-color: #f6f5f3;
 }
 
-/* line 5, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 h1 {
   font-size: 4rem;
   margin: 0px;
 }
 
-/* line 10, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 h2 {
   font-family: 'Londrina Outline', cursive;
   font-size: 4rem;
   margin: 0;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 h3 {
   color: #8ba9dd;
   font-size: 2rem;
   margin: 10px 10px;
 }
 
-/* line 22, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 h1, h3 {
   font-family: 'Londrina Solid', cursive;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 h1, h2 {
   color: #FFF;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 h4 a {
   color: #000;
   text-decoration: none;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 a {
   color: #6287c6;
   text-decoration: none;
 }
 
-/* line 40, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 body {
   margin: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 header {
   display: flex;
   height: 300px;
   background-color: #8ba9dd;
 }
-/* line 50, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 header #header-wrapper {
   display: flex;
   align-items: center;
   margin: auto;
   height: 100%;
 }
-/* line 55, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 header #header-wrapper img {
   height: 200px;
   width: 200px;
@@ -75,37 +75,37 @@ header #header-wrapper img {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin-right: 30px;
 }
-/* line 63, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 header #header-wrapper #heading-text {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* line 69, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .content {
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
 }
-/* line 73, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .content .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-/* line 77, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .content .cards h3 {
   width: 45%;
 }
-/* line 80, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .content .cards .card {
   width: 45%;
 }
-/* line 82, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .content .cards .card ul {
   padding-left: 20px;
   list-style: none;
 }
-/* line 85, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .content .cards .card ul li::before {
   content: "•";
   color: #6287c6;
@@ -113,69 +113,70 @@ header #header-wrapper #heading-text {
   width: 1em;
   margin-left: -1em;
 }
-/* line 94, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .content .cards .contact-card {
   width: 95%;
 }
-/* line 97, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .content .cards .card, .content .cards .contact-card {
   background-color: #FFF;
   padding: 10px;
   margin: 10px 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-/* line 102, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .content .cards .card h4, .content .cards .card .external-link-icon, .content .cards .contact-card h4, .content .cards .contact-card .external-link-icon {
   display: inline-block;
   margin: 2px;
 }
-/* line 106, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .content .cards .card .external-link-icon, .content .cards .contact-card .external-link-icon {
   height: 18px;
   margin-left: 4px;
 }
-/* line 110, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .content .cards .card .project-image, .content .cards .contact-card .project-image {
   height: 35px;
 }
-/* line 114, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .content .cards .hidden {
   width: 45%;
 }
-/* line 117, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .content .cards #image-card {
   background-image: url("../images/me-speaking.jpg");
 }
-/* line 120, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .content .cards #image-hayleys-health-foods-banner {
   background-image: url("../images/hayleys-health-foods-banner.png");
 }
-/* line 123, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .content .cards .image-card {
   background-size: cover;
   background-position: center;
 }
-/* line 130, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .content #contact .contact-card p#contact-message {
   margin: 10px;
-}
-/* line 133, ../sass/style.scss */
-.content #contact .contact-card #contact-form {
-  margin: 20px auto;
-  width: 80%;
+  text-align: center;
 }
 /* line 136, ../sass/style.scss */
-.content #contact .contact-card #contact-form .form-element {
-  display: flex;
+.content #contact .contact-card #contact-form {
+  margin: 20px auto;
 }
 /* line 138, ../sass/style.scss */
+.content #contact .contact-card #contact-form .form-element {
+  display: flex;
+  justify-content: center;
+}
+/* line 141, ../sass/style.scss */
 .content #contact .contact-card #contact-form .form-element label {
   text-align: right;
   margin-right: 15px;
   width: 100px;
   padding-top: 5px;
 }
-/* line 144, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .content #contact .contact-card #contact-form .form-element input, .content #contact .contact-card #contact-form .form-element textarea {
   padding: 5px;
   width: 471px;
@@ -193,20 +194,21 @@ header #header-wrapper #heading-text {
   -webkit-transition: 0.25s linear;
   /*safari and chrome */
 }
-/* line 158, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .content #contact .contact-card #contact-form .form-element textarea {
   height: 90px;
 }
-/* line 161, ../sass/style.scss */
+/* line 163, ../sass/style.scss */
 .content #contact .contact-card #contact-form .form-element textarea:focus, .content #contact .contact-card #contact-form .form-element input:focus {
   border: 2px solid #8ba9dd;
 }
-/* line 164, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 .content #contact .contact-card #contact-form .form-element input.submit-button {
   width: 100px;
   margin: auto;
+  background-color: #FFF;
 }
-/* line 168, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 .content #contact .contact-card #contact-form .form-element input.submit-button:hover {
   background: #8ba9dd;
   color: #FFF;
@@ -214,8 +216,112 @@ header #header-wrapper #heading-text {
   border-color: #8ba9dd;
 }
 
-/*
-.card:last-child {
-	margin-right: auto;
+@media (max-width: 768px) {
+  /* line 184, ../sass/style.scss */
+  h1, h2 {
+    font-size: 3rem;
+  }
+
+  /* line 187, ../sass/style.scss */
+  header {
+    height: 250px;
+  }
+  /* line 190, ../sass/style.scss */
+  header #header-wrapper img {
+    height: 150px;
+    width: 150px;
+  }
 }
-*/
+@media (max-width: 625px) {
+  /* line 199, ../sass/style.scss */
+  h1, h2 {
+    font-size: 2.5rem;
+  }
+
+  /* line 202, ../sass/style.scss */
+  header {
+    height: 200px;
+  }
+  /* line 205, ../sass/style.scss */
+  header #header-wrapper img {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media (max-width: 515px) {
+  /* line 214, ../sass/style.scss */
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  /* line 217, ../sass/style.scss */
+  h3 {
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+
+  /* line 221, ../sass/style.scss */
+  header {
+    height: 150px;
+  }
+
+  /* line 225, ../sass/style.scss */
+  .content .cards .card {
+    width: 100%;
+  }
+  /* line 228, ../sass/style.scss */
+  .content .cards .image-card {
+    min-height: 200px;
+  }
+}
+@media (max-width: 425px) {
+  /* line 235, ../sass/style.scss */
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  /* line 238, ../sass/style.scss */
+  h3 {
+    margin: 3px;
+  }
+
+  /* line 241, ../sass/style.scss */
+  header {
+    height: 100px;
+  }
+  /* line 244, ../sass/style.scss */
+  header #header-wrapper img {
+    height: 75px;
+    width: 75px;
+  }
+
+  /* line 250, ../sass/style.scss */
+  .content .cards {
+    font-size: 0.9rem;
+  }
+  /* line 253, ../sass/style.scss */
+  .content .cards .card .project-image {
+    height: 20px;
+  }
+}
+@media (max-width: 375px) {
+  /* line 261, ../sass/style.scss */
+  h3 {
+    font-size: 1.2rem;
+    margin: 2px;
+  }
+
+  /* line 265, ../sass/style.scss */
+  .content .cards {
+    font-size: 0.7rem;
+  }
+  /* line 267, ../sass/style.scss */
+  .content .cards .image-card {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  /* line 272, ../sass/style.scss */
+  .content .cards .card .external-link-icon {
+    height: 10px;
+  }
+}

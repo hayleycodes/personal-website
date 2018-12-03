@@ -1,3 +1,5 @@
+$highlight-color: #8ba9dd;
+
 html {
 	background-color: #f6f5f3;
 }
@@ -14,7 +16,7 @@ h2 {
 }
 
 h3 {
-	color: #8ba9dd;
+	color: $highlight-color;
 	font-size: 2rem;
 	margin: 10px 10px;
 }
@@ -46,7 +48,7 @@ body {
 header {
 	display: flex;
 	height: 300px;
-	background-color: #8ba9dd;
+	background-color: $highlight-color;
 	#header-wrapper {
 		display: flex;
 		align-items: center;
@@ -129,12 +131,13 @@ header {
 		.contact-card {
 			p#contact-message {
 				margin: 10px;
+				text-align: center;
 			}
 			#contact-form {
 				margin: 20px auto;
-				width: 80%;
 				.form-element {
 					display: flex;
+					justify-content: center;
 					label {
 						text-align: right;
 						margin-right: 15px;
@@ -142,7 +145,6 @@ header {
 						padding-top: 5px;
 					}
 					input, textarea {
-						// flex-grow: 3;
 						padding: 5px;
 						width: 471px;
 						margin: 0px 0px 10px 0px;
@@ -159,17 +161,18 @@ header {
 						height: 90px;
 					}
 					textarea:focus, input:focus {
-						border: 2px solid #8ba9dd;
+						border: 2px solid $highlight-color;
 					}
 					input.submit-button {
 						width: 100px;
 						margin: auto;
+						background-color: #FFF;
 					}
 					input.submit-button:hover {
-						background: #8ba9dd;
+						background: $highlight-color;
 						color: #FFF;
-						box-shadow: inset 0 0 0 3px #8ba9dd;
-						border-color: #8ba9dd;
+						box-shadow: inset 0 0 0 3px $highlight-color;
+						border-color: $highlight-color;
 					}
 				}
 			}
@@ -177,8 +180,98 @@ header {
 	}
 }
 
-/*
-.card:last-child {
-	margin-right: auto;
+@media (max-width: 768px) {
+	h1, h2 {
+		font-size: 3rem;
+	}
+	header {
+		height: 250px;
+		#header-wrapper {
+			img {
+				height: 150px;
+				width: 150px;
+			}
+		}
+	}
 }
-*/
+
+@media (max-width: 625px) {
+	h1, h2 {
+		font-size: 2.5rem;
+	}
+	header {
+		height: 200px;
+		#header-wrapper {
+			img {
+				height: 100px;
+				width: 100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 515px) {
+	h1, h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+		margin: 5px;
+	}
+	header {
+		height: 150px;
+	}
+	.content .cards {
+		.card {
+			width: 100%;
+		}
+		.image-card {
+			min-height: 200px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	h1, h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		margin: 3px;
+	}
+	header {
+		height: 100px;
+		#header-wrapper {
+			img {
+				height: 75px;
+				width: 75px;
+			}
+		}
+	}
+	.content .cards {
+		font-size: 0.9rem;
+		.card {
+			.project-image {
+				height: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	h3 {
+		font-size: 1.2rem;
+		margin: 2px;
+	}
+	.content .cards {
+		font-size: 0.7rem;
+		.image-card {
+			min-height: 150px;
+			max-height: 150px;
+		}
+		.card {
+			.external-link-icon {
+				height: 10px;
+			}
+		}
+	}
+}
