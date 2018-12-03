@@ -75,7 +75,8 @@ header {
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		// justify-content: space-around;
+		justify-content: center;
 		h3 {
 			width: 45%;
 		}
@@ -99,7 +100,7 @@ header {
 		.card, .contact-card {
 			background-color: #FFF;
 			padding: 10px;
-			margin: 10px 0;
+			margin: 10px 10px;
 			box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 			h4, .external-link-icon {
 				display: inline-block;
@@ -180,6 +181,14 @@ header {
 	}
 }
 
+@media (max-width: 820px) {
+	.content .cards {
+		.card, .contact-card {
+			margin: 10px 8px;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	h1, h2 {
 		font-size: 3rem;
@@ -191,6 +200,14 @@ header {
 				height: 150px;
 				width: 150px;
 			}
+		}
+	}
+}
+
+@media (max-width: 740px) {
+	.content .cards {
+		.card, .contact-card {
+			margin: 5px;
 		}
 	}
 }
@@ -208,6 +225,22 @@ header {
 			}
 		}
 	}
+	.content .cards {
+		.card, .contact-card {
+			margin: 8px 3px;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.content .cards {
+		.card {
+			width: 100%;
+		}
+		.image-card {
+			min-height: 200px;
+		}
+	}
 }
 
 @media (max-width: 515px) {
@@ -220,14 +253,6 @@ header {
 	}
 	header {
 		height: 150px;
-	}
-	.content .cards {
-		.card {
-			width: 100%;
-		}
-		.image-card {
-			min-height: 200px;
-		}
 	}
 }
 
