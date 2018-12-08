@@ -221,7 +221,7 @@
 
 						<p id="contact-message">If you would like to hire me for a project, ask a few questions, or simply tell me I'm awesome, I'd love to hear from you!</p>
 
-						<form id="contact-form" method="post">
+						<form id="contact-form">
 		                    <div class="form-element">
 		                        <label for="name">Your Name</label>
 		                        <input name="name" id="name" required>
@@ -229,7 +229,7 @@
 
 		                    <div class="form-element">
 		                        <label for="email">Your Email</label>
-		                        <input name="email" id="email" placeholder="example@email.com" required>
+		                        <input type="email" name="email" id="email" placeholder="example@email.com" required>
 		                    </div class="form-element">
 
 		                    <div class="form-element">
@@ -238,16 +238,20 @@
 		                    </div>
 
 		                    <div id="message-submit-button" class="form-element">
-		                        <input type="submit" value="Send" class="submit-button">
+		                        <input type="button" onclick="sendEmail()" value="Send" class="submit-button">
 		                    </div>
 		                </form>
+
+		                <div id="overlay">
+		                	<p>Message sent!</p>
+		                </div>
 
 	                </div>
 
 				</div>
 			</section>
 			
-		<!-- <script src="js/script.js"></script> -->
+		<script src="js/script.js"></script>
 	</body>
 
 </html>
