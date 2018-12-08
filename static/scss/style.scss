@@ -1,0 +1,351 @@
+$highlight-color: #8ba9dd;
+$shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);;
+
+html {
+	background-color: #f6f5f3;
+}
+
+h1 {
+	font-size: 4rem;
+	margin: 0px;
+}
+
+h2 {
+	font-family: 'Londrina Outline', cursive;
+	font-size: 4rem;
+	margin: 0;
+}
+
+h3 {
+	color: $highlight-color;
+	font-size: 2rem;
+	margin: 10px 10px;
+}
+
+h1, h3 {
+	font-family: 'Londrina Solid', cursive;
+}
+
+h1, h2 {
+	color: #FFF;
+}
+
+h4 a {
+	color: #000;
+	text-decoration: none;
+}
+
+a {
+	color: #6287c6;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	display: flex;
+	height: 250px;
+	background-color: $highlight-color;
+	#header-wrapper {
+		display: flex;
+		align-items: center;
+		margin: auto;
+		height: 100%;
+		img {
+			height: 200px;
+			width: 200px;
+			object-fit: cover;
+			border-radius: 50%;
+			box-shadow: $shadow;
+			margin-right: 30px;
+		}
+		#heading-text {
+			text-shadow: 2px 2px rgba(0,0,0,0.12);
+		}
+	}
+}
+
+nav {
+	// width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #FFF;
+	border-bottom: 1px solid $highlight-color;
+	padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: $shadow;
+	a {
+		margin: 0 20px;
+	}
+}
+
+.content {
+	width: 100%;
+	box-sizing: border-box;
+    padding: 10px;
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-around;
+		justify-content: center;
+		h3 {
+			width: 45%;
+		}
+		.card {
+			width: 45%;
+			ul {
+				padding-left: 20px;
+				list-style: none;
+				li::before {
+					content: "•";
+					color: #6287c6;
+					display: inline-block;
+					width: 1em;
+  					margin-left: -1em;
+				}
+			}
+		}
+		.contact-card {
+			width: 95%;
+		}
+		.card, .contact-card {
+			background-color: #FFF;
+			padding: 10px;
+			margin: 10px 10px;
+			box-shadow: $shadow;
+			h4, .external-link-icon {
+				display: inline-block;
+				margin: 2px;
+			}
+			.external-link-icon {
+				height: 18px;
+				margin-left: 4px;
+			}
+			.project-image {
+				height: 35px;
+			}
+		}
+		.hidden {
+			width: 45%;
+		}
+		#image-card {
+			background-image: url('../images/me-speaking.jpg');
+		}
+		#image-hayleys-health-foods-banner {
+			background-image: url('../images/hayleys-health-foods-banner.png');
+		}
+		.image-card {
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	#contact {
+		.contact-card {
+			display: block;
+			position: relative;
+			p#contact-message {
+				margin: 10px;
+				text-align: center;
+			}
+			#contact-form {
+				width: 100%;
+			    top: 0;
+			    left: 0;
+			    padding: 0;
+			    transition: opacity .5s;
+				margin: 20px auto;
+				.form-element {
+					display: flex;
+					justify-content: center;
+					label {
+						text-align: right;
+						margin-right: 15px;
+						width: 100px;
+						padding-top: 5px;
+					}
+					input, textarea {
+						padding: 5px;
+						width: 471px;
+						margin: 0px 0px 10px 0px;
+						border: 2px solid #ccc;
+						border-radius: 2px;
+
+						transition: 0.25s linear; /* vendorless fallback */
+					    -o-transition: 0.25s linear; /* opera */
+					    -ms-transition: 0.25s linear; /* IE 10 */
+					    -moz-transition: 0.25s linear; /* Firefox */
+					    -webkit-transition: 0.25s linear; /*safari and chrome */
+					}
+					textarea {
+						height: 90px;
+					}
+					textarea:focus, input:focus {
+						border: 2px solid $highlight-color;
+					}
+					input.submit-button {
+						width: 100px;
+						margin: auto;
+						background-color: #FFF;
+					}
+					input.submit-button:hover {
+						background: $highlight-color;
+						color: #FFF;
+						box-shadow: inset 0 0 0 3px $highlight-color;
+						border-color: $highlight-color;
+					}
+				}
+			}
+			#overlay {
+				display: flex;
+			    background-color: #6287c6;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    align-items: center;
+			    justify-content: center;
+			    transition: 1s ease-out;
+			    opacity: 0;
+				z-index: -1;
+				color: #FFF;
+				font-size: 1.4rem;
+			}
+			.show {
+				opacity: .9 !important;
+				z-index: 10 !important;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 820px) {
+	.content .cards {
+		.card, .contact-card {
+			margin: 10px 8px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	h1, h2 {
+		font-size: 3rem;
+	}
+	header {
+		height: 250px;
+		#header-wrapper {
+			img {
+				height: 150px;
+				width: 150px;
+			}
+		}
+	}
+}
+
+@media (max-width: 740px) {
+	.content .cards {
+		.card, .contact-card {
+			margin: 5px;
+		}
+	}
+}
+
+@media (max-width: 625px) {
+	h1, h2 {
+		font-size: 2.5rem;
+	}
+	header {
+		height: 200px;
+		#header-wrapper {
+			img {
+				height: 100px;
+				width: 100px;
+			}
+		}
+	}
+	.content .cards {
+		.card, .contact-card {
+			margin: 8px 3px;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.content .cards {
+		.card {
+			width: 100%;
+		}
+		.image-card {
+			min-height: 200px;
+		}
+	}
+}
+
+@media (max-width: 515px) {
+	h1, h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+		margin: 5px;
+	}
+	header {
+		height: 150px;
+	}
+}
+
+@media (max-width: 425px) {
+	h1, h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		margin: 3px;
+	}
+	header {
+		height: 100px;
+		#header-wrapper {
+			img {
+				height: 75px;
+				width: 75px;
+			}
+		}
+	}
+	.content .cards {
+		font-size: 0.9rem;
+		.card {
+			.project-image {
+				height: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	h3 {
+		font-size: 1.2rem;
+		margin: 2px;
+	}
+	.content .cards {
+		font-size: 0.7rem;
+		.image-card {
+			min-height: 150px;
+			max-height: 150px;
+		}
+		.card {
+			.external-link-icon {
+				height: 10px;
+			}
+		}
+		#overlay p {
+			font-size: 1rem;
+		}
+	}
+}

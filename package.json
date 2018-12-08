@@ -1,0 +1,32 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass -rw static/scss -o static/stylesheets",
+    "watch": "npm run scss-compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayleyavw/personal-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayleyavw/personal-website/issues"
+  },
+  "homepage": "https://github.com/hayleyavw/personal-website#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.4",
+    "mailgun-js": "^0.22.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.10.0",
+    "scss-compile": "^0.1.7"
+  }
+}
