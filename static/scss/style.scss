@@ -212,10 +212,8 @@ nav {
 			    align-items: center;
 			    justify-content: center;
 			    transition: 1s ease-out;
-			    // opacity: 0;
-				// z-index: -1;
-				opacity: .9 !important;
-				z-index: 10 !important;
+			    opacity: 0;
+				z-index: -1;
 				color: #FFF;
 				font-size: 1.4rem;
 			}
