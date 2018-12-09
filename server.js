@@ -16,7 +16,7 @@ app.listen(3000, function() {
 });
 
 var mailgun = require("mailgun-js");
-var api_key = '651780297ffbc19a0e680c9762e6c9ea-7bbbcb78-42665342';
+var api_key = 'key-5f88a965cacbaa9907fc3a2f79083f7a';
 var DOMAIN = 'hayleyavw.com';
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: DOMAIN});
 
