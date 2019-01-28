@@ -22,9 +22,12 @@ h1, h3 {
 h1, h2 {
   color: #FFF; }
 
-h4 a {
-  color: #000;
-  text-decoration: none; }
+h5 {
+  font-weight: bold;
+  font-size: 1rem; }
+  h5 a {
+    color: #000;
+    text-decoration: none; }
 
 a {
   color: #6287c6;
@@ -71,6 +74,10 @@ nav {
   width: 100%;
   box-sizing: border-box;
   padding: 10px; }
+  .content .service-cards {
+    display: flex; }
+    .content .service-cards .card.service-card img {
+      height: 200px; }
   .content .cards {
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +102,7 @@ nav {
       padding: 10px;
       margin: 10px 10px;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-      .content .cards .card h4, .content .cards .card .external-link-icon, .content .cards .contact-card h4, .content .cards .contact-card .external-link-icon {
+      .content .cards .card h5, .content .cards .card .external-link-icon, .content .cards .contact-card h5, .content .cards .contact-card .external-link-icon {
         display: inline-block;
         margin: 2px; }
       .content .cards .card .external-link-icon, .content .cards .contact-card .external-link-icon {

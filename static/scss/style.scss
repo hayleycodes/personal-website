@@ -30,9 +30,13 @@ h1, h2 {
 	color: #FFF;
 }
 
-h4 a {
-	color: #000;
-	text-decoration: none;
+h5 {
+	font-weight: bold;
+	font-size: 1rem;
+	a {
+		color: #000;
+		text-decoration: none;
+	}
 }
 
 a {
@@ -89,6 +93,14 @@ nav {
 	width: 100%;
 	box-sizing: border-box;
     padding: 10px;
+    .service-cards {
+    	display: flex;
+		.card.service-card {
+			img {
+				height: 200px;
+			}
+		}
+	}
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
@@ -119,7 +131,7 @@ nav {
 			padding: 10px;
 			margin: 10px 10px;
 			box-shadow: $shadow;
-			h4, .external-link-icon {
+			h5, .external-link-icon {
 				display: inline-block;
 				margin: 2px;
 			}
