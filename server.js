@@ -33,8 +33,10 @@ app.post('/', function(req, res) {
 	  text: req.body.message
 	};
 
+	console.log(data);
 	mailgun.messages().send(data, function (error, body) {
-	  console.log(body);
+		console.log(error);
+	  	console.log(body);
 	});
 
 	res.status(200).send();

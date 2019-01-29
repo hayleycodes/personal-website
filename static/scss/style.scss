@@ -1,5 +1,6 @@
 $highlight-color: #8ba9dd;
 $shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+$grey-text: #636b77;
 
 html {
 	background-color: #f6f5f3;
@@ -22,7 +23,7 @@ h3 {
 	margin: 10px 10px;
 }
 
-h1, h3 {
+h1, h3, h4 {
 	font-family: 'Londrina Solid', cursive;
 }
 
@@ -30,9 +31,19 @@ h1, h2 {
 	color: #FFF;
 }
 
-h4 a {
-	color: #000;
-	text-decoration: none;
+h4 {
+	font-size: 2rem;
+	color: $grey-text;
+	margin: 5px;
+}
+
+h5 {
+	font-weight: bold;
+	font-size: 1rem;
+	a {
+		color: #000;
+		text-decoration: none;
+	}
 }
 
 a {
@@ -89,16 +100,50 @@ nav {
 	width: 100%;
 	box-sizing: border-box;
     padding: 10px;
+    #intro {
+    	h3 {
+			text-align: center;
+		}
+	    .service-cards {
+	    	display: flex;
+	    	flex-direction: row;
+	    	width: 100%;
+			.service-card {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				height: 60vh;
+				width: 30%;
+				text-align: center;
+				.service-image {
+					img {
+						width: 100%;
+					}
+				}
+				p {
+					color: $grey-text;
+				}
+			}
+		}
+	}
+	.service-card, .card, .contact-card {
+		background-color: #FFF;
+		padding: 20px;
+		margin: 10px 10px;
+		box-shadow: $shadow;
+	}
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
-		// justify-content: space-around;
 		justify-content: center;
+	    margin-left: 20px;
+    	margin-right: 20px;
 		h3 {
 			width: 45%;
 		}
 		.card {
-			width: 45%;
+			box-sizing: border-box;
+    		width: 45%;
 			ul {
 				padding-left: 20px;
 				list-style: none;
@@ -115,11 +160,7 @@ nav {
 			width: 95%;
 		}
 		.card, .contact-card {
-			background-color: #FFF;
-			padding: 10px;
-			margin: 10px 10px;
-			box-shadow: $shadow;
-			h4, .external-link-icon {
+			h5, .external-link-icon {
 				display: inline-block;
 				margin: 2px;
 			}
@@ -171,7 +212,7 @@ nav {
 					}
 					input, textarea {
 						padding: 5px;
-						width: 471px;
+						width: 100%;
 						margin: 0px 0px 10px 0px;
 						border: 2px solid #ccc;
 						border-radius: 2px;
@@ -225,6 +266,11 @@ nav {
 	}
 }
 
+@media (min-width: 1024px) {
+	.content #contact .contact-card #contact-form {
+    	width: 50%;
+    }
+}
 
 
 @media (max-width: 820px) {
@@ -248,15 +294,46 @@ nav {
 			}
 		}
 	}
-}
+	.content {
+		.service-cards {
+			h4 {
+				font-size: 1.7rem;
+			}
+		}
+		.cards {
+			margin-left: 0px;
+			margin-right: 0px;
+			justify-content: space-between;
+			.card {
+				width: 47%;
+				margin: 10px;
+			}
 
-@media (max-width: 740px) {
-	.content .cards {
-		.card, .contact-card {
-			margin: 5px;
 		}
 	}
 }
+
+@media (max-width: 740px) {
+	.content {
+		.service-card, .card, .contact-card {
+			margin: 5px !important;
+		}
+		.card {
+			width: 48% !important;
+		}
+	}
+}
+
+@media (max-width: 740px) {
+	.content {
+		.service-cards {
+			h4 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
 
 @media (max-width: 625px) {
 	h1, h2 {
@@ -279,12 +356,29 @@ nav {
 }
 
 @media (max-width: 540px) {
-	.content .cards {
-		.card {
-			width: 100%;
+	.content {
+		.cards {
+			.card {
+				width: 100% !important;
+			}
+			.image-card {
+				min-height: 200px;
+			}
 		}
-		.image-card {
-			min-height: 200px;
+		.service-cards {
+			flex-direction: column;
+			.service-card {
+				width: 98% !important;
+				height: auto;
+				box-sizing: border-box;
+				margin: 5px 0;
+				.service-image {
+					height: 100px;
+					img {
+						height: 100%;
+					}
+				}
+			}
 		}
 	}
 }
