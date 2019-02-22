@@ -89,7 +89,7 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      height: 60vh;
+      min-height: 60vh;
       width: 30%;
       text-align: center; }
       .content #intro .service-cards .service-card .service-image img {
