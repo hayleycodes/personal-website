@@ -366,10 +366,11 @@ nav {
 			}
 		}
 		.service-cards {
-			flex-direction: column;
+			flex-direction: column !important;
 			.service-card {
 				width: 98% !important;
 				height: auto;
+				min-height: unset !important;
 				box-sizing: border-box;
 				margin: 5px 0;
 				.service-image {
