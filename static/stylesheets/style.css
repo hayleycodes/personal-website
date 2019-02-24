@@ -262,10 +262,11 @@ nav {
   .content .cards .image-card {
     min-height: 200px; }
   .content .service-cards {
-    flex-direction: column; }
+    flex-direction: column !important; }
     .content .service-cards .service-card {
       width: 98% !important;
       height: auto;
+      min-height: unset !important;
       box-sizing: border-box;
       margin: 5px 0; }
       .content .service-cards .service-card .service-image {
