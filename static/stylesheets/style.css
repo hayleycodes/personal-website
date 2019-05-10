@@ -1,14 +1,15 @@
 @charset "UTF-8";
 html {
-  background-color: #f6f5f3; }
+  background-color: #f6f5f3;
+  scroll-behavior: smooth; }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.4rem;
   margin: 0px; }
 
 h2 {
   font-family: 'Londrina Outline', cursive;
-  font-size: 4rem;
+  font-size: 3.2rem;
   margin: 0; }
 
 h3 {
@@ -37,6 +38,12 @@ h5 {
 a {
   color: #6287c6;
   text-decoration: none; }
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -3rem;
+  visibility: hidden; }
 
 body {
   margin: 0;
@@ -108,7 +115,8 @@ nav {
     margin-left: 20px;
     margin-right: 20px; }
     .content .cards h3 {
-      width: 45%; }
+      width: 100%;
+      text-align: center; }
     .content .cards .card {
       box-sizing: border-box;
       width: 45%; }
@@ -131,8 +139,6 @@ nav {
       margin-left: 4px; }
     .content .cards .card .project-image, .content .cards .contact-card .project-image {
       height: 35px; }
-    .content .cards .hidden {
-      width: 45%; }
     .content .cards #image-card {
       background-image: url("../images/me-speaking.jpg"); }
     .content .cards #image-hayleys-health-foods-banner {
@@ -140,28 +146,28 @@ nav {
     .content .cards .image-card {
       background-size: cover;
       background-position: center; }
-  .content #contact .contact-card {
+  .content #contact-section .contact-card {
     display: block;
     position: relative; }
-    .content #contact .contact-card p#contact-message {
+    .content #contact-section .contact-card p#contact-message {
       margin: 10px;
       text-align: center; }
-    .content #contact .contact-card #contact-form {
+    .content #contact-section .contact-card #contact-form {
       width: 100%;
       top: 0;
       left: 0;
       padding: 0;
       transition: opacity .5s;
       margin: 20px auto; }
-      .content #contact .contact-card #contact-form .form-element {
+      .content #contact-section .contact-card #contact-form .form-element {
         display: flex;
         justify-content: center; }
-        .content #contact .contact-card #contact-form .form-element label {
+        .content #contact-section .contact-card #contact-form .form-element label {
           text-align: right;
           margin-right: 15px;
           width: 100px;
           padding-top: 5px; }
-        .content #contact .contact-card #contact-form .form-element input, .content #contact .contact-card #contact-form .form-element textarea {
+        .content #contact-section .contact-card #contact-form .form-element input, .content #contact-section .contact-card #contact-form .form-element textarea {
           padding: 5px;
           width: 100%;
           margin: 0px 0px 10px 0px;
@@ -177,20 +183,20 @@ nav {
           /* Firefox */
           -webkit-transition: 0.25s linear;
           /*safari and chrome */ }
-        .content #contact .contact-card #contact-form .form-element textarea {
+        .content #contact-section .contact-card #contact-form .form-element textarea {
           height: 90px; }
-        .content #contact .contact-card #contact-form .form-element textarea:focus, .content #contact .contact-card #contact-form .form-element input:focus {
+        .content #contact-section .contact-card #contact-form .form-element textarea:focus, .content #contact-section .contact-card #contact-form .form-element input:focus {
           border: 2px solid #8ba9dd; }
-        .content #contact .contact-card #contact-form .form-element input.submit-button {
+        .content #contact-section .contact-card #contact-form .form-element input.submit-button {
           width: 100px;
           margin: auto;
           background-color: #FFF; }
-        .content #contact .contact-card #contact-form .form-element input.submit-button:hover {
+        .content #contact-section .contact-card #contact-form .form-element input.submit-button:hover {
           background: #8ba9dd;
           color: #FFF;
           box-shadow: inset 0 0 0 3px #8ba9dd;
           border-color: #8ba9dd; }
-    .content #contact .contact-card #overlay {
+    .content #contact-section .contact-card #overlay {
       display: flex;
       background-color: #6287c6;
       position: absolute;
@@ -205,7 +211,7 @@ nav {
       z-index: -1;
       color: #FFF;
       font-size: 1.4rem; }
-    .content #contact .contact-card .show {
+    .content #contact-section .contact-card .show {
       opacity: .9 !important;
       z-index: 10 !important; }
 
