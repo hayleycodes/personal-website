@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 })
 
 app.listen(3000, function() {
-	console.log("Example app listening for cats");
+	console.log("Server running on localhost:3000");
 });
 
 var mailgun = require("mailgun-js");
