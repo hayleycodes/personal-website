@@ -83,3 +83,24 @@ nav {
 
 #wrapper {
   margin: 0 100px; }
+  #wrapper #projects {
+    margin-top: 20px; }
+
+details {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+details summary {
+  display: flex;
+  align-items: center; }
+
+details summary .summary-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+
+details img {
+  height: 20px; }
