@@ -9,6 +9,9 @@
             const projectImg = projectName.toLowerCase().replace(/ /g, "-").replace(/'/g, "") + '.png'
             const projectLanguages = this.languages;
             const jobTitle = this.jobTitle;
+            const startDate = this.startDate;
+            const endDate = this.endDate;
+            const duration = this.duration;
 
             const template = document.createElement('details')
             template.innerHTML = `
@@ -60,7 +63,14 @@
                     </div>
                     <div class="summary-row-2">
                         <h4>${jobTitle}</h4>
-                        <h4>16/12/18 - 16/12/18 (8 months)</h4>
+                        <h4>
+                            ${startDate
+                                ? endDate
+                                    ? startDate + ' - ' + endDate
+                                    : startDate
+                                : ''}
+                             ${ duration !== '' ? '(' + duration + ')' : ''}
+                        </h4>
                     </div>
                 </div>
             </summary>
@@ -77,6 +87,18 @@
 
         get jobTitle() {
             return this.getAttribute('job-title') || '';
+        }
+
+        get startDate() {
+            return this.getAttribute('start-date') || '';
+        }
+
+        get endDate() {
+            return this.getAttribute('end-date') || '';
+        }
+
+        get duration() {
+            return this.getAttribute('duration') || '';
         }
 
         get languages() {
