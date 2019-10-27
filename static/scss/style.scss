@@ -1,76 +1,82 @@
-$highlight-color: #8ba9dd;
-$shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-$grey-text: #636b77;
+$blue: #6287c6;
+$highlightBlue: #8ba9dd;
+$grey: #636b77;
+$darkGrey: #3E3E3E;
+$offWhite: #f6f5f3;
+$white: #fff;
+$shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$bodyFont: 'Roboto', sans-serif;
 
 html {
-	background-color: #f6f5f3;
+	background-color: $blue;
 	scroll-behavior: smooth;
 }
 
-h1 {
-	font-size: 3.4rem;
-	margin: 0px;
-}
-
-h2 {
-	font-size: 3.2rem;
-	margin: 0;
-}
-
-h3 {
-	color: $highlight-color;
-	font-size: 2rem;
-	margin: 10px 10px;
+:target {
+	visibility: hidden;
+	position: relative;
+	top: -3rem;
 }
 
 h1, h2, h3 {
 	font-family: 'Londrina Solid', cursive;
 }
 
-h1, h2 {
-	color: #FFF;
+h1 {
+	font-size: 3.4rem;
+	margin: 0px;
+	color: $white;
+}
+
+h2 {
+	font-size: 3.2rem;
+	margin: 0;
+	color: $white;
+}
+
+h3 {
+	color: $white;
+	font-size: 2rem;
+	margin: 10px 10px;
+}
+
+h4 {
+	margin: 0;
+	color: $darkGrey;
+	font-size: 1.2rem;
 }
 
 h5 {
+	margin: 0;
 	font-weight: bold;
-	font-size: 1rem;
-	a {
-		color: #000;
-		text-decoration: none;
-	}
+	font-size: 0.8rem;
 }
 
 a {
-	color: #6287c6;
+	color: $blue;
 	text-decoration: none;
-}
-
-a.anchor {
-  display: block;
-  position: relative;
-  top: -3rem;
-  visibility: hidden;
 }
 
 body {
 	margin: 0;
 	height: 100%;
-	font-family: 'Roboto', sans-serif;
+	font-family: $bodyFont;
 
 	p {
-		color: #3E3E3E;
+		color: $darkGrey;
 		font-size: 0.9rem !important;
 	}
 
 	header {
 		display: flex;
 		height: 250px;
-		background-color: $highlight-color;
+		
 		#header-wrapper {
 			display: flex;
 			align-items: center;
 			margin: auto;
 			height: 100%;
+			
 			img {
 				height: 200px;
 				width: 200px;
@@ -79,6 +85,7 @@ body {
 				box-shadow: $shadow;
 				margin-right: 30px;
 			}
+			
 			#heading-text {
 				text-shadow: 2px 2px rgba(0,0,0,0.12);
 			}
@@ -88,74 +95,119 @@ body {
 	nav {
 		display: flex;
 		justify-content: center;
-		background-color: #FFF;
-		border-bottom: 1px solid $highlight-color;
 		padding: 15px;
 		position: sticky;
 		top: 0;
-		z-index: 10;
+		z-index: 1;
+		background-color: $white;
+		border-bottom: 1px solid $highlightBlue;
 		box-shadow: $shadow;
+		cursor: pointer;
+		
 		a {
 			margin: 0 20px;
 		}
 	}
 
 	#wrapper {
-		margin: 20px 100px;
 
-		.card {
-			padding: 10px;
-			background-color: #FFF;
-			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-		}
+		margin: 0px 10px;
 
-		#about-and-projects {
+		#top {
 			display: flex;
-			width: 100%;
+			justify-content: space-between;
+			margin-bottom: 10px;
 
-			#about {
+			#left-column {
 				flex-basis: 40%;
-				margin: 0 10px 10px 0;
-				height: 100%;
 			}
-
-			#projects {
+			
+			#right-column {
 				flex-basis: 60%;
 			}
+
+			#workshops, #about, #projects {
+				padding: 10px;
+			}
+		}
+		
+		.card {
+			padding: 10px;
+			margin-bottom: 10px;
+			background-color: $white;
+			box-shadow: $shadow;
+		}
+		
+	}
+
+	#contact {
+		padding: 10px;
+	}
+
+	#contact-overlay {
+		height: 0%;
+		width: 100%;
+		position: fixed;
+		z-index: 2;
+		left: 0;
+		bottom: 0;
+		background-color: $grey;
+		overflow-x: hidden;
+		transition: 0.5s;
+
+		#contact-form {
+			position: relative;
+			top: 25%;
+			width: 100%;
+			text-align: center;
+			margin-top: 30px;
+			z-index: 3;
+		  }
+
+		#close-button {
+			position: absolute;
+			top: 20px;
+			right: 45px;
+			font-size: 60px;
 		}
 	}
 }
 
 
 details {
-	font-family: 'Roboto', sans-serif;
 	margin-bottom: 10px;
-	padding: 10px;
-	background-color: #FFF;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-details summary {
-	display: flex;
-	align-items: center;
-}
-
-details summary .summary-wrapper {
-	width: 100%;
-}
-
-.summary-row-1, .summary-row-2 {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-details img {
-	height: 20px;
-}
-
-h4 {
-	margin: 3px 0 0 0;
-	color: #3E3E3E;
-	font-size: 0.8rem;
+	background-color: $white;
+	box-shadow: $shadow;
+	
+	::slotted(div) {
+		padding: 10px;
+	}
+	
+	summary {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		
+		.summary-wrapper {
+			width: 100%;
+		}
+		
+		&::-webkit-details-marker {
+			display: none;
+		}
+	}
+	
+	.summary-row-1 {
+		margin-bottom: 3px;
+	}
+	
+	.summary-row-1, .summary-row-2 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	img {
+		height: 40px;
+	}
 }

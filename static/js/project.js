@@ -31,16 +31,19 @@
                         </div>
                     </div>
                     <div class="summary-row-2">
-                        <h4>${jobTitle}</h4>
-                        <h4>
+                        <h5>${jobTitle}</h5>
+                        <h5>
                             ${startDate
                                 ? endDate
                                     ? startDate + ' - ' + endDate
                                     : startDate
                                 : ''}
                              ${ duration !== '' ? '(' + duration + ')' : ''}
-                        </h4>
+                        </h5>
                     </div>
+                </div>
+                <div class="summary-chevron-up">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
             </summary>
             <slot class="description" name="project-description"></slot>
