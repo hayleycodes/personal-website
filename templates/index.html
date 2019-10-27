@@ -53,9 +53,9 @@
 				</div>
 			</div>
 		</header>
-
+		
 		<nav>
-			<a href="#workshop-link">Workshops</a>
+			<a href="#workshop-link" tabindex="0">Workshops</a>
 			<a href="#project-link">Projects</a>
 			<a href="#about-link">About</a>
 			<button class="show-contact-form" onclick="openContact()" value="Get In Touch">Get In Touch <img src="images/email.png"></button>
@@ -100,8 +100,8 @@
 
 				<div id="left-column">
 					
+					<a class="anchor" name="workshop-link"></a> 
 					<section id="workshops">
-						<a class="anchor" name="workshop-link"></a> 
 
 						<h3 id="section-header">Workshops I offer</h3>
 
@@ -143,8 +143,8 @@
 					
 					</section>
 
+					<a class="anchor" name="about-link"></a> 
 					<section id="about">
-						<a class="anchor" name="about-link"></a> 
 						<h3>About Me</h3>
 						<div class="card">
 							<p>
@@ -232,6 +232,7 @@
 						<project-details
 							project-name="Hayley's Health Foods"
 							job-title="Web Developer"
+							start-date="August 2018"
 							duration="Ongoing side project"
 							html
 							css
@@ -476,41 +477,6 @@
 
 			</div>
 
-			<!-- <section id="contact">
-				<a class="anchor" name="contact"></a> 
-				<h3>Get in touch!</h3>
-
-				<div class="card">
-					<p id="contact-message">If you would like to hire me for a project, ask a few questions, or simply tell me I'm awesome, I'd love to hear from you!</p>
-
-					<form id="contact-form">
-						<div class="form-element">
-							<label for="name">Your Name</label>
-							<input name="name" id="name" required>
-						</div>
-
-						<div class="form-element">
-							<label for="email">Your Email</label>
-							<input type="email" name="email" id="email" placeholder="example@email.com" required>
-						</div class="form-element">
-
-						<div class="form-element">
-							<label for="message">Your Message</label>
-							<textarea name="message" id="message" required></textarea>
-						</div>
-
-						<div id="message-submit-button" class="form-element">
-							<input type="button" onclick="sendEmail()" value="Send" class="submit-button">
-						</div>
-					</form>
-
-					<div id="overlay">
-						<p>Message sent!</p>
-					</div>
-
-				</div>
-
-			</section> -->
 		</div>
 					
 		<script src="js/script.js"></script>

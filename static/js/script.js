@@ -3,6 +3,7 @@ var non_empty = true;
 /* Open when someone clicks on the span element */
 function openContact() {
 	document.getElementById("contact-overlay").style.height = "100%";
+	document.getElementById("name").focus();
   }
   
 /* Close when someone clicks on the "x" symbol inside the overlay */

@@ -109,6 +109,16 @@ body {
 			margin: 0 20px;
 		}
 
+		a:hover,
+		a:focus {
+			color: $darkGrey;
+			outline: none;
+		}
+
+		a:focus {
+			text-decoration: underline;
+		}
+
 		button {
 			display: flex;
 			align-items: center;
@@ -251,17 +261,24 @@ body {
 
 	input[type="submit"],
 	button {
-		background: $blue;
+		background-color: $blue;
 		border: none;
 		padding: 10px 20px 10px 20px;
 		color: $white;
 	}
 
 	input[type="submit"]:hover,
-	button:hover{
-		background: $highlightBlue;
+	button:hover {
+		background-color: $highlightBlue;
 		color:$white;
 	}
+
+	input[type="submit"]:focus,
+	button:focus {
+		background-color: $darkGrey;
+		outline: none;
+	}
+
 }
 
 
@@ -300,5 +317,9 @@ details {
 	
 	img {
 		height: 40px;
+	}
+
+	&:hover {
+		background-color: lighten($grey, 40%);
 	}
 }

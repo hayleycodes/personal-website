@@ -77,6 +77,12 @@ body {
     cursor: pointer; }
     body nav a, body nav button {
       margin: 0 20px; }
+    body nav a:hover,
+    body nav a:focus {
+      color: #3E3E3E;
+      outline: none; }
+    body nav a:focus {
+      text-decoration: underline; }
     body nav button {
       display: flex;
       align-items: center; }
@@ -177,14 +183,18 @@ body {
         resize: none; }
   body input[type="submit"],
   body button {
-    background: #6287c6;
+    background-color: #6287c6;
     border: none;
     padding: 10px 20px 10px 20px;
     color: #fff; }
   body input[type="submit"]:hover,
   body button:hover {
-    background: #8ba9dd;
+    background-color: #8ba9dd;
     color: #fff; }
+  body input[type="submit"]:focus,
+  body button:focus {
+    background-color: #3E3E3E;
+    outline: none; }
 
 details {
   margin-bottom: 10px;
@@ -208,3 +218,5 @@ details {
     align-items: center; }
   details img {
     height: 40px; }
+  details:hover {
+    background-color: #cfd2d7; }
