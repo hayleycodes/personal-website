@@ -102,6 +102,10 @@ body {
         flex-basis: 60%; }
       body #wrapper #top #workshops, body #wrapper #top #about, body #wrapper #top #projects {
         padding: 10px; }
+      body #wrapper #top #about {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 5rem; }
     body #wrapper .card {
       padding: 10px;
       margin-bottom: 10px;
