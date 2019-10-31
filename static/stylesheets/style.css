@@ -7,7 +7,9 @@ html {
   position: relative;
   top: -3rem; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Londrina Solid', cursive; }
 
 h1 {
@@ -27,7 +29,7 @@ h3 {
 
 h4 {
   margin: 0;
-  color: #3E3E3E;
+  color: #3e3e3e;
   font-size: 1.2rem; }
 
 h5 {
@@ -44,7 +46,7 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif; }
   body p {
-    color: #3E3E3E;
+    color: #3e3e3e;
     font-size: 0.9rem !important; }
   body header {
     display: flex;
@@ -75,12 +77,13 @@ body {
     border-bottom: 1px solid #8ba9dd;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     cursor: pointer; }
-    body nav a, body nav button {
+    body nav a,
+    body nav button {
       margin: 0 20px;
       font-size: 1rem; }
     body nav a:hover,
     body nav a:focus {
-      color: #3E3E3E;
+      color: #3e3e3e;
       outline: none; }
     body nav a:focus {
       text-decoration: underline; }
@@ -100,7 +103,9 @@ body {
         flex-basis: 40%; }
       body #wrapper #top #right-column {
         flex-basis: 60%; }
-      body #wrapper #top #workshops, body #wrapper #top #about, body #wrapper #top #projects {
+      body #wrapper #top #workshops,
+      body #wrapper #top #about,
+      body #wrapper #top #projects {
         padding: 10px; }
       body #wrapper #top #about {
         position: -webkit-sticky;
@@ -170,8 +175,8 @@ body {
         text-align: center;
         color: #fff;
         font-size: 18px; }
-      body #contact-overlay #contact-form input[type="text"],
-      body #contact-overlay #contact-form input[type="email"],
+      body #contact-overlay #contact-form input[type='text'],
+      body #contact-overlay #contact-form input[type='email'],
       body #contact-overlay #contact-form textarea {
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -186,20 +191,20 @@ body {
         font-family: monospace; }
       body #contact-overlay #contact-form textarea {
         resize: none; }
-  body input[type="submit"],
+  body input[type='submit'],
   body button {
     background-color: #6287c6;
     border: none;
     padding: 10px 20px 10px 20px;
     color: #fff;
     font-size: 1rem; }
-  body input[type="submit"]:hover,
+  body input[type='submit']:hover,
   body button:hover {
     background-color: #8ba9dd;
     color: #fff; }
-  body input[type="submit"]:focus,
+  body input[type='submit']:focus,
   body button:focus {
-    background-color: #3E3E3E;
+    background-color: #3e3e3e;
     outline: none; }
 
 details {
@@ -209,7 +214,7 @@ details {
   details ::slotted(div) {
     padding: 10px; }
   details[open] {
-    border-right: 5px solid #3E3E3E; }
+    border-right: 5px solid #3e3e3e; }
   details summary {
     display: flex;
     align-items: center;
@@ -220,14 +225,15 @@ details {
       display: none; }
     details summary:focus {
       outline: none;
-      border-left: 5px solid #3E3E3E; }
+      border-left: 5px solid #3e3e3e; }
   details .summary-row-1 {
     margin-bottom: 3px; }
-  details .summary-row-1, details .summary-row-2 {
+  details .summary-row-1,
+  details .summary-row-2 {
     display: flex;
     justify-content: space-between;
     align-items: center; }
   details img {
     height: 40px; }
   details:hover {
-    border-right: 5px solid #3E3E3E; }
+    border-right: 5px solid #3e3e3e; }

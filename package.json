@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "npm run scss-compile",
-    "scss-compile": "node-sass -rw static/scss -o static/stylesheets",
+    "scss-compile": "node-sass -rw static/scss/style.scss -o static/stylesheets",
     "watch": "npm run scss-compile"
   },
   "repository": {
@@ -20,13 +20,14 @@
   },
   "homepage": "https://github.com/hayleyavw/personal-website#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "email-validator": "^2.0.4",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "mailgun-js": "^0.22.0"
   },
   "devDependencies": {
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.0",
+    "prettier": "1.18.2",
     "scss-compile": "^0.1.7"
   }
 }
