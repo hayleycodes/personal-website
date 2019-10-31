@@ -76,7 +76,8 @@ body {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     cursor: pointer; }
     body nav a, body nav button {
-      margin: 0 20px; }
+      margin: 0 20px;
+      font-size: 1rem; }
     body nav a:hover,
     body nav a:focus {
       color: #3E3E3E;
