@@ -217,12 +217,12 @@ body {
 			.form-element > label{
 				display: block;
 				float: left;
-				margin-top: -19px;
+				margin-top: -28px;
 				background: $white;
 				height: 14px;
-				padding: 2px 5px 2px 5px;
+				padding: 7px 5px 7px 5px;
 				color: $blue;
-				font-size: 14px;
+				font-size: 18px;
 				overflow: hidden;
 			}
 			
@@ -233,7 +233,7 @@ body {
 				margin: 0 -9px -9px -9px;
 				text-align: center;
 				color: $white;
-				font-size: 11px;
+				font-size: 18px;
 			}
 
 			input[type="text"],
@@ -266,6 +266,7 @@ body {
 		border: none;
 		padding: 10px 20px 10px 20px;
 		color: $white;
+		font-size: 1rem;
 	}
 
 	input[type="submit"]:hover,
@@ -304,6 +305,12 @@ details {
 		&::-webkit-details-marker {
 			display: none;
 		}
+
+		&:focus {
+			outline: none;
+			border-right: 4px solid $darkGrey;
+			background-color: lighten($grey, 40%);
+		}
 	}
 	
 	.summary-row-1 {
@@ -321,6 +328,6 @@ details {
 	}
 
 	&:hover {
-		background-color: lighten($grey, 40%);
+		border-right: 4px solid $darkGrey;
 	}
 }

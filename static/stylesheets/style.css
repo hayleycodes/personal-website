@@ -151,12 +151,12 @@ body {
       body #contact-overlay #contact-form .form-element > label {
         display: block;
         float: left;
-        margin-top: -19px;
+        margin-top: -28px;
         background: #fff;
         height: 14px;
-        padding: 2px 5px 2px 5px;
+        padding: 7px 5px 7px 5px;
         color: #6287c6;
-        font-size: 14px;
+        font-size: 18px;
         overflow: hidden; }
       body #contact-overlay #contact-form .form-element > span {
         background: #6287c6;
@@ -165,7 +165,7 @@ body {
         margin: 0 -9px -9px -9px;
         text-align: center;
         color: #fff;
-        font-size: 11px; }
+        font-size: 18px; }
       body #contact-overlay #contact-form input[type="text"],
       body #contact-overlay #contact-form input[type="email"],
       body #contact-overlay #contact-form textarea {
@@ -187,7 +187,8 @@ body {
     background-color: #6287c6;
     border: none;
     padding: 10px 20px 10px 20px;
-    color: #fff; }
+    color: #fff;
+    font-size: 1rem; }
   body input[type="submit"]:hover,
   body button:hover {
     background-color: #8ba9dd;
@@ -211,6 +212,10 @@ details {
       width: 100%; }
     details summary::-webkit-details-marker {
       display: none; }
+    details summary:focus {
+      outline: none;
+      border-right: 4px solid #3E3E3E;
+      background-color: #cfd2d7; }
   details .summary-row-1 {
     margin-bottom: 3px; }
   details .summary-row-1, details .summary-row-2 {
@@ -220,4 +225,4 @@ details {
   details img {
     height: 40px; }
   details:hover {
-    background-color: #cfd2d7; }
+    border-right: 4px solid #3E3E3E; }
