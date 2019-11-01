@@ -215,6 +215,8 @@ details {
     padding: 10px; }
   details[open] {
     border-right: 5px solid #3e3e3e; }
+    details[open] .chevron {
+      stroke: #3e3e3e; }
   details .tooltip {
     position: relative;
     display: inline-block; }
@@ -247,11 +249,15 @@ details {
     padding: 10px; }
     details summary .summary-wrapper {
       width: 100%; }
+    details summary .chevron {
+      stroke: #6287c6; }
     details summary::-webkit-details-marker {
       display: none; }
     details summary:focus {
       outline: none;
       border-left: 5px solid #3e3e3e; }
+    details summary:hover .chevron, details summary:focus .chevron {
+      stroke: #3e3e3e; }
   details .summary-row-1 {
     margin-bottom: 3px; }
   details .summary-row-1,

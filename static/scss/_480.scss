@@ -291,6 +291,9 @@ details {
 
     &[open] {
         border-right: $border;
+        .chevron {
+            stroke: $darkGrey;
+        }
     }
 
     .tooltip {
@@ -338,6 +341,10 @@ details {
             width: 100%;
         }
 
+        .chevron {
+            stroke: $blue;
+        }
+
         &::-webkit-details-marker {
             display: none;
         }
@@ -345,6 +352,13 @@ details {
         &:focus {
             outline: none;
             border-left: $border;
+        }
+
+        &:hover,
+        &:focus {
+            .chevron {
+                stroke: $darkGrey;
+            }
         }
     }
 
