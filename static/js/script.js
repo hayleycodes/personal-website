@@ -11,6 +11,16 @@ function closeContact() {
     document.getElementById('contact-overlay').style.height = '0%'
 }
 
+// close contact on escape key
+function keydownHandler(e) {
+    if (e.keyCode == 27) {
+        document.getElementById('contact-overlay').style.height = '0%'
+    }
+}
+
+// register handler method for the keydown event
+document.addEventListener('keydown', keydownHandler, false)
+
 function highlightEmpty(element) {
     if (element.value == '') {
         element.style.borderColor = 'red'
