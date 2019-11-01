@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function() {
     class ProjectDetails extends HTMLElement {
         constructor() {
@@ -31,8 +30,11 @@
                             ${projectLanguages
                                 .map(
                                     language => `
-                                <img src="/images/language-logos/${language}.png">
-                            `
+                                        <div class="tooltip">
+                                            <img src="/images/language-logos/${language}.png" alt="${language} logo">
+                                            <span class="tooltip-text">${language}</span>
+                                        </div>
+                                    `
                                 )
                                 .join('')}
                         </div>
