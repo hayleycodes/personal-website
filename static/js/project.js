@@ -87,16 +87,16 @@
 
         get languages() {
             const allLanguages = [
-                'html',
-                'css',
-                'js',
-                'ts',
+                'HTML',
+                'CSS',
+                'JavaScript',
+                'TypeScript',
                 'threejs',
-                'react',
-                'python',
-                'django',
-                'flask',
-                'tornado'
+                'React',
+                'Python',
+                'Django',
+                'Flask',
+                'Tornado'
             ]
             const relatedLanguages = []
             allLanguages.forEach(language => {
