@@ -12,7 +12,8 @@ html {
 h1,
 h2,
 h3 {
-    font-family: 'Londrina Solid', cursive;
+    // font-family: 'Londrina Solid', cursive;
+    font-family: 'Roboto';
 }
 
 h1 {
@@ -48,6 +49,11 @@ h5 {
 a {
     color: $blue;
     text-decoration: none;
+    cursor: pointer;
+
+    #back-to-top {
+        color: $white;
+    }
 }
 
 body {
@@ -94,24 +100,18 @@ body {
         top: 0;
         z-index: 1;
         background-color: $white;
-        border-bottom: 1px solid $highlightBlue;
         box-shadow: $shadow;
-        cursor: pointer;
 
-        a,
-        button {
-            margin: 0 20px;
-            font-size: 1rem;
+        a {
+            display: flex;
+            align-items: center;
         }
 
-        a:hover,
-        a:focus {
-            color: $darkGrey;
-            outline: none;
-        }
-
-        a:focus {
-            text-decoration: underline;
+        img {
+            height: 30px;
+            padding: 0 10px;
+            transition: none;
+            cursor: pointer;
         }
 
         button {
@@ -121,6 +121,11 @@ body {
                 margin-left: 5px;
                 height: 1rem;
             }
+        }
+
+        img:hover {
+            transform: scale(1.3, 1.3) rotate(360deg);
+            transition: transform 0.7s;
         }
     }
 
@@ -277,6 +282,29 @@ body {
     button:focus {
         background-color: $darkGrey;
         outline: none;
+    }
+
+    footer {
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: $white;
+        line-height: 1.5rem;
+        cursor: pointer;
+
+        #credit {
+            font-size: 0.5rem;
+        }
+
+        p {
+            margin: 0;
+        }
     }
 }
 
