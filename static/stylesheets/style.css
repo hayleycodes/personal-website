@@ -73,6 +73,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px;
+    height: calc(60px - 15px);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -112,7 +113,7 @@ body {
       body #wrapper #top #about {
         position: -webkit-sticky;
         position: sticky;
-        top: 5rem; }
+        top: calc(calc(60px - 15px) + 10px*2); }
     body #wrapper .card {
       padding: 10px;
       margin-bottom: 10px;

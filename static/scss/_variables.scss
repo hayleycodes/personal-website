@@ -11,3 +11,10 @@ $bodyFont: 'Roboto', sans-serif;
 
 $border: 5px solid $darkGrey;
 $shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+// nav
+$navPadding: 15px;
+$navHeight: calc(60px - #{$navPadding});
+
+// about and project
+$mainBodySpacing: 10px;
