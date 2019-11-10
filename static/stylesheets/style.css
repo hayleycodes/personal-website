@@ -18,8 +18,8 @@ h1 {
   color: #fff; }
 
 h2 {
-  font-size: 3.2rem;
   margin: 0;
+  font-size: 2.5rem;
   color: #fff; }
 
 h3 {
@@ -41,7 +41,7 @@ a {
   color: #6287c6;
   text-decoration: none;
   cursor: pointer; }
-  a #back-to-top {
+  a#back-to-top {
     color: #fff; }
 
 body {
@@ -210,7 +210,6 @@ body {
     background-color: #3e3e3e;
     outline: none; }
   body footer {
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +267,11 @@ details {
     align-items: center;
     padding: 10px; }
     details summary .summary-wrapper {
-      width: 100%; }
+      flex-basis: 94%; }
+    details summary .summary-chevron-up {
+      flex-basis: 6%;
+      display: flex;
+      justify-content: center; }
     details summary .chevron {
       stroke: #6287c6; }
     details summary::-webkit-details-marker {

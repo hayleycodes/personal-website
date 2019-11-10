@@ -1,12 +1,14 @@
+// Contact Form
 var non_empty = true
 
-/* Open when someone clicks on the span element */
+
+// Open when someone clicks on the span element
 function openContact() {
     document.getElementById('contact-overlay').style.height = '100%'
     document.getElementById('name').focus()
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
+// Close when someone clicks on the "x" symbol inside the overlay
 function closeContact() {
     document.getElementById('contact-overlay').style.height = '0%'
 }
@@ -21,6 +23,8 @@ function keydownHandler(e) {
 // register handler method for the keydown event
 document.addEventListener('keydown', keydownHandler, false)
 
+
+// form colouring
 function highlightEmpty(element) {
     if (element.value == '') {
         element.style.borderColor = 'red'
@@ -30,6 +34,8 @@ function highlightEmpty(element) {
     }
 }
 
+
+// email function
 function sendEmail() {
     var name_element = document.getElementById('name')
     var email_element = document.getElementById('email')
@@ -48,7 +54,7 @@ function sendEmail() {
         var xhr = new XMLHttpRequest()
         xhr.open('POST', '/', true)
         xhr.setRequestHeader('Content-Type', 'application/json')
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // everything is fine - show validation message
                 console.log('all is well')

@@ -12,7 +12,6 @@ html {
 h1,
 h2,
 h3 {
-    // font-family: 'Londrina Solid', cursive;
     font-family: 'Roboto';
 }
 
@@ -23,8 +22,8 @@ h1 {
 }
 
 h2 {
-    font-size: 3.2rem;
     margin: 0;
+    font-size: 2.5rem;
     color: $white;
 }
 
@@ -51,7 +50,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 
-    #back-to-top {
+    &#back-to-top {
         color: $white;
     }
 }
@@ -288,7 +287,6 @@ body {
     }
 
     footer {
-        background-color: $white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -369,7 +367,13 @@ details {
         padding: 10px;
 
         .summary-wrapper {
-            width: 100%;
+            flex-basis: 94%;
+        }
+
+        .summary-chevron-up {
+            flex-basis: 6%;
+            display: flex;
+            justify-content: center;
         }
 
         .chevron {
