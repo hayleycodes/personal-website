@@ -18,8 +18,6 @@
                 const template = document.createElement('details')
                 template.innerHTML = `
             <style>
-
-                
             </style>
             
             <summary>
