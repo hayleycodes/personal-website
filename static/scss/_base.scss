@@ -170,7 +170,7 @@ body {
                 position: sticky;
                 // this madness is to make sure it stays a consistent distance
                 // from the nav
-                top: calc(#{$navHeight} + #{$mainBodySpacing}*2);
+                top: calc(#{$navHeight} + #{$mainBodySpacing}* 2);
             }
         }
 
@@ -206,7 +206,7 @@ body {
             font-size: 40px;
             &:hover,
             &:focus {
-                color: $mainColor
+                color: $mainColor;
             }
         }
 
@@ -439,5 +439,4 @@ details {
     &:hover {
         box-shadow: $shadow;
     }
-
 }
