@@ -1,43 +1,40 @@
 // Contact Form
 var non_empty = true
 
-
 // Open when someone clicks on the span element
 function openContact() {
-    document.getElementById('contact-overlay').style.height = '100%';
-    document.getElementById('name').focus();
+    document.getElementById('contact-overlay').style.height = '100%'
+    document.getElementById('name').focus()
 }
 
 // Close when someone clicks on the "x" symbol inside the overlay
 function closeContact() {
-    document.getElementById('contact-overlay').style.height = '0%';
+    document.getElementById('contact-overlay').style.height = '0%'
 }
 
 // close contact on escape key
 function keydownHandler(e) {
     if (e.keyCode == 27) {
-        document.getElementById('contact-overlay').style.height = '0%';
+        document.getElementById('contact-overlay').style.height = '0%'
     }
     if (e.keyCode == 13) {
-        openContact();
+        openContact()
     }
 }
 
 // register handler method for the keydown event
-document.addEventListener('keydown', keydownHandler, false);
-document.getElementById("email-button").addEventListener('keydown', keydownHandler);
-
+document.addEventListener('keydown', keydownHandler, false)
+document.getElementById('email-button').addEventListener('keydown', keydownHandler)
 
 // form colouring
 function highlightEmpty(element) {
     if (element.value == '') {
-        element.style.borderColor = 'red';
-        non_empty = false;
+        element.style.borderColor = 'red'
+        non_empty = false
     } else {
-        element.style.borderColor = '#ccc';
+        element.style.borderColor = '#ccc'
     }
 }
-
 
 // email function
 function sendEmail() {
@@ -58,7 +55,7 @@ function sendEmail() {
         var xhr = new XMLHttpRequest()
         xhr.open('POST', '/', true)
         xhr.setRequestHeader('Content-Type', 'application/json')
-        xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // everything is fine - show validation message
                 console.log('all is well')
