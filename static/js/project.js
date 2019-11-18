@@ -23,7 +23,7 @@
             <summary>
                 <div class="summary-wrapper">
                     <div class="summary-row-1">
-                        <img src="images/project-logos/${projectImg}" alt="Logo for ${projectName}">
+                        <img class="project-logo" src="images/project-logos/${projectImg}" alt="Logo for ${projectName}">
                         <div class="icons">
                             ${projectLanguages
                                 .map(

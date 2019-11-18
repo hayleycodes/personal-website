@@ -7,71 +7,64 @@ html {
   position: relative;
   top: -3rem; }
 
-h1,
-h2,
-h3 {
-  font-family: 'Roboto'; }
-
-h1 {
-  font-size: 3.4rem;
-  margin: 0px;
-  color: #d16689; }
-
-h2 {
-  display: inline;
-  margin: 0;
-  font-size: 2.5rem;
-  color: #d16689; }
-  h2.show-cursor {
-    border-right: 3px solid #636b77; }
-  h2.highlight {
-    background-color: #d16689;
-    color: #f6f5f3; }
-
-h3 {
-  color: #d16689;
-  font-size: 2rem;
-  margin: 10px 10px; }
-
-h4 {
-  margin: 0;
-  color: #3e3e3e;
-  font-size: 1.2rem; }
-
-h5 {
-  margin: 0;
-  font-weight: bold;
-  font-size: 0.8rem; }
-
-a {
-  color: #d16689;
-  text-decoration: none;
-  cursor: pointer; }
-  a#back-to-top {
-    color: #fff; }
-
 body {
   margin: 0;
   height: 100%;
   font-family: "Roboto", sans-serif; }
+  body h1,
+  body h2,
+  body h3 {
+    font-family: 'Roboto'; }
+  body h1 {
+    font-size: 2.8rem;
+    margin: 0px;
+    color: #d16689; }
+  body h2 {
+    display: inline;
+    margin: 0;
+    font-size: 2rem;
+    color: #d16689; }
+    body h2.show-cursor {
+      border-right: 3px solid #636b77; }
+    body h2.highlight {
+      background-color: #d16689;
+      color: #f6f5f3; }
+  body h3 {
+    color: #d16689;
+    font-size: 2rem;
+    margin: 10px 10px; }
+  body h4 {
+    margin: 0;
+    color: #3e3e3e;
+    font-size: 1.2rem; }
+  body h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.8rem; }
+  body a {
+    color: #d16689;
+    text-decoration: none;
+    cursor: pointer; }
+    body a#back-to-top {
+      color: #fff; }
   body p {
     color: #3e3e3e;
     font-size: 0.9rem !important; }
   body header {
     display: flex;
-    height: 250px; }
-    body header #header-wrapper {
-      display: flex;
-      align-items: center;
-      margin: auto;
-      height: 100%; }
-      body header #header-wrapper img {
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-right: 30px;
-        border: 1px solid #d16689; }
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center; }
+    body header img {
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 30px;
+      border: 1px solid #d16689; }
   body nav {
     display: flex;
     justify-content: center;
@@ -109,19 +102,17 @@ body {
         height: 1rem; }
   body #wrapper {
     margin: 0px 10px; }
-    body #wrapper #top {
+    body #wrapper #content {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       margin-bottom: 10px; }
-      body #wrapper #top #left-column {
-        flex-basis: 40%; }
-      body #wrapper #top #right-column {
-        flex-basis: 60%; }
-      body #wrapper #top #workshops,
-      body #wrapper #top #about,
-      body #wrapper #top #projects {
-        padding: 10px; }
-      body #wrapper #top #about {
+      body #wrapper #content #about,
+      body #wrapper #content #projects {
+        padding: 10px 10px 0 10px; }
+        body #wrapper #content #about h3,
+        body #wrapper #content #projects h3 {
+          text-align: center; }
+      body #wrapper #content #about {
         position: -webkit-sticky;
         position: sticky;
         top: calc(calc(60px - 15px) + 10px* 2); }
@@ -134,6 +125,8 @@ body {
   body #contact {
     padding: 10px; }
   body #contact-overlay {
+    display: flex;
+    flex-direction: column;
     height: 0%;
     width: 100%;
     position: fixed;
@@ -144,11 +137,11 @@ body {
     overflow-x: hidden;
     transition: 0.5s; }
     body #contact-overlay #close-button {
-      position: absolute;
-      top: 20px;
-      right: 45px;
+      align-self: flex-end;
+      margin: 10px 20px 0 0;
       color: #fff;
-      font-size: 40px; }
+      font-size: 40px;
+      z-index: 4; }
       body #contact-overlay #close-button:hover, body #contact-overlay #close-button:focus {
         color: #d16689; }
     body #contact-overlay #contact-wrapper {
@@ -157,7 +150,7 @@ body {
       display: flex;
       align-items: center; }
     body #contact-overlay #contact-form {
-      margin: 20px;
+      margin: 10px 20px 20px 20px;
       width: 100%;
       text-align: center;
       z-index: 3;
@@ -297,14 +290,58 @@ details {
       border-top: 2px solid #636b77; }
     details summary:hover .chevron, details summary:focus .chevron {
       stroke: #636b77; }
-  details .summary-row-1 {
-    margin-bottom: 3px; }
+  details .summary-row-1 .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; }
+  details .summary-row-2 h5 {
+    text-align: center; }
   details .summary-row-1,
   details .summary-row-2 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center; }
+    details .summary-row-1 .project-logo,
+    details .summary-row-1 .icons,
+    details .summary-row-1 h5,
+    details .summary-row-2 .project-logo,
+    details .summary-row-2 .icons,
+    details .summary-row-2 h5 {
+      margin: 3px 0; }
+  details .project-logo {
+    max-height: 40px;
+    max-width: 100%; }
   details img {
     height: 40px; }
   details:hover {
     box-shadow: 0 2px 5px 0 rgba(209, 102, 137, 0.16), 0 2px 10px 0 rgba(209, 102, 137, 0.12); }
+
+@media (min-width: 480px) {
+  body h1 {
+    font-size: 3.4rem; }
+  body h2 {
+    font-size: 2.5rem; }
+  body header img {
+    height: 200px;
+    width: 200px; } }
+
+@media (min-width: 768px) {
+  body header {
+    flex-direction: row; }
+  body #wrapper #content {
+    flex-direction: row;
+    justify-content: space-between; }
+    body #wrapper #content #left-column {
+      flex-basis: 40%; }
+    body #wrapper #content #right-column {
+      flex-basis: 60%; }
+    body #wrapper #content #about,
+    body #wrapper #content #projects {
+      padding: 10px; }
+  details summary .summary-row-1 {
+    margin-bottom: 3px; }
+  details summary .summary-row-1,
+  details summary .summary-row-2 {
+    flex-direction: row; } }

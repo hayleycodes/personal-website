@@ -9,64 +9,63 @@ html {
     top: -3rem;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Roboto';
-}
-
-h1 {
-    font-size: 3.4rem;
-    margin: 0px;
-    color: $mainColor;
-}
-
-h2 {
-    display: inline;
-    margin: 0;
-    font-size: 2.5rem;
-    color: $mainColor;
-    &.show-cursor {
-        border-right: 3px solid $secondaryColor;
-    }
-    &.highlight {
-        background-color: $mainColor;
-        color: $offWhite;
-    }
-}
-
-h3 {
-    color: $mainColor;
-    font-size: 2rem;
-    margin: 10px 10px;
-}
-
-h4 {
-    margin: 0;
-    color: $darkSecondaryColor;
-    font-size: 1.2rem;
-}
-
-h5 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-a {
-    color: $mainColor;
-    text-decoration: none;
-    cursor: pointer;
-
-    &#back-to-top {
-        color: $white;
-    }
-}
-
 body {
     margin: 0;
     height: 100%;
     font-family: $bodyFont;
+    h1,
+    h2,
+    h3 {
+        font-family: 'Roboto';
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin: 0px;
+        color: $mainColor;
+    }
+
+    h2 {
+        display: inline;
+        margin: 0;
+        font-size: 2rem;
+        color: $mainColor;
+        &.show-cursor {
+            border-right: 3px solid $secondaryColor;
+        }
+        &.highlight {
+            background-color: $mainColor;
+            color: $offWhite;
+        }
+    }
+
+    h3 {
+        color: $mainColor;
+        font-size: 2rem;
+        margin: 10px 10px;
+    }
+
+    h4 {
+        margin: 0;
+        color: $darkSecondaryColor;
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    a {
+        color: $mainColor;
+        text-decoration: none;
+        cursor: pointer;
+
+        &#back-to-top {
+            color: $white;
+        }
+    }
 
     p {
         color: $darkSecondaryColor;
@@ -75,22 +74,20 @@ body {
 
     header {
         display: flex;
-        height: 250px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: $mainBodySpacing;
+        text-align: center;
 
-        #header-wrapper {
-            display: flex;
-            align-items: center;
-            margin: auto;
-            height: 100%;
-
-            img {
-                height: 200px;
-                width: 200px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-right: 30px;
-                border: $border;
-            }
+        img {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 30px;
+            border: $border;
         }
     }
 
@@ -146,23 +143,17 @@ body {
     #wrapper {
         margin: 0px $mainBodySpacing;
 
-        #top {
+        #content {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             margin-bottom: 10px;
 
-            #left-column {
-                flex-basis: 40%;
-            }
-
-            #right-column {
-                flex-basis: 60%;
-            }
-
-            #workshops,
             #about,
             #projects {
-                padding: $mainBodySpacing;
+                padding: $mainBodySpacing $mainBodySpacing 0 $mainBodySpacing;
+                h3 {
+                    text-align: center;
+                }
             }
 
             #about {
@@ -188,6 +179,8 @@ body {
     }
 
     #contact-overlay {
+        display: flex;
+        flex-direction: column;
         height: 0%;
         width: 100%;
         position: fixed;
@@ -199,11 +192,11 @@ body {
         transition: 0.5s;
 
         #close-button {
-            position: absolute;
-            top: 20px;
-            right: 45px;
+            align-self: flex-end;
+            margin: 10px 20px 0 0;
             color: $white;
             font-size: 40px;
+            z-index: 4;
             &:hover,
             &:focus {
                 color: $mainColor;
@@ -218,7 +211,7 @@ body {
         }
 
         #contact-form {
-            margin: 20px;
+            margin: 10px 20px 20px 20px;
             width: 100%;
             text-align: center;
             z-index: 3;
@@ -418,14 +411,36 @@ details {
     }
 
     .summary-row-1 {
-        margin-bottom: 3px;
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .summary-row-2 {
+        h5 {
+            text-align: center;
+        }
     }
 
     .summary-row-1,
     .summary-row-2 {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        .project-logo,
+        .icons,
+        h5 {
+            margin: 3px 0;
+        }
+    }
+
+    .project-logo {
+        max-height: 40px;
+        max-width: 100%;
     }
 
     img {
