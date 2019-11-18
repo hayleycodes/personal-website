@@ -44,7 +44,9 @@ body {
   body a {
     color: #d16689;
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    overflow-wrap: break-word;
+    word-wrap: break-word; }
     body a#back-to-top {
       color: #fff; }
   body p {
