@@ -23,9 +23,10 @@ body {
     display: inline;
     margin: 0;
     font-size: 2rem;
-    color: #d16689; }
+    color: #d16689;
+    border-right: 3px solid rgba(255, 255, 255, 0); }
     body h2.show-cursor {
-      border-right: 3px solid #636b77; }
+      border-right: 3px solid #636b77 !important; }
     body h2.highlight {
       background-color: #d16689;
       color: #f6f5f3; }
@@ -73,6 +74,7 @@ body {
     align-items: center;
     padding: 15px;
     height: calc(60px - 15px);
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;

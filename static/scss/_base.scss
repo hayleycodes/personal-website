@@ -30,8 +30,9 @@ body {
         margin: 0;
         font-size: 2rem;
         color: $mainColor;
+        border-right: 3px solid rgba(255, 255, 255, 0);
         &.show-cursor {
-            border-right: 3px solid $secondaryColor;
+            border-right: 3px solid $secondaryColor !important;
         }
         &.highlight {
             background-color: $mainColor;
@@ -99,6 +100,7 @@ body {
         align-items: center;
         padding: $navPadding;
         height: $navHeight;
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1;
