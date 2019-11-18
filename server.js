@@ -1,11 +1,11 @@
 const express = require('express')
-const body_parser = require('body-parser')
+const bodyParser = require('body-parser')
 const validator = require('email-validator')
 
 const app = express()
 app.use(express.static('templates'))
 app.use(express.static('static'))
-app.use(body_parser.json())
+app.use(bodyParser.json())
 
 app.get('/', function(req, res) {
     res.send('Hello World!')
@@ -15,17 +15,17 @@ app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
 
-var mailgun = require('mailgun-js')
-var api_key = 'key-5f88a965cacbaa9907fc3a2f79083f7a'
-var DOMAIN = 'hayleyavw.com'
-var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN })
+let mailgun = require('mailgun-js')
+let apiKey = 'key-5f88a965cacbaa9907fc3a2f79083f7a'
+let DOMAIN = 'hayleyavw.com'
+let mailgun = require('mailgun-js')({ apiKey: apiKey, domain: DOMAIN })
 
 app.post('/', function(req, res) {
-    var email = req.body.email
+    let email = req.body.email
     if (validator.validate(email) == false) {
         return res.status(400).send()
     }
-    var data = {
+    let data = {
         from: email,
         to: 'contact@hayleyavw.com',
         subject: 'Message from ' + req.body.name,

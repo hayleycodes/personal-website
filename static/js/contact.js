@@ -1,8 +1,8 @@
 // Contact Form
-var non_empty = true
-const name_element = document.getElementById('name')
-const email_element = document.getElementById('email')
-const message_element = document.getElementById('message')
+let nonEmpty = true
+const nameElement = document.getElementById('name')
+const emailElement = document.getElementById('email')
+const messageElement = document.getElementById('message')
 
 // Open when someone clicks on the span element
 function openContact() {
@@ -17,9 +17,9 @@ function closeContact() {
 
 // Disable the form inputs
 function disableForm() {
-    name_element.disabled = true
-    email_element.disabled = true
-    message_element.disabled = true
+    nameElement.disabled = true
+    emailElement.disabled = true
+    messageElement.disabled = true
 
     const formElements = document.getElementsByClassName('form-element')
     for (var i = 0; i < formElements.length; i++) {
@@ -45,7 +45,7 @@ document.getElementById('email-button').addEventListener('keydown', keydownHandl
 function highlightEmpty(element) {
     if (element.value == '') {
         element.style.borderColor = 'red'
-        non_empty = false
+        nonEmpty = false
     } else {
         element.style.borderColor = '#ccc'
     }
@@ -53,26 +53,26 @@ function highlightEmpty(element) {
 
 // email function
 function sendEmail() {
-    var name = document.getElementById('name').value
-    var email = document.getElementById('email').value
-    var message = document.getElementById('message').value
+    let name = document.getElementById('name').value
+    let email = document.getElementById('email').value
+    let message = document.getElementById('message').value
 
     // if no value then give red highlight
-    highlightEmpty(name_element)
-    highlightEmpty(email_element)
-    highlightEmpty(message_element)
+    highlightEmpty(nameElement)
+    highlightEmpty(emailElement)
+    highlightEmpty(messageElement)
 
-    if (non_empty == true) {
-        var xhr = new XMLHttpRequest()
+    if (nonEmpty == true) {
+        let xhr = new XMLHttpRequest()
         xhr.open('POST', '/', true)
         xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // everything is fine - show validation message
                 console.log('all is well')
-                name_element.value = ''
-                email_element.value = ''
-                message_element.value = ''
+                nameElement.value = ''
+                emailElement.value = ''
+                messageElement.value = ''
                 document.getElementById('send-email-button').value =
                     'Thanks! Your message has been sent.'
                 disableForm()
@@ -80,7 +80,7 @@ function sendEmail() {
                     closeContact()
                 }, 2000)
             } else if (xhr.readyState == 4 && xhr.status == 400) {
-                email_element.style.borderColor = 'red'
+                emailElement.style.borderColor = 'red'
                 // invalid email - show error
                 console.log('400')
             } else if (xhr.readyState == 4) {
