@@ -56,7 +56,7 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
     text-align: center; }
     body header img {
       height: 150px;
@@ -327,9 +327,18 @@ details {
     height: 200px;
     width: 200px; } }
 
+@media (min-width: 660px) {
+  body h1 {
+    font-size: 3.4rem; }
+  body h2 {
+    font-size: 2.5rem; } }
+
 @media (min-width: 768px) {
   body header {
-    flex-direction: row; }
+    flex-direction: row;
+    margin-bottom: 20px; }
+    body header #heading-text {
+      text-align: left; }
   body #wrapper #content {
     flex-direction: row;
     justify-content: space-between; }
@@ -339,9 +348,13 @@ details {
       flex-basis: 60%; }
     body #wrapper #content #about,
     body #wrapper #content #projects {
-      padding: 10px; }
+      padding: 10px; } }
+
+@media (min-width: 1280px) {
   details summary .summary-row-1 {
     margin-bottom: 3px; }
+    details summary .summary-row-1 .icons {
+      justify-content: flex-end; }
   details summary .summary-row-1,
   details summary .summary-row-2 {
     flex-direction: row; } }

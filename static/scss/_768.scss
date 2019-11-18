@@ -2,6 +2,10 @@
     body {
         header {
             flex-direction: row;
+            margin-bottom: 20px;
+            #heading-text {
+                text-align: left;
+            }
         }
 
         #wrapper {
@@ -21,18 +25,6 @@
                 #projects {
                     padding: $mainBodySpacing;
                 }
-            }
-        }
-    }
-
-    details {
-        summary {
-            .summary-row-1 {
-                margin-bottom: 3px;
-            }
-            .summary-row-1,
-            .summary-row-2 {
-                flex-direction: row;
             }
         }
     }
