@@ -165,6 +165,8 @@ body {
         border: 1px solid #d16689;
         margin-bottom: 30px;
         border-radius: 3px; }
+        body #contact-overlay #contact-form .form-element.disabled {
+          border-color: #636b77; }
       body #contact-overlay #contact-form .form-element:last-child {
         border: none;
         margin-bottom: 0px;
@@ -179,14 +181,18 @@ body {
         color: #d16689;
         font-size: 18px;
         overflow: hidden; }
+      body #contact-overlay #contact-form .form-element.disabled > label {
+        color: #636b77; }
       body #contact-overlay #contact-form .form-element > span {
-        background: #d16689;
+        background-color: #d16689;
         display: block;
         padding: 3px;
         margin: 0 -9px -9px -9px;
         text-align: center;
         color: #fff;
         font-size: 18px; }
+      body #contact-overlay #contact-form .form-element.disabled > span {
+        background-color: #636b77; }
       body #contact-overlay #contact-form input[type='text'],
       body #contact-overlay #contact-form input[type='email'],
       body #contact-overlay #contact-form textarea {
@@ -203,18 +209,18 @@ body {
         font-family: monospace; }
       body #contact-overlay #contact-form textarea {
         resize: none; }
-  body input[type='submit'],
+  body input[type='button'],
   body button {
     background-color: #d16689;
     border: none;
     padding: 10px 20px 10px 20px;
     color: #fff;
     font-size: 1rem; }
-  body input[type='submit']:hover,
+  body input[type='button']:hover,
   body button:hover {
     background-color: #636b77;
     color: #fff; }
-  body input[type='submit']:focus,
+  body input[type='button']:focus,
   body button:focus {
     background-color: #636b77;
     outline: none; }

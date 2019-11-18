@@ -229,6 +229,9 @@ body {
                 border: 1px solid $mainColor;
                 margin-bottom: 30px;
                 border-radius: 3px;
+                &.disabled {
+                    border-color: $secondaryColor;
+                }
             }
             .form-element:last-child {
                 border: none;
@@ -246,15 +249,21 @@ body {
                 font-size: 18px;
                 overflow: hidden;
             }
+            .form-element.disabled > label {
+                color: $secondaryColor;
+            }
 
             .form-element > span {
-                background: $mainColor;
+                background-color: $mainColor;
                 display: block;
                 padding: 3px;
                 margin: 0 -9px -9px -9px;
                 text-align: center;
                 color: $white;
                 font-size: 18px;
+            }
+            .form-element.disabled > span {
+                background-color: $secondaryColor;
             }
 
             input[type='text'],
@@ -279,7 +288,7 @@ body {
         }
     }
 
-    input[type='submit'],
+    input[type='button'],
     button {
         background-color: $mainColor;
         border: none;
@@ -288,13 +297,13 @@ body {
         font-size: 1rem;
     }
 
-    input[type='submit']:hover,
+    input[type='button']:hover,
     button:hover {
         background-color: $secondaryColor;
         color: $white;
     }
 
-    input[type='submit']:focus,
+    input[type='button']:focus,
     button:focus {
         background-color: $secondaryColor;
         outline: none;
