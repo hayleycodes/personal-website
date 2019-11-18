@@ -144,8 +144,7 @@ body {
       align-self: flex-end;
       margin: 10px 20px 0 0;
       color: #fff;
-      font-size: 40px;
-      z-index: 4; }
+      font-size: 40px; }
       body #contact-overlay #close-button:hover, body #contact-overlay #close-button:focus {
         color: #d16689; }
     body #contact-overlay #contact-wrapper {
@@ -153,6 +152,26 @@ body {
       width: 100%;
       display: flex;
       align-items: center; }
+      body #contact-overlay #contact-wrapper #message-confirmation-overlay {
+        display: flex;
+        position: absolute;
+        margin: 20px;
+        top: 63px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+        font-size: 2rem;
+        background-color: #d16689;
+        color: #fff;
+        border-radius: 5px;
+        opacity: 0;
+        transition: 1s ease-out; }
+        body #contact-overlay #contact-wrapper #message-confirmation-overlay.show {
+          opacity: 1;
+          z-index: 5; }
     body #contact-overlay #contact-form {
       margin: 10px 20px 20px 20px;
       width: 100%;
