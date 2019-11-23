@@ -236,7 +236,8 @@ body {
     border: none;
     padding: 10px 20px 10px 20px;
     color: #fff;
-    font-size: 1rem; }
+    font-size: 1rem;
+    border-radius: 5px; }
   body input[type='button']:hover,
   body button:hover {
     background-color: #636b77;
@@ -245,6 +246,11 @@ body {
   body button:focus {
     background-color: #636b77;
     outline: none; }
+  body #back-to-top-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0; }
   body footer {
     display: flex;
     justify-content: center;
