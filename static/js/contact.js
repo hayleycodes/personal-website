@@ -9,7 +9,6 @@ const sendButtonElement = document.getElementById('send-email-button')
 
 function openContact() {
     document.getElementById('contact-overlay').style.height = '100%'
-    // document.getElementById('name').focus()
     toggleTabIndexes()
 }
 
@@ -46,7 +45,6 @@ function keydownHandler(e) {
 
 // register handler method for the keydown event
 document.addEventListener('keydown', keydownHandler, false)
-// document.getElementById('email-button').addEventListener('keydown', keydownHandler)
 
 // form colouring
 function highlightEmpty(element) {
@@ -78,14 +76,14 @@ function sendEmail() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // everything is fine - show validation message
                 console.log('all is well')
-                nameElement.value = ''
-                emailElement.value = ''
-                messageElement.value = ''
                 let overlayMessage = document.getElementById('message-confirmation-overlay')
                 overlayMessage.classList.toggle('show')
                 setTimeout(() => {
                     overlayMessage.classList.toggle('show')
                     closeContact()
+                    nameElement.value = ''
+                    emailElement.value = ''
+                    messageElement.value = ''
                 }, 3000)
             } else if (xhr.readyState == 4 && xhr.status == 400) {
                 // invalid email - show error
