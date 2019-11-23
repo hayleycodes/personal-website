@@ -15,7 +15,6 @@ app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
 
-let mailgun = require('mailgun-js')
 let apiKey = 'key-5f88a965cacbaa9907fc3a2f79083f7a'
 let DOMAIN = 'hayleyavw.com'
 let mailgun = require('mailgun-js')({ apiKey: apiKey, domain: DOMAIN })

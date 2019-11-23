@@ -186,8 +186,8 @@ body {
         border: 1px solid #d16689;
         margin-bottom: 30px;
         border-radius: 3px; }
-        body #contact-overlay #contact-form .form-element.disabled {
-          border-color: #636b77; }
+        body #contact-overlay #contact-form .form-element.empty > span {
+          display: block; }
       body #contact-overlay #contact-form .form-element:last-child {
         border: none;
         margin-bottom: 0px;
@@ -206,7 +206,7 @@ body {
         color: #636b77; }
       body #contact-overlay #contact-form .form-element > span {
         background-color: #d16689;
-        display: block;
+        display: none;
         padding: 3px;
         margin: 0 -9px -9px -9px;
         text-align: center;

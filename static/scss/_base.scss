@@ -252,8 +252,10 @@ body {
                 border: 1px solid $mainColor;
                 margin-bottom: 30px;
                 border-radius: 3px;
-                &.disabled {
-                    border-color: $secondaryColor;
+                &.empty {
+                    > span {
+                        display: block;
+                    }
                 }
             }
             .form-element:last-child {
@@ -278,7 +280,7 @@ body {
 
             .form-element > span {
                 background-color: $mainColor;
-                display: block;
+                display: none;
                 padding: 3px;
                 margin: 0 -9px -9px -9px;
                 text-align: center;

@@ -1,37 +1,20 @@
 // Contact Form
-let nonEmpty = true
+let empty = false
 const nameElement = document.getElementById('name')
 const emailElement = document.getElementById('email')
 const messageElement = document.getElementById('message')
 
-// Open when someone clicks on the span element
 function openContact() {
     document.getElementById('contact-overlay').style.height = '100%'
     // document.getElementById('name').focus()
 }
 
-// Close when someone clicks on the "x" symbol inside the overlay
 function closeContact() {
     document.getElementById('contact-overlay').style.height = '0%'
-    nameElement.disabled = false
-    emailElement.disabled = false
-    messageElement.disabled = false
 
     const formElements = document.getElementsByClassName('form-element')
     for (var i = 0; i < formElements.length; i++) {
-        formElements[i].classList.remove('disabled')
-    }
-}
-
-// Disable the form inputs
-function disableForm() {
-    nameElement.disabled = true
-    emailElement.disabled = true
-    messageElement.disabled = true
-
-    const formElements = document.getElementsByClassName('form-element')
-    for (var i = 0; i < formElements.length; i++) {
-        formElements[i].classList.add('disabled')
+        formElements[i].classList.remove('empty')
     }
 }
 
@@ -52,30 +35,29 @@ document.getElementById('email-button').addEventListener('keydown', keydownHandl
 // form colouring
 function highlightEmpty(element) {
     if (element.value == '') {
-        element.style.borderColor = 'red'
-        nonEmpty = false
+        element.parentElement.classList.add('empty')
+        empty = true
     } else {
-        element.style.borderColor = '#ccc'
+        element.parentElement.classList.remove('empty')
     }
 }
 
 // email function
 function sendEmail() {
-    let name = document.getElementById('name').value
-    let email = document.getElementById('email').value
-    let message = document.getElementById('message').value
+    let name = nameElement.value
+    let email = emailElement.value
+    let message = messageElement.value
 
-    // if no value then give red highlight
+    // if no value then show message
     highlightEmpty(nameElement)
     highlightEmpty(emailElement)
     highlightEmpty(messageElement)
 
-    if (nonEmpty == true) {
+    if (!empty) {
         let xhr = new XMLHttpRequest()
         xhr.open('POST', '/', true)
         xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.onreadystatechange = function() {
-            // disableForm()
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // everything is fine - show validation message
                 console.log('all is well')
@@ -89,8 +71,8 @@ function sendEmail() {
                     closeContact()
                 }, 3000)
             } else if (xhr.readyState == 4 && xhr.status == 400) {
-                emailElement.style.borderColor = 'red'
                 // invalid email - show error
+                emailElement.parentElement.classList.add('empty')
                 console.log('400')
             } else if (xhr.readyState == 4) {
                 console.log('panic!')
