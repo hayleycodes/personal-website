@@ -66,21 +66,19 @@ body {
       width: 150px;
       object-fit: cover;
       border-radius: 50%;
-      margin-right: 30px;
-      border: 1px solid #d16689; }
+      margin-right: 30px; }
   body nav {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
     height: calc(60px - 15px);
+    box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #fff;
-    border-top: 1px solid #d16689;
-    border-bottom: 1px solid #d16689; }
+    background-color: #fff; }
     body nav a {
       display: flex;
       align-items: center; }
@@ -108,8 +106,7 @@ body {
     margin: 0px 10px; }
     body #wrapper #content {
       display: flex;
-      flex-direction: column;
-      margin-bottom: 10px; }
+      flex-direction: column; }
       body #wrapper #content #about,
       body #wrapper #content #projects {
         padding: 10px 10px 0 10px; }
@@ -124,7 +121,6 @@ body {
       padding: 10px;
       margin-bottom: 10px;
       background-color: #fff;
-      border: 1px solid #d16689;
       border-radius: 5px; }
   body #contact {
     padding: 10px; }
@@ -177,7 +173,8 @@ body {
       width: 100%;
       text-align: center;
       z-index: 3;
-      padding: 20px; }
+      padding: 20px;
+      border: 1px solid #d16689; }
       body #contact-overlay #contact-form h3 {
         color: #d16689; }
       body #contact-overlay #contact-form .form-element {
@@ -250,13 +247,12 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 10px 0 10px 0; }
+    margin-bottom: 20px; }
   body footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-top: 1px solid #d16689;
     padding: 15px;
     position: sticky;
     top: 0;
@@ -270,8 +266,7 @@ body {
 details {
   margin-bottom: 10px;
   background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #d16689; }
+  border-radius: 5px; }
   details ::slotted(div) {
     padding: 10px; }
   details[open] {
@@ -322,7 +317,7 @@ details {
       display: none; }
     details summary:focus {
       outline: none;
-      border-top: 2px solid #636b77; }
+      border-top: 3px solid #636b77; }
     details summary:hover .chevron, details summary:focus .chevron {
       stroke: #636b77; }
   details .summary-row-1 .icons {
