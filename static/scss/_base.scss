@@ -315,6 +315,12 @@ body {
         border-radius: 5px;
         box-shadow: $shadow;
         border: none;
+        cursor: pointer;
+        &#back-to-top {
+            a {
+                padding: 0;
+            }
+        }
     }
 
     input[type='button']:hover,
@@ -338,7 +344,7 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     footer {
@@ -440,7 +446,7 @@ details {
 
         &:focus {
             outline: none;
-            border-top: 3px solid $secondaryColor;
+            border-top: 3px solid $mainColor;
         }
 
         &:hover,
