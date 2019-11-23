@@ -334,10 +334,14 @@ body {
         color: $secondaryColor;
         box-shadow: $secondaryShadow;
         outline: none;
+        border: 1px solid $secondaryColor;
     }
 
-    button:hover a {
-        color: $secondaryColor;
+    button:hover,
+    button:focus {
+        a {
+            color: $secondaryColor;
+        }
     }
 
     #back-to-top-wrapper {
@@ -446,7 +450,7 @@ details {
 
         &:focus {
             outline: none;
-            border-top: 3px solid $mainColor;
+            border-top: 3px solid $secondaryColor;
         }
 
         &:hover,

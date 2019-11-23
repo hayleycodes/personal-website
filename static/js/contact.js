@@ -1,12 +1,25 @@
 // Contact Form
 let empty = false
+let tabIndex = '-1'
+const closeButtonElement = document.getElementById('close-button')
 const nameElement = document.getElementById('name')
 const emailElement = document.getElementById('email')
 const messageElement = document.getElementById('message')
+const sendButtonElement = document.getElementById('send-email-button')
 
 function openContact() {
     document.getElementById('contact-overlay').style.height = '100%'
     // document.getElementById('name').focus()
+    toggleTabIndexes()
+}
+
+function toggleTabIndexes() {
+    tabIndex = tabIndex == -1 ? 0 : -1
+    closeButtonElement.tabIndex = tabIndex
+    nameElement.tabIndex = tabIndex
+    emailElement.tabIndex = tabIndex
+    messageElement.tabIndex = tabIndex
+    sendButtonElement.tabIndex = tabIndex
 }
 
 function closeContact() {
@@ -16,21 +29,24 @@ function closeContact() {
     for (var i = 0; i < formElements.length; i++) {
         formElements[i].classList.remove('empty')
     }
+
+    toggleTabIndexes()
 }
 
 // close contact on escape key
 function keydownHandler(e) {
-    if (e.keyCode == 27) {
-        document.getElementById('contact-overlay').style.height = '0%'
+    if (e.keyCode === 27) {
+        closeContact()
     }
-    if (e.keyCode == 13) {
+    if (document.activeElement.id === 'email-button' && e.keyCode === 13) {
+        // enter key
         openContact()
     }
 }
 
 // register handler method for the keydown event
 document.addEventListener('keydown', keydownHandler, false)
-document.getElementById('email-button').addEventListener('keydown', keydownHandler)
+// document.getElementById('email-button').addEventListener('keydown', keydownHandler)
 
 // form colouring
 function highlightEmpty(element) {
