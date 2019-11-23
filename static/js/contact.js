@@ -39,6 +39,7 @@ function highlightEmpty(element) {
         empty = true
     } else {
         element.parentElement.classList.remove('empty')
+        empty = false
     }
 }
 
