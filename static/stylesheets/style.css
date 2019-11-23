@@ -368,7 +368,7 @@ details {
 @media (min-width: 768px) {
   body header {
     flex-direction: row;
-    margin-bottom: 20px; }
+    margin: 40px; }
     body header #heading-text {
       text-align: left; }
   body #wrapper #content {
