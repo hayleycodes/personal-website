@@ -1,7 +1,8 @@
 // Typewriter effect for subtitle
 'use strict'
+
 document.addEventListener('DOMContentLoaded', function(event) {
-    const dataText = ['Mentor.', 'Workshop Leader.', 'Developer.']
+    const dataText = ['Mentor.', 'Workshop Leader.', 'Communicator.', 'Developer.']
     const textElementClasses = document.querySelector('h2').classList
 
     const toggleCursor = async () => {
@@ -26,18 +27,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
         textElementClasses.toggle('highlight')
     }
 
-    // type one text in the typwriter
+    // type one text in the typewriter
     // keeps calling itself until the text is finished
-    async function typeWriter(text, i, fnCallback) {
-        if (i < text.length) {
+    async function typeWriter(text, characterCounter, fnCallback) {
+        if (characterCounter < text.length) {
             document.querySelector('h2').innerHTML =
-                text.substring(0, i + 1) + '<span aria-hidden="true"></span>'
+                text.substring(0, characterCounter + 1) + '<span aria-hidden="true"></span>'
             setTimeout(function() {
-                typeWriter(text, i + 1, fnCallback)
+                typeWriter(text, characterCounter + 1, fnCallback)
             }, 100)
         } else if (typeof fnCallback == 'function') {
             // flash cursor at the end of the text
-            for (var i = 0; i < 6; i++) {
+            for (var cursorFlashCount = 0; cursorFlashCount < 6; cursorFlashCount++) {
                 await new Promise(done =>
                     setTimeout(() => {
                         toggleCursor()
@@ -59,15 +60,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
         }
     }
     // start a typewriter animation for a text in the dataText array
-    function StartTextAnimation(i) {
+    function StartTextAnimation(wordCounter) {
         showCursor()
-        if (i >= dataText.length) {
-            i = 0
+        if (wordCounter >= dataText.length) {
+            wordCounter = 0
         }
-        if (i < dataText[i].length) {
-            typeWriter(dataText[i], 0, async function() {
+        if (wordCounter < dataText[wordCounter].length) {
+            typeWriter(dataText[wordCounter], 0, async () => {
                 // after callback (and whole text has been animated), start next text
-                StartTextAnimation(i + 1)
+                StartTextAnimation(wordCounter + 1)
             })
         }
     }
