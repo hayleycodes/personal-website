@@ -64,10 +64,6 @@ body {
         cursor: pointer;
         overflow-wrap: break-word;
         word-wrap: break-word;
-
-        &#back-to-top {
-            color: $white;
-        }
     }
 
     p {
@@ -99,7 +95,7 @@ body {
         align-items: center;
         padding: $navPadding;
         height: $navHeight;
-        box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5);
+        box-shadow: $shadow;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -312,24 +308,30 @@ body {
 
     input[type='button'],
     button {
-        background-color: $mainColor;
-        border: none;
+        background-color: $white;
         padding: 10px 20px 10px 20px;
-        color: $white;
+        color: $mainColor;
         font-size: 1rem;
         border-radius: 5px;
+        box-shadow: $shadow;
+        border: none;
     }
 
     input[type='button']:hover,
     button:hover {
-        background-color: $secondaryColor;
-        color: $white;
+        box-shadow: $secondaryShadow;
+        color: $secondaryColor;
     }
 
     input[type='button']:focus,
     button:focus {
-        background-color: $secondaryColor;
+        color: $secondaryColor;
+        box-shadow: $secondaryShadow;
         outline: none;
+    }
+
+    button:hover a {
+        color: $secondaryColor;
     }
 
     #back-to-top-wrapper {

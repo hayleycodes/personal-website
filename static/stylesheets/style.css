@@ -48,8 +48,6 @@ body {
     cursor: pointer;
     overflow-wrap: break-word;
     word-wrap: break-word; }
-    body a#back-to-top {
-      color: #fff; }
   body p {
     color: #3e3e3e;
     font-size: 0.9rem !important; }
@@ -229,20 +227,24 @@ body {
         resize: none; }
   body input[type='button'],
   body button {
-    background-color: #d16689;
-    border: none;
+    background-color: #fff;
     padding: 10px 20px 10px 20px;
-    color: #fff;
+    color: #d16689;
     font-size: 1rem;
-    border-radius: 5px; }
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5);
+    border: none; }
   body input[type='button']:hover,
   body button:hover {
-    background-color: #636b77;
-    color: #fff; }
+    box-shadow: 0px 0px 6px rgba(99, 107, 119, 0.16), 0px 0px 6px rgba(99, 107, 119, 0.12);
+    color: #636b77; }
   body input[type='button']:focus,
   body button:focus {
-    background-color: #636b77;
+    color: #636b77;
+    box-shadow: 0px 0px 6px rgba(99, 107, 119, 0.16), 0px 0px 6px rgba(99, 107, 119, 0.12);
     outline: none; }
+  body button:hover a {
+    color: #636b77; }
   body #back-to-top-wrapper {
     width: 100%;
     display: flex;
@@ -274,7 +276,7 @@ details {
     details[open] .chevron {
       stroke: #636b77; }
     details[open]:hover {
-      box-shadow: 0 2px 5px 0 rgba(99, 107, 119, 0.16), 0 2px 10px 0 rgba(99, 107, 119, 0.12); }
+      box-shadow: 0px 0px 6px rgba(99, 107, 119, 0.16), 0px 0px 6px rgba(99, 107, 119, 0.12); }
   details .tooltip {
     position: relative;
     display: inline-block; }
@@ -346,7 +348,7 @@ details {
   details img {
     height: 40px; }
   details:hover {
-    box-shadow: 0 2px 5px 0 rgba(209, 102, 137, 0.16), 0 2px 10px 0 rgba(209, 102, 137, 0.12); }
+    box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5); }
 
 @media (min-width: 480px) {
   body h1 {
