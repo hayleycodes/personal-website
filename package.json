@@ -31,6 +31,7 @@
         "eslint-plugin-prettier": "^3.1.0",
         "node-sass": "^4.13.0",
         "prettier": "^1.19.1",
-        "scss-compile": "^0.1.7"
+        "scss-compile": "^0.1.7",
+        "dotenv": "^8.2.0"
     }
 }

@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const validator = require('email-validator')
+require('dotenv').config()
 
 const app = express()
 app.use(express.static('templates'))
@@ -15,8 +16,8 @@ app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
 
-let apiKey = 'key-5f88a965cacbaa9907fc3a2f79083f7a'
-let DOMAIN = 'hayleyavw.com'
+const apiKey = process.env.API_KEY
+const DOMAIN = process.env.API_DOMAIN
 let mailgun = require('mailgun-js')({ apiKey: apiKey, domain: DOMAIN })
 
 app.post('/', function(req, res) {
@@ -26,7 +27,7 @@ app.post('/', function(req, res) {
     }
     let data = {
         from: email,
-        to: 'contact@hayleyavw.com',
+        to: `${process.env.EMAIL}`,
         subject: 'Message from ' + req.body.name,
         text: req.body.message
     }
