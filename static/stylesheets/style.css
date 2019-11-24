@@ -1,5 +1,7 @@
 html {
-  background-color: #f6f5f3;
+  background: #d16689;
+  background: -webkit-linear-gradient(to right, #d16689, #b06ab3);
+  background: linear-gradient(to right, #d16689, #b06ab3);
   scroll-behavior: smooth; }
 
 :target {
@@ -14,24 +16,22 @@ body {
   body h1,
   body h2,
   body h3 {
-    font-family: 'Roboto'; }
+    font-family: 'Roboto';
+    color: #fff; }
   body h1 {
     font-size: 2.8rem;
-    margin: 0px;
-    color: #d16689; }
+    margin: 0px; }
   body h2 {
     display: inline;
     margin: 0;
     font-size: 2rem;
-    color: #d16689;
     border-right: 3px solid rgba(255, 255, 255, 0); }
     body h2.show-cursor {
-      border-right: 3px solid #636b77 !important; }
+      border-right: 3px solid #3e3e3e !important; }
     body h2.highlight {
-      background-color: #d16689;
-      color: #f6f5f3; }
+      background-color: #fff;
+      color: #d16689; }
   body h3 {
-    color: #d16689;
     font-size: 2rem;
     margin: 10px 10px; }
   body h4 {
@@ -71,7 +71,8 @@ body {
     align-items: center;
     padding: 15px;
     height: calc(60px - 15px);
-    box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5);
+    border-top: 1px solid #d16689;
+    border-bottom: 1px solid #d16689;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -131,7 +132,7 @@ body {
     z-index: 2;
     left: 0;
     bottom: 0;
-    background-color: #636b77;
+    background-color: #717171;
     overflow-x: hidden;
     transition: 0.5s; }
     body #contact-overlay #close-button {
@@ -157,7 +158,9 @@ body {
         justify-content: center;
         z-index: -1;
         font-size: 2rem;
-        background-color: #d16689;
+        background: #d16689;
+        background: -webkit-linear-gradient(to right, #d16689, #b06ab3);
+        background: linear-gradient(to right, #d16689, #b06ab3);
         color: #fff;
         opacity: 0;
         transition: 1s ease-in-out; }
@@ -197,7 +200,7 @@ body {
         font-size: 18px;
         overflow: hidden; }
       body #contact-overlay #contact-form .form-element.disabled > label {
-        color: #636b77; }
+        color: #3e3e3e; }
       body #contact-overlay #contact-form .form-element > span {
         background-color: #d16689;
         display: none;
@@ -207,7 +210,7 @@ body {
         color: #fff;
         font-size: 18px; }
       body #contact-overlay #contact-form .form-element.disabled > span {
-        background-color: #636b77; }
+        background-color: #3e3e3e; }
       body #contact-overlay #contact-form input[type='text'],
       body #contact-overlay #contact-form input[type='email'],
       body #contact-overlay #contact-form textarea {
@@ -227,29 +230,27 @@ body {
   body input[type='button'],
   body button {
     background-color: #fff;
+    border: 1px solid #d16689;
     padding: 10px 20px 10px 20px;
     color: #d16689;
     font-size: 1rem;
     border-radius: 5px;
-    box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5);
-    border: none;
     cursor: pointer; }
     body input[type='button']#back-to-top a,
     body button#back-to-top a {
       padding: 0; }
   body input[type='button']:hover,
   body button:hover {
-    box-shadow: 0px 0px 6px rgba(99, 107, 119, 0.16), 0px 0px 6px rgba(99, 107, 119, 0.12);
-    color: #636b77; }
+    color: #3e3e3e;
+    border: 1px solid #3e3e3e; }
   body input[type='button']:focus,
   body button:focus {
-    color: #636b77;
-    box-shadow: 0px 0px 6px rgba(99, 107, 119, 0.16), 0px 0px 6px rgba(99, 107, 119, 0.12);
+    color: #3e3e3e;
     outline: none;
-    border: 1px solid #636b77; }
+    border: 1px solid #3e3e3e; }
   body button:hover a,
   body button:focus a {
-    color: #636b77; }
+    color: #3e3e3e; }
   body #back-to-top-wrapper {
     width: 100%;
     display: flex;
@@ -277,11 +278,11 @@ details {
   details ::slotted(div) {
     padding: 10px; }
   details[open] {
-    border-color: #636b77; }
+    border-color: #3e3e3e; }
     details[open] .chevron {
-      stroke: #636b77; }
+      stroke: #3e3e3e; }
     details[open]:hover {
-      box-shadow: 0px 0px 6px rgba(99, 107, 119, 0.16), 0px 0px 6px rgba(99, 107, 119, 0.12); }
+      background-color: #d7d7d7; }
   details .tooltip {
     position: relative;
     display: inline-block; }
@@ -324,9 +325,9 @@ details {
       display: none; }
     details summary:focus {
       outline: none;
-      border-top: 3px solid #636b77; }
+      border-top: 3px solid #3e3e3e; }
     details summary:hover .chevron, details summary:focus .chevron {
-      stroke: #636b77; }
+      stroke: #3e3e3e; }
   details .summary-row-1 .icons {
     display: flex;
     flex-wrap: wrap;
@@ -353,7 +354,7 @@ details {
   details img {
     height: 40px; }
   details:hover {
-    box-shadow: 0px 0px 6px rgba(209, 102, 137, 0.5); }
+    background-color: #f1f1f1; }
 
 @media (min-width: 480px) {
   body h1 {
