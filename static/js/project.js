@@ -87,6 +87,7 @@
             const allLanguages = [
                 'HTML',
                 'CSS',
+                'Bootstrap',
                 'JavaScript',
                 'TypeScript',
                 'threejs',
