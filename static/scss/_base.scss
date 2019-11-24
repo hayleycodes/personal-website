@@ -385,7 +385,7 @@ details {
             stroke: $secondaryColor;
         }
         &:hover {
-            background-color: lighten($secondaryColor, 60%);
+            border-top: 3px solid $secondaryColor;
         }
     }
 
@@ -499,6 +499,6 @@ details {
     }
 
     &:hover {
-        background-color: lighten($secondaryColor, 70%);
+        border-top: 3px solid $secondaryColor;
     }
 }
