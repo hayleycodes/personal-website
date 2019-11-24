@@ -1,30 +1,35 @@
 <!doctype html>
 
 <html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61782039-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
 
-		  gtag('config', 'UA-61782039-1');
-		</script>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61782039-1"></script>
+    <script>
+        if (document.location.hostname.search("hayleyavw.com") !== -1) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-61782039-1');
+        } else {
+            console.log('ducks')
+        }
+    </script>
 
-		<meta charset="utf-8">
-		<title>Hayley van Waas - freelance software developer</title>
-		<meta name="description" content="Website of freelance developer, Hayley van Waas">
-		<meta name="keywords" content="HTML, CSS, JavaScript, Threejs, WebGl, Hayley van Waas, Freelancer, Freelance developer, developer, software developer, software engineer, web developer, python programmer, python, computer science unplugged, cs unplugged, cs field guide, csfg, computer science field guide, hayleys health foods, google, reannz, ncss, national computer science school, gather workshops, html, css, scss, css3, html5, framework, flask, threejs, fullstack, server, linux, npm, node, verto, software engineering, engineer, user experience, user experience engineer, user experience researcher, ux, user experience study, user expereince expert, hci, ux researcher, ux expert, human computer interaction, backend developer, frontend developer">
-		<meta name="author" content="Hayley van Waas">
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-		<!-- style -->
-		<link rel="stylesheet" href="stylesheets/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Londrina+Outline|Londrina+Solid|Roboto" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Hayley van Waas - developer</title>
+    <meta name="description" content="Website of freelance developer, Hayley van Waas">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, Threejs, WebGl, Hayley van Waas, Freelancer, Freelance developer, developer, software developer, software engineer, web developer, Python programmer, Python, computer science unplugged, cs unplugged, cs field guide, csfg, computer science field guide, hayleys health foods, google, reannz, ncss, national computer science school, gather workshops, html, CSS, scss, css3, html5, framework, Flask, threejs, fullstack, server, linux, npm, node, verto, software engineering, engineer, user experience, user experience engineer, user experience researcher, ux, user experience study, user expereince expert, hci, ux researcher, ux expert, human computer interaction, backend developer, frontend developer">
+    <meta name="author" content="Hayley van Waas">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <!-- style -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Outline|Londrina+Solid|Roboto" rel="stylesheet">
 
-		<!-- structured data for SEO -->
-		<script type="application/ld+json">
+    <!-- structured data for SEO -->
+    <script type="application/ld+json">
     		{
 				"@context": "https://schema.org",
 				"@type": "Organization",
@@ -41,299 +46,349 @@
 			}
 		</script>
 
-	</head>
+</head>
 
-	<body>
-		<header>
-			<div id="header-wrapper">
-				<img src="images/me.jpg">
-				<div id="heading-text">
-					<h1>Hi, I'm Hayley.</h1>
-					<h2>Developer and</h2>
-					<h2>UX Researcher</h2>
-				</div>
-			</div>
-		</header>
+<body>
+    <a class="anchor" name=""></a> 
+    <header>
+        <img src="images/hayley-van-waas.jpg" alt="Profile photo of Hayley van Waas.">
+        <div id="heading-text">
+            <h1>Hi, I'm Hayley.</h1>
+            <h2></h2>
+        </div>
+    </header>
 
-		<nav>
-			<a href="#introduction">Intro</a>
-			<a href="#projects">Projects</a>
-			<a href="#contact">Contact</a>
-		</nav>
+    <nav>
+        <a tabindex="0" target="_blank" rel="noopener noreferrer" href="https://github.com/hayleyavw"><img
+                src="images/social-logos/github.png" alt="GitHub logo."></a>
+        <a tabindex="0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/hayleyavw"><img
+                src="images/social-logos/twitter.png" alt="Twitter logo."></a>
+        <a tabindex="0" target="_blank" rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/hayley-van-waas-772670108/"><img src="images/social-logos/linkedin.png"
+                alt="LinkedIn logo."></a>
+        <img tabindex="0" id="email-button" src="images/envelope.png" onclick="openContact()" alt="Mail icon.">
+    </nav>
 
-		<div class="content">
-			<a class="anchor" name="introduction"></a> 
-			<section id="intro">
-				<h3>Hire me for...</h3>
-				<div class="service-cards">
-					<div class="card service-card">
-						<h4>User Experience</h4>
-						<div class="service-image">
-							<img src="images/interaction-design.svg">
-						</div>
-						<p>
-							Whether it's starting from nothing or improving an existing interface, I can help you to ensure your software is both beautiful and usable.
-						</p>
-					</div>
-					<div class="card service-card">
-						<h4>Website Design and Development</h4>
-						<div class="service-image">
-							<img src="images/pair-programming.svg">
-						</div>
-						<p>
-							I can help you to update an existing website or create a new one from scratch to help improve the online presence of your business.
-						</p>
-					</div>
-					<div class="card service-card">
-						<h4>Data Analysis and Visualisation</h4>
-						<div class="service-image">
-							<img src="images/data.svg">
-						</div>
-						<p>
-							If you've collected a lot of data I can help you to understand what it means and how to use it.
-						</p>
-					</div>
-				</div>
-				<div class="cards">
-					<div class="card">
-						<p>
-							Hi, I'm Hayley. I am a freelance Software Developer and User Experience Researcher available to help you find the digital solution your business is searching for. Not only do I have years of experience in Software Design and Development, but I also have had plenty of experience in teaching programming to a range of different audiences. The IT industry is full of buzzwords and mysteries that have led us to the position where the average person has no idea what we do, nevermind how to find the right solution to their particular problem. I can help with this.
-						</p>
-					</div>
-					<div class="card">
-						<p>
-							My years of working in the education sector have been a great opportunity to develop my communication skills. This makes me the perfect freelancer to help you understand what it is that you are looking for, which will allow me to develop a perfectly tailored solution that suits you needs. Whether it is a Website for your small business, a User Experience (UX) review of an existing application, or a Data Visualisation for your next presentation, I can help.
-						</p>
-					</div>
-					<div class="card">
-						<h5>Key Facts</h5>
-						<p>
-							<ul>
-								<li>4 years experience in Web Development and Python Programming</li>
-								<li>Comfortable in the following languages and frameworks: Python, Flask, Django, HTML, JavaScript, Three.js, jQuery, CSS, SCSS, Sqlite3…</li>
-								<li>I am a very fast learner, so I can pick up frameworks as I need to</li>
-								<li>I have excellent communication and time management skills</li>
-								<li>I am meticulous at documentation</li>
-							</ul>
-						</p>
-					</div>
-					<div class="card">
-						<h5>History</h5>
-						<p>
-							<ul>
-								<li>Working as a web developer and Python programmer (alternating between full and part time) for the last 4 years</li>
-								<li>Studied Computer Science and Statistics at the University of Canterbury</li>
-								<li>Completed very successful internships at REANNZ and Google</li>
-							</ul>
-						</p>
-					</div>
-					<div id="image-card" class="card image-card">
-					</div>
-					<div class="card">
-						<h5>What this means</h5>
-						<p>
-							<ul>
-								<li>I am completely comfortable being thrown into the deep end with a project, I can hit the ground running</li>
-								<li>I will consult with you as much as necessary in order to determine exactly what it is that you need and will keep you updated on progress</li>
-								<li>I will hand the completed project and documentation back in a tidy state, allowing a future developer to easily pick up and start working (therefore saving you time and money)</li>
-							</ul>
-						</p>
-					</div>
-					<div class="card">
-						<h5>Other relevant skills and activities</h5>
-						<p>
-							<ul>
-								<li>I have a love for the subject of Human Computer Interaction, I like to create websites that don’t get in the way of what the user is trying to achieve, and instead are intuitive and therefore easy to use</li>
-								<li>I am a people person! I have experience in teaching both teachers and students about computer science and programming, and therefore have a lot of practice in understanding other people’s needs and translating them into solutions</li>
-							</ul>
-						</p>
-					</div>
-					<div class="card">
-						<h5>Hire me if you want</h5>
-						<p>
-							<ul>
-								<li>Your project to be completed to a high standard</li>
-								<li>Your final product to both look good and be easy to use</li>
-								<li>Regular correspondence and progress reports</li>
-								<li>A project to be completed with concise, easy to follow documentation</li>
-								<li>A real person who is here to understand your needs and create something tailored perfectly for you</li>
-							</ul>
-						</p>
-					</div>
-				</div>
-			</section>
+    <div id="wrapper">
 
-			<section id="projects-section">
-				<a class="anchor" name="projects"></a> 
-				<div class="cards">
-					<h3>Projects I've worked on...</h3>
-					<div class="card">
-						<h5><a target="_blank" href="https://www.fastvue.co/"><img class="project-image" src="images/fastvue-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							Fastvue helps businesses and schools deliver useful Internet usage reports to HR, Teachers and Department Managers. Their software interprets the messy logs from firewalls and turns it into something meaningful.
-						</p>
-							I worked with Fastvue as a User Experience researcher and conducted a UX study to identify opportunities where improvements could be made to the software interface. 
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://www.hayleyshealthfoods.com"><img class="project-image" src="images/hayleys-health-foods-heading.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							This is a little passion project of mine. I’m very interested in health and nutrition, as well as cooking. Have you noticed how recipe websites always seem to have someone’s life story before the recipe? I was pretty over these less than optimal designs so I decided to make my own instead!
-						</p>
-						<p>
-							The site runs is written using Flask, a microframework for Python, JavaScript and SCSS.
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://phattcentral.com/"><img class="project-image" src="images/healthy-living-with-steph-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							This is a website I made for a family member of mine who is a mentor for the PH@TT program, a program designed to help people develop healthy habits when it comes to food.
-						</p>
-						<p>
-							Healthy Living With Steph runs on a Node server for the contact form. Other than that it is simply HTML, JavaScript and CSS compiled from SCSS.
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://buildingrecyclers.co.nz/">Manawatu Building Recyclers</a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							This is a website I made for a family member of mine who runs Manawatu Building Recyclers. This is a house part recycling business in my home town of Palmerston North, NZ.
-						</p>
-						<p>
-							This website runs on a Node server (a little overkill but there for future addition of a contact form). Other than that it is simply HTML and CSS compiled from SCSS.
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://pypi.org/project/verto/"><img class="project-image" src="images/verto-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							Verto is an extension of the Python Markdown package, which allows authors to include complex HTML elements with simple text tags in their Markdown files. I was one of the main developers and maintainers of this package for several months.
-						</p>
-						<p>
-							Verto is an open source project so you can take a look at my contributions (and even contribute yourself!) <a target="_blank" href="https://github.com/uccser/verto">here</a>.
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://www.csunplugged.org"><img class="project-image" src="images/csunplugged-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							Computer Science Unplugged is a collection of free learning activities that teach Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. I was part of the team who recently recreated the website. The backend is written in Python using the Django framework. The front end is written in HTML, JavaScript and SCSS. The whole system runs on Docker containers.
-						</p>
-						<p>
-							CS Unplugged is an open source project so you can take a look at my contributions (and even contribute yourself!) <a target="_blank" href="https://github.com/uccser/cs-unplugged">here<img class="external-link-icon" src="images/external-link-icon.png"></a>.
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="http://www.csfieldguide.org.nz/">Computer Science Field Guide</a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							The Computer Science Field Guide is an interactive textbook used in schools around the world to teach students about Computer Science concepts. I worked on this project part time for 4 years. Most of my time was spent developing what we called “interactives.” These are little JavaScript applets that aim to teach Computer Science concepts by reinforcing the material in the chapter in a fun and engaging way.
-						</p>
-						<p>
-							The most recent interactives I worked on were for the <a target="_blank" href="http://www.csfieldguide.org.nz/en/chapters/computer-graphics.html">Computer Graphics chapter<img class="external-link-icon" src="images/external-link-icon.png"></a>. The Box Translation and Rotation interactives demonstrate the basic principles of moving objects in 3D space. They are written using Three.js, a JavaScript framework for WebGL. The Arrow Manipulation interactives demonstrate how matrices can be used to manipulate shapes in 2D space. The code for these interactives is written in pure Javascript with SVGs for the arrows.
-						</p>
-						<p>
-							The CS Field Guide is an open source project so you can take a look at my contributions (and even contribute yourself!) <a target="_blank" href="https://github.com/uccser/cs-field-guide">here<img class="external-link-icon" src="images/external-link-icon.png"></a>. 
-						</p>
-					</div>
-					<div class="card">
-						<h5><img class="project-image" src="images/google-logo.png"></h5>
-						<p>
-							In summer 2015/16 I was a Site Reliability Engineer (SRE) Intern at Google. I was with one other intern on the Bandwidth SRE team. To best describe what an SRE does, think about the last time Google went down, can you even think of a time Google was down? Probably not too many memories spring to mind, and that is because SREs are working around the clock to keep everything up and running, and to fix things when something does go wrong.
-						</p>
-						<p>
-							As an intern on Bandwidth SRE, myself and my intern partner created an internal tool to be used by other SREs to check the status of the amount of bandwidth their service (e.g. Maps, Drive, YouTube, etc) in Google is using. The tool proved to be extremely useful and was already being used before we even finished the internship!
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://www.canterbury.ac.nz/engineering/qualifications-and-courses/engineering/engineering-course-planner/">Interactive Course Planners for Engineering at the University of Canterbury</a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							If you have ever enrolled at University then you will know that it is not an easy task, and in fact once you’ve navigated your way through it you feel like you’ve already some kind of qualification. The University of Canterbury receives thousands of calls every year from prospective engineering students asking for help with their enrolment as it is a surprisingly complicated task given the number of requirements for each course (which is also affected by the type of High School Qualification earned), and the number of specialisations on offer.
-						</p>
-						<p>
-							I was asked to create a web interface to help make this application process easier for new students and it is now embedded in in the Engineering at UC information page for intermediate year. I’ve been told that this project was a remarkable success and saves university enrolment and student help staff hours of work every year.
-						</p>
-						<p>
-							This project was written in HTML, CSS and JavaScript.
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="https://reannz.co.nz/"><img class="project-image" src="images/reannz-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							This was my first internship. I started at REANNZ only a week and a half after my last exam at high school, and it was a great way to spend the summer before starting my first year at University!
-						</p>
-						<p>
-							I worked on a data visualisation project, which involved creating a 3D representation of the REANNZ network by overlaying network data onto a model of New Zealand. This was done using Three.js, a JavaScript framework for WebGL, as well as some Python scripts for cleaning and sorting the data.
-						<p>
-							A screenshot of the finished project featured in <a target="_blank" href="https://www.computerworld.co.nz/article/568840/insight-enabling-nz-research-innovation-flourish/">this article<img class="external-link-icon" src="images/external-link-icon.png"></a>.
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="http://www.ncss.edu.au/summer-school"><img class="project-image" src="images/ncss-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							The National Computer Science School runs a summer camp program, which I attended as a student in 2014 and 2015, an industry mentor in 2016, and a tutor in 2017 and 2018. NCSS is what made me realise that I wanted a career in Software! It is a 10 day event where students from all over Australia and New Zealand, and tutors from all over the world, come together to learn and experience Computer Science. It's just as nerdy as it sounds and is always an incredible experience!
-						</p>
-					</div>
-					<div class="card">
-						<h5><a target="_blank" href="http://gathergather.co.nz/workshops/"><img class="project-image" src="images/gather-workshops-logo.png"></a></h5><img class="external-link-icon" src="images/external-link-icon.png">
-						<p>
-							From during my last year of High School to my second year of University I presented and mentored many Gather Workshops. Although I’m quite biased towards Python, I have been found presenting/mentoring Robotics and JavaScript workshops on several occasions.
-						</p>
-					</div>
-					<div class="card">
-						<h5>This Website</h5>
-						<p>
-							This website takes many shapes and forms, I tend to use it as a place to try out different frameworks and tools. At the moment this website is mostly static, but runs on a Node server for the contact form below. Other than that it is simply HTML, JavaScript and CSS compiled from SCSS.
-						</p>
-						<p>
-							For a long time this site was built using Flask, a great Python Microframework. Over the years it has used different tools such as Foundation, an SQLite database for a blog, PHP, Three.js, and often some basic JavaScript for doing tricks like randomising the background colour of the page or for little animations.
-						</p>
-					</div>
-					<div class="card">
-						<h5>NCEA Stats</h5>
-						<p>
-							In my final year of high school I decided to learn how to make a native Android app. I designed and created an app that would help students in New Zealand to keep track of their NCEA credits. This was by far the most challenging project I have ever worked on, and was definitely the most rewarding as this was the longest project I had ever worked on at the time (by a long shot!).
-						</p>
-						<p>
-							Feel free to check out the repository <a target="_blank" href="https://bitbucket.org/hayleyavw/nceastats)">here<img class="external-link-icon" src="images/external-link-icon.png"></a>.
-						</p>
-					</div>
-				</div>
-			</section>
+        <div id="contact-overlay">
 
-			<section id="contact-section">
-				<a class="anchor" name="contact"></a> 
-				<div class="cards">
-					<h3>Get in touch!</h3>
-					<div class="contact-card">
+            <a tabindex="-1" href="javascript:void(0)" id="close-button" onclick="closeContact()">&times;</a>
 
-						<p id="contact-message">If you would like to hire me for a project, ask a few questions, or simply tell me I'm awesome, I'd love to hear from you!</p>
+            <div id="contact-wrapper">
+                <div id="contact-form" class="card">
+                    <h3>Get in touch!</h3>
+                    <p id="contact-message">If you would like to hire me for a project, ask a few questions, or simply
+                        tell me I'm awesome, I'd love to hear from you!</p>
+                    <form>
+                        <div class="form-element">
+                            <label for="name">Name</label>
+                            <input tabindex="-1" id="name" type="text" name="name" required>
+                            <span>Enter your full name</span>
+                        </div>
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input tabindex="-1" id="email" type="email" name="email" required>
+                            <span>Enter a valid email address</span>
+                        </div>
+                        <div class="form-element">
+                            <label for="message">Your Message</label>
+                            <textarea tabindex="-1" id="message" name="message" rows=5></textarea>
+                            <span>Why are you reaching out?</span>
+                        </div>
+                        <div class="form-element">
+                            <input tabindex="-1" id="send-email-button" type="button" onclick="sendEmail()" value="Send" class="submit-button">
+                        </div>
+                    </form>
+                </div>
+                <div id="message-confirmation-overlay">
+                    Message sent!
+                </div>
+            </div>
+        </div>
 
-						<form id="contact-form">
-		                    <div class="form-element">
-		                        <label for="name">Your Name</label>
-		                        <input name="name" id="name" required>
-		                    </div>
+        <div id="content">
 
-		                    <div class="form-element">
-		                        <label for="email">Your Email</label>
-		                        <input type="email" name="email" id="email" placeholder="example@email.com" required>
-		                    </div class="form-element">
+            <div id="left-column">
+                <section id="about">
+                    <h3>About</h3>
+                    <div class="card">
+                        <p>
+                            I am currently a Software Developer in Perth, Australia, although my roots
+                            lie as a kiwi from Palmerston North, New Zealand.
+                            I have worked at prestigious companies in a variety of roles, such as Google, the
+                            University of Canterbury, Seven West Media, SheCodes and more.
+                        </p>
+                        <p>
+                            I am also an evangelist for Women in Tech and have had extensive experience in writing
+                            educational resources and teaching workshops about Computer Science and Programming for all
+                            ages and experience levels.
+                            My ability to describe technical details in a simple manner certainly sets me apart from
+                            others in my field and makes me an asset to any team.
+                        </p>
+                    </div>
+                </section>
+            </div>
 
-		                    <div class="form-element">
-		                        <label for="message">Your Message</label>
-		                        <textarea name="message" id="message" required></textarea>
-		                    </div>
+            <div id="right-column">
 
-		                    <div id="message-submit-button" class="form-element">
-		                        <input type="button" onclick="sendEmail()" value="Send" class="submit-button">
-		                    </div>
-		                </form>
+                <section id="projects">
 
-		                <div id="overlay">
-		                	<p>Message sent!</p>
-		                </div>
+                    <h3>Work</h3>
 
-	                </div>
+                    <project-details project-name="SheCodes" job-title="Lead Mentor | Content Developer"
+                        start-date="July 2019" end-date="Current Date" HTML CSS Python Django Flask>
+                        <div slot="project-description">
+                            <p>She Codes is a startup, based in Perth, that is on a mission to to teach women coding
+                                skills, get women into technical careers, and build communities of like-minded women.
+                                Their vision is to increase diversity in tech by inspiring 100,000 women across
+                                Australia by 2025.</p>
+                            <p>I was the Lead Mentor the first Plus and Flash programs, and continue to work in a
+                                support role helping to ensure the programs run smoothly.</p>
+                            <p>Plus is a 6 month part time course designed to help women transition into tech careers.
+                                I taught the first three months of the course where the students learned HTML, CSS,
+                                Python and Django, and continued on as a coordinator for the second half of the course.
+                            </p>
+                            <p>Flash is a one week program designed to give women a taster of several different areas of
+                                tech, including Web Development, Python, Flask, Data and Algorithms. I developed
+                                the content for each of these topics and was the lead mentor for the first Flash
+                                program.</p>
+                            <a href="https://shecodes.com.au/">https://shecodes.com.au/</a>
 
-				</div>
-			</section>
-			
-		<script src="js/script.js"></script>
-	</body>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Seven West Media" job-title="Web Developer" start-date="April 2019"
+                        end-date="November 2019" duration="7 months" HTML CSS JavaScript TypeScript React Emotion>
+                        <div slot="project-description">
+                            <p>I worked as Web Developer as part of the Digital team at Seven West Media, where I
+                                helped to maintain and develop the websites for The West Australian, PerthNow and 7News.
+                            </p>
+                            <p>I mostly worked with React, TypeScript and Emotion.</p>
+                            <a href="https://thewest.com.au/">https://thewest.com.au/</a>
+                            <a href="https://www.perthnow.com.au/">https://www.perthnow.com.au/</a>
+                            <a href="https://7news.com.au/">https://7news.com.au/</a>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="fastvue" job-title="UX Researcher" start-date="April 2019"
+                        end-date="May 2019" duration="6 Weeks">
+                        <div slot="project-description">
+                            <p>Fastvue helps businesses and schools deliver useful Internet usage reports to HR,
+                                Teachers and Department Managers. Their software interprets the messy logs from
+                                firewalls and turns it into something meaningful.</p>
+                            <p>I worked with Fastvue as a User Experience researcher and conducted a UX study to
+                                identify opportunities where improvements could be made to the software interface. This
+                                involved conducting an in-depth assessment of the existing interface and interviewing
+                                existing clients about their experience with the software and presenting my findings in a
+                                report</p>
+                            <a href="https://www.fastvue.co/">https://www.fastvue.co/</a>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Hayley's Health Foods" job-title="Web Developer"
+                        start-date="August 2018" duration="Ongoing side project" HTML CSS JavaScript TypeScript React
+                        Emotion Python Flask>
+                        <div slot="project-description">
+                            <p>This is a little passion project of mine. I very interested in health and
+                                nutrition, as well as cooking. Have you noticed how recipe websites always seem to have
+                                someone’s life story before the recipe? I was pretty over these frustrating designs
+                                so decided to make my own instead.</p>
+                            <p>The live site currently uses Flask, JavaScript, HTML and SCSS, but version two is under
+                                development and using a similar stack, but with React and Emotion on the frontend.</p>
+                            <a href="https://www.hayleyshealthfoods.com/">https://www.hayleyshealthfoods.com/</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Healthy Living with Steph" job-title="Web Developer"
+                        start-date="December 2018" duration="Small side project" HTML CSS JavaScript>
+                        <div slot="project-description">
+                            <p>This is a website I made for a family member who is a mentor for the PH@TT program,
+                                a program designed to help people develop healthy habits when it comes to food.</p>
+                            <p>Healthy Living With Steph runs on a Node server to handle the contact form. Other than
+                                that it is simply HTML, JavaScript, HTML and SCSS.</p>
+                            <a href="https://phattcentral.com/">https://phattcentral.com/</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Manawatu Building Recyclers" job-title="Web Developer"
+                        start-date="January 2018" duration="Small side project" HTML CSS JavaScript>
+                        <div slot="project-description">
+                            <p>This is website I made for a family member. Manawatu Building Recyclers is a house
+                                part recycling business in my home town of Palmerston North, NZ.</p>
+                            <p>The website runs on a Node server (which is a little overkill but is there for the
+                                potential future addition of a contact form). Other than that it is simply HTML and
+                                SCSS.</p>
+                            <a href="https://www.buildingrecyclers.co.nz/">https://www.buildingrecyclers.co.nz/</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="verto" job-title="Python Developer" start-date="February 2015"
+                        end-date="July 2019" duration="4.5 years, mix of Part and Full Time" HTML Python>
+                        <div slot="project-description">
+                            <p>Verto is an extension of the Python Markdown package, which allows authors to include
+                                complex HTML elements with simple text tags in their Markdown files. I was one of
+                                the main architects and maintainers of this package for several months.</p>
+                            <p>Verto is an open source project so you can take a look at my contributions (and
+                                even contribute yourself) by checking out the repository on GitHub.</p>
+                            <a href="https://pypi.org/project/verto/">https://pypi.org/project/verto/</a>
+                            <a
+                                href="https://verto.readthedocs.io/en/latest/index.html">https://verto.readthedocs.io/en/latest/index.html</a>
+                            <a href="https://github.com/uccser/verto">https://github.com/uccser/verto</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="CS Unplugged" job-title="Web Developer" start-date="February 2015"
+                        end-date="July 2019" duration="4.5 years, mix of Part and Full Time" HTML CSS JavaScript Python
+                        Django>
+                        <div slot="project-description">
+                            <p>Computer Science Unplugged is a collection of free learning activities that teach
+                                Computer Science through engaging games and puzzles that use cards, string, crayons and
+                                lots of running around. I was part of the team who rebuilt the website, moving away
+                                from an existing Wordpress site and into its own custom solution for delivering content
+                                and resources to teachers. The backend is written in Python using the Django framework.
+                                The front end is written in HTML, JavaScript and Bootstrap. The whole system runs on
+                                Docker containers.</p>
+                            <p>CS Unplugged is an open source project so you can take a look at my contributions
+                                (and even contribute yourself!) by checking out the repository on GitHub.</p>
+                            <a href="https://csunplugged.org/">https://csunplugged.org/</a>
+                            <a
+                                href="https://github.com/uccser/cs-unplugged/">https://github.com/uccser/cs-unplugged/</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="CS Field Guide" job-title="Web Developer" start-date="February 2015"
+                        end-date="July 2019" duration="4.5 years, mix of Part and Full Time" HTML CSS JavaScript threejs
+                        Python Django threeJavaScript>
+                        <div slot="project-description">
+                            <p>The Computer Science Field Guide is an interactive textbook used in schools around the
+                                world to teach students about Computer Science concepts. I worked on this project
+                                part time for four and a half years. Most of my time was spent developing what are
+                                called “interactives.” These are little JavaScript applets that aim to teach Computer
+                                Science concepts by reinforcing the material in the chapter in a fun and engaging way.
+                                I also made considerable contributions as an editor and author to a number of
+                                chapters.</p>
+                            <p>I worked on many of these interactives, but perhaps most significant interactives
+                                I created were for the Computer Graphics chapter. The Box Translation and Rotation
+                                interactives demonstrate the basic principles of moving objects in 3D space. They are
+                                written using Three.js, a JavaScript framework for WebGL. The Arrow Manipulation
+                                interactives demonstrate how matrices can be used to manipulate shapes in 2D space, all
+                                written in JavaScript.</p>
+                            <p>The CS Field Guide is an open source project so you can take a look at my
+                                contributions (and even contribute yourself) by checking out the repository on Github.
+                            </p>
+                            <a href="https://www.csfieldguide.org.nz/">https://www.csfieldguide.org.nz/</a>
+                            <a
+                                href="https://github.com/uccser/cs-field-guide">https://github.com/uccser/cs-field-guide</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Interactive Course Planners" job-title="Web Developer"
+                        start-date="February 2015" end-date="July 2019" duration="4.5 years, mix of Part and Full Time"
+                        HTML CSS JavaScript>
+                        <div slot="project-description">
+                            <p>If you have ever enrolled at a University then you will know that it is not an easy task,
+                                and in fact once you’ve navigated your way through it you feel like you’ve already
+                                earned some kind of qualification. The University of Canterbury used to receive
+                                thousands of calls every year from prospective engineering students asking for help with
+                                their enrolment as it is a surprisingly complicated task given the number of
+                                requirements for each course (which is also affected by the type of qualification earned
+                                in high school), and the number of specialisations on offer.</p>
+                            <p>I was asked to create a web page to help make this application process easier for
+                                new students. This has been embedded in the Engineering at UC website since 2016 and was
+                                a remarkable success that saves university enrolment and student help staff hours of
+                                work every year.</p>
+                            <p>This project was written in HTML, CSS and JavaScript.</p>
+                            <a
+                                href="https://www.canterbury.ac.nz/engineering/qualifications-and-courses/engineering/engineering-course-planner/">https://www.canterbury.ac.nz/engineering/qualifications-and-courses/engineering/engineering-course-planner/</a>
+
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Google" job-title="Web Developer Intern" start-date="December 2015"
+                        end-date="February 2016" duration="3 Months, Full Time" HTML CSS JavaScript Python>
+                        <div slot="project-description">
+                            <p>In summer 2015/16 I was an intern on the Bandwidth Site Reliability Engineer (SRE)
+                                team at Google.To best describe what an SRE does, think about the last time Google went
+                                down, can you even think of a time Google was down? Probably not too many memories
+                                spring to mind, and that is because SREs are working around the clock to keep everything
+                                up and running, and to fix things when something does go wrong.</p>
+                            <p>As an intern on Bandwidth SRE, another intern and I partnered to create an internal
+                                tool to be used by other SRE teams to check the status of the amount of bandwidth their
+                                service (e.g. Maps, Drive, YouTube, etc) in Google is using. The tool proved to be
+                                extremely useful and was already being used before they even finished the internship!
+                            </p>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="REANNZ" job-title="Web Developer (Intern)" start-date="December 2014"
+                        end-date="January 2015" duration="2 Months, Full Time" HTML CSS JavaScript threejs Python>
+                        <div slot="project-description">
+                            <p>This was my first internship. I started at REANNZ only a week and a half after
+                                my last exam at high school, and it was a great way to spend the summer before starting
+                                university.</p>
+                            <p>At REANNZ I worked on a data visualisation project, which involved creating a 3D
+                                representation of the REANNZ network by overlaying network data onto a model of New
+                                Zealand. This was done using Three.js, a JavaScript framework for WebGL, as well as some
+                                Python scripts for cleaning and sorting the data.</p>
+                            <p>A screenshot of the finished project featured in this article:</p>
+                            <a
+                                href="https://www.computerworld.co.nz/article/568840/insight-enabling-nz-research-innovation-flourish/">https://www.computerworld.co.nz/article/568840/insight-enabling-nz-research-innovation-flourish/</a>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="NCSS" job-title="Student | Web Developer | Mentor"
+                        start-date="January 2014, 2015, 2016, 2017 & 2018" duration="10 Day Summer School" HTML CSS
+                        Python Tornado>
+                        <div slot="project-description">
+                            <p>The National Computer Science School runs a summer camp program, which I attended as
+                                a student in 2014 and 2015, an industry mentor in 2016, and a tutor in 2017 and 2018.
+                                NCSS is what made me realise that I wanted a career in Software! It is a 10 day event
+                                where students from all over Australia and New Zealand, as well as tutors from all over
+                                the world, come together to learn and experience Computer Science. It's just as nerdy as
+                                it sounds and is always an incredible experience!</p>
+                            <a href="https://ncss.edu.au/">https://ncss.edu.au/</a>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="Gather Workshops" job-title="Workshop Leader" start-date="July 2014"
+                        end-date="July 2017" duration="1-3 Day Workshops" HTML CSS JavaScript Python Django>
+                        <div slot="project-description">
+                            <p>
+                                For three years I worked part time with Gather Workshops as a presenter and mentor
+                                for their workshops. I was involved with delivering workshops on Python,
+                                JavaScript, HTML/CSS and Robotics to students and teachers across New Zealand.
+                            </p>
+                            <a href="http://gathergather.co.nz/workshops/">http://gathergather.co.nz/workshops/</a>
+                        </div>
+                    </project-details>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="back-to-top-wrapper">
+        <button id="back-to-top" type="button"><a id="back-to-top" href="#">Back to top &uarr;</a></button>
+    </div>
+
+    <footer>
+        <p>Hayley van Waas &copy; 2019</p>
+        <p id="credit">Icon made by <a target="_blank" rel="noopener noreferrer" href="https://www.flaticon.com/authors/gregor-cresnar">https://www.flaticon.com/authors/gregor-cresnar</a> from <a target="_blank" rel="noopener noreferrer" href="www.flaticon.com">www.flaticon.com</a></p>
+    </footer>
+
+    <script src="js/typewriter.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/project.js"></script>
+</body>
 
 </html>

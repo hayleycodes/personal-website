@@ -1,0 +1,35 @@
+@media (min-width: 768px) {
+    body {
+        header {
+            flex-direction: row;
+            margin: 40px;
+            #heading-text {
+                text-align: left;
+            }
+        }
+
+        #wrapper {
+            #content {
+                flex-direction: row;
+                justify-content: space-between;
+
+                #left-column {
+                    flex-basis: 40%;
+                }
+
+                #right-column {
+                    flex-basis: 60%;
+                }
+
+                #about,
+                #projects {
+                    padding: $mainBodySpacing;
+                }
+            }
+        }
+
+        #back-to-top-wrapper {
+            margin-bottom: 20px;
+        }
+    }
+}
