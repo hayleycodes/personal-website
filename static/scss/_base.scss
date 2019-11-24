@@ -1,5 +1,7 @@
 html {
-    background-color: $offWhite;
+    background: $mainColor;
+    background: -webkit-linear-gradient(to right, $mainColor, #b06ab3);
+    background: linear-gradient(to right, $mainColor, #b06ab3);
     scroll-behavior: smooth;
 }
 
@@ -17,38 +19,36 @@ body {
     h2,
     h3 {
         font-family: 'Roboto';
+        color: $white;
     }
 
     h1 {
         font-size: 2.8rem;
         margin: 0px;
-        color: $mainColor;
     }
 
     h2 {
         display: inline;
         margin: 0;
         font-size: 2rem;
-        color: $mainColor;
         border-right: 3px solid rgba(255, 255, 255, 0);
         &.show-cursor {
             border-right: 3px solid $secondaryColor !important;
         }
         &.highlight {
-            background-color: $mainColor;
-            color: $offWhite;
+            background-color: $white;
+            color: $mainColor;
         }
     }
 
     h3 {
-        color: $mainColor;
         font-size: 2rem;
         margin: 10px 10px;
     }
 
     h4 {
         margin: 0;
-        color: $darkSecondaryColor;
+        color: $secondaryColor;
         font-size: 1.2rem;
     }
 
@@ -67,7 +67,7 @@ body {
     }
 
     p {
-        color: $darkSecondaryColor;
+        color: $secondaryColor;
         font-size: 0.9rem !important;
     }
 
@@ -95,7 +95,8 @@ body {
         align-items: center;
         padding: $navPadding;
         height: $navHeight;
-        box-shadow: $shadow;
+        border-top: 1px solid $mainColor;
+        border-bottom: 1px solid $mainColor;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -183,7 +184,7 @@ body {
         z-index: 2;
         left: 0;
         bottom: 0;
-        background-color: $secondaryColor;
+        background-color: lighten($secondaryColor, 20%);
         overflow-x: hidden;
         transition: 0.5s;
 
@@ -214,7 +215,9 @@ body {
                 justify-content: center;
                 z-index: -1;
                 font-size: 2rem;
-                background-color: $mainColor;
+                background: $mainColor;
+                background: -webkit-linear-gradient(to right, $mainColor, #b06ab3);
+                background: linear-gradient(to right, $mainColor, #b06ab3);
                 color: $white;
                 opacity: 0;
                 transition: 1s ease-in-out;
@@ -308,12 +311,11 @@ body {
     input[type='button'],
     button {
         background-color: $white;
+        border: 1px solid $mainColor;
         padding: 10px 20px 10px 20px;
         color: $mainColor;
         font-size: 1rem;
         border-radius: 5px;
-        box-shadow: $shadow;
-        border: none;
         cursor: pointer;
         &#back-to-top {
             a {
@@ -324,14 +326,13 @@ body {
 
     input[type='button']:hover,
     button:hover {
-        box-shadow: $secondaryShadow;
         color: $secondaryColor;
+        border: 1px solid $secondaryColor;
     }
 
     input[type='button']:focus,
     button:focus {
         color: $secondaryColor;
-        box-shadow: $secondaryShadow;
         outline: none;
         border: 1px solid $secondaryColor;
     }
@@ -384,7 +385,7 @@ details {
             stroke: $secondaryColor;
         }
         &:hover {
-            box-shadow: $secondaryShadow;
+            background-color: lighten($secondaryColor, 60%);
         }
     }
 
@@ -401,7 +402,7 @@ details {
                 position: absolute;
                 display: block;
                 border: solid;
-                border-color: $darkSecondaryColor transparent;
+                border-color: $secondaryColor transparent;
                 border-width: 0.4em 0.4em 0 0.4em;
                 bottom: 45px;
                 left: 10px;
@@ -417,7 +418,7 @@ details {
             padding: 5px 15px;
             bottom: 50px;
             left: 0;
-            background-color: $darkSecondaryColor;
+            background-color: $secondaryColor;
             opacity: 0.9;
             color: $white;
             text-align: center;
@@ -498,6 +499,6 @@ details {
     }
 
     &:hover {
-        box-shadow: $shadow;
+        background-color: lighten($secondaryColor, 70%);
     }
 }
