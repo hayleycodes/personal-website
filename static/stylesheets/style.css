@@ -282,7 +282,7 @@ details {
     details[open] .chevron {
       stroke: #3e3e3e; }
     details[open]:hover {
-      background-color: #d7d7d7; }
+      border-top: 3px solid #3e3e3e; }
   details .tooltip {
     position: relative;
     display: inline-block; }
@@ -354,7 +354,7 @@ details {
   details img {
     height: 40px; }
   details:hover {
-    background-color: #f1f1f1; }
+    border-top: 3px solid #3e3e3e; }
 
 @media (min-width: 480px) {
   body h1 {
