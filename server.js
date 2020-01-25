@@ -1,15 +1,20 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const validator = require('email-validator')
+const path = require('path')
 require('dotenv').config()
 
 const app = express()
-app.use(express.static('templates'))
 app.use(express.static('static'))
 app.use(bodyParser.json())
 
 app.get('/', function(req, res) {
-    res.send('Hello World!')
+    res.sendFile(path.join(__dirname + '/templates/index.html'))
+})
+
+app.get('/blog', function(req, res) {
+    console.log(__dirname)
+    res.sendFile(path.join(__dirname + '/templates/blog.html'))
 })
 
 app.listen(3000, function() {
