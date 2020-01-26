@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const validator = require('email-validator')
+const axios = require('axios').default
 const path = require('path')
 require('dotenv').config()
 
@@ -16,17 +17,41 @@ app.get('/', function(req, res) {
     res.render('pages/index')
 })
 
-app.get('/blog', function(req, res) {
-    res.render('pages/blog')
+app.get('/blog', async (req, res) => {
+    let blogPosts = await getBlogPosts()
+    res.render('pages/blog', { blogPosts: blogPosts.data })
 })
 
-app.get('/blog/:blogId', function(req, res) {
-    res.render('pages/blogPost')
+app.get('/blog/:blogId', async (req, res) => {
+    let blogPost = await getBlogPost(req.params.blogId)
+    res.render('pages/blogPost', { blogPost: blogPost.data })
 })
 
 app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
+
+async function getBlogPosts() {
+    try {
+        const response = await axios.get('http://localhost:1337/blog-posts')
+        console.log(response)
+        return response
+    } catch (error) {
+        console.error(error)
+        return
+    }
+}
+
+async function getBlogPost(blogId) {
+    try {
+        const response = await axios.get(`http://localhost:1337/blog-posts/${blogId}`)
+        console.log(response)
+        return response
+    } catch (error) {
+        console.error(error)
+        return
+    }
+}
 
 const apiKey = process.env.API_KEY
 const DOMAIN = process.env.API_DOMAIN
