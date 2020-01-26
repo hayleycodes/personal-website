@@ -8,14 +8,27 @@ const app = express()
 app.use(express.static('static'))
 app.use(bodyParser.json())
 
+// set the view engine to ejs
+app.set('view engine', 'ejs')
+
+// app.get('/', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/templates/index.html'))
+// })
+
+// index page
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/templates/index.html'))
+    res.render('pages/index')
 })
 
-app.get('/blog', function(req, res) {
-    console.log(__dirname)
-    res.sendFile(path.join(__dirname + '/templates/blog.html'))
-})
+// app.get('/blog', function(req, res) {
+//     console.log(__dirname)
+//     res.sendFile(path.join(__dirname + '/templates/blog.html'))
+// })
+
+// app.get('/blog/:blogId', function(req, res) {
+//     // res.sendFile(path.join(__dirname + '/templates/blogPost.html'))
+//     res.send(req.params)
+// })
 
 app.listen(3000, function() {
     console.log('Server running on localhost:3000')

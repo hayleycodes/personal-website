@@ -21,9 +21,10 @@
     "homepage": "https://github.com/hayleyavw/personal-website#readme",
     "dependencies": {
         "body-parser": "^1.19.0",
+        "ejs": "^3.0.1",
         "email-validator": "^2.0.4",
         "express": "^4.17.1",
-        "mailgun-js": "^0.22.0",
+        "mailgun-js": "^0.22.0"
     },
     "devDependencies": {
         "dotenv": "^8.2.0",
