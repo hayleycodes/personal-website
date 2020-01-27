@@ -37,11 +37,13 @@ body {
   body h4 {
     margin: 0;
     color: #3e3e3e;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    margin-bottom: 10px; }
   body h5 {
     margin: 0;
     font-weight: bold;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    color: #d16689; }
   body a {
     color: #d16689;
     text-decoration: none;
@@ -134,6 +136,21 @@ body {
         margin-bottom: 10px;
         background-color: #fff;
         border-radius: 5px; }
+    body #wrapper #blog {
+      margin-top: 10px; }
+      body #wrapper #blog .blog-card {
+        padding: 0;
+        border: 2px solid #fff;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px; }
+        body #wrapper #blog .blog-card .blog-image {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
+        body #wrapper #blog .blog-card .blog-overview {
+          padding: 10px; }
   body #contact {
     padding: 10px; }
   body #contact-overlay {
@@ -425,9 +442,13 @@ details {
       justify-content: space-between;
       flex-wrap: wrap; }
       body #wrapper #content #blog .blog-card {
-        flex-basis: 31%; }
+        flex-basis: 32%; }
   body #back-to-top-wrapper {
     margin-bottom: 20px; } }
+
+@media (min-width: 1020px) {
+  #blog .blog-card {
+    flex-basis: 32%; } }
 
 @media (min-width: 1280px) {
   details summary .summary-row-1 {
