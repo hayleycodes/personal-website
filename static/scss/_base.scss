@@ -39,11 +39,21 @@ body {
             background-color: $white;
             color: $mainColor;
         }
+
+        &.blog-heading {
+            color: $secondaryColor;
+            line-height: 4rem;
+        }
     }
 
     h3 {
         font-size: 2rem;
         margin: 10px 10px;
+        &.blog-heading {
+            font-size: 0.8rem;
+            color: $mainColor;
+            margin: 0;
+        }
     }
 
     h4 {
@@ -70,7 +80,7 @@ body {
 
     p {
         color: $secondaryColor;
-        font-size: 0.9rem !important;
+        font-size: 0.9rem;
     }
 
     header {
@@ -139,16 +149,20 @@ body {
     }
 
     #wrapper {
-        margin: 0px $mainBodySpacing;
+        padding: 0px $mainBodySpacing;
+
+        &.blog-post {
+            background-color: $white;
+            border-bottom: 1px solid $mainColor;
+        }
 
         #content,
-        #blog {
+        #blog-list {
             display: flex;
             flex-direction: column;
 
             #about,
-            #projects,
-            &.blog {
+            #projects {
                 padding: $mainBodySpacing $mainBodySpacing 0 $mainBodySpacing;
                 h3 {
                     text-align: center;
@@ -171,7 +185,7 @@ body {
             }
         }
 
-        #blog {
+        #blog-list {
             margin-top: 10px;
             .blog-card {
                 padding: 0;
@@ -187,6 +201,17 @@ body {
                 }
                 .blog-overview {
                     padding: $mainBodySpacing;
+                }
+            }
+        }
+
+        #blog-post {
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: justify;
+            .blog-post-content {
+                p {
+                    font-size: 1.3rem;
                 }
             }
         }
@@ -381,6 +406,7 @@ body {
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
+        background: transparent;
     }
 
     footer {

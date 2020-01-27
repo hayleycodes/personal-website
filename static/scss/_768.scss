@@ -39,11 +39,11 @@
 
                 #about,
                 #projects,
-                #blog {
+                #blog-list {
                     padding: $mainBodySpacing;
                 }
 
-                #blog {
+                #blog-list {
                     flex-basis: 100%;
                     flex-direction: row;
                     justify-content: space-between;

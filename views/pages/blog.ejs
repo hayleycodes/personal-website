@@ -17,7 +17,7 @@
 
         <div id="content">
 
-            <section id="blog">
+            <section id="blog-list">
             
                 <% blogPosts.forEach(blogPost => { %>
 
@@ -28,8 +28,8 @@
                                 <img class="blog-image" src="<%- 'http://localhost:1337/' + blogPost.Hero.url %>">
                             <% } %>
                             <div class="blog-overview">
-                                <h4><%= blogPost.title %></h4>
-                                <h5><%= blogPost.created_at %></h5>
+                                <h4 class="blog-heading"><%= blogPost.title %></h4>
+                                <h5 class="blog-heading"><%= blogPost.created_at %></h5>
                             </div>
                         </a>
                     </div>
@@ -42,11 +42,14 @@
     
     </div>
 
+    <div id="back-to-top-wrapper">
+        <button id="back-to-top" type="button"><a id="back-to-top" href="#">Back to top &uarr;</a></button>
+    </div>
+
     <%- include ("../partials/footer"); -%>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="/js/typewriter.js"></script>
-    <script src="/js/blog.js"></script>
     <script src="/js/contact.js"></script>
     <script src="/js/project.js"></script>
 </body>
