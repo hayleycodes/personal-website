@@ -2,7 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const validator = require('email-validator')
 const axios = require('axios').default
-var moment = require('moment')
+const moment = require('moment')
+const MarkdownIt = require('markdown-it')
+const md = new MarkdownIt()
 require('dotenv').config()
 
 const app = express()
@@ -20,20 +22,27 @@ app.get('/', function(req, res) {
 app.get('/blog', async (req, res) => {
     let blogPosts = await getBlogPosts()
     blogPosts.data.forEach(blogPost => {
-        let timeStr = moment(blogPost.created_at)
-        blogPost.created_at = timeStr.utc().format('Do MMM YYYY')
+        blogPost = parseDateAndContent(blogPost)
     })
     res.render('pages/blog', { blogPosts: blogPosts.data })
 })
 
 app.get('/blog/:blogId', async (req, res) => {
     let blogPost = await getBlogPosts(req.params.blogId)
+    blogPost.data = parseDateAndContent(blogPost.data)
     res.render('pages/blogPost', { blogPost: blogPost.data })
 })
 
 app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
+
+function parseDateAndContent(blogPost) {
+    let timeStr = moment(blogPost.created_at)
+    blogPost.created_at = timeStr.utc().format('Do MMM YYYY')
+    blogPost.content = md.render(blogPost.content)
+    return blogPost
+}
 
 async function getBlogPosts(blogId) {
     try {
