@@ -38,8 +38,19 @@
                 }
 
                 #about,
-                #projects {
+                #projects,
+                #blog {
                     padding: $mainBodySpacing;
+                }
+
+                #blog {
+                    flex-basis: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    .blog-card {
+                        flex-basis: 31%;
+                    }
                 }
             }
         }

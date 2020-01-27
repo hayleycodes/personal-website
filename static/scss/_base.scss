@@ -139,32 +139,34 @@ body {
     #wrapper {
         margin: 0px $mainBodySpacing;
 
-        #content {
+        #content,
+        #blog {
             display: flex;
             flex-direction: column;
 
             #about,
-            #projects {
+            #projects,
+            &.blog {
                 padding: $mainBodySpacing $mainBodySpacing 0 $mainBodySpacing;
                 h3 {
                     text-align: center;
                 }
+                // this madness is to make sure it stays a consistent distance
+                // from the nav
+                top: calc(#{$navHeight} + #{$mainBodySpacing}* 2);
             }
 
             #about {
                 position: -webkit-sticky;
                 position: sticky;
-                // this madness is to make sure it stays a consistent distance
-                // from the nav
-                top: calc(#{$navHeight} + #{$mainBodySpacing}* 2);
             }
-        }
 
-        .card {
-            padding: $mainBodySpacing;
-            margin-bottom: $mainBodySpacing;
-            background-color: $white;
-            border-radius: 5px;
+            .card {
+                padding: $mainBodySpacing;
+                margin-bottom: $mainBodySpacing;
+                background-color: $white;
+                border-radius: 5px;
+            }
         }
     }
 

@@ -17,13 +17,21 @@
 
         <div id="content">
 
-            <% blogPosts.forEach(blogPost => { %>
+            <section id="blog">
+            
+                <% blogPosts.forEach(blogPost => { %>
 
-            <a href="/blog/<%= blogPost.id %>"><p><%= blogPost.title %></p></a>
-             
-            <% }) %>
+                    <div class="card blog-card">
+
+                        <a href="/blog/<%= blogPost.id %>"><p><%= blogPost.title %></p></a>
+                    </div>
+                
+                <% }) %>
+            
+            </section>
 
         </div>
+    
     </div>
 
     <%- include ("../partials/footer"); -%>

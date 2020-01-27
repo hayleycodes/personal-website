@@ -107,24 +107,33 @@ body {
         transition: transform 0.7s; }
   body #wrapper {
     margin: 0px 10px; }
-    body #wrapper #content {
+    body #wrapper #content,
+    body #wrapper #blog {
       display: flex;
       flex-direction: column; }
       body #wrapper #content #about,
-      body #wrapper #content #projects {
-        padding: 10px 10px 0 10px; }
-        body #wrapper #content #about h3,
-        body #wrapper #content #projects h3 {
-          text-align: center; }
-      body #wrapper #content #about {
-        position: -webkit-sticky;
-        position: sticky;
+      body #wrapper #content #projects, body #wrapper #content.blog,
+      body #wrapper #blog #about,
+      body #wrapper #blog #projects,
+      body #wrapper #blog.blog {
+        padding: 10px 10px 0 10px;
         top: calc(calc(60px - 15px) + 10px* 2); }
-    body #wrapper .card {
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #fff;
-      border-radius: 5px; }
+        body #wrapper #content #about h3,
+        body #wrapper #content #projects h3, body #wrapper #content.blog h3,
+        body #wrapper #blog #about h3,
+        body #wrapper #blog #projects h3,
+        body #wrapper #blog.blog h3 {
+          text-align: center; }
+      body #wrapper #content #about,
+      body #wrapper #blog #about {
+        position: -webkit-sticky;
+        position: sticky; }
+      body #wrapper #content .card,
+      body #wrapper #blog .card {
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 5px; }
   body #contact {
     padding: 10px; }
   body #contact-overlay {
@@ -407,8 +416,16 @@ details {
     body #wrapper #content #right-column {
       flex-basis: 60%; }
     body #wrapper #content #about,
-    body #wrapper #content #projects {
+    body #wrapper #content #projects,
+    body #wrapper #content #blog {
       padding: 10px; }
+    body #wrapper #content #blog {
+      flex-basis: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      body #wrapper #content #blog .blog-card {
+        flex-basis: 31%; }
   body #back-to-top-wrapper {
     margin-bottom: 20px; } }
 
