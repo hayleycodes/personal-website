@@ -78,6 +78,13 @@ body {
             }
         }
     }
+    #back-to-blog-link p {
+        color: $mainColor;
+        text-align: right;
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
 
     a {
         color: $mainColor;
