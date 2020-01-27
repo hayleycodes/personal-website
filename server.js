@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const validator = require('email-validator')
 const axios = require('axios').default
-const path = require('path')
+var moment = require('moment')
 require('dotenv').config()
 
 const app = express()
@@ -19,11 +19,15 @@ app.get('/', function(req, res) {
 
 app.get('/blog', async (req, res) => {
     let blogPosts = await getBlogPosts()
+    blogPosts.data.forEach(blogPost => {
+        let timeStr = moment(blogPost.created_at)
+        blogPost.created_at = timeStr.utc().format('Do MMM YYYY')
+    })
     res.render('pages/blog', { blogPosts: blogPosts.data })
 })
 
 app.get('/blog/:blogId', async (req, res) => {
-    let blogPost = await getBlogPost(req.params.blogId)
+    let blogPost = await getBlogPosts(req.params.blogId)
     res.render('pages/blogPost', { blogPost: blogPost.data })
 })
 
@@ -31,20 +35,12 @@ app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
 
-async function getBlogPosts() {
+async function getBlogPosts(blogId) {
     try {
-        const response = await axios.get('http://localhost:1337/blog-posts')
-        console.log(response)
-        return response
-    } catch (error) {
-        console.error(error)
-        return
-    }
-}
-
-async function getBlogPost(blogId) {
-    try {
-        const response = await axios.get(`http://localhost:1337/blog-posts/${blogId}`)
+        let url = blogId
+            ? `http://localhost:1337/blog-posts/${blogId}`
+            : 'http://localhost:1337/blog-posts'
+        const response = await axios.get(url)
         console.log(response)
         return response
     } catch (error) {
