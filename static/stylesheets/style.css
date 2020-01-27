@@ -70,6 +70,11 @@ body {
   body p {
     color: #3e3e3e;
     font-size: 0.9rem; }
+  body #hero img {
+    object-fit: cover;
+    height: 240px;
+    width: 100%;
+    margin-bottom: -5px; }
   body header {
     display: flex;
     flex-direction: column;
@@ -449,6 +454,7 @@ details {
     margin: 40px; }
     body header #heading-text {
       text-align: left; }
+  body nav button,
   body nav a {
     padding: 10px 20px 10px 20px; }
   body nav img {

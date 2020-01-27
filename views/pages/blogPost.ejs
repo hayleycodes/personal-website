@@ -7,7 +7,11 @@
 <body>
     <a class="anchor" name=""></a> 
 
-    <%- include ("../partials/header") %>
+    <% if (blogPost.Hero) { %>
+        <%- include ("../partials/hero", { hero: blogPost.Hero }) %>
+    <% } else { %>
+        <%- include ("../partials/header") %>
+    <% } %>
 
     <%- include ("../partials/nav") %>
 
@@ -35,7 +39,6 @@
     <%- include ("../partials/footer"); -%>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
-    <script src="/js/typewriter.js"></script>
     <script src="/js/contact.js"></script>
     <script src="/js/project.js"></script>
 </body>
