@@ -76,6 +76,12 @@ body {
                 color: $mainColor;
                 margin-left: 20px;
             }
+            img {
+                max-height: 350px;
+                width: auto;
+                border: 1px solid $mainColor;
+                border-radius: 5px;
+            }
         }
     }
     #back-to-blog-link p {

@@ -54,6 +54,11 @@ body {
     font-size: 1.5rem;
     color: #d16689;
     margin-left: 20px; }
+  body #blog-post .blog-post-content img {
+    max-height: 350px;
+    width: auto;
+    border: 1px solid #d16689;
+    border-radius: 5px; }
   body #back-to-blog-link p {
     color: #d16689;
     text-align: right; }
