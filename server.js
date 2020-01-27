@@ -27,11 +27,12 @@ app.get('/blog', async (req, res) => {
     res.render('pages/blog', { blogPosts: blogPosts.data })
 })
 
-app.get('/blog/:blogId', async (req, res) => {
-    let blogPost = await getBlogPosts(req.params.blogId)
-    blogPost.data.created_at = parseDate(blogPost.data.created_at)
-    blogPost.data.content = parseContent(blogPost.data.content)
-    res.render('pages/blogPost', { blogPost: blogPost.data })
+app.get('/blog/:blogSlug', async (req, res) => {
+    let blogPost = await getBlogPosts(req.params.blogSlug)
+    let data = blogPost.data[0]
+    data.created_at = parseDate(data.created_at)
+    data.content = parseContent(data.content)
+    res.render('pages/blogPost', { blogPost: data })
 })
 
 app.listen(3000, function() {
@@ -47,10 +48,10 @@ function parseContent(mdContent) {
     return md.render(mdContent)
 }
 
-async function getBlogPosts(blogId) {
+async function getBlogPosts(blogSlug) {
     try {
-        let url = blogId
-            ? `http://localhost:1337/blog-posts/${blogId}`
+        let url = blogSlug
+            ? `http://localhost:1337/blog-posts/?slug=${blogSlug}`
             : 'http://localhost:1337/blog-posts'
         const response = await axios.get(url)
         console.log(response)

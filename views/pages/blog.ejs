@@ -23,8 +23,10 @@
 
                     <div class="card blog-card">
 
-                        <a href="/blog/<%= blogPost.id %>">
-                            <img class="blog-image" src="<%- 'http://localhost:1337/' + blogPost.Hero.url %>">
+                        <a href="/blog/<%= blogPost.slug %>">
+                            <% if (blogPost.Hero) { %>
+                                <img class="blog-image" src="<%- 'http://localhost:1337/' + blogPost.Hero.url %>">
+                            <% } %>
                             <div class="blog-overview">
                                 <h4><%= blogPost.title %></h4>
                                 <h5><%= blogPost.created_at %></h5>
