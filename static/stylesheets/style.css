@@ -32,15 +32,14 @@ body {
       background-color: #fff;
       color: #d16689; }
     body h2.blog-heading {
-      color: #3e3e3e;
-      line-height: 4rem; }
+      color: #3e3e3e; }
   body h3 {
     font-size: 2rem;
     margin: 10px 10px; }
     body h3.blog-heading {
       font-size: 0.8rem;
       color: #d16689;
-      margin: 0; }
+      margin: 10px 0; }
   body h4 {
     margin: 0;
     color: #3e3e3e;
@@ -51,12 +50,18 @@ body {
     font-weight: bold;
     font-size: 0.8rem;
     color: #d16689; }
+  body #blog-post .blog-post-content h1 {
+    font-size: 1.5rem;
+    color: #d16689;
+    margin-left: 20px; }
   body a {
     color: #d16689;
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
     overflow-wrap: break-word;
     word-wrap: break-word; }
+    body a:hover {
+      color: #3e3e3e; }
   body p {
     color: #3e3e3e;
     font-size: 0.9rem; }
@@ -89,6 +94,7 @@ body {
     background-color: #fff; }
     body nav a,
     body nav button {
+      text-decoration: none;
       display: flex;
       align-items: flex-end;
       margin: 0 7px; }
@@ -144,6 +150,12 @@ body {
         margin-bottom: 10px;
         background-color: #fff;
         border-radius: 5px; }
+        body #wrapper #content .card a,
+        body #wrapper #blog-list .card a {
+          text-decoration: none; }
+          body #wrapper #content .card a:hover,
+          body #wrapper #blog-list .card a:hover {
+            text-decoration: underline; }
     body #wrapper #blog-list {
       margin-top: 10px; }
       body #wrapper #blog-list .blog-card {
@@ -161,9 +173,9 @@ body {
           padding: 10px; }
     body #wrapper #blog-post {
       max-width: 800px;
-      margin: 30px auto;
-      text-align: justify; }
+      margin: 30px auto; }
       body #wrapper #blog-post .blog-post-content p {
+        text-align: justify;
         font-size: 1.3rem; }
   body #contact {
     padding: 10px; }
@@ -288,7 +300,8 @@ body {
     body input[type='button']#back-to-top a,
     body button#back-to-top a,
     body nav a#back-to-top a {
-      padding: 0; }
+      padding: 0;
+      text-decoration: none; }
   body input[type='button']:hover,
   body button:hover,
   body nav a:hover {
@@ -308,7 +321,8 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    background: transparent; }
+    background: transparent;
+    text-decoration: none; }
   body footer {
     display: flex;
     justify-content: center;

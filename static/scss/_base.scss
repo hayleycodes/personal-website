@@ -42,7 +42,6 @@ body {
 
         &.blog-heading {
             color: $secondaryColor;
-            line-height: 4rem;
         }
     }
 
@@ -52,7 +51,7 @@ body {
         &.blog-heading {
             font-size: 0.8rem;
             color: $mainColor;
-            margin: 0;
+            margin: 10px 0;
         }
     }
 
@@ -70,12 +69,25 @@ body {
         color: $mainColor;
     }
 
+    #blog-post {
+        .blog-post-content {
+            h1 {
+                font-size: 1.5rem;
+                color: $mainColor;
+                margin-left: 20px;
+            }
+        }
+    }
+
     a {
         color: $mainColor;
-        text-decoration: none;
+        text-decoration: underline;
         cursor: pointer;
         overflow-wrap: break-word;
         word-wrap: break-word;
+        &:hover {
+            color: $secondaryColor;
+        }
     }
 
     p {
@@ -117,6 +129,7 @@ body {
 
         a,
         button {
+            text-decoration: none;
             display: flex;
             align-items: flex-end;
             margin: 0 7px;
@@ -182,6 +195,13 @@ body {
                 margin-bottom: $mainBodySpacing;
                 background-color: $white;
                 border-radius: 5px;
+
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
 
@@ -208,9 +228,9 @@ body {
         #blog-post {
             max-width: 800px;
             margin: 30px auto;
-            text-align: justify;
             .blog-post-content {
                 p {
+                    text-align: justify;
                     font-size: 1.3rem;
                 }
             }
@@ -375,6 +395,7 @@ body {
         &#back-to-top {
             a {
                 padding: 0;
+                text-decoration: none;
             }
         }
     }
@@ -407,6 +428,7 @@ body {
         justify-content: center;
         margin-bottom: 10px;
         background: transparent;
+        text-decoration: none;
     }
 
     footer {
