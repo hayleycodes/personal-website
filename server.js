@@ -22,14 +22,15 @@ app.get('/', function(req, res) {
 app.get('/blog', async (req, res) => {
     let blogPosts = await getBlogPosts()
     blogPosts.data.forEach(blogPost => {
-        blogPost = parseDateAndContent(blogPost)
+        blogPost.created_at = parseDate(blogPost.created_at)
     })
     res.render('pages/blog', { blogPosts: blogPosts.data })
 })
 
 app.get('/blog/:blogId', async (req, res) => {
     let blogPost = await getBlogPosts(req.params.blogId)
-    blogPost.data = parseDateAndContent(blogPost.data)
+    blogPost.data.created_at = parseDate(blogPost.data.created_at)
+    blogPost.data.content = parseContent(blogPost.data.content)
     res.render('pages/blogPost', { blogPost: blogPost.data })
 })
 
@@ -37,11 +38,13 @@ app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
 
-function parseDateAndContent(blogPost) {
-    let timeStr = moment(blogPost.created_at)
-    blogPost.created_at = timeStr.utc().format('Do MMM YYYY')
-    blogPost.content = md.render(blogPost.content)
-    return blogPost
+function parseDate(created_at) {
+    let timeStr = moment(created_at)
+    return timeStr.utc().format('Do MMM YYYY')
+}
+
+function parseContent(mdContent) {
+    return md.render(mdContent)
 }
 
 async function getBlogPosts(blogId) {
