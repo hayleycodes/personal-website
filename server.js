@@ -16,7 +16,7 @@ app.set('view engine', 'ejs')
 
 // index page
 app.get('/', function(req, res) {
-    res.render('pages/index')
+    res.render('pages/index', { env: process.env.NODE_ENV })
 })
 
 app.get('/blog', async (req, res) => {
@@ -32,7 +32,7 @@ app.get('/blog/:blogSlug', async (req, res) => {
     let data = blogPost.data[0]
     data.created_at = parseDate(data.created_at)
     data.content = parseContent(data.content)
-    res.render('pages/blogPost', { blogPost: data })
+    res.render('pages/blogPost', { blogPost: data, env: process.env.NODE_ENV })
 })
 
 app.listen(3000, function() {
