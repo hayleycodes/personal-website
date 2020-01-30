@@ -24,7 +24,7 @@ app.get('/blog', async (req, res) => {
     blogPosts.data.forEach(blogPost => {
         blogPost.created_at = parseDate(blogPost.created_at)
     })
-    res.render('pages/blog', { blogPosts: blogPosts.data })
+    res.render('pages/blog', { blogPosts: blogPosts.data, env: process.env.NODE_ENV })
 })
 
 app.get('/blog/:blogSlug', async (req, res) => {

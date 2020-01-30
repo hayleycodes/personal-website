@@ -2,9 +2,13 @@
 
 <html lang="en">
 
-<%- include ("../partials/head") %>
+<%- include ("../partials/head", {env: env}) %>
 
 <body>
+    <% if (env !== "development") { %>
+        <%- include ("../partials/bodyGTM") %>
+    <% } %>
+
     <a class="anchor" name=""></a> 
     
     <%- include ("../partials/header") %>
