@@ -29,7 +29,7 @@
 
                         <a href="/blog/<%= blogPost.slug %>">
                             <% if (blogPost.Hero) { %>
-                                <img class="blog-image" src="<%- 'http://localhost:1337/' + blogPost.Hero.url %>">
+                                <img class="blog-image" src="<%- `${imageUrl}${blogPost.Hero.url}` %>">
                             <% } %>
                             <div class="blog-overview">
                                 <h4 class="blog-heading"><%= blogPost.title %></h4>

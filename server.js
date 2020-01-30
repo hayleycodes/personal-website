@@ -6,8 +6,12 @@ const moment = require('moment')
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
 require('dotenv').config()
-
 const app = express()
+const CMS_URL =
+    process.env.NODE_ENV == 'production' ? 'https://cms.hayleyavw.com/' : 'http://localhost:1337/'
+const CMS_IMAGE_URL =
+    process.env.NODE_ENV == 'production' ? 'https://cms.hayleyavw.com/' : 'http://localhost:1337/'
+
 app.use(express.static('static'))
 app.use(bodyParser.json())
 
@@ -24,7 +28,11 @@ app.get('/blog', async (req, res) => {
     blogPosts.data.forEach(blogPost => {
         blogPost.created_at = parseDate(blogPost.created_at)
     })
-    res.render('pages/blog', { blogPosts: blogPosts.data, env: process.env.NODE_ENV })
+    res.render('pages/blog', {
+        blogPosts: blogPosts.data,
+        imageUrl: CMS_IMAGE_URL,
+        env: process.env.NODE_ENV
+    })
 })
 
 app.get('/blog/:blogSlug', async (req, res) => {
@@ -32,7 +40,11 @@ app.get('/blog/:blogSlug', async (req, res) => {
     let data = blogPost.data[0]
     data.created_at = parseDate(data.created_at)
     data.content = parseContent(data.content)
-    res.render('pages/blogPost', { blogPost: data, env: process.env.NODE_ENV })
+    res.render('pages/blogPost', {
+        blogPost: data,
+        imageUrl: CMS_IMAGE_URL,
+        env: process.env.NODE_ENV
+    })
 })
 
 app.listen(3000, function() {
@@ -50,9 +62,7 @@ function parseContent(mdContent) {
 
 async function getBlogPosts(blogSlug) {
     try {
-        let url = blogSlug
-            ? `http://localhost:1337/blog-posts/?slug=${blogSlug}`
-            : 'http://localhost:1337/blog-posts'
+        let url = blogSlug ? `${CMS_URL}blog-posts/?slug=${blogSlug}` : `${CMS_URL}blog-posts`
         const response = await axios.get(url)
         console.log(response)
         return response
