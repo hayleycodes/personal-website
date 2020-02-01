@@ -25,6 +25,9 @@ body {
     h1 {
         font-size: 2.8rem;
         margin: 0px;
+        &.blog-heading {
+            color: $secondaryColor;
+        }
     }
 
     h2 {
@@ -38,10 +41,6 @@ body {
         &.highlight {
             background-color: $white;
             color: $mainColor;
-        }
-
-        &.blog-heading {
-            color: $secondaryColor;
         }
     }
 
@@ -71,7 +70,7 @@ body {
 
     #blog-post {
         .blog-post-content {
-            h1 {
+            h2 {
                 font-size: 1.5rem;
                 color: $mainColor;
                 margin-left: 20px;
@@ -247,7 +246,8 @@ body {
             }
         }
 
-        #blog-post {
+        #blog-post,
+        #back-to-blog-link p {
             max-width: 800px;
             margin: 30px auto;
             .blog-post-content {

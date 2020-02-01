@@ -21,6 +21,8 @@ body {
   body h1 {
     font-size: 2.8rem;
     margin: 0px; }
+    body h1.blog-heading {
+      color: #3e3e3e; }
   body h2 {
     display: inline;
     margin: 0;
@@ -31,8 +33,6 @@ body {
     body h2.highlight {
       background-color: #fff;
       color: #d16689; }
-    body h2.blog-heading {
-      color: #3e3e3e; }
   body h3 {
     font-size: 2rem;
     margin: 10px 10px; }
@@ -50,7 +50,7 @@ body {
     font-weight: bold;
     font-size: 0.8rem;
     color: #d16689; }
-  body #blog-post .blog-post-content h1 {
+  body #blog-post .blog-post-content h2 {
     font-size: 1.5rem;
     color: #d16689;
     margin-left: 20px; }
@@ -186,10 +186,12 @@ body {
           border-top-right-radius: 5px; }
         body #wrapper #blog-list .blog-card .blog-overview {
           padding: 10px; }
-    body #wrapper #blog-post {
+    body #wrapper #blog-post,
+    body #wrapper #back-to-blog-link p {
       max-width: 800px;
       margin: 30px auto; }
-      body #wrapper #blog-post .blog-post-content p {
+      body #wrapper #blog-post .blog-post-content p,
+      body #wrapper #back-to-blog-link p .blog-post-content p {
         text-align: justify;
         font-size: 1.3rem; }
   body #contact {
