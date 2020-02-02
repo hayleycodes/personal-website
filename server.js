@@ -62,7 +62,9 @@ function parseContent(mdContent) {
 
 async function getBlogPosts(blogSlug) {
     try {
-        let url = blogSlug ? `${CMS_URL}blog-posts/?slug=${blogSlug}` : `${CMS_URL}blog-posts`
+        let url = blogSlug
+            ? `${CMS_URL}blog-posts/?slug=${blogSlug}`
+            : `${CMS_URL}blog-posts/?_sort=created_at:DESC`
         const response = await axios.get(url)
         console.log(response)
         return response
