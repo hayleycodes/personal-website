@@ -52,8 +52,7 @@ body {
     color: #d16689; }
   body #blog-post .blog-post-content h2 {
     font-size: 1.5rem;
-    color: #d16689;
-    margin-left: 20px; }
+    color: #d16689; }
   body #blog-post .blog-post-content img {
     max-height: 350px;
     width: auto;
