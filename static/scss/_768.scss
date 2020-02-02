@@ -43,16 +43,6 @@
                 #blog-list {
                     padding: $mainBodySpacing;
                 }
-
-                #blog-list {
-                    flex-basis: 100%;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    .blog-card {
-                        flex-basis: 32%;
-                    }
-                }
             }
         }
 

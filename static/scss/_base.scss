@@ -189,11 +189,13 @@ body {
             border-bottom: 1px solid $mainColor;
         }
 
-        #content,
-        #blog-list {
+        #content {
             display: flex;
             flex-direction: column;
+        }
 
+        #content,
+        #blog-list {
             #about,
             #projects {
                 padding: $mainBodySpacing $mainBodySpacing 0 $mainBodySpacing;
@@ -226,6 +228,9 @@ body {
         }
 
         #blog-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
             margin-top: 10px;
             .blog-card {
                 padding: 0;
