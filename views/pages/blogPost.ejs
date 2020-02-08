@@ -11,7 +11,7 @@
     <a class="anchor" name=""></a> 
 
     <% if (blogPost.Hero) { %>
-        <%- include ("../partials/hero", { imageUrl: imageUrl, hero: blogPost.Hero }) %>
+        <%- include ("../partials/hero", { hero: blogPost.Hero }) %>
     <% } else { %>
         <%- include ("../partials/header") %>
     <% } %>

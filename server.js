@@ -9,8 +9,6 @@ require('dotenv').config()
 const app = express()
 const CMS_URL =
     process.env.NODE_ENV == 'production' ? 'https://cms.hayleyavw.com/' : 'http://localhost:1337/'
-const CMS_IMAGE_URL =
-    process.env.NODE_ENV == 'production' ? 'https://cms.hayleyavw.com/' : 'http://localhost:1337/'
 
 app.use(express.static('static'))
 app.use(bodyParser.json())
@@ -30,7 +28,6 @@ app.get('/blog', async (req, res) => {
     })
     res.render('pages/blog', {
         blogPosts: blogPosts.data,
-        imageUrl: CMS_IMAGE_URL,
         env: process.env.NODE_ENV
     })
 })
@@ -42,7 +39,6 @@ app.get('/blog/:blogSlug', async (req, res) => {
     data.content = parseContent(data.content)
     res.render('pages/blogPost', {
         blogPost: data,
-        imageUrl: CMS_IMAGE_URL,
         env: process.env.NODE_ENV
     })
 })
