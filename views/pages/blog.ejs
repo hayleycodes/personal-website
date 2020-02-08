@@ -22,23 +22,29 @@
         <div id="content">
 
             <section id="blog-list">
+
+                <% if (blogPosts.length > 0) { %>
             
-                <% blogPosts.forEach(blogPost => { %>
+                    <% blogPosts.forEach(blogPost => { %>
 
-                    <div class="card blog-card">
+                        <div class="card blog-card">
 
-                        <a href="/blog/<%= blogPost.slug %>">
-                            <% if (blogPost.Hero) { %>
-                                <img class="blog-image" src="<%- blogPost.Hero.url %>">
-                            <% } %>
-                            <div class="blog-overview">
-                                <h4 class="blog-heading"><%= blogPost.title %></h4>
-                                <h5 class="blog-heading"><%= blogPost.created_at %></h5>
-                            </div>
-                        </a>
-                    </div>
+                            <a href="/blog/<%= blogPost.slug %>">
+                                <% if (blogPost.Hero) { %>
+                                    <img class="blog-image" src="<%- blogPost.Hero.url %>">
+                                <% } %>
+                                <div class="blog-overview">
+                                    <h4 class="blog-heading"><%= blogPost.title %></h4>
+                                    <h5 class="blog-heading"><%= blogPost.created_at %></h5>
+                                </div>
+                            </a>
+                        </div>
+                    
+                    <% }) %>
                 
-                <% }) %>
+                <% } else { %>
+                    <p>Woops, nothing to see here just yet!</p>
+                <% } %>
             
             </section>
 
