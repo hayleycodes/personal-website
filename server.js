@@ -8,7 +8,9 @@ const md = new MarkdownIt()
 require('dotenv').config()
 const app = express()
 const CMS_URL =
-    process.env.NODE_ENV == 'production' ? 'https://cms.hayleyavw.com/' : 'http://localhost:1337/'
+    process.env.NODE_ENV == 'production'
+        ? 'https://hayleyavw-portfolio-site-cms.herokuapp.com/'
+        : 'http://localhost:1337/'
 
 app.use(express.static('static'))
 app.use(bodyParser.json())
