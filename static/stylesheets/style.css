@@ -213,7 +213,8 @@ body {
       align-self: flex-end;
       margin: 10px 20px 0 0;
       color: #fff;
-      font-size: 40px; }
+      font-size: 40px;
+      text-decoration: none; }
       body #contact-overlay #close-button:hover, body #contact-overlay #close-button:focus {
         color: #d16689; }
     body #contact-overlay #contact-wrapper {
