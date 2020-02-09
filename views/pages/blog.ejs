@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+
+<%- include ("../partials/head", {env: env}) %>
+
+<body>
+    <% if (env !== "development") { %>
+        <%- include ("../partials/bodyGTM") %>
+    <% } %>
+
+    <a class="anchor" name=""></a> 
+    
+    <%- include ("../partials/header") %>
+
+    <%- include ("../partials/nav") %>
+
+    <div id="wrapper">
+
+        <%- include ("../partials/contact") %>
+
+        <div id="content">
+
+            <section id="blog-list">
+
+                <% if (blogPosts.length > 0) { %>
+            
+                    <% blogPosts.forEach(blogPost => { %>
+
+                        <div class="card blog-card">
+
+                            <a href="/blog/<%= blogPost.slug %>">
+                                <% if (blogPost.Hero) { %>
+                                    <img class="blog-image" src="<%- blogPost.Hero.url %>">
+                                <% } %>
+                                <div class="blog-overview">
+                                    <h4 class="blog-heading"><%= blogPost.title %></h4>
+                                    <h5 class="blog-heading"><%= blogPost.created_at %></h5>
+                                </div>
+                            </a>
+                        </div>
+                    
+                    <% }) %>
+                
+                <% } else { %>
+                    <p>Woops, nothing to see here just yet!</p>
+                <% } %>
+            
+            </section>
+
+        </div>
+    
+    </div>
+
+    <div id="back-to-top-wrapper">
+        <button id="back-to-top" type="button"><a id="back-to-top" href="#">Back to top &uarr;</a></button>
+    </div>
+
+    <%- include ("../partials/footer"); -%>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
+    <script src="/js/typewriter.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/project.js"></script>
+</body>
+
+</html>

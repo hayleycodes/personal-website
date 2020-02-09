@@ -2,110 +2,22 @@
 
 <html lang="en">
 
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61782039-1"></script>
-    <script>
-        if (document.location.hostname.search("hayleyavw.com") !== -1) {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-61782039-1');
-        } else {
-            console.log('ducks')
-        }
-    </script>
-
-    <meta charset="utf-8">
-    <title>Hayley van Waas - developer</title>
-    <meta name="description" content="Website of freelance developer, Hayley van Waas">
-    <meta name="keywords"
-        content="HTML, CSS, JavaScript, Threejs, WebGl, Hayley van Waas, Freelancer, Freelance developer, developer, software developer, software engineer, web developer, Python programmer, Python, computer science unplugged, cs unplugged, cs field guide, csfg, computer science field guide, hayleys health foods, google, reannz, ncss, national computer science school, gather workshops, html, CSS, scss, css3, html5, framework, Flask, threejs, fullstack, server, linux, npm, node, verto, software engineering, engineer, user experience, user experience engineer, user experience researcher, ux, user experience study, user expereince expert, hci, ux researcher, ux expert, human computer interaction, backend developer, frontend developer">
-    <meta name="author" content="Hayley van Waas">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-    <!-- style -->
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Outline|Londrina+Solid|Roboto" rel="stylesheet">
-
-    <!-- structured data for SEO -->
-    <script type="application/ld+json">
-    		{
-				"@context": "https://schema.org",
-				"@type": "Organization",
-				"url": "hayleyavw.comg",
-				"contactPoint": [
-					{
-						"@type": "ContactPoint",
-				 		"telephone": "+61-468-424-969",
-				  		"contactType": "sales",
-				  		"areaServed": "AU",
-				  		"availableLanguage": "English"
-					}
-				]
-			}
-		</script>
-
-</head>
+<%- include ("../partials/head", {env: env}) %>
 
 <body>
-    <a class="anchor" name=""></a> 
-    <header>
-        <img src="images/hayley-van-waas.jpg" alt="Profile photo of Hayley van Waas.">
-        <div id="heading-text">
-            <h1>Hi, I'm Hayley.</h1>
-            <h2></h2>
-        </div>
-    </header>
+    <% if (env !== "development") { %>
+        <%- include ("../partials/bodyGTM") %>
+    <% } %>
 
-    <nav>
-        <a tabindex="0" target="_blank" rel="noopener noreferrer" href="https://github.com/hayleyavw"><img
-                src="images/social-logos/github.png" alt="GitHub logo."></a>
-        <a tabindex="0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/hayleyavw"><img
-                src="images/social-logos/twitter.png" alt="Twitter logo."></a>
-        <a tabindex="0" target="_blank" rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/hayley-van-waas-772670108/"><img src="images/social-logos/linkedin.png"
-                alt="LinkedIn logo."></a>
-        <img tabindex="0" id="email-button" src="images/envelope.png" onclick="openContact()" alt="Mail icon.">
-    </nav>
+    <a class="anchor" name=""></a> 
+
+    <%- include ("../partials/header") %>
+
+    <%- include ("../partials/nav") %>
 
     <div id="wrapper">
 
-        <div id="contact-overlay">
-
-            <a tabindex="-1" href="javascript:void(0)" id="close-button" onclick="closeContact()">&times;</a>
-
-            <div id="contact-wrapper">
-                <div id="contact-form" class="card">
-                    <h3>Get in touch!</h3>
-                    <p id="contact-message">If you would like to hire me for a project, ask a few questions, or simply
-                        tell me I'm awesome, I'd love to hear from you!</p>
-                    <form>
-                        <div class="form-element">
-                            <label for="name">Name</label>
-                            <input tabindex="-1" id="name" type="text" name="name" required>
-                            <span>Enter your full name</span>
-                        </div>
-                        <div class="form-element">
-                            <label for="email">Email</label>
-                            <input tabindex="-1" id="email" type="email" name="email" required>
-                            <span>Enter a valid email address</span>
-                        </div>
-                        <div class="form-element">
-                            <label for="message">Your Message</label>
-                            <textarea tabindex="-1" id="message" name="message" rows=5></textarea>
-                            <span>Why are you reaching out?</span>
-                        </div>
-                        <div class="form-element">
-                            <input tabindex="-1" id="send-email-button" type="button" onclick="sendEmail()" value="Send" class="submit-button">
-                        </div>
-                    </form>
-                </div>
-                <div id="message-confirmation-overlay">
-                    Message sent!
-                </div>
-            </div>
-        </div>
+        <%- include ("../partials/contact") %>
 
         <div id="content">
 
@@ -153,6 +65,15 @@
                                 the content for each of these topics and was the lead mentor for the first Flash
                                 program.</p>
                             <p><a href="https://shecodes.com.au/">https://shecodes.com.au/</a></p>
+                        </div>
+                    </project-details>
+
+                    <project-details project-name="The Cut" job-title="Python Developer"
+                        start-date="December 2019" end-date="Current Date" Python Django>
+                        <div slot="project-description">
+                            <p>The Cut is digital agency focused on Python software development. I primarily work on backend development using Python and Django.
+                            <a href="https://www.thecut.net.au/">https://www.thecut.net.au/</a>
+
                         </div>
                     </project-details>
 
@@ -374,14 +295,11 @@
         <button id="back-to-top" type="button"><a id="back-to-top" href="#">Back to top &uarr;</a></button>
     </div>
 
-    <footer>
-        <p>Hayley van Waas &copy; 2019</p>
-        <p id="credit">Icon made by <a target="_blank" rel="noopener noreferrer" href="https://www.flaticon.com/authors/gregor-cresnar">https://www.flaticon.com/authors/gregor-cresnar</a> from <a target="_blank" rel="noopener noreferrer" href="www.flaticon.com">www.flaticon.com</a></p>
-    </footer>
+    <%- include ("../partials/footer"); -%>
 
-    <script src="js/typewriter.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/project.js"></script>
+    <script src="/js/typewriter.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/project.js"></script>
 </body>
 
 </html>

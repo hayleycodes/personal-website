@@ -8,6 +8,23 @@
             }
         }
 
+        nav {
+            button,
+            a {
+                padding: 10px 20px 10px 20px;
+            }
+            img {
+                margin-left: 5px;
+            }
+            a,
+            button {
+                margin: 0 10px;
+                p {
+                    display: inline-block;
+                }
+            }
+        }
+
         #wrapper {
             #content {
                 flex-direction: row;
@@ -22,7 +39,8 @@
                 }
 
                 #about,
-                #projects {
+                #projects,
+                #blog-list {
                     padding: $mainBodySpacing;
                 }
             }
