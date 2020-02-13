@@ -76,9 +76,13 @@ body {
             }
             img {
                 max-height: 350px;
-                width: auto;
+                max-width: 90vw;
                 border: 1px solid $mainColor;
                 border-radius: 5px;
+            }
+            pre {
+                max-width: 90vw;
+                font-size: 1.2rem;
             }
         }
     }

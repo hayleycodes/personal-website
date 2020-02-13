@@ -55,9 +55,12 @@ body {
     color: #d16689; }
   body #blog-post .blog-post-content img {
     max-height: 350px;
-    width: auto;
+    max-width: 90vw;
     border: 1px solid #d16689;
     border-radius: 5px; }
+  body #blog-post .blog-post-content pre {
+    max-width: 90vw;
+    font-size: 1.2rem; }
   body #back-to-blog-link p {
     color: #d16689;
     text-align: right; }
