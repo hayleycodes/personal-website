@@ -41,6 +41,49 @@
 
     <%- include ("../partials/footer"); -%>
 
+    <% var jsonld = jsonld %>
+    <% var title = blogPost.title %>
+    <% var content = blogPost.content %>
+    <% var createdAt = blogPost.created_at %>
+    <% var updatedAt = blogPost.updated_at %>
+    <script type="text/javascript">
+        var title = "<%= title %>";
+        var content = "test"
+        var createdAt = "<%= createdAt %>";
+        var updatedAt = "<%= updatedAt %>";
+        var script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "hayley.codes"
+                },
+                "headline": title,
+                "description": "Description",
+                "articleBody": content,
+                "image": "test.com",
+                "author": {
+                    "@type": "Person",
+                    "name": "hayley"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "hayley.codes",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://hayley.codes/images/favicon.png"
+                    }
+                },
+                "datePublished": createdAt,
+                "dateModified": updatedAt
+            }
+        )
+        document.querySelector('head').appendChild(script);
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="/js/contact.js"></script>
     <script src="/js/project.js"></script>

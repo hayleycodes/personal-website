@@ -5,6 +5,7 @@ const axios = require('axios').default
 const moment = require('moment')
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
+const jsonld = require('jsonld')
 require('dotenv').config()
 const app = express()
 const CMS_URL =
@@ -23,6 +24,7 @@ app.get('/', function(req, res) {
     res.render('pages/index', { env: process.env.NODE_ENV })
 })
 
+// blog listing page
 app.get('/blog', async (req, res) => {
     let blogPosts = await getBlogPosts()
     blogPosts.data.forEach(blogPost => {
@@ -34,6 +36,7 @@ app.get('/blog', async (req, res) => {
     })
 })
 
+// blog post page
 app.get('/blog/:blogSlug', async (req, res) => {
     let blogPost = await getBlogPosts(req.params.blogSlug)
     let data = blogPost.data[0]
@@ -64,7 +67,6 @@ async function getBlogPosts(blogSlug) {
             ? `${CMS_URL}blog-posts/?slug=${blogSlug}`
             : `${CMS_URL}blog-posts/?_sort=created_at:DESC`
         const response = await axios.get(url)
-        console.log(response)
         return response
     } catch (error) {
         console.error(error)
