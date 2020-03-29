@@ -38,49 +38,18 @@
         <a tabindex="0" href="/blog" id="back-to-blog-link"><p>Back to Blogs and Articles</p></a>
     </div>
 
-
     <%- include ("../partials/footer"); -%>
 
     <% var jsonld = jsonld %>
-    <% var title = blogPost.title %>
-    <% var content = blogPost.content %>
-    <% var createdAt = blogPost.created_at %>
-    <% var updatedAt = blogPost.updated_at %>
     <script type="text/javascript">
-        var title = "<%= title %>";
-        var content = "test"
-        var createdAt = "<%= createdAt %>";
-        var updatedAt = "<%= updatedAt %>";
+        var jsonld = JSON.parse('<%- jsonld %>');
+        jsonld['headline'] = unescape(jsonld['headline'])
+        jsonld['description'] = unescape(jsonld['description'])
+        jsonld['articleBody'] = unescape(jsonld['articleBody'])
+        // create jsonld element for head
         var script = document.createElement('script');
         script.type = 'application/ld+json';
-        script.text = JSON.stringify(
-            {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "mainEntityOfPage": {
-                    "@type": "WebPage",
-                    "@id": "hayley.codes"
-                },
-                "headline": title,
-                "description": "Description",
-                "articleBody": content,
-                "image": "test.com",
-                "author": {
-                    "@type": "Person",
-                    "name": "hayley"
-                },
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "hayley.codes",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://hayley.codes/images/favicon.png"
-                    }
-                },
-                "datePublished": createdAt,
-                "dateModified": updatedAt
-            }
-        )
+        script.text = JSON.stringify(jsonld);
         document.querySelector('head').appendChild(script);
     </script>
 

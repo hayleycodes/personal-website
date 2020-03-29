@@ -39,18 +39,50 @@ app.get('/blog', async (req, res) => {
 // blog post page
 app.get('/blog/:blogSlug', async (req, res) => {
     let blogPost = await getBlogPosts(req.params.blogSlug)
-    let data = blogPost.data[0]
-    data.created_at = parseDate(data.created_at)
-    data.content = parseContent(data.content)
+    blogPost = blogPost.data[0]
+    blogPost.content = parseContent(blogPost.content)
+    let jsonld = generateJSON(blogPost)
+    blogPost.created_at = parseDate(blogPost.created_at)
     res.render('pages/blogPost', {
-        blogPost: data,
-        env: process.env.NODE_ENV
+        blogPost: blogPost,
+        env: process.env.NODE_ENV,
+        jsonld: jsonld
     })
 })
 
 app.listen(3000, function() {
     console.log('Server running on localhost:3000')
 })
+
+function generateJSON(blogPost) {
+    let description = blogPost.content.match(/<p>(.*?)<\/p>/)[1]
+    return JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'hayley.codes'
+        },
+        headline: escape(blogPost.title),
+        description: escape(description),
+        articleBody: escape(blogPost.content),
+        image: 'test.com',
+        author: {
+            '@type': 'Person',
+            name: 'Hayley van Waas'
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'hayley.codes',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://hayley.codes/images/favicon.png'
+            }
+        },
+        datePublished: blogPost.created_at,
+        dateModified: blogPost.updated_at
+    })
+}
 
 function parseDate(created_at) {
     let timeStr = moment(created_at)
