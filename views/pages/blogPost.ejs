@@ -42,15 +42,12 @@
 
     <% var jsonld = jsonld %>
     <script type="text/javascript">
-        var jsonld = JSON.parse('<%- jsonld %>');
+        let jsonld = JSON.parse('<%- jsonld %>');
         jsonld['headline'] = unescape(jsonld['headline'])
         jsonld['description'] = unescape(jsonld['description'])
         jsonld['articleBody'] = unescape(jsonld['articleBody'])
-        // create jsonld element for head
-        var script = document.createElement('script');
-        script.type = 'application/ld+json';
+        let script = document.getElementById('jsonld')
         script.text = JSON.stringify(jsonld);
-        document.querySelector('head').appendChild(script);
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
