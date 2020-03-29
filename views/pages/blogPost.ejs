@@ -38,8 +38,17 @@
         <a tabindex="0" href="/blog" id="back-to-blog-link"><p>Back to Blogs and Articles</p></a>
     </div>
 
-
     <%- include ("../partials/footer"); -%>
+
+    <% var jsonld = jsonld %>
+    <script type="text/javascript">
+        let jsonld = JSON.parse('<%- jsonld %>');
+        jsonld['headline'] = unescape(jsonld['headline'])
+        jsonld['description'] = unescape(jsonld['description'])
+        jsonld['articleBody'] = unescape(jsonld['articleBody'])
+        let script = document.getElementById('jsonld')
+        script.text = JSON.stringify(jsonld);
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="/js/contact.js"></script>

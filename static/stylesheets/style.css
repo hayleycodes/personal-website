@@ -253,7 +253,8 @@ body {
       z-index: 3;
       padding: 20px;
       border: 1px solid #d16689;
-      background-color: #fff; }
+      background-color: #fff;
+      border-radius: 5px; }
       body #contact-overlay #contact-form h3 {
         color: #d16689; }
       body #contact-overlay #contact-form .form-element {
@@ -261,7 +262,7 @@ body {
         padding: 9px;
         border: 1px solid #d16689;
         margin-bottom: 30px;
-        border-radius: 3px; }
+        border-radius: 5px; }
         body #contact-overlay #contact-form .form-element.empty > span {
           display: block; }
       body #contact-overlay #contact-form .form-element:last-child {
