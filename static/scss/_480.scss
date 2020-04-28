@@ -12,5 +12,12 @@
                 width: 200px;
             }
         }
+        nav {
+            a,
+            button {
+                margin: 0 7px;
+                padding: 7px 10px 7px 10px !important;
+            }
+        }
     }
 }

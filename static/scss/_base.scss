@@ -156,7 +156,8 @@ body {
             text-decoration: none;
             display: flex;
             align-items: flex-end;
-            margin: 0 7px;
+            margin: 0 3px;
+            padding: 4px 8px 4px 8px !important;
             p {
                 font-size: 1rem;
                 margin: 0;
@@ -256,7 +257,7 @@ body {
 
         #blog-post,
         #back-to-blog-link p {
-            max-width: 800px;
+            max-width: 100%;
             margin: 30px auto;
             .blog-post-content {
                 p {

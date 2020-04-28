@@ -114,7 +114,8 @@ body {
       text-decoration: none;
       display: flex;
       align-items: flex-end;
-      margin: 0 7px; }
+      margin: 0 3px;
+      padding: 4px 8px 4px 8px !important; }
       body nav a p,
       body nav button p {
         font-size: 1rem;
@@ -192,7 +193,7 @@ body {
           padding: 10px; }
     body #wrapper #blog-post,
     body #wrapper #back-to-blog-link p {
-      max-width: 800px;
+      max-width: 100%;
       margin: 30px auto; }
       body #wrapper #blog-post .blog-post-content p,
       body #wrapper #back-to-blog-link p .blog-post-content p {
@@ -454,7 +455,11 @@ details {
     font-size: 2.5rem; }
   body header img {
     height: 200px;
-    width: 200px; } }
+    width: 200px; }
+  body nav a,
+  body nav button {
+    margin: 0 7px;
+    padding: 7px 10px 7px 10px !important; } }
 
 @media (min-width: 660px) {
   body h1 {
