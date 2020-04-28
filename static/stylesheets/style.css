@@ -193,7 +193,7 @@ body {
           padding: 10px; }
     body #wrapper #blog-post,
     body #wrapper #back-to-blog-link p {
-      max-width: 100%;
+      max-width: 800px;
       margin: 30px auto; }
       body #wrapper #blog-post .blog-post-content p,
       body #wrapper #back-to-blog-link p .blog-post-content p {
