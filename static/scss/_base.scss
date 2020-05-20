@@ -76,9 +76,13 @@ body {
             }
             img {
                 max-height: 350px;
-                width: auto;
+                max-width: 90vw;
                 border: 1px solid $mainColor;
                 border-radius: 5px;
+            }
+            pre {
+                max-width: 90vw;
+                font-size: 1.2rem;
             }
         }
     }
@@ -152,7 +156,8 @@ body {
             text-decoration: none;
             display: flex;
             align-items: flex-end;
-            margin: 0 7px;
+            margin: 0 3px;
+            padding: 4px 8px 4px 8px !important;
             p {
                 font-size: 1rem;
                 margin: 0;
@@ -285,6 +290,7 @@ body {
             margin: 10px 20px 0 0;
             color: $white;
             font-size: 40px;
+            text-decoration: none;
             &:hover,
             &:focus {
                 color: $mainColor;

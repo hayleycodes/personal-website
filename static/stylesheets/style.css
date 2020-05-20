@@ -55,9 +55,12 @@ body {
     color: #d16689; }
   body #blog-post .blog-post-content img {
     max-height: 350px;
-    width: auto;
+    max-width: 90vw;
     border: 1px solid #d16689;
     border-radius: 5px; }
+  body #blog-post .blog-post-content pre {
+    max-width: 90vw;
+    font-size: 1.2rem; }
   body #back-to-blog-link p {
     color: #d16689;
     text-align: right; }
@@ -111,7 +114,8 @@ body {
       text-decoration: none;
       display: flex;
       align-items: flex-end;
-      margin: 0 7px; }
+      margin: 0 3px;
+      padding: 4px 8px 4px 8px !important; }
       body nav a p,
       body nav button p {
         font-size: 1rem;
@@ -213,7 +217,8 @@ body {
       align-self: flex-end;
       margin: 10px 20px 0 0;
       color: #fff;
-      font-size: 40px; }
+      font-size: 40px;
+      text-decoration: none; }
       body #contact-overlay #close-button:hover, body #contact-overlay #close-button:focus {
         color: #d16689; }
     body #contact-overlay #contact-wrapper {
@@ -450,7 +455,11 @@ details {
     font-size: 2.5rem; }
   body header img {
     height: 200px;
-    width: 200px; } }
+    width: 200px; }
+  body nav a,
+  body nav button {
+    margin: 0 7px;
+    padding: 7px 10px 7px 10px !important; } }
 
 @media (min-width: 660px) {
   body h1 {
