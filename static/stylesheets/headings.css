@@ -2,11 +2,11 @@ h1,
 h2,
 h3 {
     font-family: var(--body-font);
-    color: var(--white);
+    /* color: var(--white); */
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     margin: 0px;
 }
 
@@ -23,7 +23,7 @@ h2 .show-cursor {
 
 h2 .highlight {
     background-color: var(--white);
-    color: var(--main-colour);
+    /* color: var(--main-colour); */
 }
 
 h3 {
@@ -33,7 +33,7 @@ h3 {
 
 h4 {
     margin: 0;
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -42,5 +42,5 @@ h5 {
     margin: 0;
     font-weight: bold;
     font-size: 0.8rem;
-    color: var(--main-color);
+    /* color: var(--main-color); */
 }

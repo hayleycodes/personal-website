@@ -1,7 +1,13 @@
+project-details {
+    grid-column-end: span 2;
+}
+
 details {
     margin-bottom: 10px;
     background-color: var(--white);
     border-radius: 5px;
+    height: 100%;
+    box-shadow: 0px 0px 5px gray;
 }
 
 details ::slotted(div) {
@@ -25,18 +31,18 @@ details .tooltip {
     display: inline-block;
 }
 
-details .tooltip :hover .tooltip-text {
+details .tooltip:hover .tooltip-text {
     visibility: visible;
 }
 
 /* little triangle below tooltip */
-details .tooltip :hover :before {
+details .tooltip:hover :before {
     position: absolute;
     display: block;
     border: solid;
     border-color: var(--secondary-color) transparent;
     border-width: 0.4em 0.4em 0 0.4em;
-    bottom: 45px;
+    bottom: -6px;
     left: 10px;
     z-index: 2;
     content: '';
@@ -123,6 +129,6 @@ summary img {
     height: 40px;
 }
 
-summary :hover {
+summary:hover {
     border-top: 3px solid var(--secondary-color);
 }

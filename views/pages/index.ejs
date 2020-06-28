@@ -11,17 +11,49 @@
 
     <a class="anchor" name=""></a> 
 
-    <%- include ("../partials/header") %>
+    <!-- <%- include ("../partials/nav") %> -->
 
-    <%- include ("../partials/nav") %>
 
     <div id="wrapper">
 
         <%- include ("../partials/contact") %>
 
         <div id="home-content">
+            
+            <%- include ("../partials/header") %>
 
-            <div class="card">
+            <div id="nav-grid">
+                <div class="nav-card">
+                    <a tabindex="0" href="/"><p>Home</p><img tabindex="0" id="home-button" src="/images/home.png" alt="Home icon."></a>
+                </div>
+
+                <div class="nav-card">
+                    <a tabindex="0" href="/blog"><p>Blog</p><img tabindex="0" id="blog-button" src="/images/blog.png" alt="Blog icon."></a>
+                </div>
+
+                <div class="nav-card">
+                    <button onclick="openContact()"><p>Contact</p><img tabindex="0" id="email-button" src="/images/contact.png" alt="Mail icon."></button>
+                </div>
+
+                <div class="nav-card">
+                    <a tabindex="0" target="_blank" rel="noopener noreferrer" href="https://github.com/hayleyavw"><p>GitHub</p><img
+                            src="/images/social-logos/github.png" alt="GitHub logo."></a>
+                </div>
+
+                <div class="nav-card">
+                    <a tabindex="0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/hayleyavw"><p>Twitter</p><img
+                            src="/images/social-logos/twitter.png" alt="Twitter logo."></a>
+                </div>
+
+                <div class="nav-card">
+                    <a tabindex="0" target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/hayley-van-waas-772670108/"><p>LinkedIn</p><img src="/images/social-logos/linkedin.png"
+                            alt="LinkedIn logo."></a>
+                </div>
+
+            </div>
+
+            <div id="about" class="card">
                 <h4>About</h4>
                 <p>
                     I am currently a Software Developer and evangelist for Women in Tech. I live in Perth, Australia,

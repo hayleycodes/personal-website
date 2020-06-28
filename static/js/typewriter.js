@@ -2,7 +2,13 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    const dataText = ['Mentor.', 'Workshop Leader.', 'Communicator.', 'Developer.']
+    const dataText = [
+        'Mentor.',
+        'Workshop Leader.',
+        'Communicator.',
+        'Developer.',
+        'Instructional Designer'
+    ]
     const textElementClasses = document.querySelector('h2').classList
 
     const toggleCursor = async () => {

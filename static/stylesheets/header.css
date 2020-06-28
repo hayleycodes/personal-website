@@ -1,11 +1,10 @@
 header {
+    grid-column-end: span 6;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 header img {
@@ -13,5 +12,10 @@ header img {
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 30px;
+    margin-right: 10px;
 }
+
+header #heading-text {
+    min-width: 400px;
+}
+
