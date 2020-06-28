@@ -1,0 +1,18 @@
+#about,
+#projects {
+    padding: var(--main-body-spacing) var(--main-body-spacing) 0
+        var(--main-body-spacing);
+    /* this madness is to make sure it stays a consistent distance */
+    /* from the nav */
+    top: calc(var(--nav-height) + var(--main-body-spacing)* 2);
+}
+
+#about h3,
+#projects h3 {
+    text-align: center;
+}
+
+#about {
+    position: -webkit-sticky;
+    position: sticky;
+}

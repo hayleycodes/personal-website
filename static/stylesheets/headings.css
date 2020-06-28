@@ -1,0 +1,46 @@
+h1,
+h2,
+h3 {
+    font-family: var(--body-font);
+    color: var(--white);
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin: 0px;
+}
+
+h2 {
+    display: inline;
+    margin: 0;
+    font-size: 2rem;
+    border-right: 3px solid rgba(255, 255, 255, 0);
+}
+
+h2 .show-cursor {
+    border-right: 3px solid var(--secondary-color) !important;
+}
+
+h2 .highlight {
+    background-color: var(--white);
+    color: var(--main-colour);
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 10px 10px;
+}
+
+h4 {
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--main-color);
+}

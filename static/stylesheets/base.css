@@ -1,0 +1,130 @@
+@import url("variables.css");
+@import url("nav.css");
+@import url("blog.css");
+@import url("blog-listing.css");
+@import url("contact.css");
+@import url("details.css");
+@import url("footer.css");
+@import url("header.css");
+@import url("headings.css");
+@import url("index.css");
+
+html {
+    background: var(--main-color);
+    background: -webkit-linear-gradient(to right, var(--main-color), #b06ab3);
+    background: linear-gradient(to right, var(--main-color), #b06ab3);
+    scroll-behavior: smooth;
+}
+
+:target {
+    visibility: hidden;
+    position: relative;
+    top: -3rem;
+}
+
+
+p {
+    color: --var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: underline;
+    cursor: pointer;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+a:hover {
+    color: var(--secondary-colour);
+}
+
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: var(--body-font);
+}
+
+
+#wrapper {
+    padding: 0px var(--main-body-spacing);
+}
+
+#home-content,
+#blog-list-content,
+#blog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='button'] {
+    padding: 10px 20px 10px 20px;
+}
+
+button,
+nav a {
+    padding: 7px 10px 7px 10px;
+}
+
+input[type='button'],
+button,
+nav a {
+    background-color: var(--white);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type='button']:hover,
+button:hover,
+nav a:hover {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+input[type='button']:focus,
+button:focus,
+nav a:focus {
+    color: var(--secondary-color);
+    outline: none;
+    border: 1px solid var(--secondary-color);
+}
+
+button:hover a,
+button:focus a{
+    color: var(--secondary-color);
+}
+
+button #back-to-top a {
+    padding: 0;
+    text-decoration: none;
+}
+
+#back-to-top-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    background: transparent;
+    text-decoration: none;
+}
+
+.card,
+.card {
+    padding: var(--main-body-spacing);
+    margin-bottom: var(--main-body-spacing);
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}

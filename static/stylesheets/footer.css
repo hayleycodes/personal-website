@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--white);
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+footer p {
+    margin: 0;
+}

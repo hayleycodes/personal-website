@@ -57,7 +57,7 @@
             // apply stylesheet
             const linkElem = document.createElement('link')
             linkElem.setAttribute('rel', 'stylesheet')
-            linkElem.setAttribute('href', 'stylesheets/style.css')
+            linkElem.setAttribute('href', 'stylesheets/base.css')
 
             shadow.appendChild(linkElem)
             shadow.appendChild(template.cloneNode(true))
