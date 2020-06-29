@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         'Workshop Leader.',
         'Communicator.',
         'Developer.',
-        'Instructional Designer'
+        'Instructional Designer.'
     ]
     const textElementClasses = document.querySelector('h2').classList
 
