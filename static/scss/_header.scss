@@ -6,29 +6,30 @@ header {
         margin-right: 0;
     }
     #subheading {
-        margin-left: auto;
-        max-width: 600px;
-        text-align: right;
         h2 {
             display: inline-block;
+            margin-left: 0;
             margin-right: 0;
         }
         #typewriter {
             display: inline;
-            margin-left: 0;
+            margin-left: $spacingSizeTwo;
             font-style: italic;
             overflow-wrap: break-word;
             text-align: right;
-            border-right: 3px solid transparent;
-            &.initial-space {
-                margin-left: $spacingSizeTwo;
-            }
             &.highlight {
                 background-color: $neutralTen;
                 color: $neutralOne;
             }
+        }
+        #typewriter-suffix {
+            border-right: 3px solid transparent;
             &.show-cursor {
                 border-right: 3px solid $neutralTen !important;
+            }
+            &.highlight {
+                background-color: $neutralTen;
+                color: $neutralOne;
             }
         }
     }

@@ -3,16 +3,16 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
     const dataText = [
-        'Mentor.',
-        // 'Workshop Leader.',
-        // 'Communicator.',
-        // 'Developer.',
-        'n Instructional Designer.'
+        'Mentor',
+        'Workshop Leader',
+        'Communicator',
+        'Developer',
+        'Instructional Designer'
     ]
     const textElementClasses = document.getElementById('typewriter').classList
 
     const toggleCursor = async () => {
-        textElementClasses.toggle('show-cursor')
+        document.getElementById('typewriter-suffix').classList.toggle('show-cursor')
     }
 
     const showCursor = () => {
@@ -31,14 +31,17 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     const toggleHighlight = async () => {
         textElementClasses.toggle('highlight')
+        document.getElementById('typewriter-suffix').classList.toggle('highlight')
     }
 
-    const addInitialSpace = async () => {
-        textElementClasses.add('initial-space')
+    const addPrefix = async () => {
+        // textElementClasses.add('initial-space')
+        document.getElementById('subheading-prefix').innerHTML = 'I am a'
     }
 
-    const removeInitialSpace = async () => {
-        textElementClasses.remove('initial-space')
+    const addVowelPrefix = async () => {
+        // textElementClasses.remove('initial-space')
+        document.getElementById('subheading-prefix').innerHTML = 'I am an'
     }
 
     // type one text in the typewriter
@@ -51,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 typeWriter(text, characterCounter + 1, fnCallback)
             }, 100)
         } else if (typeof fnCallback == 'function') {
+            document.getElementById('typewriter-suffix').innerHTML = '.'
             // flash cursor at the end of the text
             for (var cursorFlashCount = 0; cursorFlashCount < 6; cursorFlashCount++) {
                 await new Promise(done =>
@@ -66,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
             await new Promise(done =>
                 setTimeout(() => {
                     toggleHighlight() // remove highlight
+                    document.getElementById('typewriter-suffix').innerHTML = ''
                     showCursor()
                     done()
                 }, 1000)
@@ -76,10 +81,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // start a typewriter animation for a text in the dataText array
     function StartTextAnimation(wordCounter) {
         showCursor()
-        if (dataText[wordCounter] == 'n Instructional Designer.') {
-            removeInitialSpace()
+        if (dataText[wordCounter] == 'Instructional Designer.') {
+            addVowelPrefix()
         } else {
-            addInitialSpace()
+            addPrefix()
         }
         if (wordCounter >= dataText.length) {
             wordCounter = 0
