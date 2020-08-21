@@ -1,4 +1,7 @@
 nav {
     text-align: right;
-    margin: 0 $spacingSizeTwo;
+
+    a {
+        margin: 0 $spacingSizeOne;
+    }
 }
