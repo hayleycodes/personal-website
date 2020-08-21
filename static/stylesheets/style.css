@@ -18,11 +18,23 @@ h2 {
   margin: 16px; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+  margin: 16px; }
+
+h3,
+.keyword,
+#typewriter {
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #FF8CBA;
+  text-decoration-skip-ink: none; }
 
 a {
   color: #1F2933;
   text-decoration: underline; }
+
+p {
+  margin: 12px; }
 
 nav {
   text-align: right; }
@@ -31,28 +43,31 @@ nav {
 
 header {
   margin: 128px 0; }
-
-#subheading {
-  margin-left: auto;
-  max-width: 600px;
-  text-align: right; }
-  #subheading h2 {
+  header h1 {
     display: inline-block;
-    margin-right: 0; }
-  #subheading #typewriter {
-    display: inline;
     margin-left: 0;
-    font-style: italic;
-    overflow-wrap: break-word;
-    text-align: right;
-    border-right: 3px solid transparent; }
-    #subheading #typewriter.initial-space {
-      margin-left: 8px; }
-    #subheading #typewriter.highlight {
-      background-color: #1F2933;
-      color: #F5F7FA; }
-    #subheading #typewriter.show-cursor {
-      border-right: 3px solid #1F2933 !important; }
+    margin-right: 0; }
+  header #subheading {
+    margin-left: auto;
+    max-width: 600px;
+    text-align: right; }
+    header #subheading h2 {
+      display: inline-block;
+      margin-right: 0; }
+    header #subheading #typewriter {
+      display: inline;
+      margin-left: 0;
+      font-style: italic;
+      overflow-wrap: break-word;
+      text-align: right;
+      border-right: 3px solid transparent; }
+      header #subheading #typewriter.initial-space {
+        margin-left: 8px; }
+      header #subheading #typewriter.highlight {
+        background-color: #1F2933;
+        color: #F5F7FA; }
+      header #subheading #typewriter.show-cursor {
+        border-right: 3px solid #1F2933 !important; }
 
 #interests .homepage-subject {
   display: flex;
@@ -64,8 +79,10 @@ header {
   #interests .homepage-subject .subject-text {
     flex-basis: 45%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
   #interests .homepage-subject img {
     height: 300px;
     width: 50%;

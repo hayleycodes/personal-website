@@ -21,9 +21,37 @@ h2 {
 
 h3 {
     font-size: $fontSizeSix;
+    margin: $spacingSizeFour;
+    // background: linear-gradient(
+    //     to bottom,
+    //     transparent 0%,
+    //     transparent 60%,
+    //     $primaryThree 60%,
+    //     $primaryThree 100%
+    // );
+    // background: linear-gradient(
+    //     to bottom,
+    //     transparent 0%,
+    //     transparent 60%,
+    //     #fbf36d 60%,
+    //     #fbf36d 100%
+    // );
+}
+
+h3,
+.keyword,
+#typewriter {
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    text-decoration-color: $primaryThree;
+    text-decoration-skip-ink: none;
 }
 
 a {
     color: $neutralTen;
     text-decoration: underline;
+}
+
+p {
+    margin: $spacingSizeThree;
 }

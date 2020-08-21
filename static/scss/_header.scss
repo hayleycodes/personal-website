@@ -1,31 +1,35 @@
 header {
     margin: $spacingSizeTen 0;
-}
-
-#subheading {
-    margin-left: auto;
-    max-width: 600px;
-    text-align: right;
-    h2 {
+    h1 {
         display: inline-block;
+        margin-left: 0;
         margin-right: 0;
     }
-    #typewriter {
-        display: inline;
-        margin-left: 0;
-        font-style: italic;
-        overflow-wrap: break-word;
+    #subheading {
+        margin-left: auto;
+        max-width: 600px;
         text-align: right;
-        border-right: 3px solid transparent;
-        &.initial-space {
-            margin-left: $spacingSizeTwo;
+        h2 {
+            display: inline-block;
+            margin-right: 0;
         }
-        &.highlight {
-            background-color: $neutralTen;
-            color: $neutralOne;
-        }
-        &.show-cursor {
-            border-right: 3px solid $neutralTen !important;
+        #typewriter {
+            display: inline;
+            margin-left: 0;
+            font-style: italic;
+            overflow-wrap: break-word;
+            text-align: right;
+            border-right: 3px solid transparent;
+            &.initial-space {
+                margin-left: $spacingSizeTwo;
+            }
+            &.highlight {
+                background-color: $neutralTen;
+                color: $neutralOne;
+            }
+            &.show-cursor {
+                border-right: 3px solid $neutralTen !important;
+            }
         }
     }
 }
