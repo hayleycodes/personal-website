@@ -1,3 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 html {
   background: #F5F7FA; }
+
+body {
+  margin: 16px auto;
+  width: 70vw;
+  font-family: "Cormorant Garamond", serif;
+  color: #1F2933; }
+
+h1 {
+  font-size: 72px;
+  margin: 24px; }
+
+h2 {
+  font-size: 48px;
+  margin: 16px; }
+
+a {
+  color: #1F2933;
+  text-decoration: underline; }
+
+nav {
+  text-align: right;
+  margin: 0 8px; }
+
+header {
+  margin: 48px 0; }
+
+#subheading {
+  margin-left: auto;
+  max-width: 600px;
+  text-align: right; }
+  #subheading h2 {
+    display: inline-block;
+    margin-right: 0; }
+  #subheading #typewriter {
+    display: inline;
+    margin-left: 0;
+    font-style: italic;
+    overflow-wrap: break-word;
+    text-align: right;
+    border-right: 3px solid transparent; }
+    #subheading #typewriter.initial-space {
+      margin-left: 8px; }
+    #subheading #typewriter.highlight {
+      background-color: #1F2933;
+      color: #F5F7FA; }
+    #subheading #typewriter.show-cursor {
+      border-right: 3px solid #1F2933 !important; }

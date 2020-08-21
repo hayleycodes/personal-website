@@ -4,12 +4,12 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     const dataText = [
         'Mentor.',
-        'Workshop Leader.',
-        'Communicator.',
-        'Developer.',
-        'Instructional Designer.'
+        // 'Workshop Leader.',
+        // 'Communicator.',
+        // 'Developer.',
+        'n Instructional Designer.'
     ]
-    const textElementClasses = document.querySelector('h2').classList
+    const textElementClasses = document.getElementById('typewriter').classList
 
     const toggleCursor = async () => {
         textElementClasses.toggle('show-cursor')
@@ -33,11 +33,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
         textElementClasses.toggle('highlight')
     }
 
+    const addInitialSpace = async () => {
+        textElementClasses.add('initial-space')
+    }
+
+    const removeInitialSpace = async () => {
+        textElementClasses.remove('initial-space')
+    }
+
     // type one text in the typewriter
     // keeps calling itself until the text is finished
     async function typeWriter(text, characterCounter, fnCallback) {
         if (characterCounter < text.length) {
-            document.querySelector('h2').innerHTML =
+            document.getElementById('typewriter').innerHTML =
                 text.substring(0, characterCounter + 1) + '<span aria-hidden="true"></span>'
             setTimeout(function() {
                 typeWriter(text, characterCounter + 1, fnCallback)
@@ -68,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // start a typewriter animation for a text in the dataText array
     function StartTextAnimation(wordCounter) {
         showCursor()
+        if (dataText[wordCounter] == 'n Instructional Designer.') {
+            removeInitialSpace()
+        } else {
+            addInitialSpace()
+        }
         if (wordCounter >= dataText.length) {
             wordCounter = 0
         }

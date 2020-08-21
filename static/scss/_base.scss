@@ -1,3 +1,25 @@
 html {
     background: $neutralOne;
 }
+
+body {
+    margin: $spacingSizeFour auto;
+    width: 70vw;
+    font-family: $bodyFont;
+    color: $neutralTen;
+}
+
+h1 {
+    font-size: $fontSizeEleven;
+    margin: $spacingSizeFive;
+}
+
+h2 {
+    font-size: $fontSizeNine;
+    margin: $spacingSizeFour;
+}
+
+a {
+    color: $neutralTen;
+    text-decoration: underline;
+}
