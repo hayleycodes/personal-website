@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // start a typewriter animation for a text in the dataText array
     function StartTextAnimation(wordCounter) {
         showCursor()
-        if (dataText[wordCounter] == 'Instructional Designer.') {
+        if (dataText[wordCounter] == 'Instructional Designer') {
             addVowelPrefix()
         } else {
             addPrefix()
