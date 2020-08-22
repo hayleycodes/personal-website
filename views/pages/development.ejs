@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html lang="en">
+
+<%- include ("../partials/head", {env: env}) %>
+
+<body>
+    <% if (env !== "development") { %>
+        <%- include ("../partials/bodyGTM") %>
+    <% } %>
+
+    <%- include ("../partials/header", {subheading: 'Software Developer'}) %>
+
+
+    <%- include ("../partials/footer"); -%>
+
+    <script src="/js/contact.js"></script>
+</body>
+
+</html>

@@ -1,24 +1,36 @@
 // server.js
 // load the things we need
 require('dotenv').config()
-var express = require('express');
-var app = express();
+var express = require('express')
+var app = express()
 app.use(express.static('static'))
 
 // set the view engine to ejs
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs')
 
 // use res.render to load up an ejs view file
 
-// index page 
+// index page
 app.get('/', function(req, res) {
     res.render('pages/index', { env: process.env.NODE_ENV })
 })
 
+app.get('/web-and-software-development', function(req, res) {
+    res.render('pages/development', { env: process.env.NODE_ENV })
+})
+
+app.get('/instructional-design', function(req, res) {
+    res.render('pages/instructionalDesign', { env: process.env.NODE_ENV })
+})
+
+app.get('/blog', function(req, res) {
+    res.render('pages/blog', { env: process.env.NODE_ENV })
+})
+
 // contact page
 app.get('/contact', function(req, res) {
-    res.render('pages/contact');
-});
+    res.render('pages/contact', { env: process.env.NODE_ENV })
+})
 
-app.listen(8080);
-console.log('8080 is the magic port');
+app.listen(8080)
+console.log('8080 is the magic port')
