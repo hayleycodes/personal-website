@@ -1,0 +1,37 @@
+form {
+    width: 100%;
+    .form-element {
+        display: flex;
+        flex-direction: column;
+        margin: $spacingSizeThree 0;
+    }
+    label {
+        font-size: $fontSizeThree;
+    }
+    input {
+        height: 30px;
+    }
+    input,
+    textarea {
+        padding: $spacingSizeOne;
+        border: 2px solid $neutralThree;
+        font: inherit;
+        &:focus {
+            outline: none;
+            border: 2px solid $primaryFive;
+        }
+    }
+    input:invalid {
+        border: 2px solid $redFive;
+    }
+    input[type='button'] {
+        background-color: $neutralOne;
+        &:hover {
+            color: $neutralOne;
+            background-color: $primaryFour;
+            border-color: $primaryFour;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px $neutralThree;
+        }
+    }
+}

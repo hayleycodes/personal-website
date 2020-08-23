@@ -52,7 +52,7 @@ a:hover::before {
   transform: scaleX(1); }
 
 p {
-  margin: 12px; }
+  margin: 12px 0; }
 
 p,
 li {
@@ -141,3 +141,33 @@ footer {
     text-align: right; }
   .blog-post-preview:hover {
     box-shadow: 0px 0px 10px #CBD2D9; }
+
+form {
+  width: 100%; }
+  form .form-element {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0; }
+  form label {
+    font-size: 16px; }
+  form input {
+    height: 30px; }
+  form input,
+  form textarea {
+    padding: 4px;
+    border: 2px solid #CBD2D9;
+    font: inherit; }
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border: 2px solid #E8368F; }
+  form input:invalid {
+    border: 2px solid #EF4E4E; }
+  form input[type='button'] {
+    background-color: #F5F7FA; }
+    form input[type='button']:hover {
+      color: #F5F7FA;
+      background-color: #F364A2;
+      border-color: #F364A2;
+      font-weight: bold;
+      box-shadow: 0px 0px 10px #CBD2D9; }
