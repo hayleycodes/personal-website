@@ -1,0 +1,16 @@
+.blog-post-preview {
+    transition: all 0.3s ease-in-out 0s;
+    display: flex;
+    align-items: center;
+    h4 {
+        flex-basis: 70%;
+        margin: 12px;
+    }
+    p {
+        flex-basis: 30%;
+        text-align: right;
+    }
+    &:hover {
+        box-shadow: 0px 0px 10px $neutralThree;
+    }
+}

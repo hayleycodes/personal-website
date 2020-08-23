@@ -6,6 +6,18 @@
 
 <body>
 
+    <% if (env !== "development") { %>
+        <%- include ("../partials/bodyGTM") %>
+    <% } %>
+
+    <%- include ("../partials/blogHeader", {title: blogPost.title, date: blogPost.created_at}) %>
+
+    <section id="blog-post">
+        <div class="blog-post-content">
+            <%- blogPost.content %>
+        </div>
+    </section>
+
     <%- include ("../partials/footer"); -%>
 
     <% var jsonld = jsonld %>
