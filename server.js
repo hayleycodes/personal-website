@@ -29,6 +29,10 @@ app.get('/instructional-design', function(req, res) {
     res.render('pages/instructionalDesign', { env: process.env.NODE_ENV })
 })
 
+app.get('/teaching-and-mentoring', function(req, res) {
+    res.render('pages/teaching', { env: process.env.NODE_ENV })
+})
+
 // blog listing page
 app.get('/blog', async (req, res) => {
     let blogPosts = await getBlogPosts()

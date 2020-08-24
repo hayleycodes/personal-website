@@ -3,11 +3,12 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
     const dataText = [
-        'Mentor',
-        'Workshop Leader',
+        'Fullstack Developer',
+        'Instructional Designer',
         'Communicator',
-        'Developer',
-        'Instructional Designer'
+        'Workshop Leader',
+        'Mentor',
+        'Blogger'
     ]
     const textElementClasses = document.getElementById('typewriter').classList
 

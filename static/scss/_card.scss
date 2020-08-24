@@ -1,0 +1,25 @@
+#cards {
+    .card {
+        margin: $spacingSizeEight 0;
+        text-align: justify;
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h4 {
+                margin: $spacingSizeTwo 0;
+            }
+            img {
+                padding-top: $spacingSizeThree;
+                height: 30px;
+            }
+        }
+        &.sub-card {
+            margin-top: $spacingSizeFour;
+            margin-left: $spacingSizeEight;
+            img {
+                padding-top: 0;
+            }
+        }
+    }
+}

@@ -21,6 +21,9 @@ h3 {
   font-size: 24px;
   margin: 16px 0; }
 
+h4 {
+  font-size: 18px; }
+
 h3,
 .keyword,
 #typewriter {
@@ -57,6 +60,24 @@ p {
 p,
 li {
   font-size: 18px; }
+
+#cards .card {
+  margin: 64px 0;
+  text-align: justify; }
+  #cards .card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    #cards .card .card-header h4 {
+      margin: 8px 0; }
+    #cards .card .card-header img {
+      padding-top: 12px;
+      height: 30px; }
+  #cards .card.sub-card {
+    margin-top: 16px;
+    margin-left: 64px; }
+    #cards .card.sub-card img {
+      padding-top: 0; }
 
 nav {
   display: flex;
@@ -138,7 +159,9 @@ footer {
     margin: 12px; }
   .blog-post-preview p {
     flex-basis: 30%;
-    text-align: right; }
+    text-align: right;
+    margin-right: 12px;
+    font-weight: normal; }
   .blog-post-preview:hover {
     box-shadow: 0px 0px 10px #CBD2D9; }
 
@@ -161,8 +184,6 @@ form {
     form textarea:focus {
       outline: none;
       border: 2px solid #E8368F; }
-  form input:invalid {
-    border: 2px solid #EF4E4E; }
   form input[type='button'] {
     background-color: #F5F7FA; }
     form input[type='button']:hover {

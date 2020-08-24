@@ -21,9 +21,6 @@ form {
             border: 2px solid $primaryFive;
         }
     }
-    input:invalid {
-        border: 2px solid $redFive;
-    }
     input[type='button'] {
         background-color: $neutralOne;
         &:hover {
