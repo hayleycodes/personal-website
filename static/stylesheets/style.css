@@ -165,6 +165,13 @@ footer {
   .blog-post-preview:hover {
     box-shadow: 0px 0px 10px #CBD2D9; }
 
+#blog-post img {
+  width: 100%; }
+
+#blog-post img,
+#blog-post pre {
+  padding: 16px 0; }
+
 form {
   width: 100%; }
   form .form-element {

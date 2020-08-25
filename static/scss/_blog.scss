@@ -16,3 +16,13 @@
         box-shadow: 0px 0px 10px $neutralThree;
     }
 }
+
+#blog-post {
+    img {
+        width: 100%;
+    }
+    img,
+    pre {
+        padding: $spacingSizeFour 0;
+    }
+}
