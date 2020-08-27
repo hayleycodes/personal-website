@@ -1,38 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+    <%- include ("../partials/head", {env: env}) %>
 
-<%- include ("../partials/head", {env: env}) %>
+    <body>
+        <% if (env !== "development") { %> <%- include ("../partials/bodyGTM") %> <% } %> <%-
+        include ("../partials/header", {subheading: 'Blogger'}) %>
 
-<body>
-
-    <% if (env !== "development") { %>
-        <%- include ("../partials/bodyGTM") %>
-    <% } %>
-
-    <%- include ("../partials/header", {subheading: 'Blogger'}) %>
-
-    <section id="blog-list">
-
-        <% if (blogPosts.length > 0) { %>
-    
-            <% blogPosts.forEach(blogPost => { %>
-                <a href="/blog/<%= blogPost.slug %>" class="blog-post-preview">
-                    <h4><%= blogPost.title %></h4>
-                    <p><%= blogPost.created_at %></p>
-                </a>
-            <% }) %>
-        
-        <% } else { %>
+        <section id="blog-list">
+            <% if (blogPosts.length > 0) { %> <% blogPosts.forEach(blogPost => { %>
+            <a href="/blog/<%= blogPost.slug %>" class="blog-post-preview">
+                <h4><%= blogPost.title %></h4>
+                <p><%= blogPost.created_at %></p>
+            </a>
+            <% }) %> <% } else { %>
             <p>Woops, nothing to see here just yet!</p>
-        <% } %>
-    
-    </section>
+            <% } %>
+        </section>
 
-    <%- include ("../partials/footer"); -%>
+        <%- include ("../partials/footer"); -%>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
-    <script src="/js/contact.js"></script>
-</body>
-
+        <script src="/js/contact.js"></script>
+    </body>
 </html>
