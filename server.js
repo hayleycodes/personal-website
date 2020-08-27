@@ -4,11 +4,11 @@ const validator = require('email-validator')
 const axios = require('axios').default
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
+require('dotenv').config()
 const CMS_URL =
-    process.env.NODE_ENV == 'production'
+    process.env.NODE_ENV === 'production'
         ? 'https://hayleyavw-portfolio-site-cms.herokuapp.com/'
         : 'http://localhost:1337/'
-require('dotenv').config()
 var app = express()
 app.use(express.static('static'))
 app.use(bodyParser.json())
