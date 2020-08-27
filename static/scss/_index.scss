@@ -1,0 +1,53 @@
+#interests {
+    .homepage-subject {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $spacingSizeSix;
+        .subject-text,
+        img {
+            display: none;
+        }
+        .subject-text {
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+        &#mysterious-pineapples {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍍</text></svg>")
+                    16 0,
+                auto;
+            .subject-text {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    #interests {
+        .homepage-subject {
+            margin-bottom: $spacingSizeTen;
+            img {
+                display: block;
+                height: 300px;
+                width: 50%;
+                object-fit: cover;
+                box-shadow: 0px 0px 10px $neutralThree;
+                padding: $spacingSizeThree;
+                &#training-juniors-img {
+                    object-position: left;
+                }
+                &#dogs-img {
+                    object-position: right;
+                }
+            }
+            .subject-text {
+                flex-basis: 45%;
+                text-align: center;
+            }
+        }
+    }
+}

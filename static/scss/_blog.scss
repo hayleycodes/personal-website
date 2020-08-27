@@ -1,0 +1,28 @@
+.blog-post-preview {
+    transition: all 0.3s ease-in-out 0s;
+    display: flex;
+    align-items: center;
+    h4 {
+        flex-basis: 70%;
+        margin: $spacingSizeThree;
+    }
+    p {
+        flex-basis: 30%;
+        text-align: right;
+        margin-right: $spacingSizeThree;
+        font-weight: normal;
+    }
+    &:hover {
+        box-shadow: 0px 0px 10px $neutralThree;
+    }
+}
+
+#blog-post {
+    img {
+        width: 100%;
+    }
+    img,
+    pre {
+        padding: $spacingSizeFour 0;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <%- include ("../partials/head", {env: env}) %>
+
+    <body>
+        <% if (env !== "development") { %> <%- include ("../partials/bodyGTM") %> <% } %> <%-
+        include ("../partials/header", {subheading: 'Instructional Designer'}) %>
+
+        <p>
+            My development skills coupled with my experience as an educator for Digital Technologies
+            curriculums create the perfect mix for technical content creation. As a result, I've
+            recently stumbled upon the job title of "Instructional Designer", which I think sums up
+            my skills perfectly as I often design, create and/or deliver technical courses.
+        </p>
+
+        <div id="cards">
+            <div class="card">
+                <div class="card-header">
+                    <h3>She Codes</h3>
+                    <img src="images/project-logos/she-codes.png" />
+                </div>
+                <p>
+                    She Codes is a startup, based in Perth, that is on a mission to teach women
+                    coding skills, get women into technical careers, and build communities of
+                    like-minded women. Our vision is to increase diversity in tech by inspiring
+                    100,000 women across Australia by 2025.
+                </p>
+                <p>
+                    I am the Content Developer and Instructional Designer for She Codes. The content
+                    I design, create and deliver is aimed at beginners, so the most challenging part
+                    about this role is making sure we push the students out of their comfort zone,
+                    but not too far as to scare them away from tech. It's a challenging balance to
+                    maintain, so I am constantly adapting and improving our content.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Firefly Educate</h3>
+                    <img src="images/project-logos/firefly.png" />
+                </div>
+                <p>
+                    Firefly is a technology consulting company that focuses on developing and
+                    administering New Product Introduction (NPI) IT training programs for their
+                    client’s employees.
+                </p>
+                <p>
+                    At Firely I am involved with designing and creating a program for educating
+                    software developers on how to use new software in the Financial Services
+                    Industry, which involves utilising my Python programming and content development
+                    skills.
+                </p>
+            </div>
+        </div>
+
+        <%- include ("../partials/footer"); -%>
+
+        <script src="/js/contact.js"></script>
+    </body>
+</html>

@@ -1,50 +1,12 @@
 // Contact Form
 let empty = false
-let tabIndex = '-1'
-const closeButtonElement = document.getElementById('close-button')
+const formElement = document.getElementById('contact-form')
 const nameElement = document.getElementById('name')
 const emailElement = document.getElementById('email')
 const messageElement = document.getElementById('message')
 const sendButtonElement = document.getElementById('send-email-button')
-
-function openContact() {
-    document.getElementById('contact-overlay').style.height = '100%'
-    toggleTabIndexes()
-}
-
-function toggleTabIndexes() {
-    tabIndex = tabIndex == -1 ? 0 : -1
-    closeButtonElement.tabIndex = tabIndex
-    nameElement.tabIndex = tabIndex
-    emailElement.tabIndex = tabIndex
-    messageElement.tabIndex = tabIndex
-    sendButtonElement.tabIndex = tabIndex
-}
-
-function closeContact() {
-    document.getElementById('contact-overlay').style.height = '0%'
-
-    const formElements = document.getElementsByClassName('form-element')
-    for (var i = 0; i < formElements.length; i++) {
-        formElements[i].classList.remove('empty')
-    }
-
-    toggleTabIndexes()
-}
-
-// close contact on escape key
-function keydownHandler(e) {
-    if (e.keyCode === 27) {
-        closeContact()
-    }
-    if (document.activeElement.id === 'email-button' && e.keyCode === 13) {
-        // enter key
-        openContact()
-    }
-}
-
-// register handler method for the keydown event
-document.addEventListener('keydown', keydownHandler, false)
+const confirmation = document.getElementById('form-confirmation')
+const text = document.getElementById('contact-message')
 
 // form colouring
 function highlightEmpty(element) {
@@ -76,15 +38,9 @@ function sendEmail() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // everything is fine - show validation message
                 console.log('all is well')
-                let overlayMessage = document.getElementById('message-confirmation-overlay')
-                overlayMessage.classList.toggle('show')
-                setTimeout(() => {
-                    overlayMessage.classList.toggle('show')
-                    closeContact()
-                    nameElement.value = ''
-                    emailElement.value = ''
-                    messageElement.value = ''
-                }, 3000)
+                text.classList.toggle('hide')
+                formElement.classList.toggle('hide')
+                confirmation.classList.toggle('hide')
             } else if (xhr.readyState == 4 && xhr.status == 400) {
                 // invalid email - show error
                 emailElement.parentElement.classList.add('empty')

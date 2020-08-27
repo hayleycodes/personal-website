@@ -1,0 +1,42 @@
+form {
+    width: 100%;
+    .form-element {
+        display: flex;
+        flex-direction: column;
+        margin: $spacingSizeThree 0;
+    }
+    label {
+        font-size: $fontSizeThree;
+    }
+    input {
+        height: 30px;
+    }
+    input,
+    textarea {
+        padding: $spacingSizeOne;
+        border: 2px solid $neutralThree;
+        font: inherit;
+        &:focus {
+            outline: none;
+            border: 2px solid $primaryFive;
+        }
+    }
+    input[type='button'] {
+        background-color: #fff;
+        &:hover {
+            color: $neutralOne;
+            background-color: $primaryFour;
+            border-color: $primaryFour;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px $neutralThree;
+        }
+    }
+}
+
+#form-confirmation {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}

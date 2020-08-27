@@ -1,0 +1,32 @@
+#cards {
+    .card {
+        margin: $spacingSizeEight 0;
+        text-align: justify;
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3 {
+                margin: $spacingSizeTwo 0;
+                text-align: left;
+            }
+            img {
+                padding-top: $spacingSizeThree;
+                height: 30px;
+            }
+        }
+        &.sub-card {
+            margin: $spacingSizeFour 0 $spacingSizeThree $spacingSizeSix;
+            @media (min-width: 500px) {
+                margin-left: $spacingSizeSeven;
+                margin-bottom: $spacingSizeFive;
+            }
+            @media (min-width: 900px) {
+                margin-left: $spacingSizeEight;
+            }
+            img {
+                padding-top: 0;
+            }
+        }
+    }
+}

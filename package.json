@@ -1,7 +1,5 @@
 {
-    "name": "personal-website",
-    "version": "1.0.0",
-    "description": "",
+    "name": "portfolio-site",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
@@ -9,33 +7,22 @@
         "scss-compile": "node-sass -rw static/scss/style.scss -o static/stylesheets",
         "watch": "npm run scss-compile"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/hayleyavw/personal-website.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/hayleyavw/personal-website/issues"
-    },
-    "homepage": "https://github.com/hayleyavw/personal-website#readme",
     "dependencies": {
-        "axios": "^0.19.2",
-        "body-parser": "^1.19.0",
-        "ejs": "^3.1.3",
+        "axios": "0.19.2",
+        "body-parser": "1.19.0",
+        "ejs": "3.1.5",
         "email-validator": "^2.0.4",
-        "express": "^4.17.1",
+        "express": "4.17.1",
         "mailgun-js": "^0.22.0",
-        "markdown-it": "^10.0.0",
-        "moment": "^2.26.0"
+        "markdown-it": "^10.0.0"
     },
     "devDependencies": {
-        "dotenv": "^8.2.0",
-        "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-prettier": "^3.1.3",
-        "node-sass": "^4.14.1",
-        "prettier": "^1.19.1",
-        "scss-compile": "^0.1.7"
+        "dotenv": "8.2.0",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "prettier": "1.19.1",
+        "node-sass": "4.14.1",
+        "scss-compile": "0.1.7"
     }
 }

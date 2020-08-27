@@ -1,0 +1,36 @@
+header {
+    margin: $spacingSizeTen 0;
+    h1 {
+        display: inline;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #subheading {
+        h2 {
+            display: inline-block;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        #typewriter {
+            display: inline;
+            margin-left: $spacingSizeTwo;
+            font-style: italic;
+            overflow-wrap: break-word;
+            text-align: right;
+            &.highlight {
+                background-color: $neutralTen;
+                color: $neutralOne;
+            }
+        }
+        #typewriter-suffix {
+            border-right: 3px solid transparent;
+            &.show-cursor {
+                border-right: 3px solid $neutralTen !important;
+            }
+            &.highlight {
+                background-color: $neutralTen;
+                color: $neutralOne;
+            }
+        }
+    }
+}

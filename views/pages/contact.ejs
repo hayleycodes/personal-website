@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <%- include ("../partials/head", {env: env}) %>
+
+    <body>
+        <% if (env !== "development") { %> <%- include ("../partials/bodyGTM") %> <% } %> <%-
+        include ("../partials/header", {subheading: 'Get in touch'}) %>
+
+        <p id="contact-message">
+            If you would like to hire me for a project, ask a few questions, or simply tell me I'm
+            awesome, I'd love to hear from you!
+        </p>
+        <form id="contact-form">
+            <div class="form-element">
+                <label for="name">Name</label>
+                <input tabindex="-1" id="name" type="text" name="name" required />
+            </div>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input tabindex="-1" id="email" type="email" name="email" required />
+            </div>
+            <div class="form-element">
+                <label for="message">Your Message</label>
+                <textarea tabindex="-1" id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="form-element">
+                <input
+                    tabindex="-1"
+                    id="send-email-button"
+                    type="button"
+                    onclick="sendEmail()"
+                    value="Send"
+                    class="submit-button"
+                />
+            </div>
+        </form>
+
+        <h4 id="form-confirmation" class="hide">Thanks for your message!</h4>
+
+        <%- include ("../partials/footer"); -%>
+
+        <script src="/js/contact.js"></script>
+    </body>
+</html>

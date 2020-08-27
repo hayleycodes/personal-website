@@ -2,16 +2,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const validator = require('email-validator')
 const axios = require('axios').default
-const moment = require('moment')
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
-require('dotenv').config()
-const app = express()
 const CMS_URL =
     process.env.NODE_ENV == 'production'
         ? 'https://hayleyavw-portfolio-site-cms.herokuapp.com/'
         : 'http://localhost:1337/'
-
+require('dotenv').config()
+var app = express()
 app.use(express.static('static'))
 app.use(bodyParser.json())
 
@@ -21,6 +19,18 @@ app.set('view engine', 'ejs')
 // index page
 app.get('/', function(req, res) {
     res.render('pages/index', { env: process.env.NODE_ENV })
+})
+
+app.get('/web-and-software-development', function(req, res) {
+    res.render('pages/development', { env: process.env.NODE_ENV })
+})
+
+app.get('/instructional-design', function(req, res) {
+    res.render('pages/instructionalDesign', { env: process.env.NODE_ENV })
+})
+
+app.get('/teaching-and-mentoring', function(req, res) {
+    res.render('pages/teaching', { env: process.env.NODE_ENV })
 })
 
 // blog listing page
@@ -49,9 +59,13 @@ app.get('/blog/:blogSlug', async (req, res) => {
     })
 })
 
-app.listen(3000, function() {
-    console.log('Server running on localhost:3000')
+// contact page
+app.get('/contact', function(req, res) {
+    res.render('pages/contact', { env: process.env.NODE_ENV })
 })
+
+app.listen(8080)
+console.log('8080 is the magic port')
 
 function generateJSON(blogPost) {
     let description = blogPost.content.match(/<p>(.*?)<\/p>/)[1]
@@ -84,8 +98,7 @@ function generateJSON(blogPost) {
 }
 
 function parseDate(created_at) {
-    let timeStr = moment(created_at)
-    return timeStr.utc().format('Do MMM YYYY')
+    return new Date(created_at).toLocaleString('default', { year: 'numeric', month: 'long' })
 }
 
 function parseContent(mdContent) {

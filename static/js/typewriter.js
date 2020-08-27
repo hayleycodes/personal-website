@@ -2,11 +2,18 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    const dataText = ['Mentor.', 'Workshop Leader.', 'Communicator.', 'Developer.']
-    const textElementClasses = document.querySelector('h2').classList
+    const dataText = [
+        'Fullstack Developer',
+        'Instructional Designer',
+        'Communicator',
+        'Workshop Leader',
+        'Mentor',
+        'Blogger'
+    ]
+    const textElementClasses = document.getElementById('typewriter').classList
 
     const toggleCursor = async () => {
-        textElementClasses.toggle('show-cursor')
+        document.getElementById('typewriter-suffix').classList.toggle('show-cursor')
     }
 
     const showCursor = () => {
@@ -25,18 +32,30 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     const toggleHighlight = async () => {
         textElementClasses.toggle('highlight')
+        document.getElementById('typewriter-suffix').classList.toggle('highlight')
+    }
+
+    const addPrefix = async () => {
+        // textElementClasses.add('initial-space')
+        document.getElementById('subheading-prefix').innerHTML = 'I am a'
+    }
+
+    const addVowelPrefix = async () => {
+        // textElementClasses.remove('initial-space')
+        document.getElementById('subheading-prefix').innerHTML = 'I am an'
     }
 
     // type one text in the typewriter
     // keeps calling itself until the text is finished
     async function typeWriter(text, characterCounter, fnCallback) {
         if (characterCounter < text.length) {
-            document.querySelector('h2').innerHTML =
+            document.getElementById('typewriter').innerHTML =
                 text.substring(0, characterCounter + 1) + '<span aria-hidden="true"></span>'
             setTimeout(function() {
                 typeWriter(text, characterCounter + 1, fnCallback)
             }, 100)
         } else if (typeof fnCallback == 'function') {
+            document.getElementById('typewriter-suffix').innerHTML = '.'
             // flash cursor at the end of the text
             for (var cursorFlashCount = 0; cursorFlashCount < 6; cursorFlashCount++) {
                 await new Promise(done =>
@@ -52,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
             await new Promise(done =>
                 setTimeout(() => {
                     toggleHighlight() // remove highlight
+                    document.getElementById('typewriter-suffix').innerHTML = ''
                     showCursor()
                     done()
                 }, 1000)
@@ -62,6 +82,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // start a typewriter animation for a text in the dataText array
     function StartTextAnimation(wordCounter) {
         showCursor()
+        if (dataText[wordCounter] == 'Instructional Designer') {
+            addVowelPrefix()
+        } else {
+            addPrefix()
+        }
         if (wordCounter >= dataText.length) {
             wordCounter = 0
         }

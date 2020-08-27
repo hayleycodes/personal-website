@@ -5,38 +5,18 @@
 <%- include ("../partials/head", {env: env}) %>
 
 <body>
+
     <% if (env !== "development") { %>
         <%- include ("../partials/bodyGTM") %>
     <% } %>
-    <a class="anchor" name=""></a> 
 
-    <% if (blogPost.Hero) { %>
-        <%- include ("../partials/hero", { hero: blogPost.Hero }) %>
-    <% } else { %>
-        <%- include ("../partials/header") %>
-    <% } %>
+    <%- include ("../partials/blogHeader", {title: blogPost.title, date: blogPost.created_at}) %>
 
-    <%- include ("../partials/nav") %>
-
-    <div id="wrapper" class="blog-post">
-
-        <%- include ("../partials/contact") %>
-
-        <div id="content">
-
-            <section id="blog-post">
-
-                <h1 class="blog-heading"><%= blogPost.title %></h1>
-                <h3 class="blog-heading">Hayley van Waas | <%= blogPost.created_at %></h3>
-                <div class="blog-post-content">
-                    <%- blogPost.content %>
-                </div>
-
-            </section>
-
+    <section id="blog-post">
+        <div class="blog-post-content">
+            <%- blogPost.content %>
         </div>
-        <a tabindex="0" href="/blog" id="back-to-blog-link"><p>Back to Blogs and Articles</p></a>
-    </div>
+    </section>
 
     <%- include ("../partials/footer"); -%>
 
@@ -52,7 +32,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
     <script src="/js/contact.js"></script>
-    <script src="/js/project.js"></script>
 </body>
 
 </html>
