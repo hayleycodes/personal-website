@@ -9,8 +9,9 @@ nav {
     user-select: none;
     input,
     span {
-        margin-left: 100%;
+        // margin-left: 100%;
         display: block;
+        margin-left: calc(100% - 33px);
     }
     input {
         position: absolute;
@@ -49,7 +50,7 @@ nav {
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
             background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
         &:first-of-type {
-            margin-top: -60px;
+            margin-top: -$spacingSizeSeven;
         }
         &:first-child {
             transform-origin: 0% 0%;
@@ -76,8 +77,8 @@ nav {
             display: flex;
             a {
                 margin-right: $spacingSizeTwo;
-                &:hover {
-                    text-decoration: none !important;
+                &:hover::before {
+                    visibility: hidden;
                 }
             }
             img {
@@ -94,6 +95,10 @@ nav {
 
 @media (min-width: 500px) {
     nav {
+        input,
+        span {
+            margin-left: 100%;
+        }
         #menu {
             padding-left: $spacingSizeEight;
             #page-links {
@@ -113,8 +118,11 @@ nav {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            padding-top: $spacingSizeFour;
+            margin-top: $spacingSizeNine;
             background-color: $neutralOne;
+            padding: $spacingSizeFour 15vw;
+            right: 0;
+            left: 0;
             a {
                 margin: 0 $spacingSizeOne;
                 white-space: nowrap;
@@ -123,7 +131,19 @@ nav {
                 column-count: 1;
                 display: flex;
                 align-items: center;
+                justify-content: flex-end;
+                max-width: 85%;
+                flex-wrap: wrap;
+                text-align: right;
             }
+        }
+    }
+}
+
+@media (min-width: 1104px) {
+    nav {
+        #menu {
+            margin-top: $spacingSizeEight;
         }
     }
 }

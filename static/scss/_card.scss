@@ -6,8 +6,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            h4 {
+            h3 {
                 margin: $spacingSizeTwo 0;
+                text-align: left;
             }
             img {
                 padding-top: $spacingSizeThree;
@@ -15,8 +16,14 @@
             }
         }
         &.sub-card {
-            margin-top: $spacingSizeFour;
-            margin-left: $spacingSizeEight;
+            margin: $spacingSizeFour 0 $spacingSizeThree $spacingSizeSix;
+            @media (min-width: 500px) {
+                margin-left: $spacingSizeSeven;
+                margin-bottom: $spacingSizeFive;
+            }
+            @media (min-width: 900px) {
+                margin-left: $spacingSizeEight;
+            }
             img {
                 padding-top: 0;
             }

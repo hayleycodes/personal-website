@@ -5,17 +5,29 @@ html {
 
 body {
   margin: 16px auto;
-  width: 70vw;
+  width: 90vw;
   font-family: "Cormorant Garamond", serif;
   color: #1F2933; }
+  @media (min-width: 500px) {
+    body {
+      width: 80vw; } }
+  @media (min-width: 900px) {
+    body {
+      width: 70vw; } }
 
 h1 {
-  font-size: 72px;
+  font-size: 60px;
   margin: 24px; }
+  @media (min-width: 500px) {
+    h1 {
+      font-size: 72px; } }
 
 h2 {
-  font-size: 48px;
+  font-size: 36px;
   margin: 16px; }
+  @media (min-width: 500px) {
+    h2 {
+      font-size: 48px; } }
 
 h3 {
   font-size: 24px;
@@ -68,14 +80,21 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    #cards .card .card-header h4 {
-      margin: 8px 0; }
+    #cards .card .card-header h3 {
+      margin: 8px 0;
+      text-align: left; }
     #cards .card .card-header img {
       padding-top: 12px;
       height: 30px; }
   #cards .card.sub-card {
-    margin-top: 16px;
-    margin-left: 64px; }
+    margin: 16px 0 12px 32px; }
+    @media (min-width: 500px) {
+      #cards .card.sub-card {
+        margin-left: 48px;
+        margin-bottom: 24px; } }
+    @media (min-width: 900px) {
+      #cards .card.sub-card {
+        margin-left: 64px; } }
     #cards .card.sub-card img {
       padding-top: 0; }
 
@@ -90,8 +109,8 @@ nav {
   user-select: none; }
   nav input,
   nav span {
-    margin-left: 100%;
-    display: block; }
+    display: block;
+    margin-left: calc(100% - 33px); }
   nav input {
     position: absolute;
     width: 40px;
@@ -123,7 +142,7 @@ nav {
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
     nav span:first-of-type {
-      margin-top: -60px; }
+      margin-top: -48px; }
     nav span:first-child {
       transform-origin: 0% 0%; }
     nav span:nth-last-child(2) {
@@ -145,8 +164,8 @@ nav {
       display: flex; }
       nav #menu #social-icons a {
         margin-right: 8px; }
-        nav #menu #social-icons a:hover {
-          text-decoration: none !important; }
+        nav #menu #social-icons a:hover::before {
+          visibility: hidden; }
       nav #menu #social-icons img {
         height: 18px; }
     nav #menu a {
@@ -155,6 +174,9 @@ nav {
       padding: 8px 0; }
 
 @media (min-width: 500px) {
+  nav input,
+  nav span {
+    margin-left: 100%; }
   nav #menu {
     padding-left: 64px; }
     nav #menu #page-links {
@@ -168,20 +190,31 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 16px;
-    background-color: #F5F7FA; }
+    margin-top: 96px;
+    background-color: #F5F7FA;
+    padding: 16px 15vw;
+    right: 0;
+    left: 0; }
     nav #menu a {
       margin: 0 4px;
       white-space: nowrap; }
     nav #menu #page-links {
       column-count: 1;
       display: flex;
-      align-items: center; } }
+      align-items: center;
+      justify-content: flex-end;
+      max-width: 85%;
+      flex-wrap: wrap;
+      text-align: right; } }
+
+@media (min-width: 1104px) {
+  nav #menu {
+    margin-top: 64px; } }
 
 header {
   margin: 128px 0; }
   header h1 {
-    display: inline-block;
+    display: inline;
     margin-left: 0;
     margin-right: 0; }
   header #subheading h2 {
@@ -213,26 +246,39 @@ footer {
 #interests .homepage-subject {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 128px; }
+  margin-bottom: 32px; }
   #interests .homepage-subject .subject-text,
   #interests .homepage-subject img {
-    padding: 12px; }
+    display: none; }
   #interests .homepage-subject .subject-text {
-    flex-basis: 45%;
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; }
-  #interests .homepage-subject img {
-    height: 300px;
-    width: 50%;
-    object-fit: cover;
-    box-shadow: 0px 0px 10px #CBD2D9; }
+    text-align: justify; }
   #interests .homepage-subject#mysterious-pineapples {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍍</text></svg>") 16 0, auto; }
     #interests .homepage-subject#mysterious-pineapples .subject-text {
       flex-basis: 100%; }
+
+@media (min-width: 500px) {
+  #interests .homepage-subject {
+    margin-bottom: 128px; }
+    #interests .homepage-subject img {
+      display: block;
+      height: 300px;
+      width: 50%;
+      object-fit: cover;
+      box-shadow: 0px 0px 10px #CBD2D9;
+      padding: 12px; }
+      #interests .homepage-subject img#training-juniors-img {
+        object-position: left; }
+      #interests .homepage-subject img#dogs-img {
+        object-position: right; }
+    #interests .homepage-subject .subject-text {
+      flex-basis: 45%;
+      text-align: center; } }
 
 .blog-post-preview {
   transition: all 0.3s ease-in-out 0s;
@@ -276,7 +322,7 @@ form {
       outline: none;
       border: 2px solid #E8368F; }
   form input[type='button'] {
-    background-color: #F5F7FA; }
+    background-color: #fff; }
     form input[type='button']:hover {
       color: #F5F7FA;
       background-color: #F364A2;

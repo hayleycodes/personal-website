@@ -4,19 +4,31 @@ html {
 
 body {
     margin: $spacingSizeFour auto;
-    width: 70vw;
+    width: 90vw;
     font-family: $bodyFont;
     color: $neutralTen;
+    @media (min-width: 500px) {
+        width: 80vw;
+    }
+    @media (min-width: 900px) {
+        width: 70vw;
+    }
 }
 
 h1 {
-    font-size: $fontSizeEleven;
+    font-size: $fontSizeTen;
     margin: $spacingSizeFive;
+    @media (min-width: 500px) {
+        font-size: $fontSizeEleven;
+    }
 }
 
 h2 {
-    font-size: $fontSizeNine;
+    font-size: $fontSizeEight;
     margin: $spacingSizeFour;
+    @media (min-width: 500px) {
+        font-size: $fontSizeNine;
+    }
 }
 
 h3 {

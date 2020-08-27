@@ -1,88 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+    <%- include ("../partials/head", {env: env}) %>
 
-<%- include ("../partials/head", {env: env}) %>
+    <body>
+        <% if (env !== "development") { %> <%- include ("../partials/bodyGTM") %> <% } %> <%-
+        include ("../partials/header", {subheading: ''}) %>
 
-<body>
-    <% if (env !== "development") { %>
-        <%- include ("../partials/bodyGTM") %>
-    <% } %>
+        <section id="interests">
+            <h4>I like...</h4>
 
-    <%- include ("../partials/header", {subheading: ''}) %>
-
-    <section id="interests">
-
-        <h4>I like...</h4>
-
-        <div class="homepage-subject">
-            <img src="images/coding.jpg">
-            <div class="subject-text">
-                <h3>Software and Web Development</h3>
-                <p>
-                    I've worked on many different projects, in both contract and permanent roles.
-                    My favourite languages to work in are Python and JavaScript.
-                </p>
-                <a href="/web-and-software-development">Read More</a>
+            <div class="homepage-subject">
+                <img src="images/coding.jpg" />
+                <div class="subject-text">
+                    <h3>Software and Web Development</h3>
+                    <p>
+                        I've worked on many different projects, in both contract and permanent
+                        roles. My favourite languages to work in are Python and JavaScript.
+                    </p>
+                    <a href="/web-and-software-development">Read More</a>
+                </div>
             </div>
-        </div>
-        
-        <div class="homepage-subject">
-            <div class="subject-text">
-                <h3>Instructional Design</h3>
-                <p>                    
-                    My development skills coupled with my experience as an educator for Digital Technologies curriculums create the
-                    perfect mix for technical content creation.
-                </p>
-                <a href="/web-and-software-development">Read More</a>
-            </div>
-            <img src="images/presenting.jpg">
-        </div>
-        
-        <div class="homepage-subject">
-            <img src="images/teaching-juniors.jpg">
-            <div class="subject-text">
-                <h3>Training Junior Developers</h3>
-                <p>
-                    I love helping Junior Developers grow and develop their skills.
-                    In particular I am dedicated to helping women to find their place in tech, and have helped many women learn how to code and to get into the tech industry.
-                </p>
-                <a href="/teaching-and-mentoring">Read More</a>
-            </div>
-        </div>
-        
-        <div class="homepage-subject">
-            <div class="subject-text">
-                <h3>Dogs</h3>
-                <p>
-                    One day I will own a fleet of tiny dogs. For now, I make do by petsitting wherever possible.
-                    This cutie is Izzy, a Miniature Schnauzer who eats like a Great Dane.
-                </p>
-            </div>
-            <img src="images/izzy.jpg">
-        </div>
-        
-        <div class="homepage-subject">
-            <img src="images/taylor-swift.jpg">
-            <div class="subject-text">
-                <h3>Taylor Swift</h3>
-                <p>You can't spell awesome without me.</p>
-            </div>
-        </div>
 
-        <div class="homepage-subject" id="mysterious-pineapples">
-            <div id="full-width-subject" class="subject-text">
-                <h3>Mysterious Pineapples</h3>
-                <p>Be a pineapple. Stand tall, wear a crown, and be sweet on the inside.</p>
+            <div class="homepage-subject">
+                <div class="subject-text">
+                    <h3>Instructional Design</h3>
+                    <p>
+                        My development skills coupled with my experience as an educator for Digital
+                        Technologies curriculums create the perfect mix for technical content
+                        creation.
+                    </p>
+                    <a href="/web-and-software-development">Read More</a>
+                </div>
+                <img src="images/presenting.jpg" />
             </div>
-        </div>
 
-    </section>
+            <div class="homepage-subject">
+                <img id="training-juniors-img" src="images/teaching-juniors.jpg" />
+                <div class="subject-text">
+                    <h3>Training Junior Developers</h3>
+                    <p>
+                        I love helping Junior Developers grow and develop their skills. In
+                        particular I am dedicated to helping women to find their place in tech, and
+                        have helped many women learn how to code and to get into the tech industry.
+                    </p>
+                    <a href="/teaching-and-mentoring">Read More</a>
+                </div>
+            </div>
 
-    <%- include ("../partials/footer"); -%>
+            <div class="homepage-subject">
+                <div class="subject-text">
+                    <h3>Dogs</h3>
+                    <p>
+                        One day I will own a fleet of tiny dogs. For now, I make do by petsitting
+                        wherever possible. This cutie is Izzy, a Miniature Schnauzer who eats like a
+                        Great Dane.
+                    </p>
+                </div>
+                <img id="dogs-img" src="images/izzy.jpg" />
+            </div>
 
-    <script src="/js/typewriter.js"></script>
-    <script src="/js/contact.js"></script>
-</body>
+            <div class="homepage-subject">
+                <img src="images/taylor-swift.jpg" />
+                <div class="subject-text">
+                    <h3>Taylor Swift</h3>
+                    <p>You can't spell awesome without me.</p>
+                </div>
+            </div>
 
+            <div class="homepage-subject" id="mysterious-pineapples">
+                <div id="full-width-subject" class="subject-text">
+                    <h3>Mysterious Pineapples</h3>
+                    <p>Be a pineapple. Stand tall, wear a crown, and be sweet on the inside.</p>
+                </div>
+            </div>
+        </section>
+
+        <%- include ("../partials/footer"); -%>
+
+        <script src="/js/typewriter.js"></script>
+        <script src="/js/contact.js"></script>
+    </body>
 </html>
