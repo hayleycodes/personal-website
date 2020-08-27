@@ -64,8 +64,8 @@ app.get('/contact', function(req, res) {
     res.render('pages/contact', { env: process.env.NODE_ENV })
 })
 
-app.listen(8080)
-console.log('8080 is the magic port')
+app.listen(3000)
+console.log('Listening on port 3000')
 
 function generateJSON(blogPost) {
     let description = blogPost.content.match(/<p>(.*?)<\/p>/)[1]
