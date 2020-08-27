@@ -1,64 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+    <%- include ("../partials/head", {env: env}) %>
 
-<%- include ("../partials/head", {env: env}) %>
+    <body>
+        <% if (env !== "development") { %> <%- include ("../partials/bodyGTM") %> <% } %> <%-
+        include ("../partials/header", {subheading: 'Teacher and Mentor'}) %>
 
-<body>
-    <% if (env !== "development") { %>
-        <%- include ("../partials/bodyGTM") %>
-    <% } %>
-
-    <%- include ("../partials/header", {subheading: 'Teacher and Mentor'}) %>
-
-    <div id="cards">
-        <div class="card">
-            <div class="card-header">
-                <h3>She Codes</h3>
-                <img src="images/project-logos/she-codes.png">
+        <p>
+            We've all heard that expression "Those who can, do; those who can't, teach." As someone
+            who has experience both working in and teaching tech, I can confirm that whoever said
+            that got it the wrong way around. I love teaching beginner developers, and you've got to
+            be a good developer to teach it. Juniors ask the weirdest questions, they will ask you
+            things you have never ever considered, and suddenly you have to come up with a suitable
+            explanation and analogy in 2s flat. It's fun, it keeps me on my toes, it means I learn
+            new things in every single class, and it is so rewarding being part of the early stages
+            of someone's journey into tech.
+        </p>
+        <div id="cards">
+            <div class="card">
+                <div class="card-header">
+                    <h3>She Codes</h3>
+                    <img src="images/project-logos/she-codes.png" />
+                </div>
+                <p>
+                    She Codes is a startup, based in Perth, that is on a mission to teach women
+                    coding skills, get women into technical careers, and build communities of
+                    like-minded women. Their vision is to increase diversity in tech by inspiring
+                    100,000 women across Australia by 2025.
+                </p>
+                <p>
+                    She Codes runs several different programs of various lengths. My primary role
+                    with She Codes is as Lead Mentor for the Flash (one week taster) and Plus (22
+                    week bootcamp) programs.
+                </p>
+                <p>
+                    As Lead Mentor, it is my job to faciliate each class, and often that involves
+                    live coding and giving detailed explanations about technical subjects on the
+                    fly. On a more personal level, I care so deeply about getting more diversity in
+                    tech, that sometimes the hardest part about this role is leaving the emotions at
+                    the door. I go out of my way to make sure every single student is getting the
+                    most out of every class, which can be a difficult task at the best of times, but
+                    the success our students have had as a result makes it all worth it in the end.
+                </p>
             </div>
-            <p>
-                She Codes is a startup, based in Perth, that is on a mission to teach women coding skills, get women into technical careers, and build communities of like-minded women. Their vision is to increase diversity in tech by inspiring 100,000 women across Australia by 2025.
-            </p>
-            <p>
-                Plus launched in Perth in 2019 and is a 5 month part time course designed to help women transition into tech careers. In 2019, as Lead Mentor, I taught the first three months of the course where the students learned HTML, CSS, Python and Django, and continued on in a support role for the second half of the course. In 2020 I am the Lead Mentor for all 5 months in Perth, and we are also running the course in Brisbane where I am Lead Mentor for the first 6 weeks. I am also the Content Developer and Coordinator for the course.
-            </p>
-            <p>
-                Flash is a 5 day program designed to give women a taster of several different areas of tech, including Web Development, Python, Flask, Data and Algorithms. I developed the content for each of these topics and was the lead mentor for the first Flash program in 2019. 
-            </p>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>NCSS</h3>
+                    <img src="images/project-logos/ncss.png" />
+                </div>
+                <p>
+                    The National Computer Science School runs a summer camp program, which I
+                    attended as a student in 2014 and 2015. NCSS is what made me realise that I
+                    wanted a career in Software! It is a 10 day event where students from all over
+                    Australia and New Zealand, as well as tutors from all over the world, come
+                    together to learn and experience Computer Science. It's just as nerdy as it
+                    sounds and is always an incredible experience! I loved it so much that I went
+                    back as an industry mentor in 2016, and then as a tutor in 2017 and 2018.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Gather Workshops</h3>
+                    <img src="images/project-logos/gather-workshops.png" />
+                </div>
+                <p>
+                    Gather Workshops was a small non-profit that delivered programming workshops in
+                    schools and kids holiday programs. I met the lead content developer and workshop
+                    facilitator at my first ever tech conference and we immediately realised we had
+                    the same values and goals for Digital Technologies education in New Zealand. Two
+                    weeks later I was teaching my first Gather Workshop, and one of the students in
+                    my class was actually a teacher from my own high school! I continued to work for
+                    Gather on a part time basis for another three years. I was involved with
+                    delivering workshops on Python, JavaScript, HTML/CSS and Robotics to students
+                    and teachers all around New Zealand.
+                </p>
+            </div>
         </div>
 
-        <div class="card">
-            <div class="card-header">
-                <h3>NCSS</h3>
-                <img src="images/project-logos/ncss.png">
-            </div>
-            <p>
-                The National Computer Science School runs a summer camp program, which I attended as
-                a student in 2014 and 2015, an industry mentor in 2016, and a tutor in 2017 and 2018.
-                NCSS is what made me realise that I wanted a career in Software! It is a 10 day event
-                where students from all over Australia and New Zealand, as well as tutors from all over
-                the world, come together to learn and experience Computer Science. It's just as nerdy as
-                it sounds and is always an incredible experience!
-            </p>
-        </div>
+        <%- include ("../partials/footer"); -%>
 
-        <div class="card">
-            <div class="card-header">
-                <h3>Gather Workshops</h3>
-                <img src="images/project-logos/gather-workshops.png">
-            </div>
-            <p>
-                For three years I worked part time with Gather Workshops as a presenter and mentor
-                for their workshops. I was involved with delivering workshops on Python,
-                JavaScript, HTML/CSS and Robotics to students and teachers across New Zealand.
-            </p>
-        </div>
-    </div>
-
-    <%- include ("../partials/footer"); -%>
-
-    <script src="/js/contact.js"></script>
-</body>
-
+        <script src="/js/contact.js"></script>
+    </body>
 </html>
