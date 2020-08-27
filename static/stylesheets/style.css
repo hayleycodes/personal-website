@@ -329,3 +329,9 @@ form {
       border-color: #F364A2;
       font-weight: bold;
       box-shadow: 0px 0px 10px #CBD2D9; }
+
+#form-confirmation {
+  display: block; }
+
+.hide {
+  display: none !important; }

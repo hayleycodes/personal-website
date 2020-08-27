@@ -1,13 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const validator = require('email-validator')
 const axios = require('axios').default
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
-// const CMS_URL =
-//     process.env.NODE_ENV == 'production'
-//         ? 'https://hayleyavw-portfolio-site-cms.herokuapp.com/'
-//         : 'http://localhost:1337/'
-const CMS_URL = 'https://hayleyavw-portfolio-site-cms.herokuapp.com/'
+const CMS_URL =
+    process.env.NODE_ENV == 'production'
+        ? 'https://hayleyavw-portfolio-site-cms.herokuapp.com/'
+        : 'http://localhost:1337/'
 require('dotenv').config()
 var app = express()
 app.use(express.static('static'))
@@ -117,3 +117,28 @@ async function getBlogPosts(blogSlug) {
         return
     }
 }
+
+const apiKey = process.env.API_KEY
+const DOMAIN = process.env.API_DOMAIN
+let mailgun = require('mailgun-js')({ apiKey: apiKey, domain: DOMAIN })
+
+app.post('/', function(req, res) {
+    let email = req.body.email
+    if (validator.validate(email) == false) {
+        return res.status(400).send()
+    }
+    let data = {
+        from: email,
+        to: `${process.env.EMAIL}`,
+        subject: 'Message from ' + req.body.name,
+        text: req.body.message
+    }
+
+    console.log(data)
+    mailgun.messages().send(data, function(error, body) {
+        console.log(error)
+        console.log(body)
+    })
+
+    res.status(200).send()
+})
