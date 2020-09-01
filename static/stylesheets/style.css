@@ -16,25 +16,25 @@ body {
       width: 70vw; } }
 
 h1 {
-  font-size: 60px;
+  font-size: 3.75rem;
   margin: 24px; }
   @media (min-width: 500px) {
     h1 {
-      font-size: 72px; } }
+      font-size: 4.5rem; } }
 
 h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin: 16px; }
   @media (min-width: 500px) {
     h2 {
-      font-size: 48px; } }
+      font-size: 3rem; } }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 16px 0; }
 
 h4 {
-  font-size: 18px; }
+  font-size: 1.125rem; }
 
 h3,
 .keyword,
@@ -71,7 +71,7 @@ p {
 
 p,
 li {
-  font-size: 18px; }
+  font-size: 1.125rem; }
 
 #cards .card {
   margin: 64px 0;
@@ -309,7 +309,7 @@ form {
     flex-direction: column;
     margin: 12px 0; }
   form label {
-    font-size: 16px; }
+    font-size: 1rem; }
   form input {
     height: 30px; }
   form input,
