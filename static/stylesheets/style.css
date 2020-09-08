@@ -76,6 +76,7 @@ li {
 
 #contact-wrapper,
 #cards,
+#blog-list,
 #blog-post {
   max-width: 600px;
   margin: 0 auto; }
@@ -209,14 +210,14 @@ nav {
     right: 0;
     left: 0; }
     nav #menu a {
-      margin: 0 4px;
+      margin: 0 8px;
       white-space: nowrap; }
     nav #menu #page-links {
       column-count: 1;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      max-width: 85%;
+      max-width: 80%;
       flex-wrap: wrap;
       text-align: right; } }
 
