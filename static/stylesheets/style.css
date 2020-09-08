@@ -310,10 +310,17 @@ footer {
   .blog-post-preview:hover {
     box-shadow: 0px 0px 10px #CBD2D9; }
 
-#blog-post img {
-  width: 100%; }
+#blog-post h2 {
+  font-size: 1.875rem; }
 
-#blog-post img,
+#blog-post img {
+  width: 100%;
+  box-shadow: 0px 0px 10px #CBD2D9; }
+  @media (min-width: 900px) {
+    #blog-post img {
+      width: 750px;
+      margin-left: -75px; } }
+
 #blog-post pre {
   padding: 16px 0; }
 

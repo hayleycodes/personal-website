@@ -18,10 +18,17 @@
 }
 
 #blog-post {
+    h2 {
+        font-size: $fontSizeSeven;
+    }
     img {
         width: 100%;
+        box-shadow: 0px 0px 10px $neutralThree;
+        @media (min-width: 900px) {
+            width: 750px;
+            margin-left: -75px; // offset the margin for the text
+        }
     }
-    img,
     pre {
         padding: $spacingSizeFour 0;
     }
