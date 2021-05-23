@@ -221,7 +221,7 @@ nav {
       flex-wrap: wrap;
       text-align: right; } }
 
-@media (min-width: 1104px) {
+@media (min-width: 1260px) {
   nav #menu {
     margin-top: 64px; } }
 
