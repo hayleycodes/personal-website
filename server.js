@@ -82,7 +82,7 @@ function generateJSON(blogPost) {
         image: 'test.com',
         author: {
             '@type': 'Person',
-            name: 'Hayley van Waas'
+            name: 'Hayley Stewart'
         },
         publisher: {
             '@type': 'Organization',
